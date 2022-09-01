@@ -25,9 +25,9 @@ const routes = {
 	'/favourites': favouritesView,
 	'/post': postView,
 	'/browse': browseView,
-	'./inbox': inboxView,
-	'./support': supportView,
-	'404' : fourOFourView,
+	'/inbox': inboxView,
+	'/support': supportView,
+	'/404' : fourOFourView,
 	'/signin': signinView,
 	'/signup': signupView,
 	'/profile': profileView,
@@ -53,6 +53,7 @@ class Router {
 		// extract path without params
 		const pathname = fullPathname.split('?')[0]
 		const route = this.routes[pathname]
+		// console.log('looking up', fullPathname, Object.keys(this.routes));
 		
 		if(route){
 			// if route exists, run init() of the view

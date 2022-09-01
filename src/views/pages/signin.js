@@ -29,7 +29,10 @@ class SignInView {
       <div class="page-content page-centered">
         <div class="signinup-box">
           <img class="signinup-logo" src="/images/honey-garden-logo.png">        
-          <sl-form class="form-signup dark-theme" @sl-submit=${this.signInSubmitHandler}>          
+          <sl-form class="form-signup dark-theme" @sl-submit=${this.signInSubmitHandler}>  
+            <div class="input-group">
+              <sl-input name="username" type="username" placeholder="Username" required></sl-input>
+            </div>        
             <div class="input-group">
               <sl-input name="email" type="email" placeholder="Email" required></sl-input>
             </div>
