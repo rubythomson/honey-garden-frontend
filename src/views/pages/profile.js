@@ -27,6 +27,12 @@ class ProfileView {
         
         <p>Updated: ${moment(Auth.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a')}</p>
 
+
+        ${Auth.currentUser.bio ? html`
+          <h3>Bio</h3>
+          <p>${Auth.currentUser.bio}</p>
+        ` : html``}
+
         <sl-button @click=${()=> gotoRoute('/editProfile')}>Edit Profile</sl-button>
       </div>      
     `

@@ -7539,17 +7539,23 @@ class Auth {
 
     const data = await response.json();
 
-    _Toast.default.show("Welcome  ".concat(data.user.firstName)); // save access token (jwt) to local storage
+    _Toast.default.show("Welcome  ".concat(data.user.userName)); // save access token (jwt) to local storage
 
 
     localStorage.setItem('accessToken', data.accessToken); // set current user
 
     this.currentUser = data.user; // console.log(this.currentUser)           
-    // redirect to home
 
-    _Router.default.init();
+    _Router.default.init(); // redirection
 
-    (0, _Router.gotoRoute)('/');
+
+    if (data.user.newUser == true) {
+      // redirect newUser to guide page (/guide)
+      (0, _Router.gotoRoute)('/guide');
+    } else {
+      // existing user - redirect to home page (/)
+      (0, _Router.gotoRoute)('/');
+    }
   } // CHECK -----------------------------------------------------------------------------------------------
 
 
@@ -7699,7 +7705,7 @@ class HomeView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser.firstName);
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser.userName);
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -13571,6 +13577,26 @@ var _moment = _interopRequireDefault(require("moment"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject5() {
+  const data = _taggedTemplateLiteral([""]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  const data = _taggedTemplateLiteral(["\n          <h3>Bio</h3>\n          <p>", "</p>\n        "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
   const data = _taggedTemplateLiteral(["\n        <sl-avatar style=\"--size: 200px; margin-bottom: 1em;\"></sl-avatar>\n        "]);
 
@@ -13592,7 +13618,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">        \n        ", "\n        <h2>", " ", "</h2>\n        <p>", "</p>\n        \n        <p>Updated: ", "</p>\n\n        <sl-button @click=", ">Edit Profile</sl-button>\n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">        \n        ", "\n        <h2>", " ", "</h2>\n        <p>", "</p>\n        \n        <p>Updated: ", "</p>\n\n\n        ", "\n\n        <sl-button @click=", ">Edit Profile</sl-button>\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -13613,7 +13639,7 @@ class ProfileView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject2(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject3()), _Auth.default.currentUser.firstName, _Auth.default.currentUser.lastName, _Auth.default.currentUser.email, (0, _moment.default)(_Auth.default.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a'), () => (0, _Router.gotoRoute)('/editProfile'));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject2(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject3()), _Auth.default.currentUser.firstName, _Auth.default.currentUser.lastName, _Auth.default.currentUser.email, (0, _moment.default)(_Auth.default.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a'), _Auth.default.currentUser.bio ? (0, _litHtml.html)(_templateObject4(), _Auth.default.currentUser.bio) : (0, _litHtml.html)(_templateObject5()), () => (0, _Router.gotoRoute)('/editProfile'));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -13640,16 +13666,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 class UserAPI {
   async updateUser(userId, userData) {
+    let dataType = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'form';
     // validate
-    if (!userId || !userData) return; // make fetch request to backend
+    if (!userId || !userData) return;
+    let responseHeader; // form data
 
-    const response = await fetch("".concat(_App.default.apiBase, "/user/").concat(userId), {
-      method: "PUT",
-      headers: {
-        "Authorization": "Bearer ".concat(localStorage.accessToken)
-      },
-      body: userData
-    }); // if response not ok
+    if (dataType == 'form') {
+      // fetch response header normal (form data)
+      responseHeader = {
+        method: "PUT",
+        headers: {
+          "Authorization": "Bearer ".concat(localStorage.accessToken)
+        },
+        body: userData
+      }; // json data
+    } else if (dataType == 'json') {
+      responseHeader = {
+        method: "PUT",
+        headers: {
+          "Authorization": "Bearer ".concat(localStorage.accessToken),
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userData)
+      };
+    } // make fetch request to backend
+
+
+    const response = await fetch("".concat(_App.default.apiBase, "/user/").concat(userId), responseHeader); // if response not ok
 
     if (!response.ok) {
       // console log error
@@ -13667,7 +13710,7 @@ class UserAPI {
 
   async getUser(userId) {
     // validate
-    if (!userId) return; // fetch the json data
+    if (!userId) return; // fetch json data
 
     const response = await fetch("".concat(_App.default.apiBase, "/user/").concat(userId), {
       headers: {
@@ -13676,12 +13719,12 @@ class UserAPI {
     }); // if response not ok
 
     if (!response.ok) {
-      // console log error
+      // console log err
       const err = await response.json();
-      if (err) console.log(err); // throw error (exit this function)      
+      if (err) console.log(err); // throw err (exit this function)
 
       throw new Error('Problem getting user');
-    } // convert response payload into json - store as data
+    } // convert res payload into json - store as data
 
 
     const data = await response.json(); // return data
@@ -13741,7 +13784,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  const data = _taggedTemplateLiteral(["\n          <p>Updated: ", "</p>\n          <sl-form class=\"page-form\" @sl-submit=", ">\n            <div class=\"input-group\">\n              <sl-input type=\"text\" name=\"firstName\" value=\"", "\" placeholder=\"First Name\"></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input type=\"text\" name=\"lastName\" value=\"", "\" placeholder=\"Last Name\"></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input type=\"text\" name=\"email\" value=\"", "\" placeholder=\"Email Address\"></sl-input>\n            </div>            \n            <div class=\"input-group\">\n              <label>Avatar</label><br>          \n              ", "\n            </div>\n            <sl-button type=\"primary\" class=\"submit-btn\" submit>Update Profile</sl-button>\n          </sl-form>\n        "]);
+  const data = _taggedTemplateLiteral(["\n          <p>Updated: ", "</p>\n          <sl-form class=\"page-form\" @sl-submit=", ">\n            <div class=\"input-group\">\n              <sl-input type=\"text\" name=\"firstName\" value=\"", "\" placeholder=\"First Name\"></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input type=\"text\" name=\"lastName\" value=\"", "\" placeholder=\"Last Name\"></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input type=\"text\" name=\"email\" value=\"", "\" placeholder=\"Email Address\"></sl-input>\n            </div>     \n            <div class=\"input-group\">\n              <sl-textarea name=\"bio\" rows=\"4\" placeholder=\"Bio\" value=\"", "\"></sl-textarea>\n            </div>        \n            <div class=\"input-group\">\n              <label>Avatar</label><br>          \n              ", "\n            </div>\n            <sl-button type=\"primary\" class=\"submit-btn\" submit>Update Profile</sl-button>\n          </sl-form>\n        "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -13815,7 +13858,7 @@ class EditProfileView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.user == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), (0, _moment.default)(_Auth.default.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a'), this.updateProfileSubmitHandler.bind(this), this.user.firstName, this.user.lastName, this.user.email, this.user.avatar ? (0, _litHtml.html)(_templateObject4(), _App.default.apiBase, this.user.avatar) : (0, _litHtml.html)(_templateObject5())));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.user == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), (0, _moment.default)(_Auth.default.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a'), this.updateProfileSubmitHandler.bind(this), this.user.firstName, this.user.lastName, this.user.email, this.user.bio, this.user.avatar ? (0, _litHtml.html)(_templateObject4(), _App.default.apiBase, this.user.avatar) : (0, _litHtml.html)(_templateObject5())));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -13892,10 +13935,14 @@ var _Auth = _interopRequireDefault(require("../../Auth"));
 
 var _Utils = _interopRequireDefault(require("../../Utils"));
 
+var _UserAPI = _interopRequireDefault(require("../../UserAPI"));
+
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Guide\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1>Guide</h1>\n        <p>Page content ...</p>\n        \n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Guide\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">  \n        \n        <div class=\"guide-title\">\n          <h1>Honey Garden,</h1>\n          <h1>The hive for literature lovers</h1>\n        </div>\n\n        <div class=\"guide-step\">\n          <h2>Read!</h2>\n          <img src=\"https://plchldr.co/i/500x300?&bg=dddddd&fc=666666&text=IMAGE\">\n        </div>\n\n        <div class=\"guide-step\">\n          <h2>Create!</h2>\n          <img src=\"https://plchldr.co/i/500x300?&bg=dddddd&fc=666666&text=IMAGE\">\n        </div>\n\n        <div class=\"guide-step\">\n          <h2>Support!</h2>\n          <img src=\"https://plchldr.co/i/500x300?&bg=dddddd&fc=666666&text=IMAGE\">\n        </div>\n\n        <sl-button type=\"primary\" @click=", ">Explore!</sl-button>\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -13912,10 +13959,24 @@ class GuideView {
     this.render();
 
     _Utils.default.pageIntroAnim();
+
+    this.updateCurrentUser();
+  }
+
+  async updateCurrentUser() {
+    try {
+      const updatedUser = await _UserAPI.default.updateUser(_Auth.default.currentUser._id, {
+        newUser: false
+      }, 'json');
+      console.log("user updated");
+      console.log(updatedUser);
+    } catch (err) {
+      _Toast.default.show(err, 'error');
+    }
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), () => (0, _Router.gotoRoute)('/'));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -13924,7 +13985,7 @@ class GuideView {
 var _default = new GuideView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"views/pages/adults.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../UserAPI":"UserAPI.js","../../Toast":"Toast.js"}],"views/pages/adults.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16386,7 +16447,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50170" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64441" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

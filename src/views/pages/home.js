@@ -17,7 +17,7 @@ class HomeView {
       <va-app-header title="Home" user=${JSON.stringify(Auth.currentUser)}></va-app-header>
       
       <div class="page-content">
-        <h1 class="anim-in">Hey ${Auth.currentUser.firstName}</h1>
+        <h1 class="anim-in">Hey ${Auth.currentUser.userName}</h1>
 
        
 

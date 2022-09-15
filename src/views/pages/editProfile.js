@@ -61,7 +61,10 @@ class EditProfileView {
             </div>
             <div class="input-group">
               <sl-input type="text" name="email" value="${this.user.email}" placeholder="Email Address"></sl-input>
-            </div>            
+            </div>     
+            <div class="input-group">
+              <sl-textarea name="bio" rows="4" placeholder="Bio" value="${this.user.bio}"></sl-textarea>
+            </div>        
             <div class="input-group">
               <label>Avatar</label><br>          
               ${(this.user.avatar) ? html`
