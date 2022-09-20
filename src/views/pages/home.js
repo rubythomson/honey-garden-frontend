@@ -19,10 +19,7 @@ class HomeView {
       <div class="page-content">
         <h1 class="anim-in">Hey ${Auth.currentUser.userName}</h1>
 
-       
-
       </div>
-     
     `
     render(template, App.rootEl)
   }

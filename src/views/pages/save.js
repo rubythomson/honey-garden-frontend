@@ -4,19 +4,19 @@ import {gotoRoute, anchorRoute} from '../../Router'
 import Auth from '../../Auth'
 import Utils from '../../Utils'
 
-class FavouritesView {
+class SaveView {
   init(){
-    document.title = 'Favourites'    
+    document.title = 'Save'    
     this.render()    
     Utils.pageIntroAnim()
   }
 
   render(){
     const template = html`
-      <va-app-header title="Favourites" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
+      <va-app-header title="Save" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
       <div class="page-content">        
-        <h1>My Favourites</h1>
-        <p>Favourited Literature</p>
+        <h1>Saved Reads</h1>
+        <p>Saved Literature</p>
         
       </div>      
     `
@@ -25,4 +25,4 @@ class FavouritesView {
 }
 
 
-export default new FavouritesView()
+export default new SaveView()

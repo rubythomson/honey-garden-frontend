@@ -121,14 +121,27 @@ a {
   }
 }
 
-// Test View Page ---------------------------------------------------------------------------------------- NOT WORKING???
-.home-img {
-  width: 50px;
-  height: auto;
+// poems grid --------------------------------------------------------------------------------------------
+.poems-grid{
+  display: flex;
+  flex-wrap: wrap;
+  .poem-card{
+    width: calc(33.3% - 1em);
+    margin: 0.5em;
+  }
 }
 
-.home-img-container {
-  display: block;
+// poems dialog ------------------------------------------------------------------------------------------
+.poem-dialog {
+  --width: 50%;
+}
+
+.poem-dialog::part(body){
+  margin-top: -5em;
+}
+
+.saveBtn {
+  color: #fff4e1;
 }
 
 // RESPONSIVE - MOBILE -----------------------------------------------------------------------------------

@@ -134,13 +134,25 @@ a {
   height: auto;
 }
 
-.home-img {
-  width: 50px;
-  height: auto;
+.poems-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.poems-grid .poem-card {
+  width: calc(33.3% - 1em);
+  margin: 0.5em;
 }
 
-.home-img-container {
-  display: block;
+.poem-dialog {
+  --width: 50%;
+}
+
+.poem-dialog::part(body) {
+  margin-top: -5em;
+}
+
+.saveBtn {
+  color: #fff4e1;
 }
 
 @media all and (max-width: 768px) {

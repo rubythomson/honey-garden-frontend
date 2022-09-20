@@ -189,15 +189,13 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       <div class="app-side-menu-items" style="z-index: 2; position: absolute;">
         <nav class="app-side-menu-items">
           <a href="/" @click="${this.menuClick}">Home</a>
-          <a href="/test" @click="${this.menuClick}">Test</a>
           <a href="/browse" @click="${this.menuClick}">Browse</a>
           <a href="/library" @click="${this.menuClick}">Library</a>
           <a href="/post" @click="${this.menuClick}">Post</a>
           <a href="/inbox" @click="${this.menuClick}">Inbox</a>
           <a href="/adults" @click="${this.menuClick}">Adults Only (18+)</a>
-          <a href="/favourites" @click="${this.menuClick}">Favourites</a>
+          <a href="/save" @click="${this.menuClick}">Saved Reads</a>
           <a href="/profile" @click="${this.menuClick}">Profile</a>
-          <a href="#" @click="${() => Auth.signOut()}">Sign Out</a>
           <a href="/support" @click="${this.menuClick}">Support</a>
         </nav>  
       </div>

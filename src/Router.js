@@ -9,7 +9,7 @@ import testView from './views/pages/test'
 import guideView from './views/pages/guide'
 import adultsView from './views/pages/adults'
 import libraryView from './views/pages/library'
-import favouritesView from './views/pages/favourites'
+import saveView from './views/pages/save'
 import postView from './views/pages/post'
 import browseView from './views/pages/browse'
 import inboxView from './views/pages/inbox'
@@ -22,7 +22,7 @@ const routes = {
 	'/guide': guideView,
 	'/adults': adultsView,
 	'/library': libraryView,
-	'/favourites': favouritesView,
+	'/save': saveView,
 	'/post': postView,
 	'/browse': browseView,
 	'/inbox': inboxView,
