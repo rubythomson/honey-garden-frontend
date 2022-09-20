@@ -14135,56 +14135,6 @@ class SaveView {
 var _default = new SaveView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"views/pages/post.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _App = _interopRequireDefault(require("../../App"));
-
-var _litHtml = require("lit-html");
-
-var _Router = require("../../Router");
-
-var _Auth = _interopRequireDefault(require("../../Auth"));
-
-var _Utils = _interopRequireDefault(require("../../Utils"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Post\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1>Post</h1>\n        <p>Add a post ...</p>\n        \n      </div>      \n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-class PostView {
-  init() {
-    document.title = 'Post';
-    this.render();
-
-    _Utils.default.pageIntroAnim();
-  }
-
-  render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
-    (0, _litHtml.render)(template, _App.default.rootEl);
-  }
-
-}
-
-var _default = new PostView();
-
-exports.default = _default;
 },{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"PoemAPI.js":[function(require,module,exports) {
 "use strict";
 
@@ -14202,6 +14152,34 @@ var _Toast = _interopRequireDefault(require("./Toast"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 class PoemAPI {
+  async newPost(formData) {
+    // send fetch request
+    const response = await fetch("".concat(_App.default.apiBase, "/post"), {
+      method: 'POST',
+      headers: {
+        "Authorization": "Bearer ".concat(localStorage.accessToken)
+      },
+      body: formData
+    }); // if response not ok
+
+    if (!response.ok) {
+      let message = 'Problem creating post';
+
+      if (response.status == 400) {
+        const err = await response.json();
+        message = err.message;
+      } // throw error (exit this function)      
+
+
+      throw new Error(message);
+    } // convert response payload into json - store as data
+
+
+    const data = await response.json(); // return data
+
+    return data;
+  }
+
   async getPoems() {
     // fetch the json data
     const response = await fetch("".concat(_App.default.apiBase, "/poem"), {
@@ -14229,7 +14207,90 @@ class PoemAPI {
 var _default = new PoemAPI();
 
 exports.default = _default;
-},{"./App":"App.js","./Auth":"Auth.js","./Toast":"Toast.js"}],"views/pages/browse.js":[function(require,module,exports) {
+},{"./App":"App.js","./Auth":"Auth.js","./Toast":"Toast.js"}],"views/pages/post.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+var _PoemAPI = _interopRequireDefault(require("../../PoemAPI"));
+
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Create Post\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">\n        <div class=\"page-form-styling\"> <!-- style -->\n          <h1>Add</h1>\n          <sl-form class=\"page-form\" @sl-submit=", ">\n            <input type=\"hidden\" name=\"user\" value=\"", "\" />\n            <div class=\"input-group\">\n              <sl-input name=\"title\" type=\"text\" placeholder=\"Title:\" required></sl-input>\n            </div>\n            <div class=\"input-group\">              \n              <sl-input name=\"tags\" type=\"text\" placeholder=\"Tags:\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-textarea name=\"description\" rows=\"3\" placeholder=\"Description:\" required></sl-textarea>\n            </div>\n            <div class=\"input-group\" style=\"margin-bottom: 2em;\">\n              <label>Image</label><br>\n              <input type=\"file\" name=\"image\" />              \n            </div>\n            <div class=\"input-group\" style=\"margin-bottom: 2em;\">\n              <label>Mature</label><br>\n              <sl-radio-group label=\"Select\" no-fieldset>\n                <sl-radio name=\"mature\" value=\"m\">On</sl-radio>\n                <sl-radio name=\"underage\" value=\"u\">Off</sl-radio>\n              </sl-radio-group>\n            </div>\n            <div class=\"input-group\">\n              <sl-textarea name=\"begin-here\" rows=\"3\" placeholder=\"Begin Here...\" required></sl-textarea>\n            </div>\n            <sl-button type=\"primary\" class=\"submit-btn\" submit size=\"medium\" pill>Save Draft</sl-button>\n            <sl-button type=\"primary\" class=\"submit-btn\" submit size=\"medium\" pill>Post</sl-button>\n          </sl-form> \n        </div>         \n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class newPostView {
+  init() {
+    document.title = 'Post';
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+  }
+
+  async newPostSubmitHandler(e) {
+    e.preventDefault();
+    const submitBtn = document.querySelector('.submit-btn');
+    submitBtn.setAttribute('loading', '');
+    const formData = e.detail.formData;
+
+    try {
+      await _PoemAPI.default.newPost(formData);
+
+      _Toast.default.show("Post Added");
+
+      submitBtn.removeAttribute('loading'); // reset form
+      // reset text + text area fields
+
+      const textInputs = document.querySelectorAll('sl-input, sl-text-area');
+      if (textInputs) textInputs.forEach(textInput => textInput.value = null); // reset radio inputs
+
+      const radioInputs = document.querySelectorAll('sl-radio');
+      if (radioInputs) radioInputs.forEach(radioInput => radioInput.removeAttribute('checked')); // reset file inputs
+
+      const fileInput = document.querySelector('input[type=file]');
+      if (fileInput) fileInput.value = null;
+    } catch (err) {
+      _Toast.default.show(err, 'error');
+
+      submitBtn.removeAttribute('loading');
+    }
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.newPostSubmitHandler, _Auth.default.currentUser._id);
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new newPostView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"views/pages/browse.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16345,6 +16406,16 @@ var _App = _interopRequireDefault(require("./../App"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject3() {
+  const data = _taggedTemplateLiteral(["\n        <a href=\"/adults\" @click=\"", "\">18+</a>\n        "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
   const data = _taggedTemplateLiteral(["\n          <h1 class=\"page-title\">", "</h1>\n        "]);
 
@@ -16356,7 +16427,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--brand-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n\n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: #fff;\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n      }\n\n      /* active nav links */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------- */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">\n      <sl-icon-button class=\"hamburger-btn\" name=\"list\" @click=\"", "\" style=\"font-size: 1.5em;\"></sl-icon-button>       \n      \n      <div class=\"app-header-main\">\n        ", "\n        <slot></slot>\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/\" @click=\"", "\">Home</a>        \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar style=\"--size: 24px;\" image=", "></sl-avatar> ", "\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Edit Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n\n    <sl-drawer class=\"app-side-menu\" placement=\"left\">\n\n      <div class=\"app-side-menu-logo\" style=\"z-index: 1;\">\n        <a href=\"/\" @click=", ">\n          <img class=\"app-side-menu-logo\" src=\"/images/honey-garden-logo.png\">\n        </a>\n      </div>\n\n      <div class=\"app-side-menu-items\" style=\"z-index: 2; position: absolute;\">\n        <nav class=\"app-side-menu-items\">\n          <a href=\"/\" @click=\"", "\">Home</a>\n          <a href=\"/browse\" @click=\"", "\">Browse</a>\n          <a href=\"/library\" @click=\"", "\">Library</a>\n          <a href=\"/post\" @click=\"", "\">Post</a>\n          <a href=\"/inbox\" @click=\"", "\">Inbox</a>\n          <a href=\"/adults\" @click=\"", "\">Adults Only (18+)</a>\n          <a href=\"/save\" @click=\"", "\">Saved Reads</a>\n          <a href=\"/profile\" @click=\"", "\">Profile</a>\n          <a href=\"/support\" @click=\"", "\">Support</a>\n        </nav>  \n      </div>\n\n    </sl-drawer>\n    "]);
+  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--brand-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n\n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: #fff;\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n      }\n\n      /* active nav links */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------- */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">\n      <sl-icon-button class=\"hamburger-btn\" name=\"list\" @click=\"", "\" style=\"font-size: 1.5em;\"></sl-icon-button>       \n      \n      <div class=\"app-header-main\">\n        ", "\n        <slot></slot>\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/\" @click=\"", "\">BeeHive</a>   \n        <a href=\"/browse\" @click=\"", "\">Search</a> \n        <a href=\"/library\" @click=\"", "\">Library</a> \n        <a href=\"/post\" @click=\"", "\">Post</a> \n\n        ", "\n\n        <a href=\"/inbox\" @click=\"", "\">Messages</a>  \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar style=\"--size: 24px;\" image=", "></sl-avatar> ", "\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Edit Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n\n    <sl-drawer class=\"app-side-menu\" placement=\"left\">\n\n      <div class=\"app-side-menu-logo\" style=\"z-index: 1;\">\n        <a href=\"/\" @click=", ">\n          <img class=\"app-side-menu-logo\" src=\"/images/honey-garden-logo.png\">\n        </a>\n      </div>\n\n      <div class=\"app-side-menu-items\" style=\"z-index: 2; position: absolute;\">\n        <nav class=\"app-side-menu-items\">\n          <a href=\"/save\" @click=\"", "\">Saved Reads</a>\n          <a href=\"/support\" @click=\"", "\">Support</a>\n        </nav>  \n      </div>\n\n    </sl-drawer>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -16418,7 +16489,7 @@ customElements.define('va-app-header', class AppHeader extends _litElement.LitEl
   }
 
   render() {
-    return (0, _litElement.html)(_templateObject(), this.hamburgerClick, this.title ? (0, _litElement.html)(_templateObject2(), this.title) : "", _Router.anchorRoute, e => e.preventDefault(), this.user && this.user.avatar ? "".concat(_App.default.apiBase, "/images/").concat(this.user.avatar) : '', this.user && this.user.firstName, () => (0, _Router.gotoRoute)('/profile'), () => (0, _Router.gotoRoute)('/editProfile'), () => _Auth.default.signOut(), _Router.anchorRoute, this.menuClick, this.menuClick, this.menuClick, this.menuClick, this.menuClick, this.menuClick, this.menuClick, this.menuClick, this.menuClick);
+    return (0, _litElement.html)(_templateObject(), this.hamburgerClick, this.title ? (0, _litElement.html)(_templateObject2(), this.title) : "", _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, this.user.accessLevel == 2 ? (0, _litElement.html)(_templateObject3(), _Router.anchorRoute) : '', _Router.anchorRoute, e => e.preventDefault(), this.user && this.user.avatar ? "".concat(_App.default.apiBase, "/images/").concat(this.user.avatar) : '', this.user && this.user.firstName, () => (0, _Router.gotoRoute)('/profile'), () => (0, _Router.gotoRoute)('/editProfile'), () => _Auth.default.signOut(), _Router.anchorRoute, this.menuClick, this.menuClick);
   }
 
 });
@@ -16640,7 +16711,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61244" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53361" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -4,6 +4,33 @@ import Toast from './Toast'
 
 class PoemAPI {
 
+  async newPost(formData){
+    // send fetch request
+    const response = await fetch(`${App.apiBase}/post`, {
+      method: 'POST',
+      headers: {"Authorization": `Bearer ${localStorage.accessToken}`},
+      body: formData
+    })
+    
+    // if response not ok
+    if(!response.ok){ 
+      let message = 'Problem creating post'
+      if(response.status == 400){
+        const err = await response.json()
+        message = err.message
+      }      
+      // throw error (exit this function)      
+      throw new Error(message)
+    }
+    
+    // convert response payload into json - store as data
+    const data = await response.json()
+    
+    // return data
+    return data
+  }
+
+
   async getPoems(){
     
     // fetch the json data

@@ -164,7 +164,16 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       </div>
 
       <nav class="app-top-nav">
-        <a href="/" @click="${anchorRoute}">Home</a>        
+        <a href="/" @click="${anchorRoute}">BeeHive</a>   
+        <a href="/browse" @click="${anchorRoute}">Search</a> 
+        <a href="/library" @click="${anchorRoute}">Library</a> 
+        <a href="/post" @click="${anchorRoute}">Post</a> 
+
+        ${this.user.accessLevel == 2 ? html`
+        <a href="/adults" @click="${anchorRoute}">18+</a>
+        ` : ''}
+
+        <a href="/inbox" @click="${anchorRoute}">Messages</a>  
         <sl-dropdown>
           <a slot="trigger" href="#" @click="${(e) => e.preventDefault()}">
             <sl-avatar style="--size: 24px;" image=${(this.user && this.user.avatar) ? `${App.apiBase}/images/${this.user.avatar}` : ''}></sl-avatar> ${this.user && this.user.firstName}
@@ -188,14 +197,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
 
       <div class="app-side-menu-items" style="z-index: 2; position: absolute;">
         <nav class="app-side-menu-items">
-          <a href="/" @click="${this.menuClick}">Home</a>
-          <a href="/browse" @click="${this.menuClick}">Browse</a>
-          <a href="/library" @click="${this.menuClick}">Library</a>
-          <a href="/post" @click="${this.menuClick}">Post</a>
-          <a href="/inbox" @click="${this.menuClick}">Inbox</a>
-          <a href="/adults" @click="${this.menuClick}">Adults Only (18+)</a>
           <a href="/save" @click="${this.menuClick}">Saved Reads</a>
-          <a href="/profile" @click="${this.menuClick}">Profile</a>
           <a href="/support" @click="${this.menuClick}">Support</a>
         </nav>  
       </div>
@@ -205,4 +207,3 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
   }
   
 })
-
