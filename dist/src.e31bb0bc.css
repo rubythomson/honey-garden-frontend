@@ -117,6 +117,7 @@ a {
 .signup-box {
   max-width: 320px;
   text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .signinup-logo {
@@ -141,6 +142,7 @@ a {
 .poems-grid .poem-card {
   width: calc(33.3% - 1em);
   margin: 0.5em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .poem-dialog {
@@ -257,10 +259,11 @@ a {
   flex: 1 1 300px;
   position: relative;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 50px;
   width: 60%;
   height: 40px;
   margin: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .searchIcon {
@@ -316,14 +319,52 @@ a {
   right: -4px;
 }
 
+/* LIBRARY  ------------------------------------------------------------------------------------------------------ */
+.library-filter {
+  margin-bottom: 20px;
+  background-color: #777;
+  border-radius: 50px;
+  width: 400px;
+}
+
+.library-title {
+  font-size: 3.5em;
+}
+
+/* BEEHIVE ------------------------------------------------------------------------------------------------------ */
+.beehive-title {
+  font-size: 3.5em;
+}
+
+.beehive-add-post-btn {
+  background: #FFF4E1;
+  color: #FFF4E1;
+}
+
+.beehive-row-1 .beehive-row-2 .beehive-row-3 {
+  width: 33.3%;
+  border-radius: 50px;
+  padding: 10px;
+  text-align: left;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.beehive-search-box {
+  border-radius: 50px;
+  background-color: white;
+  margin: 20px;
+  width: 33.3%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 /* PROFILE READING LIST ----------------------------------------------------------------------------------------- */
 .card-header {
   max-width: 300px;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
-  border-radius: 100%;
-  /* check border radius and make it work */
+  border-radius: 50px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .bio {
@@ -331,9 +372,35 @@ a {
   /* align to the left not working */
 }
 
+.bio-card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 .create-btn {
   position: relative;
   /* get to sit to the right of the title */
+}
+
+.profile-box {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 20%;
+  margin: 30px;
+  text-align: center;
+}
+
+.profile-box-parent {
+  content: "";
+  display: flex;
+  clear: both;
+}
+
+.row1 .row2 .row3 {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.column1 .column2 .column3 .column4 .column5 .column6 {
+  margin: 30px;
 }
 
 @media all and (max-width: 768px) {

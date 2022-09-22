@@ -7684,7 +7684,7 @@ var _Utils = _interopRequireDefault(require("./../../Utils"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Home\" user=", "></va-app-header>\n      \n      <div class=\"page-content\">\n        <h1 class=\"anim-in\">Hey ", "</h1>\n\n      </div>\n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Home\" user=", "></va-app-header>\n      \n      <div class=\"page-content\">\n        <h1 class=\"beehive-title\">BeeHive</h1>\n\n        <div class=\"beehive-search-box\">\n          <div class=\"searchContainer\">\n            <i class=\"fa fa-search searchIcon\"></i>\n            <input class=\"searchBox\" type=\"search\" name=\"search\">\n          </div>\n\n          <sl-button class=\"beehive-add-post-btn\" variant=\"primary\" size=\"medium\" pill>Add Post</sl-button> \n        </div>\n\n        <div class=\"beehive-row-1 calign\">\n          <sl-card>\n            <h2>In my dreams...</h2>\n            <br>\n            <p>In my dreams all I see are people dancing in the sky</p>\n            <br>\n            <p>Magic happenings everywhere</p>\n            <br>\n            <p>I want that to be my reality</p>\n\n            <iconify-icon icon=\"vs:rose\" width=\"20\" height=\"40\"></iconify-icon>\n            <sl-button class=\"send-rose-btn\" pill>Send a rose</sl-button>\n            <sl-avatar style=\"--size: 40px; margin-bottom: 1em;\" image=", "></sl-avatar>\n            <p>", "</p>\n\n          </sl-card>\n        </div>\n\n        <div class=\"beehive-row-2 calign\">\n          <sl-card>\n            <h2>Goldfish Tears</h2>\n            <br>\n            <p>Goldfish,</p>\n            <br>\n            <p>No memory just swimming in circles</p>\n            <br>\n            <p>The life of a trapped fish.</p>\n            <br>\n            <p>How sad,</p>\n            <br>\n            <p>How very sad,</p>\n            <br>\n            <p>How tragedy strikes.</p>\n            <br>\n            <p>Goldfish Bowl.</p>\n\n            <iconify-icon icon=\"vs:rose\" width=\"20\" height=\"40\"></iconify-icon>\n            <sl-button class=\"send-rose-btn\" pill>Send a rose</sl-button>\n            <sl-avatar style=\"--size: 40px; margin-bottom: 1em;\" image=", "></sl-avatar>\n            <p>", "</p>\n\n          </sl-card>\n        </div>\n\n        <div class=\"beehive-row-3 calign\">\n          <sl-card>\n            <h2>Cloud Kisses</h2>\n            <br>\n            <p>Clouds floating,</p>\n            <br>\n            <p>Drifting in the wind</p>\n            <br>\n            <p>Crying crystals</p>\n            <br>\n            <p>Crystals hitting my face.</p>\n            <br>\n            <p>Crystal kisses.</p>\n\n            <iconify-icon icon=\"vs:rose\" width=\"20\" height=\"40\"></iconify-icon>\n            <sl-button class=\"send-rose-btn\" pill>Send a rose</sl-button>\n            <sl-avatar style=\"--size: 40px; margin-bottom: 1em;\" image=", "></sl-avatar>\n            <p>", "</p>\n\n          </sl-card>\n        </div>\n\n      </div>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -7705,7 +7705,7 @@ class HomeView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser.userName);
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '', _Auth.default.currentUser.userName, _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '', _Auth.default.currentUser.userName, _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '', _Auth.default.currentUser.userName);
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -13741,7 +13741,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  const data = _taggedTemplateLiteral(["\n            <h3 class=\"bio\">Bio</h3>\n            <p>", "</p>\n          "]);
+  const data = _taggedTemplateLiteral(["\n              <h3 class=\"bio\">Bio</h3>\n              <p>", "</p>\n            "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -13771,7 +13771,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">        \n        ", "\n        \n        <h1>", "</h1>\n        <p>", "</p>\n        <p>Updated: ", "</p>\n        \n        <sl-card>  \n          ", "\n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-card class=\"card-header\">\n          <div slot=\"header\">        \n            <h2>Works (1)</h2>\n          </div> \n          \n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-card class=\"card-header\">\n          <div slot=\"header\">        \n            <h2>Reading Lists (0)</h2>\n            <sl-button class=\"create-btn\" size=\"medium\" pill>+ Create</sl-button>\n            </div> \n            \n              <div class=\"poem-grid\">\n                ", "\n              </div>\n          \n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-button @click=", ">Edit Profile</sl-button>\n\n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">        \n        ", "\n        \n        <h1>", "</h1>\n        <p>", "</p>\n        <p>Updated: ", "</p>\n        \n          <sl-card class=\"profile-box\">\n            <div class=\"profile-box-parent\">\n              <div class=\"row1\">\n                <div class=\"column1\">\n                  <p>Lists:</p>\n                </div>\n                <div class=\"column2\">\n                  <p>0</p>\n                </div>\n              </div>\n\n              <div class=\"row2\">\n                <div class=\"column3\">\n                  <p>Works:</p>\n                </div>\n                <div class=\"column4\">\n                  <p>3</p>\n                </div>\n              </div>\n\n              <div class=\"row3\">\n                <div class=\"column5\">\n                  <p>Followers:</p>\n                </div>\n                <div class=\"column6\">\n                  <p>50 k</p>\n                </div>\n              </div>\n            </div>\n\n            <sl-button variant=\"default\" size=\"medium\" pill>\n              <sl-icon name=\"person-square\"></sl-icon>\n            Following</sl-button>\n\n            <sl-button variant=\"default\" size=\"medium\" pill>\n              <sl-icon name=\"pencil-square\"></sl-icon>\n            Drafts</sl-button>\n\n            <sl-button variant=\"default\" size=\"medium\" pill>\n              <sl-icon name=\"gear\"></sl-icon>\n            Settings</sl-button>\n          </sl-card>\n\n          <sl-card class=\"bio-card\">  \n            ", "\n          </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-card class=\"card-header calign\">\n          <div slot=\"header\">        \n            <h2>Works (1)</h2>\n          </div> \n          \n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-card class=\"card-header\">\n          <div slot=\"header\">        \n            <h2>Reading Lists (0)</h2>\n            <sl-button class=\"create-btn\" size=\"medium\" pill>+ Create</sl-button>\n            </div> \n            \n              <div class=\"poem-grid\">\n                ", "\n              </div>\n          \n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-button @click=", ">Edit Profile</sl-button>\n\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14112,106 +14112,6 @@ class AdultsView {
 var _default = new AdultsView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"views/pages/library.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _App = _interopRequireDefault(require("../../App"));
-
-var _litHtml = require("lit-html");
-
-var _Router = require("../../Router");
-
-var _Auth = _interopRequireDefault(require("../../Auth"));
-
-var _Utils = _interopRequireDefault(require("../../Utils"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Library\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1>Library</h1>\n        <p>Library Timeline</p>\n        \n      </div>      \n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-class LibraryView {
-  init() {
-    document.title = 'Library';
-    this.render();
-
-    _Utils.default.pageIntroAnim();
-  }
-
-  render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
-    (0, _litHtml.render)(template, _App.default.rootEl);
-  }
-
-}
-
-var _default = new LibraryView();
-
-exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"views/pages/save.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _App = _interopRequireDefault(require("../../App"));
-
-var _litHtml = require("lit-html");
-
-var _Router = require("../../Router");
-
-var _Auth = _interopRequireDefault(require("../../Auth"));
-
-var _Utils = _interopRequireDefault(require("../../Utils"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Save\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1>Saved Reads</h1>\n        <p>Saved Literature</p>\n        \n      </div>      \n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-class SaveView {
-  init() {
-    document.title = 'Save';
-    this.render();
-
-    _Utils.default.pageIntroAnim();
-  }
-
-  render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
-    (0, _litHtml.render)(template, _App.default.rootEl);
-  }
-
-}
-
-var _default = new SaveView();
-
-exports.default = _default;
 },{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"PoemAPI.js":[function(require,module,exports) {
 "use strict";
 
@@ -14284,7 +14184,154 @@ class PoemAPI {
 var _default = new PoemAPI();
 
 exports.default = _default;
-},{"./App":"App.js","./Auth":"Auth.js","./Toast":"Toast.js"}],"views/pages/post.js":[function(require,module,exports) {
+},{"./App":"App.js","./Auth":"Auth.js","./Toast":"Toast.js"}],"views/pages/library.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+var _PoemAPI = _interopRequireDefault(require("./../../PoemAPI"));
+
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject4() {
+  const data = _taggedTemplateLiteral(["\n                  <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      name=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                    >\n                  </va-poem>\n                "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  const data = _taggedTemplateLiteral(["\n                ", "\n              "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  const data = _taggedTemplateLiteral(["\n                <sl-spinner></sl-spinner>\n                "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Library\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1 class=\"library-title\">Library</h1>\n\n        <div class=\"library-filter calign\">\n        <sl-button size=\"medium\" pill>Current Reads</sl-button>\n        <sl-button size=\"medium\" pill>Archived</sl-button>\n        <sl-button size=\"medium\" pill>Reading Lists</sl-button>\n        </div>\n\n        <div class=\"bottom\">\n            <div class=\"poems-grid\">\n              ", "\n            </div>\n          </div>\n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class LibraryView {
+  async init() {
+    document.title = 'Library';
+    this.poems = null;
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+
+    await this.getPoems();
+  }
+
+  async getPoems() {
+    try {
+      this.poems = await _PoemAPI.default.getPoems();
+      console.log(this.poems);
+      this.render();
+    } catch (err) {
+      _Toast.default.show(err, 'error');
+    }
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.poems == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), this.poems.map(poem => (0, _litHtml.html)(_templateObject4(), poem._id, poem.name, JSON.stringify(poem.user), poem.image))));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new LibraryView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"views/pages/save.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Save\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1>Saved Reads</h1>\n        <p>Saved Literature</p>\n        \n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class SaveView {
+  init() {
+    document.title = 'Save';
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new SaveView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"views/pages/post.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14451,7 +14498,7 @@ class BrowseView {
 
     _Utils.default.pageIntroAnim();
 
-    await this.getPoems(); //this.filterPoems('pages', '1-10')
+    await this.getPoems();
   }
 
   async filterPoems(field, match) {
@@ -16852,7 +16899,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51293" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59945" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

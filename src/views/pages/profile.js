@@ -41,12 +41,55 @@ class ProfileView {
         <p>${Auth.currentUser.email}</p>
         <p>Updated: ${moment(Auth.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a')}</p>
         
-        <sl-card>  
-          ${Auth.currentUser.bio ? html`
-            <h3 class="bio">Bio</h3>
-            <p>${Auth.currentUser.bio}</p>
-          ` : html``}
-        </sl-card>
+          <sl-card class="profile-box">
+            <div class="profile-box-parent">
+              <div class="row1">
+                <div class="column1">
+                  <p>Lists:</p>
+                </div>
+                <div class="column2">
+                  <p>0</p>
+                </div>
+              </div>
+
+              <div class="row2">
+                <div class="column3">
+                  <p>Works:</p>
+                </div>
+                <div class="column4">
+                  <p>3</p>
+                </div>
+              </div>
+
+              <div class="row3">
+                <div class="column5">
+                  <p>Followers:</p>
+                </div>
+                <div class="column6">
+                  <p>50 k</p>
+                </div>
+              </div>
+            </div>
+
+            <sl-button variant="default" size="medium" pill>
+              <sl-icon name="person-square"></sl-icon>
+            Following</sl-button>
+
+            <sl-button variant="default" size="medium" pill>
+              <sl-icon name="pencil-square"></sl-icon>
+            Drafts</sl-button>
+
+            <sl-button variant="default" size="medium" pill>
+              <sl-icon name="gear"></sl-icon>
+            Settings</sl-button>
+          </sl-card>
+
+          <sl-card class="bio-card">  
+            ${Auth.currentUser.bio ? html`
+              <h3 class="bio">Bio</h3>
+              <p>${Auth.currentUser.bio}</p>
+            ` : html``}
+          </sl-card>
 
         <br>
         <p></p>
@@ -55,7 +98,7 @@ class ProfileView {
         <p></p>
         <p></p>
 
-        <sl-card class="card-header">
+        <sl-card class="card-header calign">
           <div slot="header">        
             <h2>Works (1)</h2>
           </div> 

@@ -13,7 +13,6 @@ class BrowseView {
     this.render()    
     Utils.pageIntroAnim()
     await this.getPoems()
-    //this.filterPoems('pages', '1-10')
   }
 
   async filterPoems(field, match){
