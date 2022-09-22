@@ -13555,100 +13555,7 @@ var global = arguments[3];
 
 })));
 
-},{}],"views/pages/profile.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _App = _interopRequireDefault(require("./../../App"));
-
-var _litHtml = require("lit-html");
-
-var _Router = require("./../../Router");
-
-var _Auth = _interopRequireDefault(require("./../../Auth"));
-
-var _Utils = _interopRequireDefault(require("./../../Utils"));
-
-var _moment = _interopRequireDefault(require("moment"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject5() {
-  const data = _taggedTemplateLiteral([""]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  const data = _taggedTemplateLiteral(["\n          <h3>Bio</h3>\n          <p>", "</p>\n        "]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  const data = _taggedTemplateLiteral(["\n        <sl-avatar style=\"--size: 200px; margin-bottom: 1em;\"></sl-avatar>\n        "]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  const data = _taggedTemplateLiteral(["\n          <sl-avatar style=\"--size: 200px; margin-bottom: 1em;\" image=", "></sl-avatar>\n        "]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">        \n        ", "\n        <h2>", " ", "</h2>\n        <p>", "</p>\n        \n        <p>Updated: ", "</p>\n\n\n        ", "\n\n        <sl-button @click=", ">Edit Profile</sl-button>\n      </div>      \n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-class ProfileView {
-  init() {
-    console.log('ProfileView.init');
-    document.title = 'Profile';
-    this.render();
-
-    _Utils.default.pageIntroAnim();
-  }
-
-  render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject2(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject3()), _Auth.default.currentUser.firstName, _Auth.default.currentUser.lastName, _Auth.default.currentUser.email, (0, _moment.default)(_Auth.default.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a'), _Auth.default.currentUser.bio ? (0, _litHtml.html)(_templateObject4(), _Auth.default.currentUser.bio) : (0, _litHtml.html)(_templateObject5()), () => (0, _Router.gotoRoute)('/editProfile'));
-    (0, _litHtml.render)(template, _App.default.rootEl);
-  }
-
-}
-
-var _default = new ProfileView();
-
-exports.default = _default;
-},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","moment":"../node_modules/moment/moment.js"}],"UserAPI.js":[function(require,module,exports) {
+},{}],"UserAPI.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13732,12 +13639,182 @@ class UserAPI {
     return data;
   }
 
+  async readingListHandler(poemId) {
+    // validate
+    if (!poemId) return; // fetch the json data
+
+    const response = await fetch("".concat(_App.default.apiBase, "/user/profile"), {
+      // /profile was /addReadingList
+      method: "PUT",
+      headers: {
+        "Authorization": "Bearer ".concat(localStorage.accessToken),
+        "Content-Type": 'application/json'
+      },
+      body: JSON.stringify({
+        poemId: poemId
+      })
+    }); // if response not ok
+
+    if (!response.ok) {
+      // console log error
+      const err = await response.json();
+      if (err) console.log(err); // throw error (exit this function)      
+
+      throw new Error('Problem adding poem to reading list');
+    } // convert response payload into json - store as data
+
+
+    const data = await response.json(); // return data
+
+    return data;
+  }
+
 }
 
 var _default = new UserAPI();
 
 exports.default = _default;
-},{"./App":"App.js","./Auth":"Auth.js","./Toast":"Toast.js"}],"views/pages/editProfile.js":[function(require,module,exports) {
+},{"./App":"App.js","./Auth":"Auth.js","./Toast":"Toast.js"}],"views/pages/profile.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("./../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("./../../Router");
+
+var _Auth = _interopRequireDefault(require("./../../Auth"));
+
+var _Utils = _interopRequireDefault(require("./../../Utils"));
+
+var _moment = _interopRequireDefault(require("moment"));
+
+var _Toast = _interopRequireDefault(require("./../../Toast"));
+
+var _UserAPI = _interopRequireDefault(require("./../../UserAPI"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject8() {
+  const data = _taggedTemplateLiteral(["\n                    <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      name=\"", "\" \n                      description=\"", "\"\n                      views=\"", "\"\n                      status=\"", "\"\n                      pages=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                    >        \n                    </va-poem>\n                  "]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  const data = _taggedTemplateLiteral(["\n                  ", "\n                "]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  const data = _taggedTemplateLiteral(["\n                  <sl-spinner></sl-spinner>\n                "]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  const data = _taggedTemplateLiteral([""]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  const data = _taggedTemplateLiteral(["\n            <h3 class=\"bio\">Bio</h3>\n            <p>", "</p>\n          "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  const data = _taggedTemplateLiteral(["\n        <sl-avatar style=\"--size: 200px; margin-bottom: 1em;\"></sl-avatar>\n        "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  const data = _taggedTemplateLiteral(["\n          <sl-avatar style=\"--size: 200px; margin-bottom: 1em;\" image=", "></sl-avatar>\n        "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">        \n        ", "\n        \n        <h1>", "</h1>\n        <p>", "</p>\n        <p>Updated: ", "</p>\n        \n        <sl-card>  \n          ", "\n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-card class=\"card-header\">\n          <div slot=\"header\">        \n            <h2>Works (1)</h2>\n          </div> \n          \n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-card class=\"card-header\">\n          <div slot=\"header\">        \n            <h2>Reading Lists (0)</h2>\n            <sl-button class=\"create-btn\" size=\"medium\" pill>+ Create</sl-button>\n            </div> \n            \n              <div class=\"poem-grid\">\n                ", "\n              </div>\n          \n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-button @click=", ">Edit Profile</sl-button>\n\n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class ProfileView {
+  init() {
+    document.title = 'Profile';
+    this.readingList = null;
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+
+    this.getReadingList();
+  }
+
+  async getReadingList() {
+    try {
+      const currentUser = await _UserAPI.default.getUser(_Auth.default.currentUser._id);
+      this.readingList = currentUser.readingLists;
+      console.log(this.readingList);
+      this.render();
+    } catch (err) {
+      _Toast.default.show(err, 'error');
+    }
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject2(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject3()), _Auth.default.currentUser.userName, _Auth.default.currentUser.email, (0, _moment.default)(_Auth.default.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a'), _Auth.default.currentUser.bio ? (0, _litHtml.html)(_templateObject4(), _Auth.default.currentUser.bio) : (0, _litHtml.html)(_templateObject5()), this.readingList == null ? (0, _litHtml.html)(_templateObject6()) : (0, _litHtml.html)(_templateObject7(), this.readingList.map(poem => (0, _litHtml.html)(_templateObject8(), poem._id, poem.name, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image))), () => (0, _Router.gotoRoute)('/editProfile'));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new ProfileView();
+
+exports.default = _default;
+},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","moment":"../node_modules/moment/moment.js","./../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js"}],"views/pages/editProfile.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14314,8 +14391,18 @@ var _Toast = _interopRequireDefault(require("../../Toast"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject5() {
+  const data = _taggedTemplateLiteral(["\n                  <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      name=\"", "\" \n                      description=\"", "\"\n                      views=\"", "\"\n                      status=\"", "\"\n                      pages=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                    >\n                  </va-poem>\n                "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject4() {
-  const data = _taggedTemplateLiteral(["\n            <va-poem class=\"poem-card\"\n                name=\"", "\" \n                description=\"", "\"\n                views=\"", "\"\n                status=\"", "\"\n                pages=\"", "\"\n                user=\"", "\"\n                image=\"", "\"\n              >\n            </va-poem>\n          "]);
+  const data = _taggedTemplateLiteral(["\n                ", "\n              "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -14325,7 +14412,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  const data = _taggedTemplateLiteral(["\n          ", "\n        "]);
+  const data = _taggedTemplateLiteral(["\n                <sl-spinner></sl-spinner>\n                "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -14335,7 +14422,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  const data = _taggedTemplateLiteral(["\n          <sl-spinner></sl-spinner>\n          "]);
+  const data = _taggedTemplateLiteral(["\n                <h1 class=\"page-title\">", "</h1>\n              "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -14345,7 +14432,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Browse\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        \n      <div class=\"poems-grid\">\n        ", "\n      </div>\n        \n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Browse\" user=\"", "\"></va-app-header>\n\n      <div class=\"page-content\"> \n\n        <div class=\"outer\">\n          <div class=\"top\">\n            ", "\n              <slot></slot>\n              <div class=\"calign\">\n                <div class=\"searchContainer\">\n                  <i class=\"fa fa-search searchIcon\"></i>\n                  <input class=\"searchBox\" type=\"search\" name=\"search\">\n\n                  <div class=\"dropdown\">\n                    <button class=\"dropbtn\">\n                      <i class=\"gg-options\"></i>\n                    </button>\n  \n                      <div>\n                        <sl-card class=\"dropdown-content\">\n                          <div class=\"row-dropdown-length\">\n                            <a href=\"#\">Length</a>\n                            <ul class=\"length-list\">\n                              <li>\n                                <sl-button class=\"filter-btn\" size=\"small\">\n                                  <sl-icon name=\"square\"></sl-icon>\n                                </sl-button>\n                                Any</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"1-10\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                                1-10 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"10-30\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                                10-30 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"30-50\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                              30-50 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"50+\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button> \n                                50+ Chapters</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-updates\">\n                            <a href=\"#\">Updates</a>\n                            <ul class=\"updates-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\"> \n                                <sl-icon name=\"square\"></sl-icon> <!-- Need to figure this out in database -->\n                              </sl-button>  \n                              All</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Completed\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                              Completed</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Ongoing\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>   \n                              Ongoing</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-C\">\n                            <a href=\"#\">Content</a>\n                            <ul class=\"C-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              Anytime</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              Today</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              This Week</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              This Month</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>    \n                              This Year</li>\n                            </ul>\n\n                            <div class=\"apply-filters\">\n                              <sl-button size=\"small\" pill>Apply Filters</sl-button>\n                            </div>\n\n                            <div class=\"reset-filters\">\n                              <sl-button size=\"small\" pill @click=", ">Reset Filters</sl-button>\n                            </div>\n                          </div>\n                        </sl-card>\n                      </div>\n                  </div>\n                  <input type=\"submit\" value=\"Search\" class=\"searchButton\">          \n                </div>\n              </div>\n          </div>\n            \n          <div class=\"bottom\">\n            <div class=\"poems-grid\">\n              ", "\n            </div>\n          </div>\n        </div>\n        \n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14357,14 +14444,60 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 class BrowseView {
-  init() {
+  async init() {
     document.title = 'Browse';
     this.poems = null;
     this.render();
 
     _Utils.default.pageIntroAnim();
 
+    await this.getPoems(); //this.filterPoems('pages', '1-10')
+  }
+
+  async filterPoems(field, match) {
+    // validate
+    if (!field || !match) return; // get fresh copy of poems
+
+    this.poems = await _PoemAPI.default.getPoems();
+    let filteredPoems; // content
+
+    if (field == 'status') {
+      filteredPoems = this.poems.filter(poem => poem.status == match);
+    } // pages
+
+
+    if (field == 'pages') {
+      // get pageRangeStart
+      const pageRangeStart = match.split('-')[0];
+      const pageRangeEnd = match.split('-')[1];
+      filteredPoems = this.poems.filter(poem => poem.pages >= pageRangeStart && poem.pages <= pageRangeEnd);
+    } // render
+
+
+    this.poems = filteredPoems;
+    this.render();
+  }
+
+  clearFilterBtns() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => btn.removeAttribute("type"));
+  }
+
+  handleFilterBtn(e) {
+    // clear all filter Btns
+    this.clearFilterBtns(); // set Btn active state (type = primary)
+
+    e.target.setAttribute("type", "primary"); // extract field & match from btn
+
+    const field = e.target.getAttribute("data-field");
+    const match = e.target.getAttribute("data-match"); // filter the poems
+
+    this.filterPoems(field, match);
+  }
+
+  clearFilters() {
     this.getPoems();
+    this.clearFilterBtns();
   }
 
   async getPoems() {
@@ -14378,7 +14511,7 @@ class BrowseView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.poems == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), this.poems.map(poem => (0, _litHtml.html)(_templateObject4(), poem.name, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image))));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.title ? (0, _litHtml.html)(_templateObject2(), this.title) : "", this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.clearFilters.bind(this), this.poems == null ? (0, _litHtml.html)(_templateObject3()) : (0, _litHtml.html)(_templateObject4(), this.poems.map(poem => (0, _litHtml.html)(_templateObject5(), poem._id, poem.name, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image))));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -16406,18 +16539,8 @@ var _App = _interopRequireDefault(require("./../App"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject3() {
-  const data = _taggedTemplateLiteral(["\n        <a href=\"/adults\" @click=\"", "\">18+</a>\n        "]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject2() {
-  const data = _taggedTemplateLiteral(["\n          <h1 class=\"page-title\">", "</h1>\n        "]);
+  const data = _taggedTemplateLiteral(["\n        <a href=\"/adults\" @click=\"", "\">18+</a>\n        "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -16427,7 +16550,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--brand-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n\n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: #fff;\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n      }\n\n      /* active nav links */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------- */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">\n      <sl-icon-button class=\"hamburger-btn\" name=\"list\" @click=\"", "\" style=\"font-size: 1.5em;\"></sl-icon-button>       \n      \n      <div class=\"app-header-main\">\n        ", "\n        <slot></slot>\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/\" @click=\"", "\">BeeHive</a>   \n        <a href=\"/browse\" @click=\"", "\">Search</a> \n        <a href=\"/library\" @click=\"", "\">Library</a> \n        <a href=\"/post\" @click=\"", "\">Post</a> \n\n        ", "\n\n        <a href=\"/inbox\" @click=\"", "\">Messages</a>  \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar style=\"--size: 24px;\" image=", "></sl-avatar> ", "\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Edit Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n\n    <sl-drawer class=\"app-side-menu\" placement=\"left\">\n\n      <div class=\"app-side-menu-logo\" style=\"z-index: 1;\">\n        <a href=\"/\" @click=", ">\n          <img class=\"app-side-menu-logo\" src=\"/images/honey-garden-logo.png\">\n        </a>\n      </div>\n\n      <div class=\"app-side-menu-items\" style=\"z-index: 2; position: absolute;\">\n        <nav class=\"app-side-menu-items\">\n          <a href=\"/save\" @click=\"", "\">Saved Reads</a>\n          <a href=\"/support\" @click=\"", "\">Support</a>\n        </nav>  \n      </div>\n\n    </sl-drawer>\n    "]);
+  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--brand-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: #fff;\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .app-side-menu-logo-1 {\n        margin-top: 0.05em;\n        height: 45px;\n        margin-right: 0.5em;\n      }\n\n      /* PAGE TITLES --------------------------------------------------------------------------------------------- */\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n        }\n\n      .outer {\n        display: grid;\n        grid-template: 1fr / 1fr;\n        place-items: center;\n        }\n\n      .outer > * {\n        grid-column: 1 / 1;\n        grid-row: 1 /1;\n      }\n\n      .outer .bottom {\n        z-index: 2;\n      }\n\n      .outer .top {\n        z-index: 1;\n      }\n\n      /* active nav links --------------------------------------------------------------------------------------------- */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------------------------------------------------------------------------------ */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">\n      <sl-icon-button class=\"hamburger-btn\" name=\"list\" @click=\"", "\" style=\"font-size: 1.5em;\"></sl-icon-button>       \n      \n      <div class=\"app-header-main\">\n        <div class=\"app-side-menu-logo-1\" style=\"z-index: 1;\">\n          <a href=\"/\" @click=", ">\n            <img class=\"app-side-menu-logo-1\" src=\"/images/honey-garden-logo.png\">\n          </a>\n        </div>\n\n        <div class=\"app-top-nav\"> \n          <a href=\"/\" @click=\"", "\">BeeHive</a>  \n          <sl-icon name=\"search\"></sl-icon>\n          <a href=\"/browse\" @click=\"", "\">Search</a>\n        </div> \n\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/library\" @click=\"", "\">Library</a> \n        <a href=\"/post\" @click=\"", "\">Post</a> \n\n        ", "\n\n        <a href=\"/inbox\" @click=\"", "\">Messages</a>  \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar style=\"--size: 24px;\" image=", "></sl-avatar> ", "\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Edit Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n\n    <sl-drawer class=\"app-side-menu\" placement=\"left\">\n\n      <div class=\"app-side-menu-logo\" style=\"z-index: 1;\">\n        <a href=\"/\" @click=", ">\n          <img class=\"app-side-menu-logo\" src=\"/images/honey-garden-logo.png\">\n        </a>\n      </div>\n\n      <div class=\"app-side-menu-items\" style=\"z-index: 2; position: absolute;\">\n        <nav class=\"app-side-menu-items\">\n          <a href=\"/save\" @click=\"", "\">Saved Reads</a>\n          <a href=\"/support\" @click=\"", "\">Support</a>\n        </nav>  \n      </div>\n\n    </sl-drawer>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -16489,7 +16612,7 @@ customElements.define('va-app-header', class AppHeader extends _litElement.LitEl
   }
 
   render() {
-    return (0, _litElement.html)(_templateObject(), this.hamburgerClick, this.title ? (0, _litElement.html)(_templateObject2(), this.title) : "", _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, this.user.accessLevel == 2 ? (0, _litElement.html)(_templateObject3(), _Router.anchorRoute) : '', _Router.anchorRoute, e => e.preventDefault(), this.user && this.user.avatar ? "".concat(_App.default.apiBase, "/images/").concat(this.user.avatar) : '', this.user && this.user.firstName, () => (0, _Router.gotoRoute)('/profile'), () => (0, _Router.gotoRoute)('/editProfile'), () => _Auth.default.signOut(), _Router.anchorRoute, this.menuClick, this.menuClick);
+    return (0, _litElement.html)(_templateObject(), this.hamburgerClick, _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, this.user.accessLevel == 2 ? (0, _litElement.html)(_templateObject2(), _Router.anchorRoute) : '', _Router.anchorRoute, e => e.preventDefault(), this.user && this.user.avatar ? "".concat(_App.default.apiBase, "/images/").concat(this.user.avatar) : '', this.user && this.user.firstName, () => (0, _Router.gotoRoute)('/profile'), () => (0, _Router.gotoRoute)('/editProfile'), () => _Auth.default.signOut(), _Router.anchorRoute, this.menuClick, this.menuClick);
   }
 
 });
@@ -16506,10 +16629,14 @@ var _Auth = _interopRequireDefault(require("./../Auth"));
 
 var _App = _interopRequireDefault(require("./../App"));
 
+var _UserAPI = _interopRequireDefault(require("./../UserAPI"));
+
+var _Toast = _interopRequireDefault(require("./../Toast"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  const data = _taggedTemplateLiteral(["\n    <style>\n\n    </style> \n    <sl-card>\n        <img slot=\"image\" src=\"", "/images/", "\"/>\n        <h2>", "</h2>\n            <h3>\n                <sl-icon-button name=\"eye\" label=\"Views\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>\n            <h3>\n                <sl-icon-button name=\"pencil-square\" label=\"Status\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>\n            <h3>\n                <sl-icon-button name=\"book\" label=\"Pages\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>\n            <sl-icon-button @click=", " name=\"plus-circle\" label=\"Save\" style=\"font-size: 23px\"></sl-icon-button>\n            <sl-button @click=", " size=\"medium\" pill>Start Reading</sl-button>\n    </sl-card>\n    "]);
+  const data = _taggedTemplateLiteral(["\n    <style>\n\n    </style> \n    <sl-card>\n        <img slot=\"image\" src=\"", "/images/", "\"/>\n        <h2>", "</h2>\n            <h3>\n                <sl-icon-button name=\"eye\" label=\"Views\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>\n            <h3>\n                <sl-icon-button name=\"pencil-square\" label=\"Status\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>\n            <h3>\n                <sl-icon-button name=\"book\" label=\"Pages\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>\n            <!-- need to @click to the pop-up | rn it just doesn't pop up cause it adds immediatley -->\n            <sl-icon-button @click=", " name=\"plus-circle\" label=\"Save\" style=\"font-size: 23px\"></sl-icon-button>\n            <sl-button @click=", " size=\"medium\" pill>Start Reading</sl-button>\n    </sl-card>\n    "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -16519,7 +16646,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n   <style>\n    .wrap {\n        display: flex;\n    }\n    .image {\n      width: 50%;\n    }\n    .image img {\n      width: 100%;\n    }\n    .content {\n        padding-left: 1em;\n    }\n   </style>\n   <div class=\"wrap\">\n        <div class=\"content\">\n            <h2>My Library (Private)</h2>\n                <p></p>\n                <p></p>\n            <h2>Modern Takes</h2>\n                <p></p>\n                <p></p>\n            <sl-button size=\"medium\" pill>Add to new reading list...</sl-button>\n            <div class=\"saveBtn\" style=\"color: #fff4e1;\"> <!-- Get colour working -->\n                <sl-icon-button name=\"plus-circle-fill\" label=\"Add\" style=\"font-size: 23px\"></sl-icon-button>\n            </div>\n        </div>\n   </div>\n   "]);
+  const data = _taggedTemplateLiteral(["\n   <style>\n    .wrap {\n        display: flex;\n    }\n    .image {\n      width: 50%;\n    }\n    .image img {\n      width: 100%;\n    }\n    .content {\n        padding-left: 1em;\n    }\n   </style>\n   <div class=\"wrap\">\n        <div class=\"content\">\n          <sl-button size=\"medium\" pill @click=", ">\n            <h3>My Library (Private)</h3> <!-- this is the save to reading list (add to favs) btn STYLE -->\n          </sl-button>\n                <p></p>\n                <p></p>\n          <sl-button size=\"medium\" pill>\n            <h3>Modern Takes</h3>\n          </sl-button>\n                <p></p>\n                <p></p>\n            <sl-button size=\"medium\" pill>Add to new reading list...</sl-button>\n            <div class=\"saveBtn\" style=\"color: #fff4e1;\"> <!-- Get colour working -->\n                <sl-icon-button name=\"plus-circle-fill\" label=\"Add\" style=\"font-size: 23px\"></sl-icon-button>\n            </div>\n        </div>\n   </div>\n   "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -16537,6 +16664,9 @@ customElements.define('va-poem', class Poem extends _litElement.LitElement {
 
   static get properties() {
     return {
+      id: {
+        type: String
+      },
       name: {
         type: String
       },
@@ -16571,7 +16701,7 @@ customElements.define('va-poem', class Poem extends _litElement.LitElement {
 
     dialogEl.className = 'poem-dialog'; // sl-dialog content
 
-    const dialogContent = (0, _litElement.html)(_templateObject());
+    const dialogContent = (0, _litElement.html)(_templateObject(), this.readingListHandler.bind(this));
     (0, _litHtml.render)(dialogContent, dialogEl); // append to document.body
 
     document.body.append(dialogEl); // show sl-dialog
@@ -16581,18 +16711,29 @@ customElements.define('va-poem', class Poem extends _litElement.LitElement {
     dialogEl.addEventListener('sl-after-hide', () => {
       dialogEl.remove();
     });
-  }
+  } // was deleted and updated with below code but they are two diff features - link to actual poem so user can read
+
 
   startReadingHandler() {
     alert("Start Reading!");
   }
 
+  async readingListHandler() {
+    try {
+      _UserAPI.default.readingListHandler(this.id);
+
+      _Toast.default.show('Poem added to reading list');
+    } catch (err) {
+      _Toast.default.show(err, 'error');
+    }
+  }
+
   render() {
-    return (0, _litElement.html)(_templateObject2(), _App.default.apiBase, this.image, this.name, this.views, this.status, this.pages, this.saveLibraryHandler.bind(this), this.startReadingHandler.bind(this));
+    return (0, _litElement.html)(_templateObject2(), _App.default.apiBase, this.image, this.name, this.views, this.status, this.pages, this.readingListHandler.bind(this), this.startReadingHandler.bind(this));
   }
 
 });
-},{"@polymer/lit-element":"../node_modules/@polymer/lit-element/lit-element.js","lit-html":"../node_modules/lit-html/lit-html.js","./../Router":"Router.js","./../Auth":"Auth.js","./../App":"App.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"@polymer/lit-element":"../node_modules/@polymer/lit-element/lit-element.js","lit-html":"../node_modules/lit-html/lit-html.js","./../Router":"Router.js","./../Auth":"Auth.js","./../App":"App.js","./../UserAPI":"UserAPI.js","./../Toast":"Toast.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -16711,7 +16852,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53361" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51293" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

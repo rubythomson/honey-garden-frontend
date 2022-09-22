@@ -72,7 +72,6 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         align-items: center;
       }
       
-
       .app-header-main {
         flex-grow: 1;
         display: flex;
@@ -131,19 +130,45 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         top: .5em;
       }
 
+      .app-side-menu-logo-1 {
+        margin-top: 0.05em;
+        height: 45px;
+        margin-right: 0.5em;
+      }
+
+      /* PAGE TITLES --------------------------------------------------------------------------------------------- */
       .page-title {
         color: var(--app-header-txt-color);
         margin-right: 0.5em;
         font-size: var(--app-header-title-font-size);
+        }
+
+      .outer {
+        display: grid;
+        grid-template: 1fr / 1fr;
+        place-items: center;
+        }
+
+      .outer > * {
+        grid-column: 1 / 1;
+        grid-row: 1 /1;
       }
 
-      /* active nav links */
+      .outer .bottom {
+        z-index: 2;
+      }
+
+      .outer .top {
+        z-index: 1;
+      }
+
+      /* active nav links --------------------------------------------------------------------------------------------- */
       .app-top-nav a.active,
       .app-side-menu-items a.active {
         font-weight: bold;
       }
 
-      /* RESPONSIVE - MOBILE ------------------- */
+      /* RESPONSIVE - MOBILE ------------------------------------------------------------------------------------------ */
       @media all and (max-width: 768px){       
         
         .app-top-nav {
@@ -157,15 +182,21 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       <sl-icon-button class="hamburger-btn" name="list" @click="${this.hamburgerClick}" style="font-size: 1.5em;"></sl-icon-button>       
       
       <div class="app-header-main">
-        ${this.title ? html`
-          <h1 class="page-title">${this.title}</h1>
-        `:``}
-        <slot></slot>
+        <div class="app-side-menu-logo-1" style="z-index: 1;">
+          <a href="/" @click=${anchorRoute}>
+            <img class="app-side-menu-logo-1" src="/images/honey-garden-logo.png">
+          </a>
+        </div>
+
+        <div class="app-top-nav"> 
+          <a href="/" @click="${anchorRoute}">BeeHive</a>  
+          <sl-icon name="search"></sl-icon>
+          <a href="/browse" @click="${anchorRoute}">Search</a>
+        </div> 
+
       </div>
 
       <nav class="app-top-nav">
-        <a href="/" @click="${anchorRoute}">BeeHive</a>   
-        <a href="/browse" @click="${anchorRoute}">Search</a> 
         <a href="/library" @click="${anchorRoute}">Library</a> 
         <a href="/post" @click="${anchorRoute}">Post</a> 
 
