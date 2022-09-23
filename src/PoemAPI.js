@@ -6,7 +6,7 @@ class PoemAPI {
 
   async newPost(formData){
     // send fetch request
-    const response = await fetch(`${App.apiBase}/post`, {
+    const response = await fetch(`${App.apiBase}/poem`, {
       method: 'POST',
       headers: {"Authorization": `Bearer ${localStorage.accessToken}`},
       body: formData

@@ -368,24 +368,16 @@ a {
 
 .profile-box {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  width: 20%;
   margin: 30px;
   text-align: center;
 }
 
 .profile-box-parent {
-  content: "";
-  display: flex;
-  clear: both;
-}
-
-.row1 .row2 .row3 {
-  display: inline-block;
-  margin-left: 30px; //margin not working
-}
-
-.column1 .column2 .column3 .column4 .column5 .column6 {
-  margin: 30px; //margin not working
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 1.5em;
 }
 
 // RESPONSIVE - MOBILE -----------------------------------------------------------------------------------

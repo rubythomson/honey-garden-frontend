@@ -45,7 +45,7 @@ class LibraryView {
                 ${this.poems.map(poem => html`
                   <va-poem class="poem-card"
                       id="${poem._id}"
-                      name="${poem.name}"
+                      title="${poem.title}"
                       user="${JSON.stringify(poem.user)}"
                       image="${poem.image}"
                     >

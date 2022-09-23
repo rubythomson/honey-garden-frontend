@@ -43,45 +43,30 @@ class ProfileView {
         
           <sl-card class="profile-box">
             <div class="profile-box-parent">
-              <div class="row1">
                 <div class="column1">
-                  <p>Lists:</p>
+                  <p>Lists: 0</p>
                 </div>
+
                 <div class="column2">
-                  <p>0</p>
+                  <p>Works: 3</p>
                 </div>
-              </div>
 
-              <div class="row2">
                 <div class="column3">
-                  <p>Works:</p>
+                  <p>Followers: 50k</p>
                 </div>
-                <div class="column4">
-                  <p>3</p>
-                </div>
-              </div>
 
-              <div class="row3">
-                <div class="column5">
-                  <p>Followers:</p>
-                </div>
-                <div class="column6">
-                  <p>50 k</p>
-                </div>
-              </div>
+                <sl-button variant="default" size="medium" pill class="column1">
+                  <sl-icon name="person-square"></sl-icon>
+                Following</sl-button>
+    
+                <sl-button variant="default" size="medium" pill class="column2">
+                  <sl-icon name="pencil-square"></sl-icon>
+                Drafts</sl-button>
+    
+                <sl-button variant="default" size="medium" pill class="column3">
+                  <sl-icon name="gear"></sl-icon>
+                Settings</sl-button>
             </div>
-
-            <sl-button variant="default" size="medium" pill>
-              <sl-icon name="person-square"></sl-icon>
-            Following</sl-button>
-
-            <sl-button variant="default" size="medium" pill>
-              <sl-icon name="pencil-square"></sl-icon>
-            Drafts</sl-button>
-
-            <sl-button variant="default" size="medium" pill>
-              <sl-icon name="gear"></sl-icon>
-            Settings</sl-button>
           </sl-card>
 
           <sl-card class="bio-card">  
@@ -125,7 +110,7 @@ class ProfileView {
                   ${this.readingList.map(poem => html`
                     <va-poem class="poem-card"
                       id="${poem._id}"
-                      name="${poem.name}" 
+                      title="${poem.title}" 
                       description="${poem.description}"
                       views="${poem.views}"
                       status="${poem.status}"

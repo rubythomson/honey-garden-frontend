@@ -91,6 +91,7 @@ class BrowseView {
       <va-app-header title="Browse" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
 
       <div class="page-content"> 
+        <h1 class="beehive-title">Search</h1>
 
         <div class="outer">
           <div class="top">
@@ -226,13 +227,15 @@ class BrowseView {
                 ${this.poems.map(poem => html`
                   <va-poem class="poem-card"
                       id="${poem._id}"
-                      name="${poem.name}" 
+                      title="${poem.title}" 
                       description="${poem.description}"
                       views="${poem.views}"
                       status="${poem.status}"
                       pages="${poem.pages}"
                       user="${JSON.stringify(poem.user)}"
                       image="${poem.image}"
+                      showStartReadingHandler="${true}" 
+                      showReadingListHandler="${true}"
                     >
                   </va-poem>
                 `)}

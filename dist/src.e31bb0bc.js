@@ -13701,7 +13701,7 @@ var _UserAPI = _interopRequireDefault(require("./../../UserAPI"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject8() {
-  const data = _taggedTemplateLiteral(["\n                    <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      name=\"", "\" \n                      description=\"", "\"\n                      views=\"", "\"\n                      status=\"", "\"\n                      pages=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                    >        \n                    </va-poem>\n                  "]);
+  const data = _taggedTemplateLiteral(["\n                    <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      title=\"", "\" \n                      description=\"", "\"\n                      views=\"", "\"\n                      status=\"", "\"\n                      pages=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                    >        \n                    </va-poem>\n                  "]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -13771,7 +13771,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">        \n        ", "\n        \n        <h1>", "</h1>\n        <p>", "</p>\n        <p>Updated: ", "</p>\n        \n          <sl-card class=\"profile-box\">\n            <div class=\"profile-box-parent\">\n              <div class=\"row1\">\n                <div class=\"column1\">\n                  <p>Lists:</p>\n                </div>\n                <div class=\"column2\">\n                  <p>0</p>\n                </div>\n              </div>\n\n              <div class=\"row2\">\n                <div class=\"column3\">\n                  <p>Works:</p>\n                </div>\n                <div class=\"column4\">\n                  <p>3</p>\n                </div>\n              </div>\n\n              <div class=\"row3\">\n                <div class=\"column5\">\n                  <p>Followers:</p>\n                </div>\n                <div class=\"column6\">\n                  <p>50 k</p>\n                </div>\n              </div>\n            </div>\n\n            <sl-button variant=\"default\" size=\"medium\" pill>\n              <sl-icon name=\"person-square\"></sl-icon>\n            Following</sl-button>\n\n            <sl-button variant=\"default\" size=\"medium\" pill>\n              <sl-icon name=\"pencil-square\"></sl-icon>\n            Drafts</sl-button>\n\n            <sl-button variant=\"default\" size=\"medium\" pill>\n              <sl-icon name=\"gear\"></sl-icon>\n            Settings</sl-button>\n          </sl-card>\n\n          <sl-card class=\"bio-card\">  \n            ", "\n          </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-card class=\"card-header calign\">\n          <div slot=\"header\">        \n            <h2>Works (1)</h2>\n          </div> \n          \n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-card class=\"card-header\">\n          <div slot=\"header\">        \n            <h2>Reading Lists (0)</h2>\n            <sl-button class=\"create-btn\" size=\"medium\" pill>+ Create</sl-button>\n            </div> \n            \n              <div class=\"poem-grid\">\n                ", "\n              </div>\n          \n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-button @click=", ">Edit Profile</sl-button>\n\n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">        \n        ", "\n        \n        <h1>", "</h1>\n        <p>", "</p>\n        <p>Updated: ", "</p>\n        \n          <sl-card class=\"profile-box\">\n            <div class=\"profile-box-parent\">\n                <div class=\"column1\">\n                  <p>Lists: 0</p>\n                </div>\n\n                <div class=\"column2\">\n                  <p>Works: 3</p>\n                </div>\n\n                <div class=\"column3\">\n                  <p>Followers: 50k</p>\n                </div>\n\n                <sl-button variant=\"default\" size=\"medium\" pill class=\"column1\">\n                  <sl-icon name=\"person-square\"></sl-icon>\n                Following</sl-button>\n    \n                <sl-button variant=\"default\" size=\"medium\" pill class=\"column2\">\n                  <sl-icon name=\"pencil-square\"></sl-icon>\n                Drafts</sl-button>\n    \n                <sl-button variant=\"default\" size=\"medium\" pill class=\"column3\">\n                  <sl-icon name=\"gear\"></sl-icon>\n                Settings</sl-button>\n            </div>\n          </sl-card>\n\n          <sl-card class=\"bio-card\">  \n            ", "\n          </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-card class=\"card-header calign\">\n          <div slot=\"header\">        \n            <h2>Works (1)</h2>\n          </div> \n          \n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-card class=\"card-header\">\n          <div slot=\"header\">        \n            <h2>Reading Lists (0)</h2>\n            <sl-button class=\"create-btn\" size=\"medium\" pill>+ Create</sl-button>\n            </div> \n            \n              <div class=\"poem-grid\">\n                ", "\n              </div>\n          \n        </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-button @click=", ">Edit Profile</sl-button>\n\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -13805,7 +13805,7 @@ class ProfileView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject2(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject3()), _Auth.default.currentUser.userName, _Auth.default.currentUser.email, (0, _moment.default)(_Auth.default.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a'), _Auth.default.currentUser.bio ? (0, _litHtml.html)(_templateObject4(), _Auth.default.currentUser.bio) : (0, _litHtml.html)(_templateObject5()), this.readingList == null ? (0, _litHtml.html)(_templateObject6()) : (0, _litHtml.html)(_templateObject7(), this.readingList.map(poem => (0, _litHtml.html)(_templateObject8(), poem._id, poem.name, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image))), () => (0, _Router.gotoRoute)('/editProfile'));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject2(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject3()), _Auth.default.currentUser.userName, _Auth.default.currentUser.email, (0, _moment.default)(_Auth.default.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a'), _Auth.default.currentUser.bio ? (0, _litHtml.html)(_templateObject4(), _Auth.default.currentUser.bio) : (0, _litHtml.html)(_templateObject5()), this.readingList == null ? (0, _litHtml.html)(_templateObject6()) : (0, _litHtml.html)(_templateObject7(), this.readingList.map(poem => (0, _litHtml.html)(_templateObject8(), poem._id, poem.title, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image))), () => (0, _Router.gotoRoute)('/editProfile'));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -13944,57 +13944,7 @@ class EditProfileView {
 var _default = new EditProfileView();
 
 exports.default = _default;
-},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","./../../UserAPI":"UserAPI.js","../../Toast":"Toast.js","moment":"../node_modules/moment/moment.js"}],"views/pages/test.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _App = _interopRequireDefault(require("../../App"));
-
-var _litHtml = require("lit-html");
-
-var _Router = require("../../Router");
-
-var _Auth = _interopRequireDefault(require("../../Auth"));
-
-var _Utils = _interopRequireDefault(require("../../Utils"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Test\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1>Test View</h1>\n        <p>This is a test page...</p>\n\n        \n        <h3>Button example:</h3>\n        <sl-button class=\"anim-in\" @click=", ">View Profile</sl-button>\n        <p>&nbsp;</p>\n        <h3>Link example</h3>\n        <a href=\"/profile\" @click=", ">View Profile</a>\n      \n        <div class=\"home-img-container\">\n          <img class=\"home-img\" src=\"/images/home-page-img.png\">\n        </div>\n      \n\n      </div>      \n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-class TestView {
-  init() {
-    document.title = 'Test';
-    this.render();
-
-    _Utils.default.pageIntroAnim();
-  }
-
-  render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), () => (0, _Router.gotoRoute)('/profile'), _Router.anchorRoute);
-    (0, _litHtml.render)(template, _App.default.rootEl);
-  }
-
-}
-
-var _default = new TestView();
-
-exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"views/pages/guide.js":[function(require,module,exports) {
+},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","./../../UserAPI":"UserAPI.js","../../Toast":"Toast.js","moment":"../node_modules/moment/moment.js"}],"views/pages/guide.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14131,7 +14081,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 class PoemAPI {
   async newPost(formData) {
     // send fetch request
-    const response = await fetch("".concat(_App.default.apiBase, "/post"), {
+    const response = await fetch("".concat(_App.default.apiBase, "/poem"), {
       method: 'POST',
       headers: {
         "Authorization": "Bearer ".concat(localStorage.accessToken)
@@ -14209,7 +14159,7 @@ var _Toast = _interopRequireDefault(require("../../Toast"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject4() {
-  const data = _taggedTemplateLiteral(["\n                  <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      name=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                    >\n                  </va-poem>\n                "]);
+  const data = _taggedTemplateLiteral(["\n                  <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      title=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                    >\n                  </va-poem>\n                "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -14272,7 +14222,7 @@ class LibraryView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.poems == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), this.poems.map(poem => (0, _litHtml.html)(_templateObject4(), poem._id, poem.name, JSON.stringify(poem.user), poem.image))));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.poems == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), this.poems.map(poem => (0, _litHtml.html)(_templateObject4(), poem._id, poem.title, JSON.stringify(poem.user), poem.image))));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -14439,7 +14389,7 @@ var _Toast = _interopRequireDefault(require("../../Toast"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject5() {
-  const data = _taggedTemplateLiteral(["\n                  <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      name=\"", "\" \n                      description=\"", "\"\n                      views=\"", "\"\n                      status=\"", "\"\n                      pages=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                    >\n                  </va-poem>\n                "]);
+  const data = _taggedTemplateLiteral(["\n                  <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      title=\"", "\" \n                      description=\"", "\"\n                      views=\"", "\"\n                      status=\"", "\"\n                      pages=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                      showStartReadingHandler=\"", "\" \n                      showReadingListHandler=\"", "\"\n                    >\n                  </va-poem>\n                "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -14479,7 +14429,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Browse\" user=\"", "\"></va-app-header>\n\n      <div class=\"page-content\"> \n\n        <div class=\"outer\">\n          <div class=\"top\">\n            ", "\n              <slot></slot>\n              <div class=\"calign\">\n                <div class=\"searchContainer\">\n                  <i class=\"fa fa-search searchIcon\"></i>\n                  <input class=\"searchBox\" type=\"search\" name=\"search\">\n\n                  <div class=\"dropdown\">\n                    <button class=\"dropbtn\">\n                      <i class=\"gg-options\"></i>\n                    </button>\n  \n                      <div id=\"search-dropdown\">\n                        <sl-card class=\"dropdown-content\">\n                          <div class=\"row-dropdown-length\">\n                            <a href=\"#\">Length</a>\n                            <ul class=\"length-list\">\n                              <li>\n                                <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"Any\" @click=", ">\n                                  <sl-icon name=\"square\"></sl-icon>\n                                </sl-button>\n                                Any</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"1-10\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                                1-10 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"10-30\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                                10-30 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"30-50\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                              30-50 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"50+\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button> \n                                50+ Chapters</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-updates\">\n                            <a href=\"#\">Updates</a>\n                            <ul class=\"updates-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\"> \n                                <sl-icon name=\"square\"></sl-icon> <!-- Need to figure this out in database -->\n                              </sl-button>  \n                              All</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Completed\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                              Completed</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Ongoing\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>   \n                              Ongoing</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-C\">\n                            <a href=\"#\">Content</a>\n                            <ul class=\"C-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              Anytime</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              Today</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              This Week</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              This Month</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>    \n                              This Year</li>\n                            </ul>\n\n                            <div class=\"apply-filters\">\n                              <sl-button size=\"small\" pill>Apply Filters</sl-button>\n                            </div>\n\n                            <div class=\"reset-filters\">\n                              <sl-button size=\"small\" pill @click=", ">Reset Filters</sl-button>\n                            </div>\n                          </div>\n                        </sl-card>\n                      </div>\n                  </div>\n                  <input type=\"submit\" value=\"Search\" class=\"searchButton\">          \n                </div>\n              </div>\n          </div>\n            \n          <div class=\"bottom\">\n            <div class=\"poems-grid\">\n              ", "\n            </div>\n          </div>\n        </div>\n        \n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Browse\" user=\"", "\"></va-app-header>\n\n      <div class=\"page-content\"> \n        <h1 class=\"beehive-title\">Search</h1>\n\n        <div class=\"outer\">\n          <div class=\"top\">\n            ", "\n              <slot></slot>\n              <div class=\"calign\">\n                <div class=\"searchContainer\">\n                  <i class=\"fa fa-search searchIcon\"></i>\n                  <input class=\"searchBox\" type=\"search\" name=\"search\">\n\n                  <div class=\"dropdown\">\n                    <button class=\"dropbtn\">\n                      <i class=\"gg-options\"></i>\n                    </button>\n  \n                      <div id=\"search-dropdown\">\n                        <sl-card class=\"dropdown-content\">\n                          <div class=\"row-dropdown-length\">\n                            <a href=\"#\">Length</a>\n                            <ul class=\"length-list\">\n                              <li>\n                                <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"Any\" @click=", ">\n                                  <sl-icon name=\"square\"></sl-icon>\n                                </sl-button>\n                                Any</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"1-10\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                                1-10 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"10-30\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                                10-30 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"30-50\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                              30-50 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"50+\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button> \n                                50+ Chapters</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-updates\">\n                            <a href=\"#\">Updates</a>\n                            <ul class=\"updates-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\"> \n                                <sl-icon name=\"square\"></sl-icon> <!-- Need to figure this out in database -->\n                              </sl-button>  \n                              All</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Completed\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                              Completed</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Ongoing\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>   \n                              Ongoing</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-C\">\n                            <a href=\"#\">Content</a>\n                            <ul class=\"C-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              Anytime</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              Today</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              This Week</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              This Month</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>    \n                              This Year</li>\n                            </ul>\n\n                            <div class=\"apply-filters\">\n                              <sl-button size=\"small\" pill>Apply Filters</sl-button>\n                            </div>\n\n                            <div class=\"reset-filters\">\n                              <sl-button size=\"small\" pill @click=", ">Reset Filters</sl-button>\n                            </div>\n                          </div>\n                        </sl-card>\n                      </div>\n                  </div>\n                  <input type=\"submit\" value=\"Search\" class=\"searchButton\">          \n                </div>\n              </div>\n          </div>\n            \n          <div class=\"bottom\">\n            <div class=\"poems-grid\">\n              ", "\n            </div>\n          </div>\n        </div>\n        \n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14565,7 +14515,7 @@ class BrowseView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.title ? (0, _litHtml.html)(_templateObject2(), this.title) : "", this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.clearFilters.bind(this), this.poems == null ? (0, _litHtml.html)(_templateObject3()) : (0, _litHtml.html)(_templateObject4(), this.poems.map(poem => (0, _litHtml.html)(_templateObject5(), poem._id, poem.name, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image))));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.title ? (0, _litHtml.html)(_templateObject2(), this.title) : "", this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.clearFilters.bind(this), this.poems == null ? (0, _litHtml.html)(_templateObject3()) : (0, _litHtml.html)(_templateObject4(), this.poems.map(poem => (0, _litHtml.html)(_templateObject5(), poem._id, poem.title, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image, true, true))));
     (0, _litHtml.render)(template, _App.default.rootEl);
     const popup = document.getElementById("search-dropdown").querySelector(".dropdown-content");
     const {
@@ -14711,8 +14661,6 @@ var _profile = _interopRequireDefault(require("./views/pages/profile"));
 
 var _editProfile = _interopRequireDefault(require("./views/pages/editProfile"));
 
-var _test = _interopRequireDefault(require("./views/pages/test"));
-
 var _guide = _interopRequireDefault(require("./views/pages/guide"));
 
 var _adults = _interopRequireDefault(require("./views/pages/adults"));
@@ -14735,7 +14683,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // define routes
 const routes = {
   '/': _home.default,
-  '/test': _test.default,
   '/guide': _guide.default,
   '/adults': _adults.default,
   '/library': _library.default,
@@ -14802,7 +14749,7 @@ function anchorRoute(e) {
   const pathname = e.target.closest('a').pathname;
   AppRouter.gotoRoute(pathname);
 }
-},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/test":"views/pages/test.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/save":"views/pages/save.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js"}],"App.js":[function(require,module,exports) {
+},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/save":"views/pages/save.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16704,8 +16651,58 @@ var _Toast = _interopRequireDefault(require("./../Toast"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject7() {
+  const data = _taggedTemplateLiteral(["\n            <sl-button @click=", " size=\"medium\" pill>Start Reading</sl-button>"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  const data = _taggedTemplateLiteral(["\n            <sl-icon-button @click=", " name=\"plus-circle\" label=\"Save\" style=\"font-size: 23px\"></sl-icon-button>"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  const data = _taggedTemplateLiteral(["<h3>\n                <sl-icon-button name=\"book\" label=\"Pages\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  const data = _taggedTemplateLiteral(["<h3>\n                <sl-icon-button name=\"pencil-square\" label=\"Status\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  const data = _taggedTemplateLiteral(["<h3>\n                <sl-icon-button name=\"eye\" label=\"Views\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  const data = _taggedTemplateLiteral(["\n    <style>\n\n    </style> \n    <sl-card>\n        <img slot=\"image\" src=\"", "/images/", "\"/>\n        <h2>", "</h2>\n            <h3>\n                <sl-icon-button name=\"eye\" label=\"Views\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>\n            <h3>\n                <sl-icon-button name=\"pencil-square\" label=\"Status\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>\n            <h3>\n                <sl-icon-button name=\"book\" label=\"Pages\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>\n            <!-- need to @click to the pop-up | rn it just doesn't pop up cause it adds immediatley -->\n            <sl-icon-button @click=", " name=\"plus-circle\" label=\"Save\" style=\"font-size: 23px\"></sl-icon-button>\n            <sl-button @click=", " size=\"medium\" pill>Start Reading</sl-button>\n    </sl-card>\n    "]);
+  const data = _taggedTemplateLiteral(["\n    <style>\n\n    </style> \n    <sl-card>\n        <img slot=\"image\" src=\"", "/images/", "\"/>\n        <h2>", "</h2>\n            ", "\n            ", "\n            ", "\n            ", "\n            ", "\n    </sl-card>\n    "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -16736,7 +16733,7 @@ customElements.define('va-poem', class Poem extends _litElement.LitElement {
       id: {
         type: String
       },
-      name: {
+      title: {
         type: String
       },
       views: {
@@ -16755,6 +16752,12 @@ customElements.define('va-poem', class Poem extends _litElement.LitElement {
         type: Object
       },
       image: {
+        type: String
+      },
+      showStartReadingHandler: {
+        type: String
+      },
+      showReadingListHandler: {
         type: String
       }
     };
@@ -16798,7 +16801,7 @@ customElements.define('va-poem', class Poem extends _litElement.LitElement {
   }
 
   render() {
-    return (0, _litElement.html)(_templateObject2(), _App.default.apiBase, this.image, this.name, this.views, this.status, this.pages, this.readingListHandler.bind(this), this.startReadingHandler.bind(this));
+    return (0, _litElement.html)(_templateObject2(), _App.default.apiBase, this.image, this.title, this.views && (0, _litElement.html)(_templateObject3(), this.views), this.status && (0, _litElement.html)(_templateObject4(), this.status), this.pages && (0, _litElement.html)(_templateObject5(), this.pages), this.showReadingListHandler && (0, _litElement.html)(_templateObject6(), this.readingListHandler.bind(this)), this.showStartReadingHandler && (0, _litElement.html)(_templateObject7(), this.startReadingHandler.bind(this)));
   }
 
 });
@@ -16921,7 +16924,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51451" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57703" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

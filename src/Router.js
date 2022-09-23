@@ -5,7 +5,6 @@ import signinView from './views/pages/signin'
 import signupView from './views/pages/signup'
 import profileView from './views/pages/profile'
 import editProfileView from './views/pages/editProfile'
-import testView from './views/pages/test'
 import guideView from './views/pages/guide'
 import adultsView from './views/pages/adults'
 import libraryView from './views/pages/library'
@@ -18,7 +17,6 @@ import supportView from './views/pages/support'
 // define routes
 const routes = {
 	'/': homeView,	
-	'/test': testView,
 	'/guide': guideView,
 	'/adults': adultsView,
 	'/library': libraryView,

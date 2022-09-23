@@ -16,7 +16,7 @@ customElements.define('va-poem', class Poem extends LitElement {
       id: {
         type: String
       }, 
-      name: {
+      title: {
         type: String
       },  
       views: {
@@ -36,7 +36,13 @@ customElements.define('va-poem', class Poem extends LitElement {
       },
       image: {
         type: String
-      }  
+      },
+      showStartReadingHandler: {
+        type: String
+      },
+      showReadingListHandler: {
+        type: String
+      }
     }
   }
 
@@ -119,22 +125,23 @@ customElements.define('va-poem', class Poem extends LitElement {
     </style> 
     <sl-card>
         <img slot="image" src="${App.apiBase}/images/${this.image}"/>
-        <h2>${this.name}</h2>
-            <h3>
+        <h2>${this.title}</h2>
+            ${this.views && html`<h3>
                 <sl-icon-button name="eye" label="Views" style="font-size: 23px"></sl-icon-button>
                 ${this.views}
-            </h3>
-            <h3>
+            </h3>`}
+            ${this.status && html`<h3>
                 <sl-icon-button name="pencil-square" label="Status" style="font-size: 23px"></sl-icon-button>
                 ${this.status}
-            </h3>
-            <h3>
+            </h3>`}
+            ${this.pages && html`<h3>
                 <sl-icon-button name="book" label="Pages" style="font-size: 23px"></sl-icon-button>
                 ${this.pages}
-            </h3>
-            <!-- need to @click to the pop-up | rn it just doesn't pop up cause it adds immediatley -->
-            <sl-icon-button @click=${this.readingListHandler.bind(this)} name="plus-circle" label="Save" style="font-size: 23px"></sl-icon-button>
-            <sl-button @click=${this.startReadingHandler.bind(this)} size="medium" pill>Start Reading</sl-button>
+            </h3>`}
+            ${this.showReadingListHandler && html`
+            <sl-icon-button @click=${this.readingListHandler.bind(this)} name="plus-circle" label="Save" style="font-size: 23px"></sl-icon-button>`}
+            ${this.showStartReadingHandler && html`
+            <sl-button @click=${this.startReadingHandler.bind(this)} size="medium" pill>Start Reading</sl-button>`}
     </sl-card>
     `
   }
