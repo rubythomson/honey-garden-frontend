@@ -8,19 +8,22 @@ import editProfileView from './views/pages/editProfile'
 import guideView from './views/pages/guide'
 import adultsView from './views/pages/adults'
 import libraryView from './views/pages/library'
-import saveView from './views/pages/save'
+import roseView from './views/pages/rose'
 import postView from './views/pages/post'
 import browseView from './views/pages/browse'
 import inboxView from './views/pages/inbox'
 import supportView from './views/pages/support'
+import beehiveView from './views/pages/beehive'
+import readView from './views/pages/read'
 
 // define routes
 const routes = {
 	'/': homeView,	
+	'/beehive': beehiveView,	
 	'/guide': guideView,
 	'/adults': adultsView,
 	'/library': libraryView,
-	'/save': saveView,
+	'/rose': roseView,
 	'/post': postView,
 	'/browse': browseView,
 	'/inbox': inboxView,
@@ -29,7 +32,8 @@ const routes = {
 	'/signin': signinView,
 	'/signup': signupView,
 	'/profile': profileView,
-	'/editProfile': editProfileView
+	'/editProfile': editProfileView,
+	'/read': readView
 }
 
 class Router {

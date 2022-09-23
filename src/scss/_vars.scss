@@ -2,20 +2,20 @@
 
 :root {
   // base
+  --heading-color: #333; 
   --base-txt-color: #222;
-  --heading-color: #333;
   --base-font-family: 'Italiana', sans-serif;
   --body-bg: #fffef9;
   
 
   // colors  
-  $brand-color: #333;
+  $brand-color: #333;//#fffefa;
   --brand-color: #{$brand-color};
   --link-color: --brand-color;
   
   // app header
+  --app-header-txt-color: #333;
   --app-header-height: 60px;
-  --app-header-txt-color: #fffded;
   --app-header-title-font-size: 1.6em;
 
   // shoelace tokens

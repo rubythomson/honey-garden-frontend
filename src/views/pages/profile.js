@@ -83,7 +83,7 @@ class ProfileView {
         <p></p>
         <p></p>
 
-        <sl-card class="card-header calign">
+        <sl-card class="card-header">
           <div slot="header">        
             <h2>Works (1)</h2>
           </div> 

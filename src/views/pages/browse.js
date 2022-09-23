@@ -203,15 +203,17 @@ class BrowseView {
                               This Year</li>
                             </ul>
 
-                            <div class="apply-filters">
+                            <!-- <div class="apply-filters">
                               <sl-button size="small" pill>Apply Filters</sl-button>
                             </div>
+                            -->
 
-                            <div class="reset-filters">
-                              <sl-button size="small" pill @click=${this.clearFilters.bind(this)}>Reset Filters</sl-button>
+                            <div>
+                              <sl-button class="reset-filters" size="small" pill @click=${this.clearFilters.bind(this)}>Reset Filters</sl-button>
                             </div>
                           </div>
                         </sl-card>
+
                       </div>
                   </div>
                   <input type="submit" value="Search" class="searchButton">          

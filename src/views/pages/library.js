@@ -37,7 +37,7 @@ class LibraryView {
         <sl-button size="medium" pill>Reading Lists</sl-button>
         </div>
 
-        <div class="bottom">
+          <div class="bottom">
             <div class="poems-grid">
               ${this.poems == null ? html`
                 <sl-spinner></sl-spinner>

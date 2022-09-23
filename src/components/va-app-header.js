@@ -189,7 +189,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         </div>
 
         <div class="app-top-nav"> 
-          <a href="/" @click="${anchorRoute}">BeeHive</a>  
+          <a href="/beehive" @click="${anchorRoute}">BeeHive</a>  
           <sl-icon name="search"></sl-icon>
           <a href="/browse" @click="${anchorRoute}">Search</a>
         </div> 
@@ -204,7 +204,12 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         <a href="/adults" @click="${anchorRoute}">18+</a>
         ` : ''}
 
-        <a href="/inbox" @click="${anchorRoute}">Messages</a>  
+        <a href="/inbox" @click="${anchorRoute}">Messages</a> 
+
+        <a href="/rose" @click="${anchorRoute}">
+          <iconify-icon icon="vs:rose" width="20" height="40"></iconify-icon>
+        </a>
+        
         <sl-dropdown>
           <a slot="trigger" href="#" @click="${(e) => e.preventDefault()}">
             <sl-avatar style="--size: 24px;" image=${(this.user && this.user.avatar) ? `${App.apiBase}/images/${this.user.avatar}` : ''}></sl-avatar> ${this.user && this.user.firstName}

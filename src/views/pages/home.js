@@ -3,13 +3,26 @@ import {html, render } from 'lit-html'
 import {gotoRoute, anchorRoute } from './../../Router'
 import Auth from './../../Auth'
 import Utils from './../../Utils'
+import PoemAPI from './../../PoemAPI'
+import Toast from '../../Toast'
 
 class HomeView {
-  init(){    
+  async init(){    
     console.log('HomeView.init')
     document.title = 'Home'    
     this.render()    
-    Utils.pageIntroAnim()    
+    Utils.pageIntroAnim() 
+    await this.getPoems()   
+  }
+
+  async getPoems(){
+    try{
+      this.poems = await PoemAPI.getPoems()
+      console.log(this.poems)
+      this.render()
+    }catch(err){
+      Toast.show(err, 'error')
+    }
   }
 
   render(){
@@ -17,84 +30,86 @@ class HomeView {
       <va-app-header title="Home" user=${JSON.stringify(Auth.currentUser)}></va-app-header>
       
       <div class="page-content">
-        <h1 class="beehive-title">BeeHive</h1>
+        <div class="home-title">
+          <h3>The night it beautiful,</h3>
+          <h3>So are the faces of my people</h3>
 
-        <div class="beehive-search-box">
-          <div class="searchContainer">
-            <i class="fa fa-search searchIcon"></i>
-            <input class="searchBox" type="search" name="search">
+          <div class="feather-img-div">
+            <img class="feather-img" src="/images/feather-ink-pot.png" alt="feather-ink-pot">
           </div>
-
-          <sl-button class="beehive-add-post-btn" variant="primary" size="medium" pill>Add Post</sl-button> 
         </div>
 
-        <div class="beehive-row-1 calign">
-          <sl-card>
-            <h2>In my dreams...</h2>
-            <br>
-            <p>In my dreams all I see are people dancing in the sky</p>
-            <br>
-            <p>Magic happenings everywhere</p>
-            <br>
-            <p>I want that to be my reality</p>
-
-            <iconify-icon icon="vs:rose" width="20" height="40"></iconify-icon>
-            <sl-button class="send-rose-btn" pill>Send a rose</sl-button>
-            <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-            <p>${Auth.currentUser.userName}</p>
-
-          </sl-card>
+        <div class="featured-content">
+          <h2 class="featured-h2">Featured</h2>
+          <sl-card class="featured-card">
+          <img class="floral-img-3" src="/images/floral-img-3.png" alt="floral-flowers-3"> 
+          Support with roses</sl-card>
         </div>
 
-        <div class="beehive-row-2 calign">
-          <sl-card>
-            <h2>Goldfish Tears</h2>
-            <br>
-            <p>Goldfish,</p>
-            <br>
-            <p>No memory just swimming in circles</p>
-            <br>
-            <p>The life of a trapped fish.</p>
-            <br>
-            <p>How sad,</p>
-            <br>
-            <p>How very sad,</p>
-            <br>
-            <p>How tragedy strikes.</p>
-            <br>
-            <p>Goldfish Bowl.</p>
+        <div class="for-you-content">
+          <h2 class="featured-h2">For you</h2>
+            <div class="bottom">
+              <div class="poems-grid">
+                ${this.poems == null ? html`
+                  <sl-spinner></sl-spinner>
+                  ` : html`
+                  ${this.poems.map(poem => html`
+                    <va-poem class="poem-card"
+                        id="${poem._id}"
+                        title="${poem.title}"
+                        user="${JSON.stringify(poem.user)}"
+                        image="${poem.image}"
+                      >
+                    </va-poem>
+                  `)}
+                `}
+              </div>
+            </div>
+        </div>  
 
-            <iconify-icon icon="vs:rose" width="20" height="40"></iconify-icon>
-            <sl-button class="send-rose-btn" pill>Send a rose</sl-button>
-            <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-            <p>${Auth.currentUser.userName}</p>
-
-          </sl-card>
+        <div class="continue-reading-content">
+          <h2 class="featured-h2">Continue Reading</h2>
+            <div class="bottom">
+              <div class="poems-grid">
+                ${this.poems == null ? html`
+                  <sl-spinner></sl-spinner>
+                  ` : html`
+                  ${this.poems.map(poem => html`
+                    <va-poem class="poem-card"
+                        id="${poem._id}"
+                        title="${poem.title}"
+                        user="${JSON.stringify(poem.user)}"
+                        image="${poem.image}"
+                      >
+                    </va-poem>
+                  `)}
+                `}
+              </div>
+            </div>
+        </div>
+        
+        <div class="new-post-content">
+          <h2 class="featured-h2">New Posts</h2>
+            <div class="bottom">
+              <div class="poems-grid">
+                ${this.poems == null ? html`
+                  <sl-spinner></sl-spinner>
+                  ` : html`
+                  ${this.poems.map(poem => html`
+                    <va-poem class="poem-card"
+                        id="${poem._id}"
+                        title="${poem.title}"
+                        user="${JSON.stringify(poem.user)}"
+                        image="${poem.image}"
+                      >
+                    </va-poem>
+                  `)}
+                `}
+              </div>
+            </div>
         </div>
 
-        <div class="beehive-row-3 calign">
-          <sl-card>
-            <h2>Cloud Kisses</h2>
-            <br>
-            <p>Clouds floating,</p>
-            <br>
-            <p>Drifting in the wind</p>
-            <br>
-            <p>Crying crystals</p>
-            <br>
-            <p>Crystals hitting my face.</p>
-            <br>
-            <p>Crystal kisses.</p>
-
-            <iconify-icon icon="vs:rose" width="20" height="40"></iconify-icon>
-            <sl-button class="send-rose-btn" pill>Send a rose</sl-button>
-            <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-            <p>${Auth.currentUser.userName}</p>
-
-          </sl-card>
-        </div>
-
-      </div>
+      </div> 
     `
     render(template, App.rootEl)
   }
