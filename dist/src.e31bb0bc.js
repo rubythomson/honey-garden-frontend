@@ -7907,7 +7907,7 @@ var _litHtml = require("lit-html");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["    \n      <div class=\"calign\">\n        <h1>Opps!</h1>\n        <p>Sorry, we couldn't find that.</p>\n      </div>\n    "]);
+  const data = _taggedTemplateLiteral(["    \n      <div class=\"calign\">\n        <h1>Opps!</h1>\n        <p>Sorry, we couldn't find that.</p>\n        <div>\n          <img style=\"height: 800px;\" src=\"/images/404.png\" alt=\"404.png\">\n        </div>\n      </div>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14893,10 +14893,94 @@ var _Auth = _interopRequireDefault(require("../../Auth"));
 
 var _Utils = _interopRequireDefault(require("../../Utils"));
 
+var _PoemAPI = _interopRequireDefault(require("./../../PoemAPI"));
+
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject9() {
+  const data = _taggedTemplateLiteral(["\n          <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\"></sl-avatar>\n          "]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  const data = _taggedTemplateLiteral(["\n            <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\" image=", "></sl-avatar>\n          "]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  const data = _taggedTemplateLiteral(["\n          <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\"></sl-avatar>\n          "]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  const data = _taggedTemplateLiteral(["\n            <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\" image=", "></sl-avatar>\n          "]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  const data = _taggedTemplateLiteral(["\n          <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\"></sl-avatar>\n          "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  const data = _taggedTemplateLiteral(["\n            <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\" image=", "></sl-avatar>\n          "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  const data = _taggedTemplateLiteral(["\n          <sl-avatar style=\"--size: 30px; margin-bottom: 1em;\"></sl-avatar>\n          "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  const data = _taggedTemplateLiteral(["\n            <sl-avatar style=\"--size: 30px; margin-bottom: 1em;\" image=", "></sl-avatar>\n          "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Read\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n      \n      <hr>\n      <h1 class=\"read-title\">Chapter 1</h1>\n      <h2 class=\"read-title-2\">\"The ship is sinking\"</h2>\n      \n      <div class=\"lorem\">\n        <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut \n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        <p></p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut \n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        <p></p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut \n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        <p></p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. \n        <p></p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut \n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut \n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        <p></p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. \n        </p>\n      </div>\n\n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Read\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n      \n      <sl-card class=\"read-card-top\">\n        <div class=\"profile\">\n          ", "\n          <p>", "</p>\n        </div>\n\n        <div class=\"read-card-img\">\n          <img src=\"/images/sinking-ships.jpg\" alt=\"sinking-ships\">\n        </div>\n        <div class=\"img-title\">\n          <h3>Sinking Ships</h3>\n        </div>\n\n        <div class=\"read-card-icon\">\n          <sl-icon-button name=\"eye\" label=\"Views\" style=\"font-size: 23px\"></sl-icon-button>\n        </div>\n        <div class=\"read-card-icon\">\n          <sl-icon-button name=\"pencil-square\" label=\"Status\" style=\"font-size: 23px\"></sl-icon-button>\n        </div>\n        <div class=\"read-card-icon\">\n          <sl-icon-button name=\"book\" label=\"Pages\" style=\"font-size: 23px\"></sl-icon-button>\n        </div>\n\n        <sl-button size=\"small\" pill>Chapter 1 | \"The ship is sinking\"\n          <sl-icon style=\"margin-left:5px;\" name=\"chevron-down\"></sl-icon>\n        </sl-button>\n\n        <div class=\"progress\">\n          <progress max=\"100\" value=\"30\"></progress>\n        </div>\n      </sl-card>\n\n      <hr>\n        <sl-button size=\"small\" pill>Edit\n          <sl-icon style=\"margin-left:5px;\" name=\"chevron-down\"></sl-icon>\n        </sl-button>\n\n      <h1 class=\"calign\">Chapter 1</h1>\n      <h2 class=\"calign\">\"The ship is sinking\"</h2>\n\n      <div class=\"lorem\">\n        <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut \n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        <p></p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut \n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        <p></p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut \n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        <p></p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. \n        <p></p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut \n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut \n        vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.\n        Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat \n        faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. \n        Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. \n        Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, \n        non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.\n        <p></p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, \n        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. \n        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, \n        in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent\n        per conubia nostra, per inceptos himenaeos. \n        </p>\n        <br>\n        <br>\n        <br>\n      </div>\n\n      <div class=\"next-page\">\n        <sl-button class=\"next-page-btn\" variant=\"primary\" size=\"medium\" pill>Next Page ></sl-button>\n      </div>\n\n      <div class=\"rose-content\">\n        <div class=\"rose-read\">\n          <iconify-icon icon=\"vs:rose\" width=\"30\" height=\"50\"></iconify-icon>\n        </div>\n        <div class=\"rose-read-text\">\n          <p>Send a rose</p>\n        </div>\n      </div>\n      <hr> \n\n      <sl-card class=\"comments-div\">\n        <div class=\"comments-content\">\n          ", "\n        </div>\n        <sl-input placeholder=\"Add comment\"></sl-input>\n        <hr>\n\n        <div class=\"comments-content\">\n          ", "\n        </div>\n        <hr>\n        <div class=\"comments-content\">\n          ", "\n        </div>\n        <hr>\n      </sl-card>\n\n\n    </div>     \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14908,15 +14992,27 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 class ReadView {
-  init() {
+  async init() {
     document.title = 'Read';
     this.render();
 
     _Utils.default.pageIntroAnim();
+
+    await this.getPoems();
+  }
+
+  async getPoems() {
+    try {
+      this.poems = await _PoemAPI.default.getPoems();
+      console.log(this.poems);
+      this.render();
+    } catch (err) {
+      _Toast.default.show(err, 'error');
+    }
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject2(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject3()), _Auth.default.currentUser.userName, _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject4(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject5()), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject6(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject7()), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject8(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject9()));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -14925,7 +15021,7 @@ class ReadView {
 var _default = new ReadView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"Router.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"Router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -17216,7 +17312,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51642" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49486" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

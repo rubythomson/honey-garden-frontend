@@ -527,17 +527,88 @@ a {
   padding-left: 20px;
 }
 
-/* READ  ------------------------------------------------------------------------------------------------------- */
-.read-title .read-title-2 {
-  
+/* READ  ------------------------------------------------------------------------------------------------- */
+.lorem {
+  text-align: left;
+  width: 60%;
+  justify-content: center;
+  margin-left: 305px;
 }
 
-.lorem {
-  text-align: center;
-  width: 70%;
-  justify-content: center;
-  margin: 10px;
+.next-page-btn::part(base) {
+  background-color: #FEC76C;
 }
+
+.rose-content {
+  display: flex;
+  justify-content: right;
+  margin-right: 250px;
+}
+
+.rose-read {
+	position:absolute;
+	left: 1200px;
+  top: 1400px;
+}
+
+.rose-read-text {
+	position: absolute;
+  left: 1175px;
+  top: 1430px;
+}
+
+.comments-div {
+  width: auto;
+  margin-top: 50px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}
+
+.comments-content {
+  margin: 20px;
+}
+
+.read-card-top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  justify-content: right;
+  gap: 0.5em;
+}
+
+.read-card-img {
+  display: flex;
+  justify-content: left;
+}
+
+.img-title {
+  display: flex;
+  justify-content: center;
+}
+
+.read-card-icon {
+  display: flex;
+  justify-content: left;
+  margin-left: 30px;
+}
+
+.next-page {
+  display: flex;
+  justify-content: center;
+}
+
+/* DRAFTS  ----------------------------------------------------------------------------------------------- */
+
 
 // RESPONSIVE - MOBILE -----------------------------------------------------------------------------------
 @media all and (max-width: 768px){ 

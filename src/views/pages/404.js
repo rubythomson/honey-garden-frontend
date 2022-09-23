@@ -13,6 +13,9 @@ class FourOFourView{
       <div class="calign">
         <h1>Opps!</h1>
         <p>Sorry, we couldn't find that.</p>
+        <div>
+          <img style="height: 800px;" src="/images/404.png" alt="404.png">
+        </div>
       </div>
     `
     render(template, App.rootEl)
