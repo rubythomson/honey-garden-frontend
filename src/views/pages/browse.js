@@ -25,17 +25,26 @@ class BrowseView {
     let filteredPoems
 
     // content
-    if(field == 'status'){
+    if(field === 'status'){
       filteredPoems = this.poems.filter(poem => poem.status == match)
     }
 
     // pages
-    if(field == 'pages'){
-      // get pageRangeStart
-      const pageRangeStart = match.split('-')[0]
-      const pageRangeEnd = match.split('-')[1]
-      filteredPoems = this.poems.filter(poem => poem.pages >= pageRangeStart && poem.pages <= pageRangeEnd)
-    }
+    if(field === 'pages'){
+      let lower = null
+      let upper = null 
+      if (match.includes("-")){
+        lower = match.split('-')[0]
+        upper = match.split('-')[1]
+      }
+      else if (match.includes('+')) {
+        lower = match.replace("+", "");
+      }
+
+      filteredPoems = this.poems.filter(poem =>
+          (!lower || poem.pages >= lower)
+          && (!upper || poem.pages <= upper));
+    }    
 
     // render
     this.poems = filteredPoems
@@ -99,13 +108,13 @@ class BrowseView {
                       <i class="gg-options"></i>
                     </button>
   
-                      <div>
+                      <div id="search-dropdown">
                         <sl-card class="dropdown-content">
                           <div class="row-dropdown-length">
                             <a href="#">Length</a>
                             <ul class="length-list">
                               <li>
-                                <sl-button class="filter-btn" size="small">
+                                <sl-button class="filter-btn" size="small" data-field="pages" data-match="Any" @click=${this.handleFilterBtn.bind(this)}>
                                   <sl-icon name="square"></sl-icon>
                                 </sl-button>
                                 Any</li>
@@ -234,7 +243,16 @@ class BrowseView {
         
       </div>      
     `
-    render(template, App.rootEl)
+    render(template, App.rootEl);
+
+    const popup = document.getElementById("search-dropdown").querySelector(".dropdown-content");
+    const { x, y, width, height  } = popup.getBoundingClientRect();
+    const  screenWidth = document.querySelector("html").clientWidth;
+    const offsetX = (x + width) - screenWidth;
+    if (offsetX > 0) {
+      popup.style.transform = `translate(-${offsetX}px, 0)`;
+    }
+    console.log(popup, x, y, screenWidth, offsetX)
   }
 }
 

@@ -33,7 +33,7 @@ class SignUpView{
           <h1>Sign Up</h1>
           <sl-form class="form-signup" @sl-submit=${this.signUpSubmitHandler}>
             <div class="input-group"> 
-              <sl-input name="username" type="text" placeholder="Username" required></sl-input>
+              <sl-input name="userName" type="text" placeholder="Username" required></sl-input>
             </div>
             <div class="input-group">
               <sl-input name="email" type="email" placeholder="Email" required></sl-input>
