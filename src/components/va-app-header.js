@@ -59,7 +59,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         box-sizing: border-box;
       }
       .app-header {
-        background: var(--brand-color);
+        background: var(--app-header-color);
         position: fixed;
         top: 0;
         right: 0;
@@ -109,7 +109,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         display: inline-block;
         padding: .8em;
         text-decoration: none;
-        color: #fff;
+        color: var(--app-header-txt-color);
       }
       
       .app-side-menu-items a {

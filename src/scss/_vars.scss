@@ -4,16 +4,17 @@
   // base
   --heading-color: #333; 
   --base-txt-color: #222;
-  --base-font-family: 'Italiana', sans-serif;
+  --base-font-family: 'Italiana', sans-seri;
   --body-bg: #fffef9;
   
 
   // colors  
-  $brand-color: #333;//#fffefa;
+  $brand-color:#FEC76C;
   --brand-color: #{$brand-color};
   --link-color: --brand-color;
   
   // app header
+  --app-header-color: var(--body-bg);
   --app-header-txt-color: #333;
   --app-header-height: 60px;
   --app-header-title-font-size: 1.6em;

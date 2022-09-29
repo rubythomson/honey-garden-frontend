@@ -15,11 +15,13 @@ import inboxView from './views/pages/inbox'
 import supportView from './views/pages/support'
 import beehiveView from './views/pages/beehive'
 import readView from './views/pages/read'
+import landingView from './views/pages/landing'
 
 // define routes
 const routes = {
 	'/': homeView,	
-	'/beehive': beehiveView,	
+	'/beehive': beehiveView,
+	'/landing':	landingView,
 	'/guide': guideView,
 	'/adults': adultsView,
 	'/library': libraryView,

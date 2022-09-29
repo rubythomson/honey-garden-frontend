@@ -25,7 +25,7 @@ class BeehiveView {
               <input class="searchBox" type="search" name="search">
             </div>
 
-            <sl-button class="beehive-add-post-btn" variant="primary" size="medium" pill>Add Post</sl-button> 
+            <sl-button class="beehive-add-post-btn" variant="primary" size="medium" pill>Add Post</sl-button>
           </div>
 
           <div class="beehive-row-1 calign">

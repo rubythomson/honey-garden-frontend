@@ -2,24 +2,25 @@
 :root {
   --heading-color: #333;
   --base-txt-color: #222;
-  --base-font-family: "Italiana", sans-serif;
+  --base-font-family: "Italiana", sans-seri;
   --body-bg: #fffef9;
-  --brand-color: #333;
+  --brand-color: #FEC76C;
   --link-color: --brand-color;
+  --app-header-color: var(--body-bg);
   --app-header-txt-color: #333;
   --app-header-height: 60px;
   --app-header-title-font-size: 1.6em;
   --sl-color-primary-50: #f4f4f4;
-  --sl-color-primary-100: #999999;
-  --sl-color-primary-200: gray;
-  --sl-color-primary-300: #666666;
-  --sl-color-primary-400: #4d4d4d;
-  --sl-color-primary-500: #333;
-  --sl-color-primary-600: #1a1a1a;
-  --sl-color-primary-700: black;
-  --sl-color-primary-800: black;
-  --sl-color-primary-900: black;
-  --sl-focus-ring-color-primary: rgba(51, 51, 51, 0.1);
+  --sl-color-primary-100: white;
+  --sl-color-primary-200: white;
+  --sl-color-primary-300: #ffeed1;
+  --sl-color-primary-400: #feda9f;
+  --sl-color-primary-500: #FEC76C;
+  --sl-color-primary-600: #feb439;
+  --sl-color-primary-700: #fda007;
+  --sl-color-primary-800: #d08201;
+  --sl-color-primary-900: #9d6201;
+  --sl-focus-ring-color-primary: rgba(254, 199, 108, 0.1);
 }
 
 * {
@@ -113,16 +114,33 @@ a {
   justify-content: center;
 }
 
-.signinup-box,
 .signup-box {
-  max-width: 320px;
-  text-align: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transform: translate(0px, 0px);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.signinup-logo {
-  width: 200px;
-  margin-bottom: 1em;
+.login-h1 {
+  justify-content: center;
+  font-size: 1.7em;
+}
+
+.signin-box {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submit-btn::part(base) {
+  border-color: #FEC76C;
+  background-color: var(--body-bg);
+  color: black;
+  font-family: var(--base-font-family);
+  font-size: 1.1em;
 }
 
 .guide-step {
@@ -624,6 +642,68 @@ a {
 }
 
 /* DRAFTS  ----------------------------------------------------------------------------------------------- */
+/* LANDING  ---------------------------------------------------------------------------------------------- */
+.page-content-landing {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.landing-btns-container {
+  display: flex;
+}
+
+.landing-logo {
+  display: flex;
+  justify-content: left;
+}
+
+.landing-btn-top {
+  display: flex;
+  justify-content: right;
+}
+
+.landing-btn-top > sl-button::part(base) {
+  background-color: #FEC76C;
+}
+
+.login-landing-btn > sl-button::part(base) {
+  background-color: #FEC76C;
+}
+
+.login-landing-btn {
+  margin-left: 100px;
+  display: flex;
+  justify-content: left;
+}
+
+.sign-up-landing-btn > sl-button::part(base) {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  border-color: #FEC76C;
+}
+
+.landing-headers {
+  margin-left: 100px;
+  margin-top: 200px;
+}
+
+.landing-h1 {
+  font-size: 3.5em;
+}
+
+.radial-gradient {
+  height: 200px;
+  border-radius: 50px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  z-index: -1;
+  left: 350px;
+  top: 200px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(254, 199, 108, 0.39) 0%, rgba(217, 217, 217, 0) 100%);
+}
+
 @media all and (max-width: 768px) {
   .signinup-box {
     width: 90%;

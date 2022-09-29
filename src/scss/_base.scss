@@ -99,16 +99,33 @@ a {
 }
 
 // sign in + sign up pages -------------------------------------------------------------------------------
-.signinup-box,
 .signup-box {  
-  max-width: 320px;
-  text-align: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transform: translate(0px, 0px);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.signinup-logo {
-  width: 200px;
-  margin-bottom: 1em;
+.login-h1 {
+  justify-content: center;
+  font-size: 1.7em;
+}
+
+.signin-box {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submit-btn::part(base) {
+  border-color: #FEC76C;
+  background-color: var(--body-bg);
+  color: black;
+  font-family: var(--base-font-family);
+  font-size: 1.1em;
 }
 
 // guide page --------------------------------------------------------------------------------------------
@@ -609,6 +626,67 @@ a {
 
 /* DRAFTS  ----------------------------------------------------------------------------------------------- */
 
+/* LANDING  ---------------------------------------------------------------------------------------------- */
+.page-content-landing {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.landing-btns-container {
+  display: flex;
+}
+
+.landing-logo {
+  display: flex;
+  justify-content: left;
+}
+
+.landing-btn-top {
+  display: flex;
+  justify-content: right;
+}
+
+.landing-btn-top > sl-button::part(base) {
+  background-color: #FEC76C;
+}
+
+.login-landing-btn > sl-button::part(base) {
+  background-color: #FEC76C;
+}
+
+.login-landing-btn {
+  margin-left: 100px;
+  display: flex;
+  justify-content: left;
+}
+
+.sign-up-landing-btn > sl-button::part(base) {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  border-color: #FEC76C;
+}
+
+.landing-headers {
+  margin-left: 100px;
+  margin-top: 200px;
+}
+
+.landing-h1 {
+  font-size: 3.5em;
+}
+
+.radial-gradient {
+  height: 200px;
+  border-radius: 50px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  z-index: -1;
+  left: 350px;
+  top: 200px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(254, 199, 108, 0.39) 0%, rgba(217, 217, 217, 0) 100%);;
+}
 
 // RESPONSIVE - MOBILE -----------------------------------------------------------------------------------
 @media all and (max-width: 768px){ 

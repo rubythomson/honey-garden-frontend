@@ -7568,7 +7568,7 @@ class Auth {
       _Toast.default.show("Please sign in"); // redirect to sign in page      
 
 
-      (0, _Router.gotoRoute)('/signin');
+      (0, _Router.gotoRoute)('/landing');
       return;
     } // token must exist - validate token via the backend
 
@@ -7956,7 +7956,7 @@ var _Utils = _interopRequireDefault(require("./../../Utils"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["      \n      <div class=\"page-content page-centered\">\n        <div class=\"signinup-box\">\n          <img class=\"signinup-logo\" src=\"/images/honey-garden-logo.png\">        \n          <sl-form class=\"form-signup dark-theme\" @sl-submit=", ">  \n            <div class=\"input-group\">\n              <sl-input name=\"username\" type=\"username\" placeholder=\"Username\" required></sl-input>\n            </div>        \n            <div class=\"input-group\">\n              <sl-input name=\"email\" type=\"email\" placeholder=\"Email\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"password\" type=\"password\" placeholder=\"Password\" required toggle-password></sl-input>\n            </div>\n            <sl-button class=\"submit-btn\" type=\"primary\" submit style=\"width: 100%;\">Sign In</sl-button>\n          </sl-form>\n          <p>No Account? <a href=\"/signup\" @click=", ">Sign Up</a></p>\n        </div>\n      </div>\n    "]);
+  const data = _taggedTemplateLiteral(["      \n      <div class=\"page-content calign\">\n\n        <div class=\"login-h1\">\n          <h1>Login</h1>\n        </div>\n\n        <div class=\"signin-box\">       \n          <sl-form class=\"form-signup dark-theme\" @sl-submit=", ">  \n            <div class=\"input-group\">\n              <sl-input name=\"username\" type=\"username\" placeholder=\"Username\" required></sl-input>\n            </div>        \n            <div class=\"input-group\">\n              <sl-input name=\"email\" type=\"email\" placeholder=\"Email\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"password\" type=\"password\" placeholder=\"Password\" required toggle-password></sl-input>\n            </div>\n            <sl-button class=\"submit-btn\" type=\"primary\" submit style=\"width: 100%;\" pill>Sign In!</sl-button>\n          </sl-form>\n          <p>Dont have an account? <a href=\"/signup\" @click=", ">Sign up here</a></p>\n        </div>\n      </div>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -8018,7 +8018,7 @@ var _Utils = _interopRequireDefault(require("./../../Utils"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["      \n      <div class=\"page-content page-centered\">      \n        <div class=\"signinup-box\">\n        <img class=\"signinup-logo\" src=\"/images/honey-garden-logo.png\">\n          <h1>Sign Up</h1>\n          <sl-form class=\"form-signup\" @sl-submit=", ">\n            <div class=\"input-group\"> \n              <sl-input name=\"userName\" type=\"text\" placeholder=\"Username\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"email\" type=\"email\" placeholder=\"Email\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"password\" type=\"password\" placeholder=\"Password\" required toggle-password></sl-input>\n            </div>   \n            <div class=\"input-group\">\n              <sl-select name=\"accessLevel\" placeholder=\"I am...\">\n                <sl-menu-item value=\"1\">Under 18 years</sl-menu-item>\n                <sl-menu-item value=\"2\">Over 18 years</sl-menu-item>\n              </sl-select>\n            </div>         \n            <sl-button type=\"primary\" class=\"submit-btn\" submit style=\"width: 100%;\">Sign Up</sl-button>\n          </sl-form>\n          <p>Have an account? <a href=\"/signin\" @click=", ">Sign In</a></p>\n        </div>\n      </div>\n    "]);
+  const data = _taggedTemplateLiteral(["      \n      <div class=\"page-content calign\"> \n        \n      <div class=\"login-h1\">\n        <h1>Sign Up</h1>\n      </div>\n\n        <div class=\"signup-box\">\n          <sl-form class=\"form-signup\" @sl-submit=", ">\n            <div class=\"input-group\"> \n              <sl-input name=\"userName\" type=\"text\" placeholder=\"Username\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"email\" type=\"email\" placeholder=\"Email\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"password\" type=\"password\" placeholder=\"Password\" required toggle-password></sl-input>\n            </div>   \n            <div class=\"input-group\">\n              <sl-select name=\"accessLevel\" placeholder=\"Age\">\n                <sl-menu-item value=\"1\">Under 18 years</sl-menu-item>\n                <sl-menu-item value=\"2\">Over 18 years</sl-menu-item>\n              </sl-select>\n            </div>         \n            <sl-button type=\"primary\" class=\"submit-btn\" submit style=\"width: 100%;\" pill>Explore!</sl-button>\n          </sl-form>\n          <p>Have an account? <a href=\"/signin\" @click=", ">Sign In</a></p>\n        </div>\n      </div>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14846,7 +14846,7 @@ var _Utils = _interopRequireDefault(require("../../Utils"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Beehive\" user=", "></va-app-header>\n      \n      <div class=\"page-content\">\n        <div class=\"beehive-content\">\n        <h1 class=\"beehive-title\">Beehive</h1>\n\n          <div class=\"beehive-search-box\">\n            <div class=\"searchContainer\">\n              <i class=\"fa fa-search searchIcon\"></i>\n              <input class=\"searchBox\" type=\"search\" name=\"search\">\n            </div>\n\n            <sl-button class=\"beehive-add-post-btn\" variant=\"primary\" size=\"medium\" pill>Add Post</sl-button> \n          </div>\n\n          <div class=\"beehive-row-1 calign\">\n            <sl-card>\n              <h2>In my dreams...</h2>\n              <br>\n              <p>In my dreams all I see are people dancing in the sky</p>\n              <br>\n              <p>Magic happenings everywhere</p>\n              <br>\n              <p>I want that to be my reality</p>\n\n              <iconify-icon icon=\"vs:rose\" width=\"20\" height=\"40\"></iconify-icon>\n              <sl-button class=\"send-rose-btn\" pill>Send a rose</sl-button>\n              <sl-avatar style=\"--size: 40px; margin-bottom: 1em;\" image=", "></sl-avatar>\n              <p>", "</p>\n\n            </sl-card>\n          </div>\n\n          <div class=\"beehive-row-2 calign\">\n            <sl-card>\n              <h2>Goldfish Tears</h2>\n              <br>\n              <p>Goldfish,</p>\n              <br>\n              <p>No memory just swimming in circles</p>\n              <br>\n              <p>The life of a trapped fish.</p>\n              <br>\n              <p>How sad,</p>\n              <br>\n              <p>How very sad,</p>\n              <br>\n              <p>How tragedy strikes.</p>\n              <br>\n              <p>Goldfish Bowl.</p>\n\n              <iconify-icon icon=\"vs:rose\" width=\"20\" height=\"40\"></iconify-icon>\n              <sl-button class=\"send-rose-btn\" pill>Send a rose</sl-button>\n              <sl-avatar style=\"--size: 40px; margin-bottom: 1em;\" image=", "></sl-avatar>\n              <p>", "</p>\n\n            </sl-card>\n          </div>\n\n          <div class=\"beehive-row-3 calign\">\n            <sl-card>\n              <h2>Cloud Kisses</h2>\n              <br>\n              <p>Clouds floating,</p>\n              <br>\n              <p>Drifting in the wind</p>\n              <br>\n              <p>Crying crystals</p>\n              <br>\n              <p>Crystals hitting my face.</p>\n              <br>\n              <p>Crystal kisses.</p>\n\n              <iconify-icon icon=\"vs:rose\" width=\"20\" height=\"40\"></iconify-icon>\n              <sl-button class=\"send-rose-btn\" pill>Send a rose</sl-button>\n              <sl-avatar style=\"--size: 40px; margin-bottom: 1em;\" image=", "></sl-avatar>\n              <p>", "</p>\n\n            </sl-card>\n          </div>\n        </div>\n        </div>\n      </div>\n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Beehive\" user=", "></va-app-header>\n      \n      <div class=\"page-content\">\n        <div class=\"beehive-content\">\n        <h1 class=\"beehive-title\">Beehive</h1>\n\n          <div class=\"beehive-search-box\">\n            <div class=\"searchContainer\">\n              <i class=\"fa fa-search searchIcon\"></i>\n              <input class=\"searchBox\" type=\"search\" name=\"search\">\n            </div>\n\n            <sl-button class=\"beehive-add-post-btn\" variant=\"primary\" size=\"medium\" pill>Add Post</sl-button>\n          </div>\n\n          <div class=\"beehive-row-1 calign\">\n            <sl-card>\n              <h2>In my dreams...</h2>\n              <br>\n              <p>In my dreams all I see are people dancing in the sky</p>\n              <br>\n              <p>Magic happenings everywhere</p>\n              <br>\n              <p>I want that to be my reality</p>\n\n              <iconify-icon icon=\"vs:rose\" width=\"20\" height=\"40\"></iconify-icon>\n              <sl-button class=\"send-rose-btn\" pill>Send a rose</sl-button>\n              <sl-avatar style=\"--size: 40px; margin-bottom: 1em;\" image=", "></sl-avatar>\n              <p>", "</p>\n\n            </sl-card>\n          </div>\n\n          <div class=\"beehive-row-2 calign\">\n            <sl-card>\n              <h2>Goldfish Tears</h2>\n              <br>\n              <p>Goldfish,</p>\n              <br>\n              <p>No memory just swimming in circles</p>\n              <br>\n              <p>The life of a trapped fish.</p>\n              <br>\n              <p>How sad,</p>\n              <br>\n              <p>How very sad,</p>\n              <br>\n              <p>How tragedy strikes.</p>\n              <br>\n              <p>Goldfish Bowl.</p>\n\n              <iconify-icon icon=\"vs:rose\" width=\"20\" height=\"40\"></iconify-icon>\n              <sl-button class=\"send-rose-btn\" pill>Send a rose</sl-button>\n              <sl-avatar style=\"--size: 40px; margin-bottom: 1em;\" image=", "></sl-avatar>\n              <p>", "</p>\n\n            </sl-card>\n          </div>\n\n          <div class=\"beehive-row-3 calign\">\n            <sl-card>\n              <h2>Cloud Kisses</h2>\n              <br>\n              <p>Clouds floating,</p>\n              <br>\n              <p>Drifting in the wind</p>\n              <br>\n              <p>Crying crystals</p>\n              <br>\n              <p>Crystals hitting my face.</p>\n              <br>\n              <p>Crystal kisses.</p>\n\n              <iconify-icon icon=\"vs:rose\" width=\"20\" height=\"40\"></iconify-icon>\n              <sl-button class=\"send-rose-btn\" pill>Send a rose</sl-button>\n              <sl-avatar style=\"--size: 40px; margin-bottom: 1em;\" image=", "></sl-avatar>\n              <p>", "</p>\n\n            </sl-card>\n          </div>\n        </div>\n        </div>\n      </div>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -15021,7 +15021,68 @@ class ReadView {
 var _default = new ReadView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"Router.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"views/pages/landing.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <div class=\"page-content-landing\">    \n        <div class=\"landing-logo\">\n          <img class=\"app-side-menu-logo-1\" src=\"/images/honey-garden-logo.png\" style=\"height: 40px;\"> \n        </div> \n\n        <div class=\"landing-btn-top\">\n          <sl-button variant=\"primary\" size=\"small\" pill>\n            <a href=\"/signup\" @click=", ">  \n            Sign up / Login\n            </a>\n          </sl-button>\n        </div>\n\n        <div class=\"radial-gradient\"></div>\n\n        <div class=\"landing-headers\">\n          <h1 class=\"landing-h1\">Exlpore the art of literature</h1>\n          <h1>Read, create, support</h1>\n        </div>\n\n        <br>\n\n        <div class=\"landing-btns-container\">\n          <div class=\"login-landing-btn\">\n            <sl-button variant=\"primary\" size=\"medium\" pill>\n              <a href=\"/signin\" @click=", ">  \n              Log In\n              </a>\n            </sl-button> <!-- make colour work for btn bg -->\n          </div>\n\n          <div class=\"sign-up-landing-btn\">\n            <sl-button size=\"medium\" pill>\n              <a href=\"/signup\" @click=", ">\n              Sign Up\n              </a>\n            </sl-button>\n          </div>\n        </div>\n        \n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class TemplateView {
+  init() {
+    document.title = 'Template';
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+  }
+
+  signInSubmitHandler(e) {
+    e.preventDefault();
+    const formData = e.detail.formData;
+    const submitBtn = document.querySelector('.submit-btn');
+    submitBtn.setAttribute('loading', ''); // sign in using Auth    
+
+    _Auth.default.signIn(formData, () => {
+      submitBtn.removeAttribute('loading');
+    });
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute);
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new TemplateView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"Router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15063,6 +15124,8 @@ var _beehive = _interopRequireDefault(require("./views/pages/beehive"));
 
 var _read = _interopRequireDefault(require("./views/pages/read"));
 
+var _landing = _interopRequireDefault(require("./views/pages/landing"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import views
@@ -15070,6 +15133,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const routes = {
   '/': _home.default,
   '/beehive': _beehive.default,
+  '/landing': _landing.default,
   '/guide': _guide.default,
   '/adults': _adults.default,
   '/library': _library.default,
@@ -15137,7 +15201,7 @@ function anchorRoute(e) {
   const pathname = e.target.closest('a').pathname;
   AppRouter.gotoRoute(pathname);
 }
-},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js"}],"App.js":[function(require,module,exports) {
+},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js","./views/pages/landing":"views/pages/landing.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16954,7 +17018,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--brand-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: #fff;\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .app-side-menu-logo-1 {\n        margin-top: 0.05em;\n        height: 45px;\n        margin-right: 0.5em;\n      }\n\n      /* PAGE TITLES --------------------------------------------------------------------------------------------- */\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n        }\n\n      .outer {\n        display: grid;\n        grid-template: 1fr / 1fr;\n        place-items: center;\n        }\n\n      .outer > * {\n        grid-column: 1 / 1;\n        grid-row: 1 /1;\n      }\n\n      .outer .bottom {\n        z-index: 2;\n      }\n\n      .outer .top {\n        z-index: 1;\n      }\n\n      /* active nav links --------------------------------------------------------------------------------------------- */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------------------------------------------------------------------------------ */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">\n      <sl-icon-button class=\"hamburger-btn\" name=\"list\" @click=\"", "\" style=\"font-size: 1.5em;\"></sl-icon-button>       \n      \n      <div class=\"app-header-main\">\n        <div class=\"app-side-menu-logo-1\" style=\"z-index: 1;\">\n          <a href=\"/\" @click=", ">\n            <img class=\"app-side-menu-logo-1\" src=\"/images/honey-garden-logo.png\">\n          </a>\n        </div>\n\n        <div class=\"app-top-nav\"> \n          <a href=\"/beehive\" @click=\"", "\">BeeHive</a>  \n          <sl-icon name=\"search\"></sl-icon>\n          <a href=\"/browse\" @click=\"", "\">Search</a>\n        </div> \n\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/library\" @click=\"", "\">Library</a> \n        <a href=\"/post\" @click=\"", "\">Post</a> \n\n        ", "\n\n        <a href=\"/inbox\" @click=\"", "\">Messages</a> \n\n        <a href=\"/rose\" @click=\"", "\">\n          <iconify-icon icon=\"vs:rose\" width=\"20\" height=\"40\"></iconify-icon>\n        </a>\n        \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar style=\"--size: 24px;\" image=", "></sl-avatar> ", "\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Edit Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n\n    <sl-drawer class=\"app-side-menu\" placement=\"left\">\n\n      <div class=\"app-side-menu-logo\" style=\"z-index: 1;\">\n        <a href=\"/\" @click=", ">\n          <img class=\"app-side-menu-logo\" src=\"/images/honey-garden-logo.png\">\n        </a>\n      </div>\n\n      <div class=\"app-side-menu-items\" style=\"z-index: 2; position: absolute;\">\n        <nav class=\"app-side-menu-items\">\n          <a href=\"/save\" @click=\"", "\">Saved Reads</a>\n          <a href=\"/support\" @click=\"", "\">Support</a>\n        </nav>  \n      </div>\n\n    </sl-drawer>\n    "]);
+  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--app-header-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: var(--app-header-txt-color);\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .app-side-menu-logo-1 {\n        margin-top: 0.05em;\n        height: 45px;\n        margin-right: 0.5em;\n      }\n\n      /* PAGE TITLES --------------------------------------------------------------------------------------------- */\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n        }\n\n      .outer {\n        display: grid;\n        grid-template: 1fr / 1fr;\n        place-items: center;\n        }\n\n      .outer > * {\n        grid-column: 1 / 1;\n        grid-row: 1 /1;\n      }\n\n      .outer .bottom {\n        z-index: 2;\n      }\n\n      .outer .top {\n        z-index: 1;\n      }\n\n      /* active nav links --------------------------------------------------------------------------------------------- */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------------------------------------------------------------------------------ */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">\n      <sl-icon-button class=\"hamburger-btn\" name=\"list\" @click=\"", "\" style=\"font-size: 1.5em;\"></sl-icon-button>       \n      \n      <div class=\"app-header-main\">\n        <div class=\"app-side-menu-logo-1\" style=\"z-index: 1;\">\n          <a href=\"/\" @click=", ">\n            <img class=\"app-side-menu-logo-1\" src=\"/images/honey-garden-logo.png\">\n          </a>\n        </div>\n\n        <div class=\"app-top-nav\"> \n          <a href=\"/beehive\" @click=\"", "\">BeeHive</a>  \n          <sl-icon name=\"search\"></sl-icon>\n          <a href=\"/browse\" @click=\"", "\">Search</a>\n        </div> \n\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/library\" @click=\"", "\">Library</a> \n        <a href=\"/post\" @click=\"", "\">Post</a> \n\n        ", "\n\n        <a href=\"/inbox\" @click=\"", "\">Messages</a> \n\n        <a href=\"/rose\" @click=\"", "\">\n          <iconify-icon icon=\"vs:rose\" width=\"20\" height=\"40\"></iconify-icon>\n        </a>\n        \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar style=\"--size: 24px;\" image=", "></sl-avatar> ", "\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Edit Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n\n    <sl-drawer class=\"app-side-menu\" placement=\"left\">\n\n      <div class=\"app-side-menu-logo\" style=\"z-index: 1;\">\n        <a href=\"/\" @click=", ">\n          <img class=\"app-side-menu-logo\" src=\"/images/honey-garden-logo.png\">\n        </a>\n      </div>\n\n      <div class=\"app-side-menu-items\" style=\"z-index: 2; position: absolute;\">\n        <nav class=\"app-side-menu-items\">\n          <a href=\"/save\" @click=\"", "\">Saved Reads</a>\n          <a href=\"/support\" @click=\"", "\">Support</a>\n        </nav>  \n      </div>\n\n    </sl-drawer>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -17312,7 +17376,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49486" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64523" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -26,9 +26,13 @@ class SignInView {
 
   render(){    
     const template = html`      
-      <div class="page-content page-centered">
-        <div class="signinup-box">
-          <img class="signinup-logo" src="/images/honey-garden-logo.png">        
+      <div class="page-content calign">
+
+        <div class="login-h1">
+          <h1>Login</h1>
+        </div>
+
+        <div class="signin-box">       
           <sl-form class="form-signup dark-theme" @sl-submit=${this.signInSubmitHandler}>  
             <div class="input-group">
               <sl-input name="username" type="username" placeholder="Username" required></sl-input>
@@ -39,9 +43,9 @@ class SignInView {
             <div class="input-group">
               <sl-input name="password" type="password" placeholder="Password" required toggle-password></sl-input>
             </div>
-            <sl-button class="submit-btn" type="primary" submit style="width: 100%;">Sign In</sl-button>
+            <sl-button class="submit-btn" type="primary" submit style="width: 100%;" pill>Sign In!</sl-button>
           </sl-form>
-          <p>No Account? <a href="/signup" @click=${anchorRoute}>Sign Up</a></p>
+          <p>Dont have an account? <a href="/signup" @click=${anchorRoute}>Sign up here</a></p>
         </div>
       </div>
     `
