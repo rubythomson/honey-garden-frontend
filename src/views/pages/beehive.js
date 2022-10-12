@@ -19,78 +19,100 @@ class BeehiveView {
         <div class="beehive-content">
         <h1 class="beehive-title">Beehive</h1>
 
+        <div class="beehive-search-style">
           <div class="beehive-search-box">
             <div class="searchContainer">
-              <i class="fa fa-search searchIcon"></i>
-              <input class="searchBox" type="search" name="search">
+              <p>Type a poem</p>
             </div>
-
-            <sl-button class="beehive-add-post-btn" variant="primary" size="medium" pill>Add Post</sl-button>
+            <sl-button class="beehive-add-post-btn" variant="primary" size="medium" style="margin: 20px;"pill>Add Post</sl-button>
           </div>
+        </div>
+
+          <div class="radial-gradient"></div> <!-- STYLE -->
 
           <div class="beehive-row-1 calign">
-            <sl-card>
-              <h2>In my dreams...</h2>
-              <br>
-              <p>In my dreams all I see are people dancing in the sky</p>
-              <br>
-              <p>Magic happenings everywhere</p>
-              <br>
-              <p>I want that to be my reality</p>
+            <sl-card class="beehive-in-my-dreams">
+              <div id="beehive-card-text">
+                <h2>In my dreams...</h2>
+                <hr>
+                <p>In my dreams all I see are people dancing in the sky</p>
+                <p>Magic happenings everywhere</p>
+                <p>I want that to be my reality</p>
+                <br>
 
-              <iconify-icon icon="vs:rose" width="20" height="40"></iconify-icon>
-              <sl-button class="send-rose-btn" pill>Send a rose</sl-button>
-              <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-              <p>${Auth.currentUser.userName}</p>
-
+                <div class="in-my-dreams-icons">
+                  <div id="beehive-card-rose-icon">
+                    <img src="/images/rose-flower.png" width="30" height="30">
+                  </div>
+                  <div id="beehive-card-rose-icon">
+                    <p>Send a rose</p>
+                  </div>
+                  <div id="beehive-card-avatar">
+                    <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
+                    <p>${Auth.currentUser.userName}</p>
+                  </div>
+                </div>
+              </div>
             </sl-card>
           </div>
 
+          <div class="radial-gradient"></div> <!-- STYLE -->
+
           <div class="beehive-row-2 calign">
-            <sl-card>
+            <sl-card class="beehive-goldfish-tears">
+            <div id="beehive-card-text">
               <h2>Goldfish Tears</h2>
-              <br>
+              <hr>
               <p>Goldfish,</p>
-              <br>
               <p>No memory just swimming in circles</p>
-              <br>
               <p>The life of a trapped fish.</p>
-              <br>
               <p>How sad,</p>
-              <br>
               <p>How very sad,</p>
-              <br>
               <p>How tragedy strikes.</p>
-              <br>
               <p>Goldfish Bowl.</p>
+              <br>
 
-              <iconify-icon icon="vs:rose" width="20" height="40"></iconify-icon>
-              <sl-button class="send-rose-btn" pill>Send a rose</sl-button>
-              <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-              <p>${Auth.currentUser.userName}</p>
-
+              <div class="goldfish-tears-icons">
+              <div id="beehive-card-rose-icon">
+                <img src="/images/rose-flower.png" width="30" height="30">
+              </div>
+              <div id="beehive-card-rose-icon">
+                <p>Send a rose</p>
+              </div>
+              <div id="beehive-card-avatar">
+                <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
+                <p>${Auth.currentUser.userName}</p>
+              </div>
+              </div>
+            </div>
             </sl-card>
           </div>
 
           <div class="beehive-row-3 calign">
-            <sl-card>
+            <sl-card class="beehive-cloud-kisses">
+            <div id="beehive-card-text">
               <h2>Cloud Kisses</h2>
-              <br>
+              <hr>
               <p>Clouds floating,</p>
-              <br>
               <p>Drifting in the wind</p>
-              <br>
               <p>Crying crystals</p>
-              <br>
               <p>Crystals hitting my face.</p>
-              <br>
               <p>Crystal kisses.</p>
+              <br>
 
-              <iconify-icon icon="vs:rose" width="20" height="40"></iconify-icon>
-              <sl-button class="send-rose-btn" pill>Send a rose</sl-button>
-              <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-              <p>${Auth.currentUser.userName}</p>
-
+              <div class="cloud-kisses-icons">
+              <div id="beehive-card-rose-icon">
+                <img src="/images/rose-flower.png" width="30" height="30">
+              </div>
+              <div id="beehive-card-rose-icon">
+                <p>Send a rose</p>
+              </div>
+              <div id="beehive-card-avatar">
+                <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
+                <p>${Auth.currentUser.userName}</p>
+              </div>
+              </div>
+            </div>
             </sl-card>
           </div>
         </div>

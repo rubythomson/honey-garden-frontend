@@ -151,6 +151,48 @@ a {
 .guide-step img {
   width: 100%;
   height: auto;
+  margin-bottom: 200px;
+}
+
+.guide-title {
+  display: flex;
+  justify-content: left;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-size: 1.5em;
+}
+
+.guide-titles {
+  font-size: 2.5em;
+}
+
+.bee-guide-img {
+  display: flex;
+  justify-content: right;
+  width: auto;
+  height: 450px;
+  transform: rotate(40deg);
+  opacity: 60%;
+}
+
+.guide-rose-icon {
+  display: flex;
+  justify-content: left;
+  transform: scaleX(-1);
+  transform: rotate(-20deg);
+  margin-right: 1000px;
+  margin-left: 250px;
+}
+
+.guide-rose-icon-small {
+  display: flex;
+  justify-content: right;
+  transform: rotate(25deg);
+  margin-right: 300px;
+}
+
+.explore-btn::part(body) {
+  color: #FFF4E1;
 }
 
 .poems-grid {
@@ -272,7 +314,7 @@ a {
   display: inline-block;
 }
 
-/* SEARCH BAR ------------------------------------------------------------------------------------------------ */
+/* SEARCH BAR (BEEHIVE) ------------------------------------------------------------------------------------- */
 .searchContainer {
   display: inline-flex;
   flex: 1 1 300px;
@@ -281,8 +323,9 @@ a {
   border-radius: 50px;
   width: 60%;
   height: 40px;
-  margin: 10px;
+  margin: 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #F9F9F9;
 }
 
 .searchIcon {
@@ -359,12 +402,16 @@ a {
 }
 
 .beehive-title {
-  margin: 50px;
+  margin-left: 50px;
+  margin-top: 40px;
   font-size: 2.5em;
 }
 
 .beehive-add-post-btn::part(base) {
   background-color: #FFF4E1;
+  border-color: black;
+  font-family: var(--base-font-family);
+  color: black;
 }
 
 .beehive-row-1 .beehive-row-2 .beehive-row-3 {
@@ -378,9 +425,68 @@ a {
 .beehive-search-box {
   border-radius: 50px;
   background-color: white;
-  margin: 20px;
   width: 33.3%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.beehive-in-my-dreams {
+  width: 70%;
+  text-align: left;
+  padding: 40px;
+}
+
+.beehive-goldfish-tears {
+  width: 70%;
+  text-align: left;
+  padding: 40px;
+}
+
+.beehive-cloud-kisses {
+  width: 70%;
+  text-align: left;
+  padding: 40px;
+}
+
+.in-my-dreams-icons {
+  display: flex;
+  align-items: left;
+}
+
+.goldfish-tears-icons {
+  display: flex;
+  align-items: left;
+}
+
+.cloud-kisses-icons {
+  display: flex;
+  align-items: left;
+}
+
+#beehive-card-text {
+  margin: 10px;
+}
+
+#beehive-card-rose-icon {
+  margin: 5px;
+  display: flex;
+}
+
+#beehive-card-rose-icon :hover {
+  color: #FEC76C;
+}
+
+#beehive-card-avatar {
+  display: flex;
+  justify-content: left;
+  margin: 10px;
+}
+
+.beehive-search-style {
+  display: flex;
+  justify-content: center;
+  width: auto;
 }
 
 /* PROFILE  ------------------------------------------------------------------------------------------------------- */
@@ -514,26 +620,52 @@ a {
   height: 500px;
 }
 
+.radial-gradient {
+  height: 700px;
+  border-radius: 50px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  z-index: -1;
+  left: 800px;
+  top: 400px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(254, 199, 108, 0.39) 0%, rgba(217, 217, 217, 0) 100%);
+}
+
 .feather-img-div {
   display: flex;
   justify-content: right;
+  margin-right: 100px;
 }
 
 .home-title {
   margin: 50px;
-  font-size: 2.5em;
-}
-
-.floral-img-3 {
-  width: auto;
-  height: 350px;
+  font-size: 3em;
+  margin-top: 200px;
 }
 
 .featured-card {
   display: grid;
-  align-items: center;
-  justify-items: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #FFE4B7;
+  border-radius: 50px;
+  width: 90%;
+  padding: 60px;
+}
+
+.featured-content-heading {
+  display: flex;
+  justify-content: left;
+}
+
+.featured-h2 {
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 2.5em;
+}
+
+.featured-img {
+  display: flex;
+  justify-content: left;
 }
 
 .for-you-content {
@@ -556,9 +688,44 @@ a {
   margin-top: 40px;
 }
 
-.featured-h2 {
-  padding-top: 20px;
-  padding-left: 20px;
+#slider {
+  height: 350px;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.carousel-item {
+  height: 350px;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.carousel-indicators {
+  bottom: -50px;
+}
+
+.summary {
+  justify-content: right;
+  margin: 20px;
+  font-size: 2em;
+}
+
+.comment-1 {
+  display: flex;
+  justify-content: left;
+  margin-left: 20px;
+}
+
+.comment-2 {
+  display: flex;
+  justify-content: right;
+  margin-right: 180px;
 }
 
 /* READ  ------------------------------------------------------------------------------------------------- */

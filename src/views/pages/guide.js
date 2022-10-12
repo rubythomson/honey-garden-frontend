@@ -31,25 +31,49 @@ class GuideView {
         
         <div class="guide-title">
           <h1>Honey Garden,</h1>
+        </div>
+        <div class="guide-title">
           <h1>The hive for literature lovers</h1>
         </div>
 
+        <div class="bee-guide-img">
+          <img src="/images/bee-logo-guide.png" alt="bee-img">
+        </div>
+
+        <div class="radial-gradient"></div>
+
         <div class="guide-step">
-          <h2>Read!</h2>
-          <img src="https://plchldr.co/i/500x300?&bg=dddddd&fc=666666&text=IMAGE">
+          <h2 class="guide-titles">Read!</h2>
+          <div class="book-stack">
+            <img src="/images/book-stack.png" alt="book-stack-img">
+          </div>
         </div>
 
         <div class="guide-step">
-          <h2>Create!</h2>
-          <img src="https://plchldr.co/i/500x300?&bg=dddddd&fc=666666&text=IMAGE">
+          <h2 class="guide-titles">Create!</h2>
+          <div class="open-book">
+            <img src="/images/open-book.png" alt="open-book-img" style="width: auto; height: 200px;">
+          </div>
+        </div>
+
+        <div class="guide-rose-icon-small">
+          <img src="/images/rose-flower.png" width="auto" height="70">
         </div>
 
         <div class="guide-step">
-          <h2>Support!</h2>
-          <img src="https://plchldr.co/i/500x300?&bg=dddddd&fc=666666&text=IMAGE">
+          <h2 class="guide-titles">Support!</h2>
+          <div class="rose-bunch">
+            <img src="/images/rose-bunch.png" alt="rose-bunch-img" style="width: auto; height: 500px;">
+          </div>
         </div>
 
-        <sl-button type="primary" @click=${() => gotoRoute('/')}>Explore!</sl-button>
+        <div class="guide-rose-icon">
+          <img src="/images/rose-flower.png" width="auto" height="120">
+        </div>
+
+        <div class="explore-btn">
+          <sl-button type="primary" @click=${() => gotoRoute('/')} size="medium" pill>Explore!</sl-button>
+        </div>
       </div>      
     `
     render(template, App.rootEl)

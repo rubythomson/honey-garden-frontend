@@ -26,6 +26,7 @@ class SaveView {
             
             <div class="rose-card">
               <iconify-icon class="rose-icon" icon="vs:rose" width="50" height="90"></iconify-icon>
+              <img src="/images/rose-flower.png" width="75" height="80"> <!-- ADJUST -->
               <div class="rose-card-text">
                 <h3>You have 7 Roses</h3>
                 <p>You have given 60 Roses</p>
