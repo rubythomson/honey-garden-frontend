@@ -484,16 +484,27 @@ a {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+.bio-content {
+  margin: 15px;
+}
+
 .bio {
   text-align: left; /* align to the left not working */
 }
 
 .bio-card {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 50px;
 }
 
-.create-btn {
-  position: relative; /* get to sit to the right of the title */
+.create-btn::part(base) {
+  background-color: #CBBFAB;
+  border-color: black;
+  color: black;
+  font-family: var(--base-font-family);
+  font-weight: bold;
+  display: flex;
+  justify-content: right;
 }
 
 .profile-box {
@@ -508,6 +519,75 @@ a {
   align-items: center;
   justify-items: center;
   gap: 1.5em;
+}
+
+.bio-works-card {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.create-new-btn {
+  display: flex;
+  justify-content: right;
+}
+
+.reading-list-title {
+  display: flex;
+  justify-content: left;
+}
+
+.reading-list-card {
+  display: flex;
+  justify-content: center;
+}
+
+.reading-list-content {
+  width: 800px;
+}
+
+.stories-text {
+  display: flex;
+  justify-content: inline-block;
+  margin-left: 30px;
+  margin-top: 4px;
+}
+
+.reading-list-imgs {
+  display: flex;
+  justify-content: left;
+}
+
+.sinking-ships-img {
+  display: flex;
+  justify-content: left;
+  width: auto;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.kissing-clouds-img {
+  display: flex;
+  justify-content: left;
+  width: auto;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.center-img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.empty-reading-list-space {
+  width: auto;
+  height: 200px;
+  border: #777;
+  border-radius: 15px;
 }
 
 /* ROSE VIEW --------------------------------------------------------------------------------------------- */

@@ -30,7 +30,10 @@ class ProfileView {
   render(){
     const template = html`
       <va-app-header title="Profile" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
-      <div class="page-content calign">        
+      <div class="page-content calign">      
+        
+      <div class="radial-gradient"></div> <!-- STYLE -->
+
         ${Auth.currentUser && Auth.currentUser.avatar ? html`
           <sl-avatar style="--size: 200px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
         `:html`
@@ -69,11 +72,16 @@ class ProfileView {
             </div>
           </sl-card>
 
+          <div class="radial-gradient"></div> <!-- STYLE -->
+
           <sl-card class="bio-card">  
+          <div class="bio-content">
             ${Auth.currentUser.bio ? html`
-              <h3 class="bio">Bio</h3>
+              <h3 class="bio">Bio:</h3>
+              <hr>
               <p>${Auth.currentUser.bio}</p>
             ` : html``}
+            </div>
           </sl-card>
 
         <br>
@@ -83,27 +91,14 @@ class ProfileView {
         <p></p>
         <p></p>
 
-        <sl-card class="card-header">
-          <div slot="header">        
-            <h2>Works (1)</h2>
-          </div> 
-          
-        </sl-card>
-
-        <br>
-        <p></p>
-        <p></p>
-        <br>
-        <p></p>
-        <p></p>
-
-        <sl-card class="card-header">
-          <div slot="header">        
-            <h2>Reading Lists (0)</h2>
-            <sl-button class="create-btn" size="medium" pill>+ Create</sl-button>
+        <div class="bio-works-card">
+          <sl-card class="card-basic">
+            <div>        
+              <h2>Works (1)</h2>
+              <hr>
             </div> 
-            
-              <div class="poem-grid">
+
+            <div class="poem-grid">
                 ${this.readingList == null ? html`
                   <sl-spinner></sl-spinner>
                 ` : html`
@@ -122,8 +117,88 @@ class ProfileView {
                   `)}
                 `}
               </div>
-          
-        </sl-card>
+          </sl-card>
+        </div>
+
+        <br>
+        <p></p>
+        <p></p>
+        <br>
+        <p></p>
+        <p></p>
+
+        <div class="reading-list-card">
+          <sl-card class="card-basic">
+            <div class="reading-list-content">  
+              <div class="reading-list-title">     
+                <h2>Reading Lists (1)</h2>
+              </div> 
+              <div class="create-new-btn">
+                <sl-button class="create-btn" size="medium" pill>Create New</sl-button>
+              </div>
+              <hr>
+              <div class="reading-list-title">
+                <h2>Modern Takes</h2>
+                <style>
+                  .vl {
+                    border-left: 1.5px solid black;
+                    height: 30px;
+                    position: absolute;
+                    margin-left: 155px;
+                  }
+                </style>
+                <div class="vl"></div>
+                <div class="stories-text">
+                  <h3>2 Stories</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="reading-list-imgs">
+              <div class="sinking-ships-img">
+                <img src="/images/sinking-ships.png" alt="sinking-ships-img" style="border-radius: 15px;">
+                <div class="center-img-text">Sinking Ships</div>
+              </div>
+              <div class="kissing-clouds-img">
+                <img src="/images/kissing-clouds.png" alt="kissing-clouds-img" style="border-radius: 15px;">
+                <div class="center-img-text">Kissing Clouds</div>
+              </div>
+
+              <div class="empty-reading-list-space"></div>
+              <style>
+                .empty-reading-list-space {
+                  width: 135px;
+                  height: 200px;
+                  border: 0.5px lightslategray solid;
+                  margin-left: 10px;
+                  margin-right: 10px;
+                }
+              </style>
+
+            <div class="empty-reading-list-space"></div>
+              <style>
+                .empty-reading-list-space {
+                  width: 135px;
+                  height: 200px;
+                  border: 0.5px lightslategray solid;
+                  margin-left: 10px;
+                  margin-right: 10px;
+                }
+              </style>
+
+            <div class="empty-reading-list-space"></div>
+              <style>
+                .empty-reading-list-space {
+                  width: 135px;
+                  height: 200px;
+                  border: 0.5px lightslategray solid;
+                  margin-left: 10px;
+                  margin-right: 10px;
+                }
+              </style>
+            </div>
+          </sl-card>
+        </div>
 
         <br>
         <p></p>
