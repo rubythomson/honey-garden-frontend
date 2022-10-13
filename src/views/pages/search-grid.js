@@ -7,12 +7,27 @@ import PoemAPI from './../../PoemAPI'
 import Toast from '../../Toast'
 import { useParam } from '../../params'
 
-class BrowseView {
+class SearchGridView {
   async init(){
-    document.title = 'Browse'  //search
+    document.title = 'Search Filter'
     this.category = useParam("category");
-    this.poems = null  
-    this.render()
+    this.poems = null 
+    this.categories = [
+        "Romance",
+        "Fantasy",
+        "Drama",
+        "Horror",
+        "Comedy",
+        "Mystery",
+        "Paranormal",
+        "Thriller",
+        "Science-Fiction",
+        "Historical",
+        "Adventure",
+        "Non-Fiction",
+        "18+ Only",
+    ]
+    this.render()    
     Utils.pageIntroAnim()
     await this.getPoems()
   }
@@ -90,10 +105,10 @@ class BrowseView {
 
   render(){
     const template = html`
-      <va-app-header title="Browse" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
+      <va-app-header title="Search Grid" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
 
       <div class="page-content"> 
-        <h1 class="beehive-title">Search by ${this.category.get()}</h1>
+        <h1 class="beehive-title">Search</h1>
 
         <div class="outer">
           <div class="top">
@@ -220,31 +235,15 @@ class BrowseView {
                   </div>
                   <input type="submit" value="Search" class="searchButton">          
                 </div>
+
+                <div class="search-grid">
+                  ${this.categories.map(name => html`
+                    <sl-button data-name="name" size="large" variant="primary"  @click=${() => {
+                      this.category.set(name, "/browse");
+                    }}>${name}</sl-button>
+                  `)}
+                </div>
               </div>
-          </div>
-            
-          <div class="bottom">
-            <div class="poems-grid">
-              ${this.poems == null ? html`
-                <sl-spinner></sl-spinner>
-                ` : html`
-                ${this.poems.map(poem => html`
-                  <va-poem class="poem-card"
-                      id="${poem._id}"
-                      title="${poem.title}" 
-                      description="${poem.description}"
-                      views="${poem.views}"
-                      status="${poem.status}"
-                      pages="${poem.pages}"
-                      user="${JSON.stringify(poem.user)}"
-                      image="${poem.image}"
-                      showStartReadingHandler="${true}" 
-                      showReadingListHandler="${true}"
-                    >
-                  </va-poem>
-                `)}
-              `}
-            </div>
           </div>
         </div>
         
@@ -263,4 +262,4 @@ class BrowseView {
   }
 }
 
-export default new BrowseView()
+export default new SearchGridView()

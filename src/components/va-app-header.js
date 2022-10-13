@@ -2,10 +2,11 @@ import { LitElement, html, css } from '@polymer/lit-element'
 import {anchorRoute, gotoRoute} from './../Router'
 import Auth from './../Auth'
 import App from './../App'
+import { useParam } from '../params'
 
 customElements.define('va-app-header', class AppHeader extends LitElement {
   constructor(){
-    super()    
+    super()
   }
 
   static get properties(){
@@ -195,7 +196,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         <div class="app-top-nav"> 
           <a href="/beehive" @click="${anchorRoute}">BeeHive</a>  
           <sl-icon name="search"></sl-icon>
-          <a href="/browse" @click="${anchorRoute}">Search</a>
+          <a href="/search-grid" @click="${anchorRoute}">Search</a>
         </div> 
 
       </div>

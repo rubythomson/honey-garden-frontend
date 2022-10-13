@@ -121,28 +121,81 @@ customElements.define('va-poem', class Poem extends LitElement {
   render(){    
     return html`
     <style>
+      .poem-card {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(auto, 50%));
+        grid-template-rows: max-content 1fr max-content;
+        border-radius: 50px;
+        gap: 15px;
+        padding: 1em;
+        background-color: #FFFFFF;
+      }
 
+      .poem-card img {
+        grid-row: 1 / -1;
+        max-width: 100%;
+        border-radius: 5px;
+        border: 0.2px solid lightgray;
+        aspect-ratio: 1 / 1.6;
+        object-fit: cover;
+      }
+
+      .poem-card .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .poem-card .stats > li {
+        display: flex;
+        align-items: center;
+      }
+
+      .poem-card p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 8px;
+      }
+
+      .poem-card .actions {
+        display: flex;
+        gap: 0.5em;
+      }
+
+      .search-description {
+        font-size: 1.2em;
+      }
     </style> 
-    <sl-card>
+    <div class="poem-card">
         <img slot="image" src="${App.apiBase}/images/${this.image}"/>
-        <h2>${this.title}</h2>
-            ${this.views && html`<h3>
-                <sl-icon-button name="eye" label="Views" style="font-size: 23px"></sl-icon-button>
-                ${this.views}
-            </h3>`}
-            ${this.status && html`<h3>
-                <sl-icon-button name="pencil-square" label="Status" style="font-size: 23px"></sl-icon-button>
-                ${this.status}
-            </h3>`}
-            ${this.pages && html`<h3>
-                <sl-icon-button name="book" label="Pages" style="font-size: 23px"></sl-icon-button>
-                ${this.pages}
-            </h3>`}
-            ${this.showReadingListHandler && html`
-            <sl-icon-button @click=${this.readingListHandler.bind(this)} name="plus-circle" label="Save" style="font-size: 23px"></sl-icon-button>`}
-            ${this.showStartReadingHandler && html`
-            <sl-button @click=${this.startReadingHandler.bind(this)} size="medium" pill>Start Reading</sl-button>`}
-    </sl-card>
+        <ul class="stats">
+          ${this.views && html`
+            <li>
+              <sl-icon-button name="eye" label="Views" style="font-size: 23px"></sl-icon-button>
+              ${this.views}
+            </li>`}
+          ${this.status && html`
+            <li>
+              <sl-icon-button name="pencil-square" label="Status" style="font-size: 23px"></sl-icon-button>
+              ${this.status}
+            </li>`}
+          ${this.pages && html`
+          <li>
+              <sl-icon-button name="book" label="Pages" style="font-size: 23px"></sl-icon-button>
+              ${this.pages}
+          </li>`}
+        </ul>
+        <p class="search-description">
+          ${this.description}
+        </p>
+        <div class="actions">
+          <sl-icon-button @click=${this.readingListHandler.bind(this)} name="plus-circle" label="Save" style="font-size: 23px"></sl-icon-button>
+          <sl-button @click=${this.startReadingHandler.bind(this)} size="medium" pill>Start Reading</sl-button>
+        </div>
+    </div>
     `
   }
 })

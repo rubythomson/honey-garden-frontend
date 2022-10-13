@@ -19,7 +19,7 @@ class ProfileView {
   async getReadingList(){
     try {
       const currentUser = await UserAPI.getUser(Auth.currentUser._id)
-      this.readingList = currentUser.readingList
+      this.readingList = [currentUser.readingList[0]] // first item is 0
       console.log(this.readingList)
       this.render()
     }catch(err){

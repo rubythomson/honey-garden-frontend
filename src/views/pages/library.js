@@ -31,10 +31,10 @@ class LibraryView {
       <div class="page-content">        
         <h1 class="library-title">Library</h1>
 
-        <div class="library-filter calign">
-        <sl-button size="medium" pill>Current Reads</sl-button>
-        <sl-button size="medium" pill>Archived</sl-button>
-        <sl-button size="medium" pill>Reading Lists</sl-button>
+        <div class="library-filter">
+          <sl-button variant="primary">Current Reads</sl-button>
+          <sl-button variant="primary">Archived</sl-button>
+          <sl-button variant="primary">Reading Lists</sl-button>
         </div>
 
           <div class="bottom">

@@ -13974,7 +13974,8 @@ class ProfileView {
   async getReadingList() {
     try {
       const currentUser = await _UserAPI.default.getUser(_Auth.default.currentUser._id);
-      this.readingList = currentUser.readingList;
+      this.readingList = [currentUser.readingList[0]]; // first item is 0
+
       console.log(this.readingList);
       this.render();
     } catch (err) {
@@ -14295,7 +14296,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Library\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1 class=\"library-title\">Library</h1>\n\n        <div class=\"library-filter calign\">\n        <sl-button size=\"medium\" pill>Current Reads</sl-button>\n        <sl-button size=\"medium\" pill>Archived</sl-button>\n        <sl-button size=\"medium\" pill>Reading Lists</sl-button>\n        </div>\n\n          <div class=\"bottom\">\n            <div class=\"poems-grid\">\n              ", "\n            </div>\n          </div>\n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Library\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1 class=\"library-title\">Library</h1>\n\n        <div class=\"library-filter\">\n          <sl-button variant=\"primary\">Current Reads</sl-button>\n          <sl-button variant=\"primary\">Archived</sl-button>\n          <sl-button variant=\"primary\">Reading Lists</sl-button>\n        </div>\n\n          <div class=\"bottom\">\n            <div class=\"poems-grid\">\n              ", "\n            </div>\n          </div>\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14470,7 +14471,50 @@ class newPostView {
 var _default = new newPostView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"views/pages/browse.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"params.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useParam = useParam;
+
+var _Router = _interopRequireDefault(require("./Router"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function useParam(name) {
+  const subscriptions = [];
+
+  function get() {
+    return new URLSearchParams(window.location.search).get(name);
+  }
+
+  function set(value) {
+    let pathname = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    const url = new URL(window.location);
+    url.searchParams.set(name, value);
+    url.pathname = pathname !== null && pathname !== void 0 ? pathname : url.pathname;
+    window.history.pushState({}, '', url);
+
+    for (const callback of subscriptions) {
+      callback(value);
+    }
+
+    _Router.default.route(url.pathname);
+  }
+
+  function subscribe(callback) {
+    subscriptions.push(callback);
+  }
+
+  return {
+    get,
+    set,
+    subscribe
+  };
+}
+},{"./Router":"Router.js"}],"views/pages/browse.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14491,6 +14535,8 @@ var _Utils = _interopRequireDefault(require("../../Utils"));
 var _PoemAPI = _interopRequireDefault(require("./../../PoemAPI"));
 
 var _Toast = _interopRequireDefault(require("../../Toast"));
+
+var _params = require("../../params");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -14535,7 +14581,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Browse\" user=\"", "\"></va-app-header>\n\n      <div class=\"page-content\"> \n        <h1 class=\"beehive-title\">Search</h1>\n\n        <div class=\"outer\">\n          <div class=\"top\">\n            ", "\n              <slot></slot>\n              <div class=\"calign\">\n                <div class=\"searchContainer\">\n                  <i class=\"fa fa-search searchIcon\"></i>\n                  <input class=\"searchBox\" type=\"search\" name=\"search\">\n\n                  <div class=\"dropdown\">\n                    <button class=\"dropbtn\">\n                      <i class=\"gg-options\"></i>\n                    </button>\n  \n                      <div id=\"search-dropdown\">\n                        <sl-card class=\"dropdown-content\">\n                          <div class=\"row-dropdown-length\">\n                            <a href=\"#\">Length</a>\n                            <ul class=\"length-list\">\n                              <li>\n                                <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"Any\" @click=", ">\n                                  <sl-icon name=\"square\"></sl-icon>\n                                </sl-button>\n                                Any</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"1-10\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                                1-10 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"10-30\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                                10-30 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"30-50\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                              30-50 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"50+\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button> \n                                50+ Chapters</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-updates\">\n                            <a href=\"#\">Updates</a>\n                            <ul class=\"updates-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\"> \n                                <sl-icon name=\"square\"></sl-icon> <!-- Need to figure this out in database -->\n                              </sl-button>  \n                              All</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Completed\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                              Completed</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Ongoing\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>   \n                              Ongoing</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-C\">\n                            <a href=\"#\">Content</a>\n                            <ul class=\"C-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              Anytime</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              Today</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              This Week</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              This Month</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>    \n                              This Year</li>\n                            </ul>\n\n                            <!-- <div class=\"apply-filters\">\n                              <sl-button size=\"small\" pill>Apply Filters</sl-button>\n                            </div>\n                            -->\n\n                            <div>\n                              <sl-button class=\"reset-filters\" size=\"small\" pill @click=", ">Reset Filters</sl-button>\n                            </div>\n                          </div>\n                        </sl-card>\n\n                      </div>\n                  </div>\n                  <input type=\"submit\" value=\"Search\" class=\"searchButton\">          \n                </div>\n              </div>\n          </div>\n            \n          <div class=\"bottom\">\n            <div class=\"poems-grid\">\n              ", "\n            </div>\n          </div>\n        </div>\n        \n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Browse\" user=\"", "\"></va-app-header>\n\n      <div class=\"page-content\"> \n        <h1 class=\"beehive-title\">Search by ", "</h1>\n\n        <div class=\"outer\">\n          <div class=\"top\">\n            ", "\n              <slot></slot>\n              <div class=\"calign\">\n                <div class=\"searchContainer\">\n                  <i class=\"fa fa-search searchIcon\"></i>\n                  <input class=\"searchBox\" type=\"search\" name=\"search\">\n\n                  <div class=\"dropdown\">\n                    <button class=\"dropbtn\">\n                      <i class=\"gg-options\"></i>\n                    </button>\n  \n                      <div id=\"search-dropdown\">\n                        <sl-card class=\"dropdown-content\">\n                          <div class=\"row-dropdown-length\">\n                            <a href=\"#\">Length</a>\n                            <ul class=\"length-list\">\n                              <li>\n                                <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"Any\" @click=", ">\n                                  <sl-icon name=\"square\"></sl-icon>\n                                </sl-button>\n                                Any</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"1-10\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                                1-10 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"10-30\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                                10-30 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"30-50\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                              30-50 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"50+\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button> \n                                50+ Chapters</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-updates\">\n                            <a href=\"#\">Updates</a>\n                            <ul class=\"updates-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\"> \n                                <sl-icon name=\"square\"></sl-icon> <!-- Need to figure this out in database -->\n                              </sl-button>  \n                              All</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Completed\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                              Completed</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Ongoing\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>   \n                              Ongoing</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-C\">\n                            <a href=\"#\">Content</a>\n                            <ul class=\"C-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              Anytime</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              Today</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              This Week</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              This Month</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>    \n                              This Year</li>\n                            </ul>\n\n                            <!-- <div class=\"apply-filters\">\n                              <sl-button size=\"small\" pill>Apply Filters</sl-button>\n                            </div>\n                            -->\n\n                            <div>\n                              <sl-button class=\"reset-filters\" size=\"small\" pill @click=", ">Reset Filters</sl-button>\n                            </div>\n                          </div>\n                        </sl-card>\n\n                      </div>\n                  </div>\n                  <input type=\"submit\" value=\"Search\" class=\"searchButton\">          \n                </div>\n              </div>\n          </div>\n            \n          <div class=\"bottom\">\n            <div class=\"poems-grid\">\n              ", "\n            </div>\n          </div>\n        </div>\n        \n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14548,7 +14594,9 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 class BrowseView {
   async init() {
-    document.title = 'Browse';
+    document.title = 'Browse'; //search
+
+    this.category = (0, _params.useParam)("category");
     this.poems = null;
     this.render();
 
@@ -14621,7 +14669,7 @@ class BrowseView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.title ? (0, _litHtml.html)(_templateObject2(), this.title) : "", this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.clearFilters.bind(this), this.poems == null ? (0, _litHtml.html)(_templateObject3()) : (0, _litHtml.html)(_templateObject4(), this.poems.map(poem => (0, _litHtml.html)(_templateObject5(), poem._id, poem.title, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image, true, true))));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.category.get(), this.title ? (0, _litHtml.html)(_templateObject2(), this.title) : "", this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.clearFilters.bind(this), this.poems == null ? (0, _litHtml.html)(_templateObject3()) : (0, _litHtml.html)(_templateObject4(), this.poems.map(poem => (0, _litHtml.html)(_templateObject5(), poem._id, poem.title, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image, true, true))));
     (0, _litHtml.render)(template, _App.default.rootEl);
     const popup = document.getElementById("search-dropdown").querySelector(".dropdown-content");
     const {
@@ -14645,7 +14693,7 @@ class BrowseView {
 var _default = new BrowseView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"views/pages/inbox.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js","../../params":"params.js"}],"views/pages/inbox.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15082,7 +15130,168 @@ class TemplateView {
 var _default = new TemplateView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"Router.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"views/pages/search-grid.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+var _PoemAPI = _interopRequireDefault(require("./../../PoemAPI"));
+
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
+var _params = require("../../params");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject3() {
+  const data = _taggedTemplateLiteral(["\n                    <sl-button data-name=\"name\" size=\"large\" variant=\"primary\"  @click=", ">", "</sl-button>\n                  "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  const data = _taggedTemplateLiteral(["\n                <h1 class=\"page-title\">", "</h1>\n              "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Search Grid\" user=\"", "\"></va-app-header>\n\n      <div class=\"page-content\"> \n        <h1 class=\"beehive-title\">Search</h1>\n\n        <div class=\"outer\">\n          <div class=\"top\">\n            ", "\n              <slot></slot>\n              <div class=\"calign\">\n                <div class=\"searchContainer\">\n                  <i class=\"fa fa-search searchIcon\"></i>\n                  <input class=\"searchBox\" type=\"search\" name=\"search\">\n\n                  <div class=\"dropdown\">\n                    <button class=\"dropbtn\">\n                      <i class=\"gg-options\"></i>\n                    </button>\n  \n                      <div id=\"search-dropdown\">\n                        <sl-card class=\"dropdown-content\">\n                          <div class=\"row-dropdown-length\">\n                            <a href=\"#\">Length</a>\n                            <ul class=\"length-list\">\n                              <li>\n                                <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"Any\" @click=", ">\n                                  <sl-icon name=\"square\"></sl-icon>\n                                </sl-button>\n                                Any</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"1-10\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                                1-10 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"10-30\" @click=", ">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                                10-30 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"30-50\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button>\n                              30-50 Chapters</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"pages\" data-match=\"50+\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button> \n                                50+ Chapters</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-updates\">\n                            <a href=\"#\">Updates</a>\n                            <ul class=\"updates-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\"> \n                                <sl-icon name=\"square\"></sl-icon> <!-- Need to figure this out in database -->\n                              </sl-button>  \n                              All</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Completed\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>  \n                              Completed</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\" data-field=\"status\" data-match=\"Ongoing\" @click=", "> \n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>   \n                              Ongoing</li>\n                            </ul>\n                          </div>\n\n                          <div class=\"row-dropdown-C\">\n                            <a href=\"#\">Content</a>\n                            <ul class=\"C-list\">\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              Anytime</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              Today</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>  \n                              </sl-button> \n                              This Week</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon> \n                              </sl-button>   \n                              This Month</li>\n\n                              <li>\n                              <sl-button class=\"filter-btn\" size=\"small\">\n                                <sl-icon name=\"square\"></sl-icon>\n                              </sl-button>    \n                              This Year</li>\n                            </ul>\n\n                            <!-- <div class=\"apply-filters\">\n                              <sl-button size=\"small\" pill>Apply Filters</sl-button>\n                            </div>\n                            -->\n\n                            <div>\n                              <sl-button class=\"reset-filters\" size=\"small\" pill @click=", ">Reset Filters</sl-button>\n                            </div>\n                          </div>\n                        </sl-card>\n\n                      </div>\n                  </div>\n                  <input type=\"submit\" value=\"Search\" class=\"searchButton\">          \n                </div>\n\n                <div class=\"search-grid\">\n                  ", "\n                </div>\n              </div>\n          </div>\n        </div>\n        \n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class SearchGridView {
+  async init() {
+    document.title = 'Search Filter';
+    this.category = (0, _params.useParam)("category");
+    this.poems = null;
+    this.categories = ["Romance", "Fantasy", "Drama", "Horror", "Comedy", "Mystery", "Paranormal", "Thriller", "Science-Fiction", "Historical", "Adventure", "Non-Fiction", "18+ Only"];
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+
+    await this.getPoems();
+  }
+
+  async filterPoems(field, match) {
+    // validate
+    if (!field || !match) return; // get fresh copy of poems
+
+    this.poems = await _PoemAPI.default.getPoems();
+    let filteredPoems; // content
+
+    if (field === 'status') {
+      filteredPoems = this.poems.filter(poem => poem.status == match);
+    } // pages
+
+
+    if (field === 'pages') {
+      let lower = null;
+      let upper = null;
+
+      if (match.includes("-")) {
+        lower = match.split('-')[0];
+        upper = match.split('-')[1];
+      } else if (match.includes('+')) {
+        lower = match.replace("+", "");
+      }
+
+      filteredPoems = this.poems.filter(poem => (!lower || poem.pages >= lower) && (!upper || poem.pages <= upper));
+    } // render
+
+
+    this.poems = filteredPoems;
+    this.render();
+  }
+
+  clearFilterBtns() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => btn.removeAttribute("type"));
+  }
+
+  handleFilterBtn(e) {
+    // clear all filter Btns
+    this.clearFilterBtns(); // set Btn active state (type = primary)
+
+    e.target.setAttribute("type", "primary"); // extract field & match from btn
+
+    const field = e.target.getAttribute("data-field");
+    const match = e.target.getAttribute("data-match"); // filter the poems
+
+    this.filterPoems(field, match);
+  }
+
+  clearFilters() {
+    this.getPoems();
+    this.clearFilterBtns();
+  }
+
+  async getPoems() {
+    try {
+      this.poems = await _PoemAPI.default.getPoems();
+      console.log(this.poems);
+      this.render();
+    } catch (err) {
+      _Toast.default.show(err, 'error');
+    }
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.title ? (0, _litHtml.html)(_templateObject2(), this.title) : "", this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.handleFilterBtn.bind(this), this.clearFilters.bind(this), this.categories.map(name => (0, _litHtml.html)(_templateObject3(), () => {
+      this.category.set(name, "/browse");
+    }, name)));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+    const popup = document.getElementById("search-dropdown").querySelector(".dropdown-content");
+    const {
+      x,
+      y,
+      width,
+      height
+    } = popup.getBoundingClientRect();
+    const screenWidth = document.querySelector("html").clientWidth;
+    const offsetX = x + width - screenWidth;
+
+    if (offsetX > 0) {
+      popup.style.transform = "translate(-".concat(offsetX, "px, 0)");
+    }
+
+    console.log(popup, x, y, screenWidth, offsetX);
+  }
+
+}
+
+var _default = new SearchGridView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js","../../params":"params.js"}],"Router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15126,6 +15335,8 @@ var _read = _interopRequireDefault(require("./views/pages/read"));
 
 var _landing = _interopRequireDefault(require("./views/pages/landing"));
 
+var _searchGrid = _interopRequireDefault(require("./views/pages/search-grid"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import views
@@ -15147,7 +15358,8 @@ const routes = {
   '/signup': _signup.default,
   '/profile': _profile.default,
   '/editProfile': _editProfile.default,
-  '/read': _read.default
+  '/read': _read.default,
+  '/search-grid': _searchGrid.default
 };
 
 class Router {
@@ -15201,7 +15413,7 @@ function anchorRoute(e) {
   const pathname = e.target.closest('a').pathname;
   AppRouter.gotoRoute(pathname);
 }
-},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js","./views/pages/landing":"views/pages/landing.js"}],"App.js":[function(require,module,exports) {
+},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js","./views/pages/landing":"views/pages/landing.js","./views/pages/search-grid":"views/pages/search-grid.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -17005,6 +17217,8 @@ var _Auth = _interopRequireDefault(require("./../Auth"));
 
 var _App = _interopRequireDefault(require("./../App"));
 
+var _params = require("../params");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
@@ -17018,7 +17232,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--app-header-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: var(--app-header-txt-color);\n      }\n\n      .app-top-nav :hover{\n        color: #FEC76C;\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .app-side-menu-logo-1 {\n        margin-top: 0.05em;\n        height: 45px;\n        margin-right: 0.5em;\n      }\n\n      /* PAGE TITLES --------------------------------------------------------------------------------------------- */\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n        }\n\n      .outer {\n        display: grid;\n        grid-template: 1fr / 1fr;\n        place-items: center;\n        }\n\n      .outer > * {\n        grid-column: 1 / 1;\n        grid-row: 1 /1;\n      }\n\n      .outer .bottom {\n        z-index: 2;\n      }\n\n      .outer .top {\n        z-index: 1;\n      }\n\n      /* active nav links --------------------------------------------------------------------------------------------- */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------------------------------------------------------------------------------ */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">\n      <sl-icon-button class=\"hamburger-btn\" name=\"list\" @click=\"", "\" style=\"font-size: 1.5em;\"></sl-icon-button>       \n      \n      <div class=\"app-header-main\">\n        <div class=\"app-side-menu-logo-1\" style=\"z-index: 1;\">\n          <a href=\"/\" @click=", ">\n            <img class=\"app-side-menu-logo-1\" src=\"/images/honey-garden-logo.png\">\n          </a>\n        </div>\n\n        <div class=\"app-top-nav\"> \n          <a href=\"/beehive\" @click=\"", "\">BeeHive</a>  \n          <sl-icon name=\"search\"></sl-icon>\n          <a href=\"/browse\" @click=\"", "\">Search</a>\n        </div> \n\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/library\" @click=\"", "\">Library</a> \n        <a href=\"/post\" @click=\"", "\">Post</a> \n\n        ", "\n\n        <a href=\"/inbox\" @click=\"", "\">Messages</a> \n\n        <a href=\"/rose\" @click=\"", "\">\n          <img src=\"/images/rose-flower.png\" width=\"30\" height=\"30\">\n        </a>\n        \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar style=\"--size: 24px;\" image=", "></sl-avatar> ", "\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Edit Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n\n    <sl-drawer class=\"app-side-menu\" placement=\"left\">\n\n      <div class=\"app-side-menu-logo\" style=\"z-index: 1;\">\n        <a href=\"/\" @click=", ">\n          <img class=\"app-side-menu-logo\" src=\"/images/honey-garden-logo.png\">\n        </a>\n      </div>\n\n      <div class=\"app-side-menu-items\" style=\"z-index: 2; position: absolute;\">\n        <nav class=\"app-side-menu-items\">\n          <a href=\"/save\" @click=\"", "\">Saved Reads</a>\n          <a href=\"/support\" @click=\"", "\">Support</a>\n        </nav>  \n      </div>\n\n    </sl-drawer>\n    "]);
+  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--app-header-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: var(--app-header-txt-color);\n      }\n\n      .app-top-nav :hover{\n        color: #FEC76C;\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .app-side-menu-logo-1 {\n        margin-top: 0.05em;\n        height: 45px;\n        margin-right: 0.5em;\n      }\n\n      /* PAGE TITLES --------------------------------------------------------------------------------------------- */\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n        }\n\n      .outer {\n        display: grid;\n        grid-template: 1fr / 1fr;\n        place-items: center;\n        }\n\n      .outer > * {\n        grid-column: 1 / 1;\n        grid-row: 1 /1;\n      }\n\n      .outer .bottom {\n        z-index: 2;\n      }\n\n      .outer .top {\n        z-index: 1;\n      }\n\n      /* active nav links --------------------------------------------------------------------------------------------- */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------------------------------------------------------------------------------ */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">\n      <sl-icon-button class=\"hamburger-btn\" name=\"list\" @click=\"", "\" style=\"font-size: 1.5em;\"></sl-icon-button>       \n      \n      <div class=\"app-header-main\">\n        <div class=\"app-side-menu-logo-1\" style=\"z-index: 1;\">\n          <a href=\"/\" @click=", ">\n            <img class=\"app-side-menu-logo-1\" src=\"/images/honey-garden-logo.png\">\n          </a>\n        </div>\n\n        <div class=\"app-top-nav\"> \n          <a href=\"/beehive\" @click=\"", "\">BeeHive</a>  \n          <sl-icon name=\"search\"></sl-icon>\n          <a href=\"/search-grid\" @click=\"", "\">Search</a>\n        </div> \n\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/library\" @click=\"", "\">Library</a> \n        <a href=\"/post\" @click=\"", "\">Post</a> \n\n        ", "\n\n        <a href=\"/inbox\" @click=\"", "\">Messages</a> \n\n        <a href=\"/rose\" @click=\"", "\">\n          <img src=\"/images/rose-flower.png\" width=\"30\" height=\"30\">\n        </a>\n        \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar style=\"--size: 24px;\" image=", "></sl-avatar> ", "\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Edit Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n\n    <sl-drawer class=\"app-side-menu\" placement=\"left\">\n\n      <div class=\"app-side-menu-logo\" style=\"z-index: 1;\">\n        <a href=\"/\" @click=", ">\n          <img class=\"app-side-menu-logo\" src=\"/images/honey-garden-logo.png\">\n        </a>\n      </div>\n\n      <div class=\"app-side-menu-items\" style=\"z-index: 2; position: absolute;\">\n        <nav class=\"app-side-menu-items\">\n          <a href=\"/save\" @click=\"", "\">Saved Reads</a>\n          <a href=\"/support\" @click=\"", "\">Support</a>\n        </nav>  \n      </div>\n\n    </sl-drawer>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -17084,7 +17298,7 @@ customElements.define('va-app-header', class AppHeader extends _litElement.LitEl
   }
 
 });
-},{"@polymer/lit-element":"../node_modules/@polymer/lit-element/lit-element.js","./../Router":"Router.js","./../Auth":"Auth.js","./../App":"App.js"}],"components/va-poem.js":[function(require,module,exports) {
+},{"@polymer/lit-element":"../node_modules/@polymer/lit-element/lit-element.js","./../Router":"Router.js","./../Auth":"Auth.js","./../App":"App.js","../params":"params.js"}],"components/va-poem.js":[function(require,module,exports) {
 "use strict";
 
 var _litElement = require("@polymer/lit-element");
@@ -17103,28 +17317,8 @@ var _Toast = _interopRequireDefault(require("./../Toast"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject7() {
-  const data = _taggedTemplateLiteral(["\n            <sl-button @click=", " size=\"medium\" pill>Start Reading</sl-button>"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  const data = _taggedTemplateLiteral(["\n            <sl-icon-button @click=", " name=\"plus-circle\" label=\"Save\" style=\"font-size: 23px\"></sl-icon-button>"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject5() {
-  const data = _taggedTemplateLiteral(["<h3>\n                <sl-icon-button name=\"book\" label=\"Pages\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>"]);
+  const data = _taggedTemplateLiteral(["\n          <li>\n              <sl-icon-button name=\"book\" label=\"Pages\" style=\"font-size: 23px\"></sl-icon-button>\n              ", "\n          </li>"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -17134,7 +17328,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  const data = _taggedTemplateLiteral(["<h3>\n                <sl-icon-button name=\"pencil-square\" label=\"Status\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>"]);
+  const data = _taggedTemplateLiteral(["\n            <li>\n              <sl-icon-button name=\"pencil-square\" label=\"Status\" style=\"font-size: 23px\"></sl-icon-button>\n              ", "\n            </li>"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -17144,7 +17338,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  const data = _taggedTemplateLiteral(["<h3>\n                <sl-icon-button name=\"eye\" label=\"Views\" style=\"font-size: 23px\"></sl-icon-button>\n                ", "\n            </h3>"]);
+  const data = _taggedTemplateLiteral(["\n            <li>\n              <sl-icon-button name=\"eye\" label=\"Views\" style=\"font-size: 23px\"></sl-icon-button>\n              ", "\n            </li>"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -17154,7 +17348,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  const data = _taggedTemplateLiteral(["\n    <style>\n\n    </style> \n    <sl-card>\n        <img slot=\"image\" src=\"", "/images/", "\"/>\n        <h2>", "</h2>\n            ", "\n            ", "\n            ", "\n            ", "\n            ", "\n    </sl-card>\n    "]);
+  const data = _taggedTemplateLiteral(["\n    <style>\n      .poem-card {\n        display: grid;\n        grid-template-columns: repeat(2, minmax(auto, 50%));\n        grid-template-rows: max-content 1fr max-content;\n        border-radius: 50px;\n        gap: 15px;\n        padding: 1em;\n        background-color: #FFFFFF;\n      }\n\n      .poem-card img {\n        grid-row: 1 / -1;\n        max-width: 100%;\n        border-radius: 5px;\n        border: 0.2px solid lightgray;\n        aspect-ratio: 1 / 1.6;\n        object-fit: cover;\n      }\n\n      .poem-card .stats {\n        display: flex;\n        flex-direction: column;\n        gap: 0.5em;\n        padding: 0;\n        margin: 0;\n        list-style: none;\n      }\n\n      .poem-card .stats > li {\n        display: flex;\n        align-items: center;\n      }\n\n      .poem-card p {\n        overflow: hidden;\n        text-overflow: ellipsis;\n        padding-left: 8px;\n      }\n\n      .poem-card .actions {\n        display: flex;\n        gap: 0.5em;\n      }\n\n      .search-description {\n        font-size: 1.2em;\n      }\n    </style> \n    <div class=\"poem-card\">\n        <img slot=\"image\" src=\"", "/images/", "\"/>\n        <ul class=\"stats\">\n          ", "\n          ", "\n          ", "\n        </ul>\n        <p class=\"search-description\">\n          ", "\n        </p>\n        <div class=\"actions\">\n          <sl-icon-button @click=", " name=\"plus-circle\" label=\"Save\" style=\"font-size: 23px\"></sl-icon-button>\n          <sl-button @click=", " size=\"medium\" pill>Start Reading</sl-button>\n        </div>\n    </div>\n    "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -17253,7 +17447,7 @@ customElements.define('va-poem', class Poem extends _litElement.LitElement {
   }
 
   render() {
-    return (0, _litElement.html)(_templateObject2(), _App.default.apiBase, this.image, this.title, this.views && (0, _litElement.html)(_templateObject3(), this.views), this.status && (0, _litElement.html)(_templateObject4(), this.status), this.pages && (0, _litElement.html)(_templateObject5(), this.pages), this.showReadingListHandler && (0, _litElement.html)(_templateObject6(), this.readingListHandler.bind(this)), this.showStartReadingHandler && (0, _litElement.html)(_templateObject7(), this.startReadingHandler.bind(this)));
+    return (0, _litElement.html)(_templateObject2(), _App.default.apiBase, this.image, this.views && (0, _litElement.html)(_templateObject3(), this.views), this.status && (0, _litElement.html)(_templateObject4(), this.status), this.pages && (0, _litElement.html)(_templateObject5(), this.pages), this.description, this.readingListHandler.bind(this), this.startReadingHandler.bind(this));
   }
 
 });
@@ -17376,7 +17570,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53074" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60033" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

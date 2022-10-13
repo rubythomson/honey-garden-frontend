@@ -16,6 +16,7 @@ import supportView from './views/pages/support'
 import beehiveView from './views/pages/beehive'
 import readView from './views/pages/read'
 import landingView from './views/pages/landing'
+import searchGridView from './views/pages/search-grid'
 
 // define routes
 const routes = {
@@ -35,7 +36,8 @@ const routes = {
 	'/signup': signupView,
 	'/profile': profileView,
 	'/editProfile': editProfileView,
-	'/read': readView
+	'/read': readView,
+	'/search-grid': searchGridView
 }
 
 class Router {
