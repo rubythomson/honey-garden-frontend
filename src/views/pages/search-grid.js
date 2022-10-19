@@ -246,6 +246,21 @@ class SearchGridView {
               </div>
           </div>
         </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="feeling-adventurous-btn">
+          <p>Feeling adventurous?</p>
+        </div>
+        
+        <div class="randomise-container">
+          <sl-button class="randomise-btn" variant="primary" size="medium" style="margin: 20px;"pill>Randomise</sl-button>
+        </div>
+
+        <br>
+        <br>
         
       </div>      
     `
