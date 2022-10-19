@@ -47,12 +47,16 @@ class HomeView {
 
           <div class="featured-card">
               <div class="featured-img">
-                <img src="/images/sinking-ships.jpg" alt="sinking-ships-img"> 
+                <img src="/images/sinking-ships.png" alt="sinking-ships-img" style="border-radius: 30px;"> 
               </div>
-              <div class="summary"> 
-                  <p> 8 Hours left on a sinking ship. Multiple stories about different couples going through heartache and grief.</p>
-                </div>
 
+              <div class="featured-box-parent">
+                <div class="summary"> 
+                  <p> 8 hours left on a sinking ship. Multiple stories about different couples going through heartache and grief.</p>
+                </div>
+              
+
+              <!-- <div class="featured-comments-box-parent"> -->
                 <div class="comment-1">
                   <p><i>"This was so good"</i></p>
                 </div>
@@ -60,64 +64,94 @@ class HomeView {
                 <div class="comment-2">
                   <p><i>"Highly Recommend"</i></p>
                 </div>
-            </div>
+              <!-- </div> -->
+              </div>
+          </div>
 
       <!-- ----------------------------------------CAROUSEL TEST 1 ----------------------------------------------- -->
-        <div id="slider" class="carousel-slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#slider" data-slide-to="0" class="active"></li>
-            <li data-target="#slider" data-slide-to="1"></li>
-            <li data-target="#slider" data-slide-to="2"></li>
-            <li data-target="#slider" data-slide-to="3"></li>
-            <li data-target="#slider" data-slide-to="4"></li>
-            <li data-target="#slider" data-slide-to="5"></li>
-          </ol>
-
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="floral-img-3" src="/images/sinking-ships.jpg" alt="sinking-ships-img">
-              </div>
-
-            <div class="carousel-item">
-              <div class="carousel-item-active">
-                <img style="width: auto; height: 350px;" src="/images/sinking-ships.jpg" alt="sinking-ships-img">
-              </div>
-            </div>
-          </div>
+      <div class="img-slider">
+        <div class="slide active">
+          <img src="/images/sinking-ships.png" alt="sinking-ships-img">
         </div>
-        <!-- ----------------------------------------CAROUSEL TEST 1 ----------------------------------------------- -->
-
-
-
-        <!-- ----------------------------------------CAROUSEL TEST 2 ----------------------------------------------- -->
-          <div id="slider" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#slider" data-slide-to="0" class="active"></li>
-                <li data-target="#slider" data-slide-to="1"></li>
-                <li data-target="#slider" data-slide-to="2"></li>
-                <li data-target="#slider" data-slide-to="3"></li>
-                <li data-target="#slider" data-slide-to="4"></li>
-            </ol>
-
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="http://via.placeholder.com/350x350/d8ddef/ffffff?text=header.jpg">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="http://via.placeholder.com/350x350/a0a4b8/ffffff?text=slider2.jpg">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="http://via.placeholder.com/350x350/7293a0/ffffff?text=slider3.jpg">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="http://via.placeholder.com/350x350/45b69c/ffffff?text=slider4.jpeg">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="http://via.placeholder.com/350x350/21d19f/ffffff?text=slider5.jpeg">
-                </div>
-            </div>
+        <div class="slide">
+          <img src="/images/kissing-clouds.png" alt="kissing-clouds-img">
         </div>
-        <!-- ----------------------------------------CAROUSEL TEST ----------------------------------------------- -->
+        <div class="slide">
+          <img src="/images/pop-pop-pop.png" alt="pop-pop-pop-img">
+        </div>
+        <div class="slide">
+          <img src="/images/collusion.png" alt="collusion-img">
+        </div>
+        <div class="slide">
+          <img src="/images/sing-song.png" alt="sing-song-img">
+        </div>
+        <div class="slide">
+          <img src="/images/non-stop-babbling.png" alt="non-stop-babbling-img">
+        </div>
+
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        var btns = document.querySelectorAll('.btn');
+        let currentSlide = 1;
+
+        // javacript for img slider manual navigation
+        var manualNav = function(manual){
+          slides.forEach((slide) => {
+            slide.classList.remove('active');
+          })
+
+          btns.forEach((btn) => {
+            btn.classList.remove('active');
+          })
+
+          slides[manual].classList.add('active');
+          btns[manual].classList.add('active');
+        }
+
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+          });
+        });
+
+        // javascript for img slider autoplay navigation
+        var repeat = function(activeClass){
+          let active = document.getElementByClassName('active');
+          let i = 1;
+
+          var repeater = () => {
+            setTimeout(function(){
+              [...active].forEach(activeSlide) => {
+                activeSlide.classList.remove('active');
+              });
+
+              slides[i].classList.add('active');
+              btns[i].classList.add('active');
+              i++;
+
+              if(slides.length == i){
+                i = 0;
+              }
+              if(i >= slides.length){
+                return;
+              }
+              repeater();
+            }, 10000);
+          }repeater();
+        }repeat();
+      </script>
+      <!-- ----------------------------------------CAROUSEL TEST 1 END -------------------------------------------- -->
 
         <div class="for-you-content">
           <h2 class="featured-h2">For you</h2>

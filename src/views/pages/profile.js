@@ -157,11 +157,9 @@ class ProfileView {
             <div class="reading-list-imgs">
               <div class="sinking-ships-img">
                 <img src="/images/sinking-ships.png" alt="sinking-ships-img" style="border-radius: 15px;">
-                <div class="center-img-text">Sinking Ships</div>
               </div>
               <div class="kissing-clouds-img">
                 <img src="/images/kissing-clouds.png" alt="kissing-clouds-img" style="border-radius: 15px;">
-                <div class="center-img-text">Kissing Clouds</div>
               </div>
 
               <div class="empty-reading-list-space"></div>

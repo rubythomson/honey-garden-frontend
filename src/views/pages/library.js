@@ -37,6 +37,13 @@ class LibraryView {
           <sl-button variant="primary">Reading Lists</sl-button>
         </div>
 
+        <div class="sort-by-btn">
+          <sl-button variant="default">
+            <sl-icon slot="prefix" name="chevron-down"></sl-icon>  
+            Sort By
+          </sl-button>
+        </div>
+
           <div class="bottom">
             <div class="poems-grid">
               ${this.poems == null ? html`

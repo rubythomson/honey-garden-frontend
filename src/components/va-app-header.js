@@ -116,6 +116,10 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
       .app-top-nav :hover{
         color: #FEC76C;
       }
+
+      .app-top-nav-rose :hover{ /* needs to change colour */
+        color: #FEC76C;
+      }
       
       .app-side-menu-items a {
         display: block;
@@ -212,7 +216,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         <a href="/inbox" @click="${anchorRoute}">Messages</a> 
 
         <a href="/rose" @click="${anchorRoute}">
-          <img src="/images/rose-flower.png" width="30" height="30">
+          <img src="/images/rose-flower.png" width="30" height="30" class="app-top-nav-rose">
         </a>
         
         <sl-dropdown>
