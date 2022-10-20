@@ -44,7 +44,13 @@ class newPostView {
     const template = html`
       <va-app-header title="Create Post" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
       <div class="page-content">
-        <div class="page-form-styling"> <!-- style -->
+        <div class="back-to-manage-container">
+          <sl-button variant="default" size="medium" class="back-to-manage-btn">
+            <sl-icon slot="prefix" name="arrow-left"></sl-icon>
+            <p class="back-to-manage-text">Back to Manage</p>
+          </sl-button>
+        </div>
+        <div class="page-form-styling">
           <h1>Add</h1>
           <sl-form class="page-form" @sl-submit=${this.newPostSubmitHandler}>
             <input type="hidden" name="user" value="${Auth.currentUser._id}" />

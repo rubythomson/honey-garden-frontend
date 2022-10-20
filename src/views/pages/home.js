@@ -10,6 +10,21 @@ class HomeView {
   async init(){    
     console.log('HomeView.init')
     document.title = 'Home'    
+    const poems = await PoemAPI.getPoems();
+    this.slides = [];
+    for (var i = 0; i < poems.length; i++) {
+      const slide = Math.floor(i / 5);
+      if (this.slides.length === slide) {
+        this.slides.push([]);
+      }
+      this.slides[slide].push({
+        image: `${App.apiBase}/images/${poems[i].image}`,
+        alt: poems[i].title
+      })
+    }
+    console.log(this.slides);
+    this.slideNumber = [0,0,0];
+
     this.render()    
     Utils.pageIntroAnim() 
     await this.getPoems()   
@@ -25,7 +40,15 @@ class HomeView {
     }
   }
 
-  render(){
+  changeToSlide(slider, index) {
+    this.slideNumber[slider] = index;
+    console.log('chaning', slider, index)
+    this.render(slider);
+  }
+
+  render(slider){
+
+    console.log('slider', slider)
     const template = html`
       <va-app-header title="Home" user=${JSON.stringify(Auth.currentUser)}></va-app-header>
       
@@ -54,7 +77,6 @@ class HomeView {
                 <div class="summary"> 
                   <p> 8 hours left on a sinking ship. Multiple stories about different couples going through heartache and grief.</p>
                 </div>
-              
 
               <!-- <div class="featured-comments-box-parent"> -->
                 <div class="comment-1">
@@ -68,157 +90,81 @@ class HomeView {
               </div>
           </div>
 
-      <!-- ----------------------------------------CAROUSEL TEST 1 ----------------------------------------------- -->
-      <div class="img-slider">
-        <div class="slide active">
-          <img src="/images/sinking-ships.png" alt="sinking-ships-img">
-        </div>
-        <div class="slide">
-          <img src="/images/kissing-clouds.png" alt="kissing-clouds-img">
-        </div>
-        <div class="slide">
-          <img src="/images/pop-pop-pop.png" alt="pop-pop-pop-img">
-        </div>
-        <div class="slide">
-          <img src="/images/collusion.png" alt="collusion-img">
-        </div>
-        <div class="slide">
-          <img src="/images/sing-song.png" alt="sing-song-img">
-        </div>
-        <div class="slide">
-          <img src="/images/non-stop-babbling.png" alt="non-stop-babbling-img">
-        </div>
-
-        <div class="navigation">
-          <div class="btn active"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-        </div>
-      </div>
-
-      <script type="text/javascript">
-        var slides = document.querySelectorAll('.slide');
-        var btns = document.querySelectorAll('.btn');
-        let currentSlide = 1;
-
-        // javacript for img slider manual navigation
-        var manualNav = function(manual){
-          slides.forEach((slide) => {
-            slide.classList.remove('active');
-          })
-
-          btns.forEach((btn) => {
-            btn.classList.remove('active');
-          })
-
-          slides[manual].classList.add('active');
-          btns[manual].classList.add('active');
-        }
-
-        btns.forEach((btn, i) => {
-          btn.addEventListener("click", () => {
-            manualNav(i);
-            currentSlide = i;
-          });
-        });
-
-        // javascript for img slider autoplay navigation
-        var repeat = function(activeClass){
-          let active = document.getElementByClassName('active');
-          let i = 1;
-
-          var repeater = () => {
-            setTimeout(function(){
-              [...active].forEach(activeSlide) => {
-                activeSlide.classList.remove('active');
-              });
-
-              slides[i].classList.add('active');
-              btns[i].classList.add('active');
-              i++;
-
-              if(slides.length == i){
-                i = 0;
-              }
-              if(i >= slides.length){
-                return;
-              }
-              repeater();
-            }, 10000);
-          }repeater();
-        }repeat();
-      </script>
-      <!-- ----------------------------------------CAROUSEL TEST 1 END -------------------------------------------- -->
-
+        <!-- ---------------------------------------- CAROUSEL (for you) ----------------------------------------------- -->
         <div class="for-you-content">
-          <h2 class="featured-h2">For you</h2>
-            <div class="bottom">
-              <div class="poems-grid">
-                ${this.poems == null ? html`
-                  <sl-spinner></sl-spinner>
-                  ` : html`
-                  ${this.poems.map(poem => html`
-                    <va-poem class="poem-card"
-                        id="${poem._id}"
-                        title="${poem.title}"
-                        user="${JSON.stringify(poem.user)}"
-                        image="${poem.image}"
-                      >
-                    </va-poem>
-                  `)}
-                `}
-              </div>
+          <div class="img-slider" style="display: grid; grid-template-rows: max-content 1fr max-content">
+            <div class="featured-h2">For you</div>
+            <div style="display: grid; grid-template-columns: repeat(${this.slides[this.slideNumber[0]].length}, 1fr); gap: 1em">
+              ${this.slides[this.slideNumber[0]].map(({ image, alt }) => html`
+                <img style="aspect-ratio: 1 / 1.6; height: 350px; clip-path: circle(0% at 0 50%); border-radius: 20px;" src="${image}" alt="${alt}">
+              `)}
             </div>
-        </div>  
+            <div class="navigation">
+              ${this.slides.map((_, n) => html`
+                <div class="btn ${n == this.slideNumber[0] ? "active" : ""}" @click="${() => this.changeToSlide(0, n)}" />
+              `)}
+            </div>
+          </div>
+        </div>
+        <!-- ---------------------------------------- CAROUSEL (for you) ----------------------------------------------- --> 
 
+        <!-- ---------------------------------------- CAROUSEL (continue reading) -------------------------------------- -->
         <div class="continue-reading-content">
-          <h2 class="featured-h2">Continue Reading</h2>
-            <div class="bottom">
-              <div class="poems-grid">
-                ${this.poems == null ? html`
-                  <sl-spinner></sl-spinner>
-                  ` : html`
-                  ${this.poems.map(poem => html`
-                    <va-poem class="poem-card"
-                        id="${poem._id}"
-                        title="${poem.title}"
-                        user="${JSON.stringify(poem.user)}"
-                        image="${poem.image}"
-                      >
-                    </va-poem>
-                  `)}
-                `}
-              </div>
+          <div class="img-slider" style="display: grid; grid-template-rows: max-content 1fr max-content">
+            <div class="featured-h2">Continue Reading</div>
+            <div style="display: grid; grid-template-columns: repeat(${this.slides[this.slideNumber[1]].length}, 1fr); gap: 1em">
+              ${this.slides[this.slideNumber[1]].map(({ image, alt }) => html`
+                <img style="aspect-ratio: 1 / 1.6; height: 350px; clip-path: circle(0% at 0 50%); border-radius: 20px;" src="${image}" alt="${alt}">
+              `)}
             </div>
-        </div>
-        
-        <div class="new-post-content">
-          <h2 class="featured-h2">New Posts</h2>
-            <div class="bottom">
-              <div class="poems-grid">
-                ${this.poems == null ? html`
-                  <sl-spinner></sl-spinner>
-                  ` : html`
-                  ${this.poems.map(poem => html`
-                    <va-poem class="poem-card"
-                        id="${poem._id}"
-                        title="${poem.title}"
-                        user="${JSON.stringify(poem.user)}"
-                        image="${poem.image}"
-                      >
-                    </va-poem>
-                  `)}
-                `}
-              </div>
+            <div class="navigation">
+              ${this.slides.map((_, n) => html`
+                <div class="btn ${n == this.slideNumber[1] ? "active" : ""}" @click="${() => this.changeToSlide(1, n)}" />
+              `)}
             </div>
+          </div> 
         </div>
+        <!-- ---------------------------------------- CAROUSEL (continue reading) -------------------------------------- -->
 
+        <!-- ---------------------------------------- CAROUSEL (new posts) --------------------------------------------- -->
+        <div class="for-you-content">
+          <div class="img-slider" style="display: grid; grid-template-rows: max-content 1fr max-content">
+            <div class="featured-h2">New Posts</div>
+            <div style="display: grid; grid-template-columns: repeat(${this.slides[this.slideNumber[2]].length}, 1fr); gap: 1em">
+              ${this.slides[this.slideNumber[2]].map(({ image, alt }) => html`
+                <img style="aspect-ratio: 1 / 1.6; height: 350px; clip-path: circle(0% at 0 50%); border-radius: 20px;" src="${image}" alt="${alt}">
+              `)}
+            </div>
+            <div class="navigation">
+              ${this.slides.map((_, n) => html`
+                <div class="btn ${n == this.slideNumber[2] ? "active" : ""}" @click="${() => this.changeToSlide(2, n)}" />
+              `)}
+            </div>
+          </div>
+        </div>
+        <!-- ---------------------------------------- CAROUSEL (new posts) --------------------------------------------- -->
       </div> 
     `
-    render(template, App.rootEl)
+    render(template, App.rootEl);
+
+    if (slider !== undefined) {
+      console.log('single slider')
+      const el = App.rootEl.querySelectorAll(".img-slider")[slider]
+      el.classList.remove("fade-in");
+      setTimeout(() => {
+        el.classList.add("fade-in");
+      })
+    } else {
+      const imageSlides = App.rootEl.querySelectorAll(".img-slider");
+      for (const el of imageSlides) {
+        el.classList.remove("fade-in");
+      }
+      setTimeout(() => {
+        for (const el of imageSlides) {
+          el.classList.add("fade-in");
+        }
+      })
+    }
   }
 }
 

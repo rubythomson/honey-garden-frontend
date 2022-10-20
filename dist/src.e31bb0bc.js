@@ -7759,38 +7759,8 @@ var _Toast = _interopRequireDefault(require("../../Toast"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject10() {
-  const data = _taggedTemplateLiteral(["\n                    <va-poem class=\"poem-card\"\n                        id=\"", "\"\n                        title=\"", "\"\n                        user=\"", "\"\n                        image=\"", "\"\n                      >\n                    </va-poem>\n                  "]);
-
-  _templateObject10 = function _templateObject10() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject9() {
-  const data = _taggedTemplateLiteral(["\n                  ", "\n                "]);
-
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject8() {
-  const data = _taggedTemplateLiteral(["\n                  <sl-spinner></sl-spinner>\n                  "]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject7() {
-  const data = _taggedTemplateLiteral(["\n                    <va-poem class=\"poem-card\"\n                        id=\"", "\"\n                        title=\"", "\"\n                        user=\"", "\"\n                        image=\"", "\"\n                      >\n                    </va-poem>\n                  "]);
+  const data = _taggedTemplateLiteral(["\n                <div class=\"btn ", "\" @click=\"", "\" />\n              "]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -7800,7 +7770,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  const data = _taggedTemplateLiteral(["\n                  ", "\n                "]);
+  const data = _taggedTemplateLiteral(["\n                <img style=\"aspect-ratio: 1 / 1.6; height: 350px; clip-path: circle(0% at 0 50%); border-radius: 20px;\" src=\"", "\" alt=\"", "\">\n              "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -7810,7 +7780,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  const data = _taggedTemplateLiteral(["\n                  <sl-spinner></sl-spinner>\n                  "]);
+  const data = _taggedTemplateLiteral(["\n                <div class=\"btn ", "\" @click=\"", "\" />\n              "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -7820,7 +7790,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  const data = _taggedTemplateLiteral(["\n                    <va-poem class=\"poem-card\"\n                        id=\"", "\"\n                        title=\"", "\"\n                        user=\"", "\"\n                        image=\"", "\"\n                      >\n                    </va-poem>\n                  "]);
+  const data = _taggedTemplateLiteral(["\n                <img style=\"aspect-ratio: 1 / 1.6; height: 350px; clip-path: circle(0% at 0 50%); border-radius: 20px;\" src=\"", "\" alt=\"", "\">\n              "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -7830,7 +7800,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  const data = _taggedTemplateLiteral(["\n                  ", "\n                "]);
+  const data = _taggedTemplateLiteral(["\n                <div class=\"btn ", "\" @click=\"", "\" />\n              "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -7840,7 +7810,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  const data = _taggedTemplateLiteral(["\n                  <sl-spinner></sl-spinner>\n                  "]);
+  const data = _taggedTemplateLiteral(["\n                <img style=\"aspect-ratio: 1 / 1.6; height: 350px; clip-path: circle(0% at 0 50%); border-radius: 20px;\" src=\"", "\" alt=\"", "\">\n              "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -7850,7 +7820,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Home\" user=", "></va-app-header>\n      \n      <div class=\"page-content\">\n        <div class=\"home-title\">\n          <h3>The night it beautiful,</h3>\n          <h3>So are the faces of my people</h3>\n        </div>\n\n        <div class=\"feather-img-div\">\n          <img class=\"feather-img\" src=\"/images/feather-ink-pot.png\" alt=\"feather-ink-pot\">\n        </div>\n        \n        <div class=\"radial-gradient\"></div>\n\n        <div class=\"featured-content-heading\">\n          <h2 class=\"featured-h2\">Featured</h2>\n        </div>\n\n          <div class=\"featured-card\">\n              <div class=\"featured-img\">\n                <img src=\"/images/sinking-ships.png\" alt=\"sinking-ships-img\" style=\"border-radius: 30px;\"> \n              </div>\n\n              <div class=\"featured-box-parent\">\n                <div class=\"summary\"> \n                  <p> 8 hours left on a sinking ship. Multiple stories about different couples going through heartache and grief.</p>\n                </div>\n              \n\n              <!-- <div class=\"featured-comments-box-parent\"> -->\n                <div class=\"comment-1\">\n                  <p><i>\"This was so good\"</i></p>\n                </div>\n\n                <div class=\"comment-2\">\n                  <p><i>\"Highly Recommend\"</i></p>\n                </div>\n              <!-- </div> -->\n              </div>\n          </div>\n\n      <!-- ----------------------------------------CAROUSEL TEST 1 ----------------------------------------------- -->\n      <div class=\"img-slider\">\n        <div class=\"slide active\">\n          <img src=\"/images/sinking-ships.png\" alt=\"sinking-ships-img\">\n        </div>\n        <div class=\"slide\">\n          <img src=\"/images/kissing-clouds.png\" alt=\"kissing-clouds-img\">\n        </div>\n        <div class=\"slide\">\n          <img src=\"/images/pop-pop-pop.png\" alt=\"pop-pop-pop-img\">\n        </div>\n        <div class=\"slide\">\n          <img src=\"/images/collusion.png\" alt=\"collusion-img\">\n        </div>\n        <div class=\"slide\">\n          <img src=\"/images/sing-song.png\" alt=\"sing-song-img\">\n        </div>\n        <div class=\"slide\">\n          <img src=\"/images/non-stop-babbling.png\" alt=\"non-stop-babbling-img\">\n        </div>\n\n        <div class=\"navigation\">\n          <div class=\"btn active\"></div>\n          <div class=\"btn\"></div>\n          <div class=\"btn\"></div>\n          <div class=\"btn\"></div>\n          <div class=\"btn\"></div>\n          <div class=\"btn\"></div>\n        </div>\n      </div>\n\n      <script type=\"text/javascript\">\n        var slides = document.querySelectorAll('.slide');\n        var btns = document.querySelectorAll('.btn');\n        let currentSlide = 1;\n\n        // javacript for img slider manual navigation\n        var manualNav = function(manual){\n          slides.forEach((slide) => {\n            slide.classList.remove('active');\n          })\n\n          btns.forEach((btn) => {\n            btn.classList.remove('active');\n          })\n\n          slides[manual].classList.add('active');\n          btns[manual].classList.add('active');\n        }\n\n        btns.forEach((btn, i) => {\n          btn.addEventListener(\"click\", () => {\n            manualNav(i);\n            currentSlide = i;\n          });\n        });\n\n        // javascript for img slider autoplay navigation\n        var repeat = function(activeClass){\n          let active = document.getElementByClassName('active');\n          let i = 1;\n\n          var repeater = () => {\n            setTimeout(function(){\n              [...active].forEach(activeSlide) => {\n                activeSlide.classList.remove('active');\n              });\n\n              slides[i].classList.add('active');\n              btns[i].classList.add('active');\n              i++;\n\n              if(slides.length == i){\n                i = 0;\n              }\n              if(i >= slides.length){\n                return;\n              }\n              repeater();\n            }, 10000);\n          }repeater();\n        }repeat();\n      </script>\n      <!-- ----------------------------------------CAROUSEL TEST 1 END -------------------------------------------- -->\n\n        <div class=\"for-you-content\">\n          <h2 class=\"featured-h2\">For you</h2>\n            <div class=\"bottom\">\n              <div class=\"poems-grid\">\n                ", "\n              </div>\n            </div>\n        </div>  \n\n        <div class=\"continue-reading-content\">\n          <h2 class=\"featured-h2\">Continue Reading</h2>\n            <div class=\"bottom\">\n              <div class=\"poems-grid\">\n                ", "\n              </div>\n            </div>\n        </div>\n        \n        <div class=\"new-post-content\">\n          <h2 class=\"featured-h2\">New Posts</h2>\n            <div class=\"bottom\">\n              <div class=\"poems-grid\">\n                ", "\n              </div>\n            </div>\n        </div>\n\n      </div> \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Home\" user=", "></va-app-header>\n      \n      <div class=\"page-content\">\n        <div class=\"home-title\">\n          <h3>The night it beautiful,</h3>\n          <h3>So are the faces of my people</h3>\n        </div>\n\n        <div class=\"feather-img-div\">\n          <img class=\"feather-img\" src=\"/images/feather-ink-pot.png\" alt=\"feather-ink-pot\">\n        </div>\n        \n        <div class=\"radial-gradient\"></div>\n\n        <div class=\"featured-content-heading\">\n          <h2 class=\"featured-h2\">Featured</h2>\n        </div>\n\n          <div class=\"featured-card\">\n              <div class=\"featured-img\">\n                <img src=\"/images/sinking-ships.png\" alt=\"sinking-ships-img\" style=\"border-radius: 30px;\"> \n              </div>\n\n              <div class=\"featured-box-parent\">\n                <div class=\"summary\"> \n                  <p> 8 hours left on a sinking ship. Multiple stories about different couples going through heartache and grief.</p>\n                </div>\n\n              <!-- <div class=\"featured-comments-box-parent\"> -->\n                <div class=\"comment-1\">\n                  <p><i>\"This was so good\"</i></p>\n                </div>\n\n                <div class=\"comment-2\">\n                  <p><i>\"Highly Recommend\"</i></p>\n                </div>\n              <!-- </div> -->\n              </div>\n          </div>\n\n        <!-- ---------------------------------------- CAROUSEL (for you) ----------------------------------------------- -->\n        <div class=\"for-you-content\">\n          <div class=\"img-slider\" style=\"display: grid; grid-template-rows: max-content 1fr max-content\">\n            <div class=\"featured-h2\">For you</div>\n            <div style=\"display: grid; grid-template-columns: repeat(", ", 1fr); gap: 1em\">\n              ", "\n            </div>\n            <div class=\"navigation\">\n              ", "\n            </div>\n          </div>\n        </div>\n        <!-- ---------------------------------------- CAROUSEL (for you) ----------------------------------------------- --> \n\n        <!-- ---------------------------------------- CAROUSEL (continue reading) -------------------------------------- -->\n        <div class=\"continue-reading-content\">\n          <div class=\"img-slider\" style=\"display: grid; grid-template-rows: max-content 1fr max-content\">\n            <div class=\"featured-h2\">Continue Reading</div>\n            <div style=\"display: grid; grid-template-columns: repeat(", ", 1fr); gap: 1em\">\n              ", "\n            </div>\n            <div class=\"navigation\">\n              ", "\n            </div>\n          </div> \n        </div>\n        <!-- ---------------------------------------- CAROUSEL (continue reading) -------------------------------------- -->\n\n        <!-- ---------------------------------------- CAROUSEL (new posts) --------------------------------------------- -->\n        <div class=\"for-you-content\">\n          <div class=\"img-slider\" style=\"display: grid; grid-template-rows: max-content 1fr max-content\">\n            <div class=\"featured-h2\">New Posts</div>\n            <div style=\"display: grid; grid-template-columns: repeat(", ", 1fr); gap: 1em\">\n              ", "\n            </div>\n            <div class=\"navigation\">\n              ", "\n            </div>\n          </div>\n        </div>\n        <!-- ---------------------------------------- CAROUSEL (new posts) --------------------------------------------- -->\n      </div> \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -7865,6 +7835,24 @@ class HomeView {
   async init() {
     console.log('HomeView.init');
     document.title = 'Home';
+    const poems = await _PoemAPI.default.getPoems();
+    this.slides = [];
+
+    for (var i = 0; i < poems.length; i++) {
+      const slide = Math.floor(i / 5);
+
+      if (this.slides.length === slide) {
+        this.slides.push([]);
+      }
+
+      this.slides[slide].push({
+        image: "".concat(_App.default.apiBase, "/images/").concat(poems[i].image),
+        alt: poems[i].title
+      });
+    }
+
+    console.log(this.slides);
+    this.slideNumber = [0, 0, 0];
     this.render();
 
     _Utils.default.pageIntroAnim();
@@ -7882,9 +7870,57 @@ class HomeView {
     }
   }
 
-  render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.poems == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), this.poems.map(poem => (0, _litHtml.html)(_templateObject4(), poem._id, poem.title, JSON.stringify(poem.user), poem.image))), this.poems == null ? (0, _litHtml.html)(_templateObject5()) : (0, _litHtml.html)(_templateObject6(), this.poems.map(poem => (0, _litHtml.html)(_templateObject7(), poem._id, poem.title, JSON.stringify(poem.user), poem.image))), this.poems == null ? (0, _litHtml.html)(_templateObject8()) : (0, _litHtml.html)(_templateObject9(), this.poems.map(poem => (0, _litHtml.html)(_templateObject10(), poem._id, poem.title, JSON.stringify(poem.user), poem.image))));
+  changeToSlide(slider, index) {
+    this.slideNumber[slider] = index;
+    console.log('chaning', slider, index);
+    this.render(slider);
+  }
+
+  render(slider) {
+    console.log('slider', slider);
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.slides[this.slideNumber[0]].length, this.slides[this.slideNumber[0]].map((_ref) => {
+      let {
+        image,
+        alt
+      } = _ref;
+      return (0, _litHtml.html)(_templateObject2(), image, alt);
+    }), this.slides.map((_, n) => (0, _litHtml.html)(_templateObject3(), n == this.slideNumber[0] ? "active" : "", () => this.changeToSlide(0, n))), this.slides[this.slideNumber[1]].length, this.slides[this.slideNumber[1]].map((_ref2) => {
+      let {
+        image,
+        alt
+      } = _ref2;
+      return (0, _litHtml.html)(_templateObject4(), image, alt);
+    }), this.slides.map((_, n) => (0, _litHtml.html)(_templateObject5(), n == this.slideNumber[1] ? "active" : "", () => this.changeToSlide(1, n))), this.slides[this.slideNumber[2]].length, this.slides[this.slideNumber[2]].map((_ref3) => {
+      let {
+        image,
+        alt
+      } = _ref3;
+      return (0, _litHtml.html)(_templateObject6(), image, alt);
+    }), this.slides.map((_, n) => (0, _litHtml.html)(_templateObject7(), n == this.slideNumber[2] ? "active" : "", () => this.changeToSlide(2, n))));
     (0, _litHtml.render)(template, _App.default.rootEl);
+
+    if (slider !== undefined) {
+      console.log('single slider');
+
+      const el = _App.default.rootEl.querySelectorAll(".img-slider")[slider];
+
+      el.classList.remove("fade-in");
+      setTimeout(() => {
+        el.classList.add("fade-in");
+      });
+    } else {
+      const imageSlides = _App.default.rootEl.querySelectorAll(".img-slider");
+
+      for (const el of imageSlides) {
+        el.classList.remove("fade-in");
+      }
+
+      setTimeout(() => {
+        for (const el of imageSlides) {
+          el.classList.add("fade-in");
+        }
+      });
+    }
   }
 
 }
@@ -14413,7 +14449,7 @@ var _Toast = _interopRequireDefault(require("../../Toast"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Create Post\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">\n        <div class=\"page-form-styling\"> <!-- style -->\n          <h1>Add</h1>\n          <sl-form class=\"page-form\" @sl-submit=", ">\n            <input type=\"hidden\" name=\"user\" value=\"", "\" />\n            <div class=\"input-group\">\n              <sl-input name=\"title\" type=\"text\" placeholder=\"Title:\" required></sl-input>\n            </div>\n            <div class=\"input-group\">              \n              <sl-input name=\"tags\" type=\"text\" placeholder=\"Tags:\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-textarea name=\"description\" rows=\"3\" placeholder=\"Description:\" required></sl-textarea>\n            </div>\n            <div class=\"input-group\" style=\"margin-bottom: 2em;\">\n              <label>Image</label><br>\n              <input type=\"file\" name=\"image\" />              \n            </div>\n            <div class=\"input-group\" style=\"margin-bottom: 2em;\">\n              <label>Mature</label><br>\n              <sl-radio-group label=\"Select\" no-fieldset>\n                <sl-radio name=\"mature\" value=\"m\">On</sl-radio>\n                <sl-radio name=\"underage\" value=\"u\">Off</sl-radio>\n              </sl-radio-group>\n            </div>\n            <div class=\"input-group\">\n              <sl-textarea name=\"begin-here\" rows=\"3\" placeholder=\"Begin Here...\" required></sl-textarea>\n            </div>\n            <sl-button type=\"primary\" class=\"submit-btn\" submit size=\"medium\" pill>Save Draft</sl-button>\n            <sl-button type=\"primary\" class=\"submit-btn\" submit size=\"medium\" pill>Post</sl-button>\n          </sl-form> \n        </div>         \n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Create Post\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">\n        <div class=\"back-to-manage-container\">\n          <sl-button variant=\"default\" size=\"medium\" class=\"back-to-manage-btn\">\n            <sl-icon slot=\"prefix\" name=\"arrow-left\"></sl-icon>\n            <p class=\"back-to-manage-text\">Back to Manage</p>\n          </sl-button>\n        </div>\n        <div class=\"page-form-styling\">\n          <h1>Add</h1>\n          <sl-form class=\"page-form\" @sl-submit=", ">\n            <input type=\"hidden\" name=\"user\" value=\"", "\" />\n            <div class=\"input-group\">\n              <sl-input name=\"title\" type=\"text\" placeholder=\"Title:\" required></sl-input>\n            </div>\n            <div class=\"input-group\">              \n              <sl-input name=\"tags\" type=\"text\" placeholder=\"Tags:\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-textarea name=\"description\" rows=\"3\" placeholder=\"Description:\" required></sl-textarea>\n            </div>\n            <div class=\"input-group\" style=\"margin-bottom: 2em;\">\n              <label>Image</label><br>\n              <input type=\"file\" name=\"image\" />              \n            </div>\n            <div class=\"input-group\" style=\"margin-bottom: 2em;\">\n              <label>Mature</label><br>\n              <sl-radio-group label=\"Select\" no-fieldset>\n                <sl-radio name=\"mature\" value=\"m\">On</sl-radio>\n                <sl-radio name=\"underage\" value=\"u\">Off</sl-radio>\n              </sl-radio-group>\n            </div>\n            <div class=\"input-group\">\n              <sl-textarea name=\"begin-here\" rows=\"3\" placeholder=\"Begin Here...\" required></sl-textarea>\n            </div>\n            <sl-button type=\"primary\" class=\"submit-btn\" submit size=\"medium\" pill>Save Draft</sl-button>\n            <sl-button type=\"primary\" class=\"submit-btn\" submit size=\"medium\" pill>Post</sl-button>\n          </sl-form> \n        </div>         \n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -17570,7 +17606,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51543" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58929" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -856,8 +856,8 @@ input.searchBox:focus-visible {
 }
 
 .featured-h2 {
-  padding-top: 20px;
-  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
   font-size: 2.5em;
 }
 
@@ -873,6 +873,7 @@ input.searchBox:focus-visible {
   width: auto;
   height: auto;
   margin-top: 40px;
+  padding: 20px;
 }
 
 .new-post-content {
@@ -886,6 +887,7 @@ input.searchBox:focus-visible {
   width: auto;
   height: auto;
   margin-top: 40px;
+  padding: 20px;
 }
 
 .summary {
@@ -934,16 +936,15 @@ input.searchBox:focus-visible {
   clip-path: circle(0% at 0 50%);
 }
 
-.img-slider .slide .active {
-  clip-path: circle(100% at 0 50%);
-  transition: 2s;
+.img-slider.fade-in img {
+  clip-path: circle(100% at 0 50%) !important;
+  transition: 0.5s;
   transition-property: clip-path;
 }
 
 .img-slider .slide img {
-  z-index: 1;
-  width: 400px;
-  border-radius: 5px;
+  height: 350px;
+  aspect-ratio: 1 / 1.6;
 }
 
 .img-slider .navigation {
@@ -957,14 +958,14 @@ input.searchBox:focus-visible {
 
 .img-slider .navigation .btn {
   background: rgba(225, 225, 225, 0.5);
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   margin: 10px;
   border-radius: 50px;
   cursor: pointer;
 }
 
-.img-slider .navigation .btn .active {
+.img-slider .navigation .btn.active {
   background: #FEC76C;
   box-shadow: 0 0 2px rgba(0,0,0,0.05);
 }
@@ -1054,6 +1055,25 @@ input.searchBox:focus-visible {
 /* POST / ADD  ----------------------------------------------------------------------------------------------- */
 .page-form-styling {
   background-color: #FFFFFF;
+  border-radius: 30px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.05);
+  width: 70%;
+  margin: 30px;
+  padding: 30px;
+}
+
+.back-to-manage-btn {
+  background-color: transparent;
+}
+
+.back-to-manage-text {
+  display: flex;
+  justify-content: right;
+}
+
+.back-to-manage-container {
+  display: flex;
+  margin: 30px;
 }
 
 /* LANDING  ---------------------------------------------------------------------------------------------- */
@@ -1155,11 +1175,6 @@ input.searchBox:focus-visible {
   bottom: 15px;
 }
 
-.img-slider .navigation .btn {
-  width: 8px;
-  height: 8px;
-  margin: 6px;
-}
 
 @media (max-width: 420px){
   .img-slider{
