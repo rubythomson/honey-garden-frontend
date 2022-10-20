@@ -52,9 +52,15 @@ class LibraryView {
                 ${this.poems.map(poem => html`
                   <va-poem class="poem-card"
                       id="${poem._id}"
-                      title="${poem.title}"
+                      title="${poem.title}" 
+                      description="${poem.description}"
+                      views="${poem.views}"
+                      status="${poem.status}"
+                      pages="${poem.pages}"
                       user="${JSON.stringify(poem.user)}"
                       image="${poem.image}"
+                      showStartReadingHandler="${true}" 
+                      showReadingListHandler="${true}"
                     >
                   </va-poem>
                 `)}

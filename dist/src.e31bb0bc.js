@@ -14010,7 +14010,7 @@ class ProfileView {
   async getReadingList() {
     try {
       const currentUser = await _UserAPI.default.getUser(_Auth.default.currentUser._id);
-      this.readingList = [currentUser.readingList[0]]; // first item is 0
+      this.readingList = [currentUser.readingList[currentUser.readingList.length - 1]]; // first item is 0
 
       console.log(this.readingList);
       this.render();
@@ -14020,7 +14020,12 @@ class ProfileView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject2(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject3()), _Auth.default.currentUser.userName, _Auth.default.currentUser.email, (0, _moment.default)(_Auth.default.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a'), _Auth.default.currentUser.bio ? (0, _litHtml.html)(_templateObject4(), _Auth.default.currentUser.bio) : (0, _litHtml.html)(_templateObject5()), this.readingList == null ? (0, _litHtml.html)(_templateObject6()) : (0, _litHtml.html)(_templateObject7(), this.readingList.map(poem => (0, _litHtml.html)(_templateObject8(), poem._id, poem.title, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image))), () => (0, _Router.gotoRoute)('/editProfile'));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject2(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject3()), _Auth.default.currentUser.userName, _Auth.default.currentUser.email, (0, _moment.default)(_Auth.default.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a'), _Auth.default.currentUser.bio ? (0, _litHtml.html)(_templateObject4(), _Auth.default.currentUser.bio) : (0, _litHtml.html)(_templateObject5()), this.readingList == null ? (0, _litHtml.html)(_templateObject6()) : (0, _litHtml.html)(_templateObject7(), this.readingList.map((_ref) => {
+      let {
+        poem
+      } = _ref;
+      return (0, _litHtml.html)(_templateObject8(), poem._id, poem.title, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image);
+    })), () => (0, _Router.gotoRoute)('/editProfile'));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -14302,7 +14307,7 @@ var _Toast = _interopRequireDefault(require("../../Toast"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject4() {
-  const data = _taggedTemplateLiteral(["\n                  <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      title=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                    >\n                  </va-poem>\n                "]);
+  const data = _taggedTemplateLiteral(["\n                  <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      title=\"", "\" \n                      description=\"", "\"\n                      views=\"", "\"\n                      status=\"", "\"\n                      pages=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                      showStartReadingHandler=\"", "\" \n                      showReadingListHandler=\"", "\"\n                    >\n                  </va-poem>\n                "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -14365,7 +14370,7 @@ class LibraryView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.poems == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), this.poems.map(poem => (0, _litHtml.html)(_templateObject4(), poem._id, poem.title, JSON.stringify(poem.user), poem.image))));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.poems == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), this.poems.map(poem => (0, _litHtml.html)(_templateObject4(), poem._id, poem.title, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image, true, true))));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -17483,7 +17488,19 @@ customElements.define('va-poem', class Poem extends _litElement.LitElement {
   }
 
   render() {
-    return (0, _litElement.html)(_templateObject2(), _App.default.apiBase, this.image, this.views && (0, _litElement.html)(_templateObject3(), this.views), this.status && (0, _litElement.html)(_templateObject4(), this.status), this.pages && (0, _litElement.html)(_templateObject5(), this.pages), this.description, this.readingListHandler.bind(this), this.startReadingHandler.bind(this));
+    const friendlyNumber = number => {
+      if (number < 1000) {
+        return number;
+      }
+
+      if (number < 1000000) {
+        return "".concat(Math.round(number / 1000 * 10) / 10, "k");
+      }
+
+      return "".concat(Math.round(number / 1000000 * 10) / 10, "M");
+    };
+
+    return (0, _litElement.html)(_templateObject2(), _App.default.apiBase, this.image, this.views && (0, _litElement.html)(_templateObject3(), friendlyNumber(this.views)), this.status && (0, _litElement.html)(_templateObject4(), this.status), this.pages && (0, _litElement.html)(_templateObject5(), this.pages), this.description, this.readingListHandler.bind(this), this.startReadingHandler.bind(this));
   }
 
 });
@@ -17606,7 +17623,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58929" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57461" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

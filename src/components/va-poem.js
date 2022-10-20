@@ -119,6 +119,17 @@ customElements.define('va-poem', class Poem extends LitElement {
   }
   
   render(){    
+
+    const friendlyNumber = number => {
+      if(number<1000){
+        return number
+      }
+      if(number<1000000){
+        return `${Math.round(number / 1000 * 10) / 10}k`
+      }
+      return `${Math.round(number / 1000000 * 10) / 10}M`
+    }
+
     return html`
     <style>
       .poem-card {
@@ -175,7 +186,7 @@ customElements.define('va-poem', class Poem extends LitElement {
           ${this.views && html`
             <li>
               <sl-icon-button name="eye" label="Views" style="font-size: 23px"></sl-icon-button>
-              ${this.views}
+              ${friendlyNumber(this.views)}
             </li>`}
           ${this.status && html`
             <li>

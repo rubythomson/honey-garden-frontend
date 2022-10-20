@@ -19,7 +19,7 @@ class ProfileView {
   async getReadingList(){
     try {
       const currentUser = await UserAPI.getUser(Auth.currentUser._id)
-      this.readingList = [currentUser.readingList[0]] // first item is 0
+      this.readingList = [currentUser.readingList[currentUser.readingList.length - 1]] // first item is 0
       console.log(this.readingList)
       this.render()
     }catch(err){
@@ -102,7 +102,7 @@ class ProfileView {
                 ${this.readingList == null ? html`
                   <sl-spinner></sl-spinner>
                 ` : html`
-                  ${this.readingList.map(poem => html`
+                  ${this.readingList.map(({ poem }) => html`
                     <va-poem class="poem-card"
                       id="${poem._id}"
                       title="${poem.title}" 
