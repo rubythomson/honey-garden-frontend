@@ -380,13 +380,14 @@ a {
   display: inline-flex;
   flex: 1 1 300px;
   border: 1px solid #ccc;
-  border-radius: 15px;
-  width: 60%;
+  border-radius: 50px;
+  width: auto;
   height: 45px;
   margin: 0 auto;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-color: #F9F9F9;
-  margin-bottom: 40px;
+  margin-top: 17px;
+  margin-left: 15px;
 }
 
 .searchIcon {
@@ -416,6 +417,13 @@ a {
 
 input.searchBox:focus-visible {
   outline: none !important;
+}
+
+.beehive-search-text {
+  display: flex;
+  justify-content: left;
+  margin-left: 30px;
+  margin-bottom: 20px;
 }
 
 /* FILTER ICON ------------------------------------------------------------------------------------------------ */
@@ -499,7 +507,7 @@ input.searchBox:focus-visible {
 
 .beehive-row-1 .beehive-row-2 .beehive-row-3 {
   display: flex;
-  border-radius: 50px;
+  border-radius: 30px;
   padding: 10px;
   text-align: left;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -508,7 +516,7 @@ input.searchBox:focus-visible {
 .beehive-search-box {
   border-radius: 50px;
   background-color: white;
-  width: 33.3%;
+  width: 65%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   justify-content: center;
@@ -526,25 +534,39 @@ input.searchBox:focus-visible {
   padding: 40px;
 }
 
-.beehive-cloud-kisses {
+.beehive-card {
   width: 70%;
   text-align: left;
-  padding: 40px;
+  padding: 30px;
+  background-color: #FFFFFF;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .in-my-dreams-icons {
-  display: flex;
-  align-items: left;
+  display: grid;
+  justify-content: right;
+  grid-template-columns: 30px 90px 70px 50px;
+  grid-template-rows: 50px;
+  grid-column-gap: 10px;
 }
 
 .goldfish-tears-icons {
-  display: flex;
-  align-items: left;
+  display: grid;
+  justify-content: right;
+  grid-template-columns: 30px 90px 70px 50px;
+  grid-template-rows: 50px;
+  grid-column-gap: 10px;
 }
 
 .cloud-kisses-icons {
-  display: flex;
-  align-items: left;
+  display: grid;
+  justify-content: right;
+  grid-template-columns: 30px 90px 70px 50px;
+  grid-template-rows: 50px;
+  grid-column-gap: 10px;
 }
 
 #beehive-card-text {
@@ -553,16 +575,16 @@ input.searchBox:focus-visible {
 
 #beehive-card-rose-icon {
   margin: 5px;
-  display: flex;
+  margin-top: 10px;
 }
 
-#beehive-card-rose-icon :hover {
+.beehive-card-rose-icon :hover {
   color: #FEC76C;
 }
 
 #beehive-card-avatar {
   display: flex;
-  justify-content: left;
+  justify-content: right;
   margin: 10px;
 }
 
@@ -570,6 +592,18 @@ input.searchBox:focus-visible {
   display: flex;
   justify-content: center;
   width: auto;
+}
+
+.beehive-card-username {
+  display: flex;
+  justify-content: right;
+  margin: 10px;
+}
+
+.beehive-card-send-rose-text {
+  display: flex;
+  justify-content: right;
+  margin-top: 10px;
 }
 
 /* PROFILE  ------------------------------------------------------------------------------------------------------- */
@@ -1023,6 +1057,11 @@ input.searchBox:focus-visible {
 }
 
 /* DRAFTS  ----------------------------------------------------------------------------------------------- */
+/* POST / ADD  ----------------------------------------------------------------------------------------------- */
+.page-form-styling {
+  background-color: #FFFFFF;
+}
+
 /* LANDING  ---------------------------------------------------------------------------------------------- */
 .page-content-landing {
   margin-top: 20px;

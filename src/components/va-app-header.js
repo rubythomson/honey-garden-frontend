@@ -143,6 +143,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         margin-top: 0.05em;
         height: 45px;
         margin-right: 0.5em;
+        margin-left: 0.5em;
       }
 
       /* PAGE TITLES --------------------------------------------------------------------------------------------- */
@@ -187,13 +188,11 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
 
     </style>
 
-    <header class="app-header">
-      <sl-icon-button class="hamburger-btn" name="list" @click="${this.hamburgerClick}" style="font-size: 1.5em;"></sl-icon-button>       
-      
+    <header class="app-header">       
       <div class="app-header-main">
         <div class="app-side-menu-logo-1" style="z-index: 1;">
           <a href="/" @click=${anchorRoute}>
-            <img class="app-side-menu-logo-1" src="/images/honey-garden-logo.png">
+            <img class="app-side-menu-logo-1" src="/images/honey-garden-logo.png" alt="honey-garden-logo-img">
           </a>
         </div>
 
@@ -231,23 +230,6 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         </sl-dropdown>
       </nav>
     </header>
-
-    <sl-drawer class="app-side-menu" placement="left">
-
-      <div class="app-side-menu-logo" style="z-index: 1;">
-        <a href="/" @click=${anchorRoute}>
-          <img class="app-side-menu-logo" src="/images/honey-garden-logo.png">
-        </a>
-      </div>
-
-      <div class="app-side-menu-items" style="z-index: 2; position: absolute;">
-        <nav class="app-side-menu-items">
-          <a href="/save" @click="${this.menuClick}">Saved Reads</a>
-          <a href="/support" @click="${this.menuClick}">Support</a>
-        </nav>  
-      </div>
-
-    </sl-drawer>
     `
   }
   
