@@ -144,7 +144,7 @@ class ProfileView {
                 <h2>Modern Takes</h2>
                 <style>
                   .vl {
-                    border-left: 1.5px solid black;
+                    border-left: 1px solid black;
                     height: 30px;
                     position: absolute;
                     margin-left: 155px;

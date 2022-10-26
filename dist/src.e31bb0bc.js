@@ -13985,7 +13985,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">      \n        \n      <div class=\"radial-gradient\"></div> <!-- STYLE -->\n\n        ", "\n        \n        <h1>", " ", "</h1>\n        <p>@", "</p>\n        \n          <sl-card class=\"profile-box\">\n            <div class=\"profile-box-parent\">\n                <div class=\"column1\">\n                  <p>Lists: 0</p>\n                </div>\n\n                <div class=\"column2\">\n                  <p>Works: 3</p>\n                </div>\n\n                <div class=\"column3\">\n                  <p>Followers: 50k</p>\n                </div>\n\n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/following-icon.png\" alt=\"following-icon-img\">  \n                Following</div>\n\n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/drafts-icon.png\" alt=\"drafts-icon-img\">  \n                Drafts</div>\n    \n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/setting-icon.png\" alt=\"setting-icon-img\">  \n                Settings</div>\n            </div>\n          </sl-card>\n\n          <div class=\"radial-gradient\"></div> <!-- STYLE -->\n\n          <sl-card class=\"bio-card\" style=\"width: 400px;\">\n          <div class=\"bio-content\">\n            ", "\n            </div>\n          </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <div class=\"bio-works-card\">\n          <sl-card class=\"card-basic\">\n            <div>        \n              <h2>Works (1)</h2>\n              <hr>\n            </div> \n\n            <div class=\"poem-grid\">\n                ", "\n              </div>\n          </sl-card>\n        </div>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <div class=\"reading-list-card\">\n          <sl-card class=\"card-basic\">\n            <div class=\"reading-list-content\"> \n              <div class=\"reading-list-title-and-btn\"> \n                <div class=\"reading-list-title\">     \n                  <h2>Reading Lists (1)</h2>\n                </div> \n                <div class=\"create-new-btn\">\n                <a href=\"/create-reading-list\">\n                  <sl-button class=\"create-btn\" size=\"medium\" pill>Create New</sl-button>\n                </a>\n                </div>\n              </div>\n              <hr>\n              <div class=\"reading-list-title\">\n                <h2>Modern Takes</h2>\n                <style>\n                  .vl {\n                    border-left: 1.5px solid black;\n                    height: 30px;\n                    position: absolute;\n                    margin-left: 155px;\n                  }\n                </style>\n                <div class=\"vl\"></div>\n                <div class=\"stories-text\">\n                  <h3>2 Stories</h3>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"reading-list-imgs\">\n              <div class=\"sinking-ships-img\">\n                <img src=\"/images/sinking-ships.png\" alt=\"sinking-ships-img\" style=\"border-radius: 15px;\">\n              </div>\n              <div class=\"kissing-clouds-img\">\n                <img src=\"/images/kissing-clouds.png\" alt=\"kissing-clouds-img\" style=\"border-radius: 15px;\">\n              </div>\n\n              <div class=\"empty-reading-list-space\"></div>\n              <style>\n                .empty-reading-list-space {\n                  width: 135px;\n                  height: 200px;\n                  border: 0.5px lightslategray solid;\n                  margin-left: 10px;\n                  margin-right: 10px;\n                }\n              </style>\n\n            <div class=\"empty-reading-list-space\"></div>\n              <style>\n                .empty-reading-list-space {\n                  width: 135px;\n                  height: 200px;\n                  border: 0.5px lightslategray solid;\n                  margin-left: 10px;\n                  margin-right: 10px;\n                }\n              </style>\n\n            <div class=\"empty-reading-list-space\"></div>\n              <style>\n                .empty-reading-list-space {\n                  width: 135px;\n                  height: 200px;\n                  border: 0.5px lightslategray solid;\n                  margin-left: 10px;\n                  margin-right: 10px;\n                }\n              </style>\n            </div>\n          </sl-card>\n        </div>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-button @click=", ">Edit Profile</sl-button>\n\n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">      \n        \n      <div class=\"radial-gradient\"></div> <!-- STYLE -->\n\n        ", "\n        \n        <h1>", " ", "</h1>\n        <p>@", "</p>\n        \n          <sl-card class=\"profile-box\">\n            <div class=\"profile-box-parent\">\n                <div class=\"column1\">\n                  <p>Lists: 0</p>\n                </div>\n\n                <div class=\"column2\">\n                  <p>Works: 3</p>\n                </div>\n\n                <div class=\"column3\">\n                  <p>Followers: 50k</p>\n                </div>\n\n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/following-icon.png\" alt=\"following-icon-img\">  \n                Following</div>\n\n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/drafts-icon.png\" alt=\"drafts-icon-img\">  \n                Drafts</div>\n    \n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/setting-icon.png\" alt=\"setting-icon-img\">  \n                Settings</div>\n            </div>\n          </sl-card>\n\n          <div class=\"radial-gradient\"></div> <!-- STYLE -->\n\n          <sl-card class=\"bio-card\" style=\"width: 400px;\">\n          <div class=\"bio-content\">\n            ", "\n            </div>\n          </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <div class=\"bio-works-card\">\n          <sl-card class=\"card-basic\">\n            <div>        \n              <h2>Works (1)</h2>\n              <hr>\n            </div> \n\n            <div class=\"poem-grid\">\n                ", "\n              </div>\n          </sl-card>\n        </div>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <div class=\"reading-list-card\">\n          <sl-card class=\"card-basic\">\n            <div class=\"reading-list-content\"> \n              <div class=\"reading-list-title-and-btn\"> \n                <div class=\"reading-list-title\">     \n                  <h2>Reading Lists (1)</h2>\n                </div> \n                <div class=\"create-new-btn\">\n                <a href=\"/create-reading-list\">\n                  <sl-button class=\"create-btn\" size=\"medium\" pill>Create New</sl-button>\n                </a>\n                </div>\n              </div>\n              <hr>\n              <div class=\"reading-list-title\">\n                <h2>Modern Takes</h2>\n                <style>\n                  .vl {\n                    border-left: 1px solid black;\n                    height: 30px;\n                    position: absolute;\n                    margin-left: 155px;\n                  }\n                </style>\n                <div class=\"vl\"></div>\n                <div class=\"stories-text\">\n                  <h3>2 Stories</h3>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"reading-list-imgs\">\n              <div class=\"sinking-ships-img\">\n                <img src=\"/images/sinking-ships.png\" alt=\"sinking-ships-img\" style=\"border-radius: 15px;\">\n              </div>\n              <div class=\"kissing-clouds-img\">\n                <img src=\"/images/kissing-clouds.png\" alt=\"kissing-clouds-img\" style=\"border-radius: 15px;\">\n              </div>\n\n              <div class=\"empty-reading-list-space\"></div>\n              <style>\n                .empty-reading-list-space {\n                  width: 135px;\n                  height: 200px;\n                  border: 0.5px lightslategray solid;\n                  margin-left: 10px;\n                  margin-right: 10px;\n                }\n              </style>\n\n            <div class=\"empty-reading-list-space\"></div>\n              <style>\n                .empty-reading-list-space {\n                  width: 135px;\n                  height: 200px;\n                  border: 0.5px lightslategray solid;\n                  margin-left: 10px;\n                  margin-right: 10px;\n                }\n              </style>\n\n            <div class=\"empty-reading-list-space\"></div>\n              <style>\n                .empty-reading-list-space {\n                  width: 135px;\n                  height: 200px;\n                  border: 0.5px lightslategray solid;\n                  margin-left: 10px;\n                  margin-right: 10px;\n                }\n              </style>\n            </div>\n          </sl-card>\n        </div>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-button @click=", ">Edit Profile</sl-button>\n\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14454,7 +14454,7 @@ var _Toast = _interopRequireDefault(require("../../Toast"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Create Post\" user=\"", "\"></va-app-header>\n\n      <!------------------------------------------------ NOW CALLED MANAGE ---------------------------------------------------->\n      <div class=\"page-content\">\n\n      <div class=\"manage-container\">\n        <h1>Manage</h1>\n        <hr>\n        <div class=\"manage-btns-container-1\">\n          <div class=\"work-btn\">1 Work</div>\n          <div class=\"vertical-line\"></div>\n          <div class=\"draft-btn\">1 Drafts</div>\n          <div class=\"vertical-line-draft\"></div>\n          <div></div>\n        </div>\n        <div class=\"manage-btns-container-2\">\n          <div class=\"current-work-btn\">Current Work</div>\n          <div class=\"view-drafts-btn\">View Drafts</div>\n          <div class=\"create-new-btn\">Create New</div>\n        </div>\n      </div>\n\n        <div class=\"page-form-styling\">\n          <div class=\"back-to-manage-container\">\n            <a href=\"/post\" style=\"text-decoration: none;\">\n              <div class=\"back-to-manage\">\n                <img src=\"/images/arrow-left-icon.png\" class=\"arrow-left-icon\">  \n                Back to Manage</div>\n            </a>\n          </div>\n\n          <h1>Add</h1>\n          <sl-form class=\"page-form\" @sl-submit=", ">\n            <input type=\"hidden\" name=\"user\" value=\"", "\" />\n            <div class=\"input-group\">\n              <sl-input name=\"title\" type=\"text\" placeholder=\"Title:\" required></sl-input>\n            </div>\n            <div class=\"input-group\">              \n              <sl-input name=\"tags\" type=\"text\" placeholder=\"Tags:\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-textarea name=\"description\" rows=\"3\" placeholder=\"Description:\" required></sl-textarea>\n            </div>\n            <div class=\"input-group\" style=\"margin-bottom: 2em;\">\n              <label>Image</label><br>\n              <input type=\"file\" name=\"image\" />              \n            </div>\n            <div class=\"input-group\" style=\"margin-bottom: 2em;\">\n              <label>Mature</label><br>\n              <sl-radio-group label=\"Select\" no-fieldset>\n                <sl-radio name=\"mature\" value=\"m\">On</sl-radio>\n                <sl-radio name=\"underage\" value=\"u\">Off</sl-radio>\n              </sl-radio-group>\n            </div>\n            <div class=\"input-group\">\n              <sl-textarea name=\"begin-here\" rows=\"3\" placeholder=\"Begin Here...\" required></sl-textarea>\n            </div>\n            <sl-button type=\"primary\" class=\"submit-btn\" submit size=\"medium\" pill>Save Draft</sl-button>\n            <sl-button type=\"primary\" class=\"submit-btn\" submit size=\"medium\" pill>Post</sl-button>\n          </sl-form> \n        </div>         \n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Create Post\" user=\"", "\"></va-app-header>\n\n      <!------------------------------------------------ NOW CALLED MANAGE ---------------------------------------------------->\n    <div class=\"page-content\">\n\n      <div class=\"manage-container\">\n        <h1>Manage</h1>\n        <hr>\n        <div class=\"manage-btns-container-1\">\n          <div class=\"work-btn\">1 Work</div>\n          <div class=\"vertical-line\"></div>\n          <div class=\"draft-btn\">1 Drafts</div>\n          <div class=\"vertical-line-draft\"></div>\n          <div></div>\n        </div>\n        <div class=\"manage-btns-container-2\">\n        <a href=\"/current-work\">\n          <div class=\"current-work-btn\">Current Work</div>\n        </a>  \n          <a href=\"/drafts\">\n            <div class=\"view-drafts-btn\">View Drafts</div>\n          </a>\n          <a href=\"/add\">\n            <div id=\"create-new-btn\">Create New</div>\n          </a>\n        </div>\n      </div>\n    </div>    \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14467,7 +14467,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 class newPostView {
   init() {
-    document.title = 'Post';
+    document.title = 'Manage';
     this.render();
 
     _Utils.default.pageIntroAnim();
@@ -14503,7 +14503,7 @@ class newPostView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.newPostSubmitHandler, _Auth.default.currentUser._id);
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -15386,7 +15386,297 @@ class CreateReadingListView {
 var _default = new CreateReadingListView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js"}],"Router.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js"}],"views/pages/add.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+var _PoemAPI = _interopRequireDefault(require("../../PoemAPI"));
+
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">   \n\n      <div class=\"page-form-styling\">\n          <div class=\"back-to-manage-container\">\n            <a href=\"/post\" style=\"text-decoration: none;\">\n              <div class=\"back-to-manage\">\n                <img src=\"/images/arrow-left-icon.png\" class=\"arrow-left-icon\">  \n                Back to Manage</div>\n            </a>\n          </div>  \n\n            <h1>Add</h1>\n              <sl-form class=\"page-form\" @sl-submit=", ">\n                <input type=\"hidden\" name=\"user\" value=\"", "\" />\n                <div class=\"input-group\">\n                  <sl-input name=\"title\" type=\"text\" placeholder=\"Title:\" required></sl-input>\n                </div>\n                <div class=\"input-group\">              \n                  <sl-input name=\"tags\" type=\"text\" placeholder=\"Tags:\" required></sl-input>\n                </div>\n                <div class=\"input-group\">\n                  <sl-textarea name=\"description\" rows=\"3\" placeholder=\"Description:\" required></sl-textarea>\n                </div>\n                <div class=\"input-group\" style=\"margin-bottom: 2em;\">\n                  <label>Image</label><br>\n                  <input type=\"file\" name=\"image\" />              \n                </div>\n                <div class=\"input-group\" style=\"margin-bottom: 2em;\">\n                  <label>Mature</label><br>\n                  <sl-radio-group label=\"Select\" no-fieldset>\n                    <sl-radio name=\"mature\" value=\"m\">On</sl-radio>\n                    <sl-radio name=\"underage\" value=\"u\">Off</sl-radio>\n                  </sl-radio-group>\n                </div>\n                <div class=\"input-group\">\n                  <sl-textarea name=\"begin-here\" rows=\"3\" placeholder=\"Begin Here...\" required></sl-textarea>\n                </div>\n                <sl-button type=\"primary\" class=\"submit-btn\" submit size=\"medium\" pill>Save Draft</sl-button>\n                <sl-button type=\"primary\" class=\"submit-btn\" submit size=\"medium\" pill>Post</sl-button>\n              </sl-form> \n            </div>\n        </div> \n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class AddView {
+  init() {
+    document.title = 'Add Post';
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.newPostSubmitHandler, _Auth.default.currentUser._id);
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new AddView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"views/pages/drafts.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        \n        <div class=\"draft-container\">\n          <div class=\"back-to-manage-container\">\n            <a href=\"/post\" style=\"text-decoration: none;\">\n              <div class=\"back-to-manage\">\n                <img src=\"/images/arrow-left-icon.png\" class=\"arrow-left-icon\">  \n                Back to Manage</div>\n            </a>\n          </div> \n\n          <div class=\"drafts-top-content-container\">\n            <div>\n              <h1>Drafts</h1>\n              <p>Drafts (1)</p>\n            </div>\n            <a href=\"/add\">\n              <div class=\"add-post-btn\">\n                <p class=\"add-post-text-btn\">Create New</p>\n              </div>\n            </a>\n          </div>\n\n          <hr>\n          <div class=\"drafts-img-text-container\">\n            <div class=\"the-way-love-lies-img\">\n              <img src=\"/images/the-way-love-lies.png\" alt=\"the-way-love-lies-img\" style=\"border-radius: 15px;\">\n            </div>\n            <div class=\"drafts-text\">\n              <h3>The Way Love Lies</h3>\n              <p>Chapter 13</p>\n            </div>\n            <div class=\"post-btn\">\n              <p class=\"post-btn-text\">Post</p>\n            </div>\n          </div>\n        </div> \n        \n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class DraftsView {
+  init() {
+    document.title = 'Drafts';
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new DraftsView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"views/pages/current-work.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+var _PoemAPI = _interopRequireDefault(require("../../PoemAPI"));
+
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n\n        <div class=\"current-work-container\">\n          <div class=\"back-to-manage-container\">\n            <a href=\"/post\" style=\"text-decoration: none;\">\n              <div class=\"back-to-manage\">\n                <img src=\"/images/arrow-left-icon.png\" class=\"arrow-left-icon\">  \n                Back to Manage</div>\n            </a>\n          </div> \n\n          <h1>Current Work</h1>\n\n          <hr>\n          <div class=\"current-works-img-text-container\">\n            <div class=\"the-way-love-lies-img\">\n              <img src=\"/images/the-way-love-lies.png\" alt=\"the-way-love-lies-img\" style=\"border-radius: 15px;\">\n            </div>\n            <div class=\"current-works-text\">\n              <h3>The Way Love Lies</h3>\n              <div class=\"current-work-icons\">\n                <div>\n                <img src=\"/images/views-icon.png\" alt=\"views-icon-img\" class=\"views-icon\">  \n                300</div>\n\n                <div>\n                <img src=\"/images/status-icon.png\" alt=\"views-icon-img\" class=\"status-icon\">   \n                Completed</div>\n\n                <div>\n                <img src=\"/images/pages-icon.png\" alt=\"views-icon-img\" class=\"pages-icon\">   \n                12</div>\n              </div>\n\n              <div class=\"current-works-description\">\n                <p>Alaska an alien princess who wants to expand her wings and meet her love and her life on another planet. Running away from home she finds herself on planet Earth.\n                  <p></p>\n                  Kingsley a restaurant chef at a small owned store has been in a cooking slump and decides to take a break to clear his head.\n                  <p></p>\n                  The two cross paths and we shall see the madness that unravels.</p>\n                </div>\n\n                <div class=\"current-works-bottom-btns\">\n                  <div class=\"romance-btn\">Romance</div>\n                  <div class=\"slice-of-life-btn\">Slice of Life</div>\n                </div>\n            </div>\n\n          </div>\n        </div> \n        \n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class CurrentWorkView {
+  init() {
+    document.title = 'Current Work';
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new CurrentWorkView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"views/pages/profile-settings.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+var _PoemAPI = _interopRequireDefault(require("../../PoemAPI"));
+
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
+var _UserAPI = _interopRequireDefault(require("./../../UserAPI"));
+
+var _moment = _interopRequireDefault(require("moment"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject5() {
+  const data = _taggedTemplateLiteral(["\n                    <input type=\"file\" name=\"avatar\"/>\n                  "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  const data = _taggedTemplateLiteral(["\n                    <sl-avatar image=\"", "/images/", "\"></sl-avatar>\n                    <input type=\"file\" name=\"avatar\"/>\n                  "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  const data = _taggedTemplateLiteral(["\n                <div class=\"input-group\">         \n                  ", "\n                </div>\n              <sl-form class=\"page-form\" @sl-submit=", ">\n                <p>Username :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"userName\" value=\"", "\" placeholder=\" Username\"></sl-input>\n                </div>\n                <p>First Name :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"firstName\" value=\"", "\" placeholder=\"First Name\"></sl-input>\n                </div>\n                <p>Last Name :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"lastName\" value=\"", "\" placeholder=\"Last Name\"></sl-input>\n                </div>\n                <p>Email :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"email\" value=\"", "\" placeholder=\"Email Address\"></sl-input>\n                </div>   \n                <p>Bio :</p>  \n                <div class=\"input-group\">\n                  <sl-textarea name=\"bio\" rows=\"4\" placeholder=\"Bio\" value=\"", "\"></sl-textarea>\n                </div>  \n                <p>Birthday (dd/mm/yyyy) :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"email\" value=\"", "\" placeholder=\"Birthday\"></sl-input>\n                </div>       \n                <sl-button type=\"primary\" class=\"submit-btn\" submit>Update</sl-button>\n              </sl-form>\n            "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  const data = _taggedTemplateLiteral(["\n              <sl-spinner></sl-spinner>\n            "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Edit Profile\" user=", "></va-app-header>\n      <div class=\"page-content\"> \n\n          <div class=\"settings-title\">\n            <h1>Settings</h1> \n          </div>\n        \n        <div class=\"settings-container\">\n          <h2 class=\"edit-profile-title\">Edit Profile</h2>\n\n          <div class=\"settings-form-content\">\n            ", "\n          </div>\n        </div>\n      </div>\n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class SettingsView {
+  init() {
+    console.log('EditProfileView.init');
+    document.title = 'Edit Profile';
+    this.user = null;
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+
+    this.getUser();
+  }
+
+  async getUser() {
+    try {
+      this.user = await _UserAPI.default.getUser(_Auth.default.currentUser._id);
+      this.render();
+    } catch (err) {
+      _Toast.default.show(err, 'error');
+    }
+  }
+
+  async updateProfileSubmitHandler(e) {
+    e.preventDefault();
+    const formData = e.detail.formData;
+    const submitBtn = document.querySelector('.submit-btn');
+    submitBtn.setAttribute('loading', '');
+
+    try {
+      const updatedUser = await _UserAPI.default.updateUser(_Auth.default.currentUser._id, formData);
+      delete updatedUser.password;
+      this.user = updatedUser;
+      _Auth.default.currentUser = updatedUser;
+      this.render();
+
+      _Toast.default.show('profile updated');
+    } catch (err) {
+      _Toast.default.show(err, 'error');
+    }
+
+    submitBtn.removeAttribute('loading');
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.user == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), this.user.avatar ? (0, _litHtml.html)(_templateObject4(), _App.default.apiBase, this.user.avatar) : (0, _litHtml.html)(_templateObject5()), this.updateProfileSubmitHandler.bind(this), this.user.userName, this.user.firstName, this.user.lastName, this.user.email, this.user.bio, this.user.birthday));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new SettingsView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js","moment":"../node_modules/moment/moment.js"}],"Router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15434,6 +15724,14 @@ var _searchGrid = _interopRequireDefault(require("./views/pages/search-grid"));
 
 var _createReadingList = _interopRequireDefault(require("./views/pages/create-reading-list"));
 
+var _add = _interopRequireDefault(require("./views/pages/add"));
+
+var _drafts = _interopRequireDefault(require("./views/pages/drafts"));
+
+var _currentWork = _interopRequireDefault(require("./views/pages/current-work"));
+
+var _profileSettings = _interopRequireDefault(require("./views/pages/profile-settings"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import views
@@ -15457,7 +15755,11 @@ const routes = {
   '/editProfile': _editProfile.default,
   '/read': _read.default,
   '/search-grid': _searchGrid.default,
-  '/create-reading-list': _createReadingList.default
+  '/create-reading-list': _createReadingList.default,
+  '/add': _add.default,
+  '/drafts': _drafts.default,
+  '/current-work': _currentWork.default,
+  '/profile-settings': _profileSettings.default
 };
 
 class Router {
@@ -15511,7 +15813,7 @@ function anchorRoute(e) {
   const pathname = e.target.closest('a').pathname;
   AppRouter.gotoRoute(pathname);
 }
-},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js","./views/pages/landing":"views/pages/landing.js","./views/pages/search-grid":"views/pages/search-grid.js","./views/pages/create-reading-list":"views/pages/create-reading-list.js"}],"App.js":[function(require,module,exports) {
+},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js","./views/pages/landing":"views/pages/landing.js","./views/pages/search-grid":"views/pages/search-grid.js","./views/pages/create-reading-list":"views/pages/create-reading-list.js","./views/pages/add":"views/pages/add.js","./views/pages/drafts":"views/pages/drafts.js","./views/pages/current-work":"views/pages/current-work.js","./views/pages/profile-settings":"views/pages/profile-settings.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -17680,7 +17982,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51518" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50294" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

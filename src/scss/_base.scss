@@ -15,18 +15,18 @@ body {
   height: 100vh;
 }
 
-// headings --------------------------------------------------------------------------------------------
+// HEADINGS --------------------------------------------------------------------------------------------
 h1,h2,h3,h5,h6 {
   margin: 0 0 .5em;
   color: var(--heading-color);
 }
 
-// links -----------------------------------------------------------------------------------------------
+// LINKS -----------------------------------------------------------------------------------------------
 a {
   color: var(--link-color);
 }
 
-// app splash screen -----------------------------------------------------------------------------------
+// APP SPLASH SCREEN -----------------------------------------------------------------------------------
 .app-splash {
   position: fixed;
   background: #fff;
@@ -46,7 +46,7 @@ a {
   }
 }
 
-// helper classes -----------------------------------------------------------------------------------------
+// HELPER CLASSES -----------------------------------------------------------------------------------------
 .calign {
   text-align: center;
 }
@@ -59,7 +59,7 @@ a {
   color: var(--brand-color);
 }
 
-// generic-entry ------------------------------------------------------------------------------------------
+// GENERIC-ENTRY ------------------------------------------------------------------------------------------
 .generic-entry {
   box-shadow: 0px 3px 5px rgba(0,0,0,0.07);
   border-radius: 5px;
@@ -68,7 +68,7 @@ a {
   background: #fff;
 }
 
-// root --------------------------------------------------------------------------------------------------
+// ROOT --------------------------------------------------------------------------------------------------
 #root {
   position: absolute;
   top: 0;
@@ -78,7 +78,7 @@ a {
   overflow: hidden;
 }
 
-// page --------------------------------------------------------------------------------------------------
+// PAGE --------------------------------------------------------------------------------------------------
 .page-content {
   position: absolute;
   top: var(--app-header-height);
@@ -98,7 +98,7 @@ a {
   justify-content: center;
 }
 
-// sign in + sign up pages -------------------------------------------------------------------------------
+// SIGN IN / UP PAGES -------------------------------------------------------------------------------
 .signup-box {  
   transform: translate(0px, 0px);
   opacity: 1;
@@ -121,14 +121,17 @@ a {
 }
 
 .submit-btn::part(base) {
-  border-color: #FEC76C;
-  background-color: var(--body-bg);
-  color: black;
+  border-color: 1px solid black;
+  background-color: #FEC76C;
+  color: white;
   font-family: var(--base-font-family);
   font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
-// guide page --------------------------------------------------------------------------------------------
+// GUIDE PAGE --------------------------------------------------------------------------------------------
 .guide-step {
   padding: 1em;
   margin: 1.5em auto;
@@ -181,7 +184,7 @@ a {
   color: #FFF4E1;
 }
 
-// poems grid --------------------------------------------------------------------------------------------
+// POEMS GRID --------------------------------------------------------------------------------------------
 .poems-grid{
   display: grid;
   grid-template-columns: repeat(2, 677px);
@@ -194,7 +197,7 @@ a {
   }
 }
 
-// poems dialog ------------------------------------------------------------------------------------------
+// POEMS DIALOG ------------------------------------------------------------------------------------------
 .poem-dialog {
   --width: 50%;
 }
@@ -302,6 +305,7 @@ a {
   cursor: pointer;
   display: inline-block;
 }
+
 /* SEARCH GRID FILTER  ------------------------------------------------------------------------------------- */
 .search-grid {
   display: grid;
@@ -819,6 +823,31 @@ input.searchBox:focus-visible {
   color: #FEC76C;
 }
 
+/* PROFILE (settings) ------------------------------------------------------------------------------------- */
+.settings-container {
+  background-color: white;
+  border: 0.5px solid lightgray;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 30px;
+}
+
+.edit-profile-title {
+  margin-bottom: 30px;
+}
+
+.settings-title {
+  margin: 20px;
+}
+
+.settings-form-content {
+  display: grid;
+  grid-template-columns: 200px 600px;
+  grid-template-rows: 100px;
+  grid-column-gap: 100px;
+  height: 800px;
+}
+
 /* ADULTS (18+) VIEW ------------------------------------------------------------------------------------- */
 .adults-only-title {
   margin-top: 30px;
@@ -1167,15 +1196,185 @@ input.searchBox:focus-visible {
   display: flex;
   justify-content: center;
 }
+/* MANAGE (current works)  ---------------------------------------------------------------------------------------- */
+.current-works-text {
+  justify-content: left;
+  margin-top: 30px;
+}
 
-/* DRAFTS  ----------------------------------------------------------------------------------------------- */
+.current-work-icons {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 70px 100px 90px;
+  grid-template-rows: 30px;
+  grid-column-gap: 100px;
+}
+
+.views-icon {
+  width: auto;
+  height: 13px;
+  margin-right: 5px;
+}
+
+.status-icon {
+  width: auto;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.pages-icon {
+  width: auto;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.current-works-img-text-container {
+  display: grid;
+  grid-template-columns: 100px 370px;
+  grid-template-rows: 300px;
+  grid-column-gap: 100px;
+}
+
+.current-work-container {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  width: 70%;
+  margin: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.current-works-description {
+  width: 500px;
+  height: auto;
+  font-size: 0.8em;
+}
+
+.current-works-bottom-btns {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px;
+  grid-column-gap: 30px;
+}
+
+.romance-btn {
+  display: flex;
+  justify-content: center;
+  background-color: #FFFEF9;
+  border-radius: 10px;
+  border: 0.5px solid black;
+  width: 100px;
+  height: 30px;
+  padding: 6px;
+  font-size: 0.9em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.slice-of-life-btn {
+  display: flex;
+  justify-content: center;
+  background-color: #FFFEF9;
+  border-radius: 10px;
+  border: 0.5px solid black;
+  width: 100px;
+  height: 30px;
+  margin: 20px;
+  padding: 6px;
+  font-size: 0.9em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* MANAGE (drafts)  ----------------------------------------------------------------------------------------------- */
+.drafts-top-content-container {
+  display: grid;
+  grid-template-columns: 470px 200px;
+  grid-template-rows: 100px;
+  grid-column-gap: 200px;
+}
+
+.add-post-btn {
+  background-color: #CBBFAB;
+  border: 0.5px solid black;
+  border-radius: 50px;
+  width: 150px;
+  height: 40px;
+  align-items: right;
+}
+
+.add-post-text-btn {
+  justify-content: center;
+  margin-top: 10px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.drafts-text {
+  justify-content: left;
+  margin-top: 30px;
+}
+
+.the-way-love-lies-img {
+  display: flex;
+  justify-content: left;
+  width: auto;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+.drafts-img-text-container {
+  display: grid;
+  grid-template-columns: 100px 370px 200px;
+  grid-template-rows: 300px;
+  grid-column-gap: 100px;
+}
+
+.post-btn {
+  background-color: #FEC76C;
+  border: 0.5px solid black;
+  width: 150px;
+  height: 40px;
+  border-radius: 30px;
+  margin-top: 250px;
+}
+
+.post-btn-text {
+  margin-top: 9px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.draft-container {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  width: 70%;
+  margin: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  margin: auto;
+  margin-top: 40px;
+}
 
 /* MANAGE (post/add)  ------------------------------------------------------------------------------------ */
 .manage-container{
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 0 3px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   width: 70%;
+  height: 400px;
   margin: 30px;
   padding: 30px;
   margin: auto;
@@ -1186,14 +1385,14 @@ input.searchBox:focus-visible {
   display: grid;
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 50px;
-  grid-column-gap: 80px;
+  grid-column-gap: 180px;
   justify-content: center;
   margin-top: 40px;
 }
 
 .current-work-btn {
   background-color: #FFF4E1;
-  border: black 2px;
+  border: 0.5px solid black;
   border-radius: 20px;
   width: 120px;
   height: 40px;
@@ -1202,8 +1401,9 @@ input.searchBox:focus-visible {
 }
 
 .view-drafts-btn {
+  text-decoration: none !important;
   background-color: #EDDCC0;
-  border: black 2px;
+  border: 0.5px solid black;
   border-radius: 20px;
   width: 120px;
   height: 40px;
@@ -1211,9 +1411,10 @@ input.searchBox:focus-visible {
   text-align: center;
 }
 
-.create-new-btn {
+#create-new-btn {
+  text-decoration: none !important;
   background-color: #CBBFAB;
-  border: black 2px;
+  border: 0.5px solid black;
   border-radius: 20px;
   width: 120px;
   height: 40px;
@@ -1224,9 +1425,9 @@ input.searchBox:focus-visible {
 .manage-btns-container-1 {
   display: grid;
   margin: auto;
-  grid-template-columns: 100px 100px 100px;
+  grid-template-columns: 270px 150px 150px;
   grid-template-rows: 50px;
-  grid-column-gap: 80px;
+  grid-column-gap: 10px;
   justify-content: center;
   margin-top: 40px;
   background-color: #F9F9F9;
@@ -1287,7 +1488,7 @@ input.searchBox:focus-visible {
 .page-form-styling {
   background-color: #FFFFFF;
   border-radius: 10px;
-  box-shadow: 0 0 3px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   width: 70%;
   margin: 30px;
   padding: 30px;

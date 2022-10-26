@@ -18,6 +18,10 @@ import readView from './views/pages/read'
 import landingView from './views/pages/landing'
 import searchGridView from './views/pages/search-grid'
 import CreateReadingListView from './views/pages/create-reading-list'
+import AddView from './views/pages/add'
+import DraftsView from './views/pages/drafts'
+import CurrentWorkView from './views/pages/current-work'
+import SettingsView from './views/pages/profile-settings'
 
 // define routes
 const routes = {
@@ -39,7 +43,11 @@ const routes = {
 	'/editProfile': editProfileView,
 	'/read': readView,
 	'/search-grid': searchGridView,
-	'/create-reading-list': CreateReadingListView
+	'/create-reading-list': CreateReadingListView,
+	'/add': AddView,
+	'/drafts': DraftsView,
+	'/current-work': CurrentWorkView,
+	'/profile-settings': SettingsView
 }
 
 class Router {
