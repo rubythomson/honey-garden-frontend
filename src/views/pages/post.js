@@ -43,14 +43,36 @@ class newPostView {
   render(){
     const template = html`
       <va-app-header title="Create Post" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
+
+      <!------------------------------------------------ NOW CALLED MANAGE ---------------------------------------------------->
       <div class="page-content">
-        <div class="back-to-manage-container">
-          <sl-button variant="default" size="medium" class="back-to-manage-btn">
-            <sl-icon slot="prefix" name="arrow-left"></sl-icon>
-            <p class="back-to-manage-text">Back to Manage</p>
-          </sl-button>
+
+      <div class="manage-container">
+        <h1>Manage</h1>
+        <hr>
+        <div class="manage-btns-container-1">
+          <div class="work-btn">1 Work</div>
+          <div class="vertical-line"></div>
+          <div class="draft-btn">1 Drafts</div>
+          <div class="vertical-line-draft"></div>
+          <div></div>
         </div>
+        <div class="manage-btns-container-2">
+          <div class="current-work-btn">Current Work</div>
+          <div class="view-drafts-btn">View Drafts</div>
+          <div class="create-new-btn">Create New</div>
+        </div>
+      </div>
+
         <div class="page-form-styling">
+          <div class="back-to-manage-container">
+            <a href="/post" style="text-decoration: none;">
+              <div class="back-to-manage">
+                <img src="/images/arrow-left-icon.png" class="arrow-left-icon">  
+                Back to Manage</div>
+            </a>
+          </div>
+
           <h1>Add</h1>
           <sl-form class="page-form" @sl-submit=${this.newPostSubmitHandler}>
             <input type="hidden" name="user" value="${Auth.currentUser._id}" />

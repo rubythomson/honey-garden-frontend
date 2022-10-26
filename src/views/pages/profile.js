@@ -40,9 +40,8 @@ class ProfileView {
         <sl-avatar style="--size: 200px; margin-bottom: 1em;"></sl-avatar>
         `}
         
-        <h1>${Auth.currentUser.userName}</h1>
-        <p>${Auth.currentUser.email}</p>
-        <p>Updated: ${moment(Auth.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a')}</p>
+        <h1>${Auth.currentUser.firstName} ${Auth.currentUser.lastName}</h1>
+        <p>@${Auth.currentUser.userName}</p>
         
           <sl-card class="profile-box">
             <div class="profile-box-parent">
@@ -58,23 +57,23 @@ class ProfileView {
                   <p>Followers: 50k</p>
                 </div>
 
-                <sl-button variant="default" size="medium" pill class="column1">
-                  <sl-icon name="person-square"></sl-icon>
-                Following</sl-button>
+                <div class="following-btn" class="column1">
+                <img src="/images/following-icon.png" alt="following-icon-img">  
+                Following</div>
+
+                <div class="following-btn" class="column1">
+                <img src="/images/drafts-icon.png" alt="drafts-icon-img">  
+                Drafts</div>
     
-                <sl-button variant="default" size="medium" pill class="column2">
-                  <sl-icon name="pencil-square"></sl-icon>
-                Drafts</sl-button>
-    
-                <sl-button variant="default" size="medium" pill class="column3">
-                  <sl-icon name="gear"></sl-icon>
-                Settings</sl-button>
+                <div class="following-btn" class="column1">
+                <img src="/images/setting-icon.png" alt="setting-icon-img">  
+                Settings</div>
             </div>
           </sl-card>
 
           <div class="radial-gradient"></div> <!-- STYLE -->
 
-          <sl-card class="bio-card">  
+          <sl-card class="bio-card" style="width: 400px;">
           <div class="bio-content">
             ${Auth.currentUser.bio ? html`
               <h3 class="bio">Bio:</h3>
@@ -129,12 +128,16 @@ class ProfileView {
 
         <div class="reading-list-card">
           <sl-card class="card-basic">
-            <div class="reading-list-content">  
-              <div class="reading-list-title">     
-                <h2>Reading Lists (1)</h2>
-              </div> 
-              <div class="create-new-btn">
-                <sl-button class="create-btn" size="medium" pill>Create New</sl-button>
+            <div class="reading-list-content"> 
+              <div class="reading-list-title-and-btn"> 
+                <div class="reading-list-title">     
+                  <h2>Reading Lists (1)</h2>
+                </div> 
+                <div class="create-new-btn">
+                <a href="/create-reading-list">
+                  <sl-button class="create-btn" size="medium" pill>Create New</sl-button>
+                </a>
+                </div>
               </div>
               <hr>
               <div class="reading-list-title">

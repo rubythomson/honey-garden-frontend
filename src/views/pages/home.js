@@ -53,14 +53,16 @@ class HomeView {
       <va-app-header title="Home" user=${JSON.stringify(Auth.currentUser)}></va-app-header>
       
       <div class="page-content">
+
+      <div class="home-text-img-container">
         <div class="home-title">
           <h3>The night it beautiful,</h3>
           <h3>So are the faces of my people</h3>
         </div>
-
         <div class="feather-img-div">
           <img class="feather-img" src="/images/feather-ink-pot.png" alt="feather-ink-pot">
         </div>
+      </div>
         
         <div class="radial-gradient"></div>
 
@@ -68,27 +70,27 @@ class HomeView {
           <h2 class="featured-h2">Featured</h2>
         </div>
 
-          <div class="featured-card">
+            <div class="featured-card">
               <div class="featured-img">
                 <img src="/images/sinking-ships.png" alt="sinking-ships-img" style="border-radius: 30px;"> 
               </div>
-
+            
               <div class="featured-box-parent">
                 <div class="summary"> 
                   <p> 8 hours left on a sinking ship. Multiple stories about different couples going through heartache and grief.</p>
                 </div>
-
-              <!-- <div class="featured-comments-box-parent"> -->
-                <div class="comment-1">
-                  <p><i>"This was so good"</i></p>
-                </div>
-
-                <div class="comment-2">
-                  <p><i>"Highly Recommend"</i></p>
-                </div>
-              <!-- </div> -->
               </div>
-          </div>
+
+              <!-- no longer rendering on the page? -->
+                <div class="featured-comments-box-parent">
+                  <div class="comment-1">
+                    <p><i>"This was so good"</i></p>
+                  </div>
+                  <div class="comment-2">
+                    <p><i>"Highly Recommend"</i></p>
+                  </div>
+                </div>
+            </div>
 
         <!-- ---------------------------------------- CAROUSEL (for you) ----------------------------------------------- -->
         <div class="for-you-content">

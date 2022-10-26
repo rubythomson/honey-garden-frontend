@@ -494,9 +494,15 @@ input.searchBox:focus-visible {
   color: black;
 }
 
+.beehive-poems-container {
+  position: relative;
+}
+
 .beehive-row-1 .beehive-row-2 .beehive-row-3{
+  margin: auto;
+  position: absolute;
   display: flex;
-  border-radius: 30px; //not working
+  border-radius: 30px;
   padding: 10px;
   text-align: left;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -538,24 +544,24 @@ input.searchBox:focus-visible {
 .in-my-dreams-icons {
   display: grid;
   justify-content: right;
-  grid-template-columns: 30px 90px 70px 50px;
-  grid-template-rows: 50px;
+  grid-template-columns: 30px 90px 50px 70px;
+  grid-template-rows: 40px;
   grid-column-gap: 10px;
 }
 
 .goldfish-tears-icons {
   display: grid;
   justify-content: right;
-  grid-template-columns: 30px 90px 70px 50px;
-  grid-template-rows: 50px;
+  grid-template-columns: 30px 90px 50px 50px;
+  grid-template-rows: 40px;
   grid-column-gap: 10px;
 }
 
 .cloud-kisses-icons {
   display: grid;
   justify-content: right;
-  grid-template-columns: 30px 90px 70px 50px;
-  grid-template-rows: 50px;
+  grid-template-columns: 30px 90px 50px 50px;
+  grid-template-rows: 40px;
   grid-column-gap: 10px;
 }
 
@@ -565,7 +571,9 @@ input.searchBox:focus-visible {
 
 #beehive-card-rose-icon {
   margin: 5px;
-  margin-top: 10px;
+  margin-top: 15px;
+  width: auto;
+  height: 40px;
 }
 
 .beehive-card-rose-icon :hover{
@@ -575,7 +583,9 @@ input.searchBox:focus-visible {
 #beehive-card-avatar {
   display: flex;
   justify-content: right;
-  margin: 10px;
+  margin-top: 15px;
+  width: auto;
+  height: 40px;
 }
 
 .beehive-search-style {
@@ -587,13 +597,17 @@ input.searchBox:focus-visible {
 .beehive-card-username {
   display: flex;
   justify-content: right;
-  margin: 10px;
+  margin-top: 10px;
+  width: 60px;
+  height: 40px;
 }
 
 .beehive-card-send-rose-text {
   display: flex;
   justify-content: right;
   margin-top: 10px;
+  width: 80px;
+  height: 40px;
 }
 
 /* PROFILE  ------------------------------------------------------------------------------------------------------- */
@@ -615,8 +629,13 @@ input.searchBox:focus-visible {
 }
 
 .bio-card {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 200px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  margin: 50px;
+  margin: auto;
+  margin-top: 40px;
 }
 
 .create-btn::part(base) {
@@ -640,7 +659,19 @@ input.searchBox:focus-visible {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
-  gap: 1.5em;
+  gap: 1.6em;
+}
+
+.following-btn {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 110px;
+  height: 38px;
+  padding: 10px;
+  border: solid black 0.5px;
+  border-radius: 30px;
 }
 
 .bio-works-card {
@@ -648,10 +679,16 @@ input.searchBox:focus-visible {
   justify-content: center;
   width: auto;
 }
+.reading-list-title-and-btn {
+  display: grid;
+  grid-template-columns: 670px 100px;
+  grid-template-rows: 50px;
+  grid-column-gap: 10px;
+}
 
 .create-new-btn {
   display: flex;
-  justify-content: right;
+  align-items: right;
 }
 
 .reading-list-title {
@@ -710,6 +747,82 @@ input.searchBox:focus-visible {
   height: 200px;
   border: #777;
   border-radius: 15px;
+}
+
+/* PROFILE - create reading list ------------------------------------------------------------------------- */
+.edit-btn {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 110px;
+  height: 38px;
+  padding: 10px;
+  border: solid black 0.5px;
+  border-radius: 30px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 240px;
+  background-color: #FFF4E1;
+}
+
+.create-reading-list-container {
+  background-color: white;
+  box-sizing: border-box;
+  border: solid black 0.5px;
+  border-radius: 10px;
+  padding: 50px;
+  width: 70%;
+  height: 650px;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.reading-list-cover-img {
+  position: absolute;
+  top: 70px;
+  left: 530px;
+  background-color: white;
+  box-sizing: border-box;
+  border: solid black 0.5px;
+  border-radius: 10px;
+  width: 20%;
+  height: 350px;
+  margin: auto;
+}
+
+.arrow-left-icon {
+  display: flex;
+  justify-content: left;
+  width: 30px;
+  height: auto;
+  margin: 5px;
+}
+
+.back-to-profile {
+  display: flex;
+  justify-content: left;
+}
+
+.back-to-profile-container {
+  padding: 10px;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.back-to-profile-container :hover{
+  color: #FEC76C;
+}
+
+.arrow-left-icon :hover{
+  color: #FEC76C;
+}
+
+/* ADULTS (18+) VIEW ------------------------------------------------------------------------------------- */
+.adults-only-title {
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 /* ROSE VIEW --------------------------------------------------------------------------------------------- */
@@ -807,6 +920,15 @@ input.searchBox:focus-visible {
 }
 
 /* HOME VIEW ---------------------------------------------------------------------------------------------------- */
+.home-text-img-container {
+  display: grid;
+  grid-template-columns: 900px 260px;
+  grid-template-rows: 100px;
+  grid-column-gap: 100px;
+  margin-bottom: 500px;
+  margin-top: 30px;
+}
+
 .feather-img {
   width: auto;
   height: 500px;
@@ -898,19 +1020,12 @@ input.searchBox:focus-visible {
 }
 
 .comment-1 {
-  display: flex;
   justify-content: left;
-  position: absolute;
-  top: 1270px; //maybe find a better way to position?
   font-size: 1.2em;
 }
 
 .comment-2 {
-  display: flex;
   justify-content: right;
-  position: absolute;
-  top: 1350px; //maybe find a better way to position?
-  left: 900px;
   font-size: 1.2em;
 }
 
@@ -919,7 +1034,10 @@ input.searchBox:focus-visible {
 }
 
 .featured-comments-box-parent {
-  position: relative;
+  display: grid;
+  grid-template-columns: 100px 400px;
+  grid-template-rows: 50px;
+  grid-column-gap: 200px;
 }
 
 .img-slider {
@@ -1052,14 +1170,129 @@ input.searchBox:focus-visible {
 
 /* DRAFTS  ----------------------------------------------------------------------------------------------- */
 
-/* POST / ADD  ----------------------------------------------------------------------------------------------- */
-.page-form-styling {
-  background-color: #FFFFFF;
-  border-radius: 30px;
-  box-shadow: 0 0 2px rgba(0,0,0,0.05);
+/* MANAGE (post/add)  ------------------------------------------------------------------------------------ */
+.manage-container{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.05);
   width: 70%;
   margin: 30px;
   padding: 30px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.manage-btns-container-2 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 50px;
+  grid-column-gap: 80px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.current-work-btn {
+  background-color: #FFF4E1;
+  border: black 2px;
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+}
+
+.view-drafts-btn {
+  background-color: #EDDCC0;
+  border: black 2px;
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+}
+
+.create-new-btn {
+  background-color: #CBBFAB;
+  border: black 2px;
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+}
+
+.manage-btns-container-1 {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 50px;
+  grid-column-gap: 80px;
+  justify-content: center;
+  margin-top: 40px;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px lightgray;
+}
+
+.work-btn {
+  margin-top: 15px;
+}
+
+.vertical-line {
+  border-left: 1px solid lightgray;
+  height: 40px;
+  position: absolute;
+  left: 40%;
+  margin-top: 5px;
+}
+
+.vertical-line-draft {
+  border-left: 1px solid lightgray;
+  height: 40px;
+  position: absolute;
+  left: 62%;
+  margin-top: 5px;
+}
+
+.draft-btn {
+  margin-top: 15px;
+}
+
+.arrow-left-icon {
+  display: flex;
+  justify-content: left;
+  width: 30px;
+  height: auto;
+  margin: 5px;
+}
+
+.back-to-manage {
+  display: flex;
+  justify-content: left;
+}
+
+.back-to-manage-container {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.back-to-manage-container :hover{
+  color: #FEC76C;
+}
+
+.arrow-left-icon :hover{
+  color: #FEC76C;
+}
+
+.page-form-styling {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.05);
+  width: 70%;
+  margin: 30px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 40px;
 }
 
 .back-to-manage-btn {

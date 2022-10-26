@@ -17,6 +17,7 @@ import beehiveView from './views/pages/beehive'
 import readView from './views/pages/read'
 import landingView from './views/pages/landing'
 import searchGridView from './views/pages/search-grid'
+import CreateReadingListView from './views/pages/create-reading-list'
 
 // define routes
 const routes = {
@@ -37,7 +38,8 @@ const routes = {
 	'/profile': profileView,
 	'/editProfile': editProfileView,
 	'/read': readView,
-	'/search-grid': searchGridView
+	'/search-grid': searchGridView,
+	'/create-reading-list': CreateReadingListView
 }
 
 class Router {

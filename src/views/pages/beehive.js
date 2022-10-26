@@ -30,7 +30,7 @@ class BeehiveView {
 
           <div class="radial-gradient"></div> <!-- STYLE -->
 
-          <div class="beehive-row-1 calign">
+          <div class="beehive-row-1">
             <div class="beehive-card">
               <div id="beehive-card-text">
                 <h2>In my dreams...</h2>
@@ -48,7 +48,7 @@ class BeehiveView {
                     <p class="beehive-card-rose-icon">Send a rose</p>
                   </div>
                   <div id="beehive-card-avatar">
-                    <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
+                    <sl-avatar style="--size: 35px;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
                   </div>
                   <div class="beehive-card-username">
                     <p>${Auth.currentUser.userName}</p>
@@ -60,7 +60,7 @@ class BeehiveView {
 
           <div class="radial-gradient"></div> <!-- STYLE -->
 
-        <div class="beehive-row-2 calign">
+        <div class="beehive-row-2">
           <div class="beehive-card">
             <div id="beehive-card-text">
               <h2>Goldfish Tears</h2>
@@ -82,7 +82,7 @@ class BeehiveView {
                 <p class="beehive-card-rose-icon">Send a rose</p>
               </div>
               <div id="beehive-card-avatar">
-                <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
+                <sl-avatar style="--size: 35px;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
               </div>
               <div class="beehive-card-username">
                 <p>${Auth.currentUser.userName}</p>
@@ -92,7 +92,7 @@ class BeehiveView {
           </div>
         </div>
 
-        <div class="beehive-row-3 calign">
+        <div class="beehive-row-3">
           <div class="beehive-card">
             <div id="beehive-card-text">
               <h2>Cloud Kisses</h2>
@@ -112,7 +112,7 @@ class BeehiveView {
                   <p class="beehive-card-rose-icon">Send a rose</p>
                 </div>
                 <div id="beehive-card-avatar">
-                  <sl-avatar style="--size: 40px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
+                  <sl-avatar style="--size: 35px;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
                 </div>
                 <div class="beehive-card-username">
                   <p>${Auth.currentUser.userName}</p>
