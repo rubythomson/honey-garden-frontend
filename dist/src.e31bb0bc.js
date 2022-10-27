@@ -7820,7 +7820,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Home\" user=", "></va-app-header>\n      \n      <div class=\"page-content\">\n\n      <div class=\"home-text-img-container\">\n        <div class=\"home-title\">\n          <h3>The night it beautiful,</h3>\n          <h3>So are the faces of my people</h3>\n        </div>\n        <div class=\"feather-img-div\">\n          <img class=\"feather-img\" src=\"/images/feather-ink-pot.png\" alt=\"feather-ink-pot\">\n        </div>\n      </div>\n        \n        <div class=\"radial-gradient\"></div>\n\n        <div class=\"featured-content-heading\">\n          <h2 class=\"featured-h2\">Featured</h2>\n        </div>\n\n            <div class=\"featured-card\">\n              <div class=\"featured-img\">\n                <img src=\"/images/sinking-ships.png\" alt=\"sinking-ships-img\" style=\"border-radius: 30px;\"> \n              </div>\n            \n              <div class=\"featured-box-parent\">\n                <div class=\"summary\"> \n                  <p> 8 hours left on a sinking ship. Multiple stories about different couples going through heartache and grief.</p>\n                </div>\n              </div>\n\n              <!-- no longer rendering on the page? -->\n                <div class=\"featured-comments-box-parent\">\n                  <div class=\"comment-1\">\n                    <p><i>\"This was so good\"</i></p>\n                  </div>\n                  <div class=\"comment-2\">\n                    <p><i>\"Highly Recommend\"</i></p>\n                  </div>\n                </div>\n            </div>\n\n        <!-- ---------------------------------------- CAROUSEL (for you) ----------------------------------------------- -->\n        <div class=\"for-you-content\">\n          <div class=\"img-slider\" style=\"display: grid; grid-template-rows: max-content 1fr max-content\">\n            <div class=\"featured-h2\">For you</div>\n            <div style=\"display: grid; grid-template-columns: repeat(", ", 1fr); gap: 1em\">\n              ", "\n            </div>\n            <div class=\"navigation\">\n              ", "\n            </div>\n          </div>\n        </div>\n        <!-- ---------------------------------------- CAROUSEL (for you) ----------------------------------------------- --> \n\n        <!-- ---------------------------------------- CAROUSEL (continue reading) -------------------------------------- -->\n        <div class=\"continue-reading-content\">\n          <div class=\"img-slider\" style=\"display: grid; grid-template-rows: max-content 1fr max-content\">\n            <div class=\"featured-h2\">Continue Reading</div>\n            <div style=\"display: grid; grid-template-columns: repeat(", ", 1fr); gap: 1em\">\n              ", "\n            </div>\n            <div class=\"navigation\">\n              ", "\n            </div>\n          </div> \n        </div>\n        <!-- ---------------------------------------- CAROUSEL (continue reading) -------------------------------------- -->\n\n        <!-- ---------------------------------------- CAROUSEL (new posts) --------------------------------------------- -->\n        <div class=\"for-you-content\">\n          <div class=\"img-slider\" style=\"display: grid; grid-template-rows: max-content 1fr max-content\">\n            <div class=\"featured-h2\">New Posts</div>\n            <div style=\"display: grid; grid-template-columns: repeat(", ", 1fr); gap: 1em\">\n              ", "\n            </div>\n            <div class=\"navigation\">\n              ", "\n            </div>\n          </div>\n        </div>\n        <!-- ---------------------------------------- CAROUSEL (new posts) --------------------------------------------- -->\n      </div> \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Home\" user=", "></va-app-header>\n      \n      <div class=\"page-content\">\n\n      <div class=\"home-text-img-container\">\n        <div class=\"home-title\">\n          <h3>The night it beautiful,</h3>\n          <h3>So are the faces of my people</h3>\n        </div>\n        <div class=\"feather-img-div\">\n          <img class=\"feather-img\" src=\"/images/feather-ink-pot.png\" alt=\"feather-ink-pot\">\n        </div>\n      </div>\n        \n        <div class=\"radial-gradient\"></div>\n\n        <div class=\"featured-content-heading\">\n          <h2 class=\"featured-h2\">Featured</h2>\n        </div>\n\n            <div class=\"featured-card\">\n              <div class=\"featured-img\">\n                <img src=\"/images/sinking-ships.png\" alt=\"sinking-ships-img\" style=\"border-radius: 30px;\"> \n              </div>\n            \n              <div class=\"featured-box-parent\">\n                <div class=\"summary\"> \n                  <p> 8 hours left on a sinking ship. Multiple stories about different couples going through heartache and grief.</p>\n                </div>\n              </div>\n\n              <!-- no longer rendering on the page? -->\n                <div class=\"featured-comments-box-parent\">\n                  <div class=\"comment-1\">\n                    <p><i>\"This was so good\"</i></p>\n                  </div>\n                  <div class=\"comment-2\" style=\"margin-top: 80px\">\n                    <p><i>\"Highly Recommend\"</i></p>\n                  </div>\n                </div>\n            </div>\n\n        <!-- ---------------------------------------- CAROUSEL (for you) ----------------------------------------------- -->\n        <div class=\"for-you-content\">\n          <div class=\"img-slider\" style=\"display: grid; grid-template-rows: max-content 1fr max-content max-content\">\n            <div class=\"featured-h2\">For you</div>\n            <div style=\"display: grid; grid-template-columns: repeat(", ", 1fr); gap: 1em\">\n              ", "\n            </div>\n            <div class=\"navigation\">\n              ", "\n            </div>\n          </div>\n        </div>\n        <!-- ---------------------------------------- CAROUSEL (for you) ----------------------------------------------- --> \n\n        <!-- ---------------------------------------- CAROUSEL (continue reading) -------------------------------------- -->\n        <div class=\"continue-reading-content\">\n          <div class=\"img-slider\" style=\"display: grid; grid-template-rows: max-content 1fr max-content  max-content\">\n            <div class=\"featured-h2\">Continue Reading</div>\n            <div style=\"display: grid; grid-template-columns: repeat(", ", 1fr); gap: 1em\">\n              ", "\n            </div>\n            <div class=\"navigation\">\n              ", "\n            </div>\n          </div> \n        </div>\n        <!-- ---------------------------------------- CAROUSEL (continue reading) -------------------------------------- -->\n\n        <!-- ---------------------------------------- CAROUSEL (new posts) --------------------------------------------- -->\n        <div class=\"for-you-content\">\n          <div class=\"img-slider\" style=\"display: grid; grid-template-rows: max-content 1fr max-content  max-content\">\n            <div class=\"featured-h2\">New Posts</div>\n            <div style=\"display: grid; grid-template-columns: repeat(", ", 1fr); gap: 1em\">\n              ", "\n            </div>\n            <div class=\"navigation\">\n              ", "\n            </div>\n          </div>\n        </div>\n        <!-- ---------------------------------------- CAROUSEL (new posts) --------------------------------------------- -->\n      </div> \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14010,7 +14010,7 @@ class ProfileView {
   async getReadingList() {
     try {
       const currentUser = await _UserAPI.default.getUser(_Auth.default.currentUser._id);
-      this.readingList = [currentUser.readingList[currentUser.readingList.length - 1]]; // first item is 0
+      this.readingList = currentUser.readingList; // first item is 0
 
       console.log(this.readingList);
       this.render();
@@ -14034,137 +14034,7 @@ class ProfileView {
 var _default = new ProfileView();
 
 exports.default = _default;
-},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","moment":"../node_modules/moment/moment.js","./../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js"}],"views/pages/editProfile.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _App = _interopRequireDefault(require("./../../App"));
-
-var _litHtml = require("lit-html");
-
-var _Router = require("./../../Router");
-
-var _Auth = _interopRequireDefault(require("./../../Auth"));
-
-var _Utils = _interopRequireDefault(require("./../../Utils"));
-
-var _UserAPI = _interopRequireDefault(require("./../../UserAPI"));
-
-var _Toast = _interopRequireDefault(require("../../Toast"));
-
-var _moment = _interopRequireDefault(require("moment"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject5() {
-  const data = _taggedTemplateLiteral(["\n                <input type=\"file\" name=\"avatar\" />\n              "]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  const data = _taggedTemplateLiteral(["\n                <sl-avatar image=\"", "/images/", "\"></sl-avatar>\n                <input type=\"file\" name=\"avatar\" />\n              "]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  const data = _taggedTemplateLiteral(["\n          <p>Updated: ", "</p>\n          <sl-form class=\"page-form\" @sl-submit=", ">\n            <div class=\"input-group\">\n              <sl-input type=\"text\" name=\"firstName\" value=\"", "\" placeholder=\"First Name\"></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input type=\"text\" name=\"lastName\" value=\"", "\" placeholder=\"Last Name\"></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input type=\"text\" name=\"email\" value=\"", "\" placeholder=\"Email Address\"></sl-input>\n            </div>     \n            <div class=\"input-group\">\n              <sl-textarea name=\"bio\" rows=\"4\" placeholder=\"Bio\" value=\"", "\"></sl-textarea>\n            </div>        \n            <div class=\"input-group\">\n              <label>Avatar</label><br>          \n              ", "\n            </div>\n            <sl-button type=\"primary\" class=\"submit-btn\" submit>Update Profile</sl-button>\n          </sl-form>\n        "]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  const data = _taggedTemplateLiteral(["\n          <sl-spinner></sl-spinner>\n        "]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Edit Profile\" user=", "></va-app-header>\n      <div class=\"page-content\">        \n        ", "\n      </div>\n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-class EditProfileView {
-  init() {
-    console.log('EditProfileView.init');
-    document.title = 'Edit Profile';
-    this.user = null;
-    this.render();
-
-    _Utils.default.pageIntroAnim();
-
-    this.getUser();
-  }
-
-  async getUser() {
-    try {
-      this.user = await _UserAPI.default.getUser(_Auth.default.currentUser._id);
-      this.render();
-    } catch (err) {
-      _Toast.default.show(err, 'error');
-    }
-  }
-
-  async updateProfileSubmitHandler(e) {
-    e.preventDefault();
-    const formData = e.detail.formData;
-    const submitBtn = document.querySelector('.submit-btn');
-    submitBtn.setAttribute('loading', '');
-
-    try {
-      const updatedUser = await _UserAPI.default.updateUser(_Auth.default.currentUser._id, formData);
-      delete updatedUser.password;
-      this.user = updatedUser;
-      _Auth.default.currentUser = updatedUser;
-      this.render();
-
-      _Toast.default.show('profile updated');
-    } catch (err) {
-      _Toast.default.show(err, 'error');
-    }
-
-    submitBtn.removeAttribute('loading');
-  }
-
-  render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.user == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), (0, _moment.default)(_Auth.default.currentUser.updatedAt).format('MMMM Do YYYY, @ h:mm a'), this.updateProfileSubmitHandler.bind(this), this.user.firstName, this.user.lastName, this.user.email, this.user.bio, this.user.avatar ? (0, _litHtml.html)(_templateObject4(), _App.default.apiBase, this.user.avatar) : (0, _litHtml.html)(_templateObject5())));
-    (0, _litHtml.render)(template, _App.default.rootEl);
-  }
-
-}
-
-var _default = new EditProfileView();
-
-exports.default = _default;
-},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","./../../UserAPI":"UserAPI.js","../../Toast":"Toast.js","moment":"../node_modules/moment/moment.js"}],"views/pages/guide.js":[function(require,module,exports) {
+},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","moment":"../node_modules/moment/moment.js","./../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js"}],"views/pages/guide.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14189,7 +14059,7 @@ var _Toast = _interopRequireDefault(require("../../Toast"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Guide\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">  \n        \n        <div class=\"guide-title\">\n          <h1>Honey Garden,</h1>\n        </div>\n        <div class=\"guide-title\">\n          <h1>The hive for literature lovers</h1>\n        </div>\n\n        <div class=\"bee-guide-img\">\n          <img src=\"/images/bee-logo-guide.png\" alt=\"bee-img\">\n        </div>\n\n        <div class=\"radial-gradient\"></div>\n\n        <div class=\"guide-step\">\n          <h2 class=\"guide-titles\">Read!</h2>\n          <div class=\"book-stack\">\n            <img src=\"/images/book-stack.png\" alt=\"book-stack-img\">\n          </div>\n        </div>\n\n        <div class=\"guide-step\">\n          <h2 class=\"guide-titles\">Create!</h2>\n          <div class=\"open-book\">\n            <img src=\"/images/open-book.png\" alt=\"open-book-img\" style=\"width: auto; height: 200px;\">\n          </div>\n        </div>\n\n        <div class=\"guide-rose-icon-small\">\n          <img src=\"/images/rose-flower.png\" width=\"auto\" height=\"70\">\n        </div>\n\n        <div class=\"guide-step\">\n          <h2 class=\"guide-titles\">Support!</h2>\n          <div class=\"rose-bunch\">\n            <img src=\"/images/rose-bunch.png\" alt=\"rose-bunch-img\" style=\"width: auto; height: 500px;\">\n          </div>\n        </div>\n\n        <div class=\"guide-rose-icon\">\n          <img src=\"/images/rose-flower.png\" width=\"auto\" height=\"120\">\n        </div>\n\n        <div class=\"explore-btn\">\n          <sl-button type=\"primary\" @click=", " size=\"medium\" pill>Explore!</sl-button>\n        </div>\n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Guide\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">  \n        \n        <div class=\"guide-title\">\n          <h1>Honey Garden,</h1>\n        </div>\n        <div class=\"guide-title\">\n          <h1>The hive for literature lovers</h1>\n        </div>\n\n        <!-- <div id=\"bee\" class=\"bee-guide-img\" style=\"position: absolute;\">\n          <img src=\"/images/bee-logo-guide.png\" height=\"50px\" width=\"50px\" alt=\"bee-img\">\n        </div> -->\n\n        <img src=\"/bee.svg\" id=\"rect\" style=\"width: 300px; height: auto;\"/>\n\n        <div class=\"div-path\" style=\"    position: absolute;\n    left: 0;\n    margin-top: -240px;\n    overflow: visible;\n    width: 100%;\">\n          <svg\n          style=\"overflow: visible\"\n          width=\"183.15088mm\"\n   height=\"451.45297mm\"\n   viewBox=\"0 0 183.15088 451.45297\"\n            version=\"1.1\"\n            preserveAspectRatio=\"xMidyMid\"\n            id=\"svg5\"\n            inkscape:version=\"1.2.1 (9c6d41e, 2022-07-14)\"\n            sodipodi:docname=\"honey-garden-motion-path.svg\"\n            xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\"\n            xmlns:sodipodi=\"http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            xmlns:svg=\"http://www.w3.org/2000/svg\">\n            <sodipodi:namedview\n              id=\"namedview7\"\n              pagecolor=\"#505050\"\n              bordercolor=\"#eeeeee\"\n              borderopacity=\"1\"\n              inkscape:showpageshadow=\"0\"\n              inkscape:pageopacity=\"0\"\n              inkscape:pagecheckerboard=\"0\"\n              inkscape:deskcolor=\"#505050\"\n              inkscape:document-units=\"mm\"\n              showgrid=\"false\"\n              inkscape:lockguides=\"false\"\n              inkscape:zoom=\"0.24842659\"\n              inkscape:cx=\"386.43207\"\n              inkscape:cy=\"173.08937\"\n              inkscape:window-width=\"1512\"\n              inkscape:window-height=\"860\"\n              inkscape:window-x=\"0\"\n              inkscape:window-y=\"38\"\n              inkscape:window-maximized=\"0\"\n              inkscape:current-layer=\"layer1\"/>\n            <defs\n              id=\"defs2\"/>\n              <g\n                inkscape:label=\"Layer 1\"\n                inkscape:groupmode=\"layer\"\n                id=\"layer1\">\n                <!-- TRANSPARENT SVG PATH -->\n                <path\n       style=\"fill:none;stroke:#000000;stroke-width:0.802631;stroke-dasharray:none;stroke-opacity:0\"\n       d=\"m 72.000187,41.073225 c 0,0 74.223263,-28.557781 97.779123,-15.865432 23.55588,12.692346 34.66716,116.346527 12.88908,141.731207 -21.77808,25.3847 -113.334908,31.73088 -113.334908,31.73088 0,0 -46.667315,1.05769 -50.222918,77.21179 -3.555607,76.15408 19.555824,108.94262 19.555824,108.94262 0,0 48.000668,35.96166 96.445782,-6.34617 48.44512,-42.30781 40.88946,89.90413 40.88946,89.90413 0,0 -34.66715,102.59649 -74.66771,86.73105 -40.000549,-15.86544 -25.778128,93.0772 -0.88889,113.17343\"\n       id=\"path\" />\n              <!-- DOTTED SVG PATH -->\n              <path\n       style=\"fill:none;stroke:#000000;stroke-width:0.803;stroke-dasharray:1.60599995,4.81799984;stroke-opacity:0.901554;stroke-dashoffset:0\"\n       d=\"m 72.000187,41.073225 c 0,0 74.223263,-28.557781 97.779123,-15.865432 23.55588,12.692346 34.66716,116.346527 12.88908,141.731207 -21.77808,25.3847 -113.334908,31.73088 -113.334908,31.73088 0,0 -46.667315,1.05769 -50.222918,77.21179 -3.555607,76.15408 19.555824,108.94262 19.555824,108.94262 0,0 48.000668,35.96166 96.445782,-6.34617 48.44512,-42.30781 40.88946,89.90413 40.88946,89.90413 0,0 -34.66715,102.59649 -74.66771,86.73105 -40.000549,-15.86544 -25.778128,93.0772 -0.88889,113.17343\"\n       id=\"path-dotted\" />\n            </svg>\n  </div>\n\n        <div class=\"radial-gradient\"></div>\n\n        <div class=\"guide-step\">\n          <h2 class=\"guide-titles\">Read!</h2>\n          <div class=\"book-stack\">\n            <img src=\"/images/book-stack.png\" alt=\"book-stack-img\">\n          </div>\n        </div>\n\n        <div class=\"guide-step\">\n          <h2 class=\"guide-titles\">Create!</h2>\n          <div class=\"open-book\">\n            <img src=\"/images/open-book.png\" alt=\"open-book-img\" style=\"width: auto; height: 200px;\">\n          </div>\n        </div>\n\n        <div class=\"guide-rose-icon-small\">\n          <img src=\"/images/rose-flower.png\" width=\"auto\" height=\"70\">\n        </div>\n\n        <div class=\"guide-step\">\n          <h2 class=\"guide-titles\">Support!</h2>\n          <div class=\"rose-bunch\">\n            <img src=\"/images/rose-bunch.png\" alt=\"rose-bunch-img\" style=\"width: auto; height: 500px;\">\n          </div>\n        </div>\n\n        <div class=\"guide-rose-icon\">\n          <img src=\"/images/rose-flower.png\" width=\"auto\" height=\"120\">\n        </div>\n\n        <div class=\"explore-btn\">\n          <sl-button type=\"primary\" @click=", " size=\"medium\" pill>Explore!</sl-button>\n        </div>\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14225,6 +14095,20 @@ class GuideView {
   render() {
     const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), () => (0, _Router.gotoRoute)('/'));
     (0, _litHtml.render)(template, _App.default.rootEl);
+    gsap.registerPlugin(MotionPathPlugin);
+    gsap.to("#rect", {
+      duration: 5,
+      repeat: 12,
+      repeatDelay: 3,
+      yoyo: true,
+      ease: "power1.inOut",
+      motionPath: {
+        path: "#path",
+        align: "#path",
+        autoRotate: true,
+        alignOrigin: [0.5, 0.5]
+      }
+    });
   }
 
 }
@@ -14454,7 +14338,7 @@ var _Toast = _interopRequireDefault(require("../../Toast"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Create Post\" user=\"", "\"></va-app-header>\n\n      <!------------------------------------------------ NOW CALLED MANAGE ---------------------------------------------------->\n    <div class=\"page-content\">\n\n      <div class=\"manage-container\">\n        <h1>Manage</h1>\n        <hr>\n        <div class=\"manage-btns-container-1\">\n          <div class=\"work-btn\">1 Work</div>\n          <div class=\"vertical-line\"></div>\n          <div class=\"draft-btn\">1 Drafts</div>\n          <div class=\"vertical-line-draft\"></div>\n          <div></div>\n        </div>\n        <div class=\"manage-btns-container-2\">\n        <a href=\"/current-work\">\n          <div class=\"current-work-btn\">Current Work</div>\n        </a>  \n          <a href=\"/drafts\">\n            <div class=\"view-drafts-btn\">View Drafts</div>\n          </a>\n          <a href=\"/add\">\n            <div id=\"create-new-btn\">Create New</div>\n          </a>\n        </div>\n      </div>\n    </div>    \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Create Post\" user=\"", "\"></va-app-header>\n\n      <!------------------------------------------------ NOW CALLED MANAGE ---------------------------------------------------->\n    <div class=\"page-content\">\n\n      <div class=\"manage-container\">\n        <h1>Manage</h1>\n        <hr>\n        <div class=\"manage-btns-container-1\">\n          <div class=\"work-btn\">1 Work</div>\n          <div class=\"vertical-line\"></div>\n          <div class=\"draft-btn\">1 Drafts</div>\n          <div class=\"vertical-line-draft\"></div>\n          <div></div>\n        </div>\n        <div class=\"manage-btns-container-2\">\n        <a href=\"/current-work\" style=\"text-decoration: none;\">\n          <div class=\"current-work-btn\">Current Work</div>\n        </a>  \n          <a href=\"/drafts\" style=\"text-decoration: none;\">\n            <div class=\"view-drafts-btn\">View Drafts</div>\n          </a>\n          <a href=\"/add\" style=\"text-decoration: none;\">\n            <div id=\"create-new-btn\">Create New</div>\n          </a>\n        </div>\n      </div>\n    </div>    \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -15593,7 +15477,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  const data = _taggedTemplateLiteral(["\n                <div class=\"input-group\">         \n                  ", "\n                </div>\n              <sl-form class=\"page-form\" @sl-submit=", ">\n                <p>Username :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"userName\" value=\"", "\" placeholder=\" Username\"></sl-input>\n                </div>\n                <p>First Name :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"firstName\" value=\"", "\" placeholder=\"First Name\"></sl-input>\n                </div>\n                <p>Last Name :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"lastName\" value=\"", "\" placeholder=\"Last Name\"></sl-input>\n                </div>\n                <p>Email :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"email\" value=\"", "\" placeholder=\"Email Address\"></sl-input>\n                </div>   \n                <p>Bio :</p>  \n                <div class=\"input-group\">\n                  <sl-textarea name=\"bio\" rows=\"4\" placeholder=\"Bio\" value=\"", "\"></sl-textarea>\n                </div>  \n                <p>Birthday (dd/mm/yyyy) :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"email\" value=\"", "\" placeholder=\"Birthday\"></sl-input>\n                </div>       \n                <sl-button type=\"primary\" class=\"submit-btn\" submit>Update</sl-button>\n              </sl-form>\n            "]);
+  const data = _taggedTemplateLiteral(["\n                <div class=\"input-group\">         \n                  ", "\n                </div>\n              <sl-form class=\"page-form\" @sl-submit=", ">\n                <p>Username :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"userName\" value=\"", "\" placeholder=\" Username\"></sl-input>\n                </div>\n                <p>First Name :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"firstName\" value=\"", "\" placeholder=\"First Name\"></sl-input>\n                </div>\n                <p>Last Name :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"lastName\" value=\"", "\" placeholder=\"Last Name\"></sl-input>\n                </div>\n                <p>Email :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"email\" value=\"", "\" placeholder=\"Email Address\"></sl-input>\n                </div>   \n                <p>Bio :</p>  \n                <div class=\"input-group\">\n                  <sl-textarea name=\"bio\" rows=\"4\" placeholder=\"Bio\" value=\"", "\"></sl-textarea>\n                </div>  \n                <p>Birthday (dd/mm/yyyy) :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"email\" value=\"", "\" placeholder=\"Birthday\"></sl-input>\n                </div>   \n                <p>Pronouns :</p>\n                <div class=\"input-group\">\n                  <sl-input type=\"text\" name=\"email\" value=\"", "\" placeholder=\"Pronouns\"></sl-input>\n                </div>      \n                <sl-button type=\"primary\" class=\"submit-btn\" submit>Update</sl-button>\n              </sl-form>\n            "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -15667,7 +15551,7 @@ class SettingsView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.user == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), this.user.avatar ? (0, _litHtml.html)(_templateObject4(), _App.default.apiBase, this.user.avatar) : (0, _litHtml.html)(_templateObject5()), this.updateProfileSubmitHandler.bind(this), this.user.userName, this.user.firstName, this.user.lastName, this.user.email, this.user.bio, this.user.birthday));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.user == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), this.user.avatar ? (0, _litHtml.html)(_templateObject4(), _App.default.apiBase, this.user.avatar) : (0, _litHtml.html)(_templateObject5()), this.updateProfileSubmitHandler.bind(this), this.user.userName, this.user.firstName, this.user.lastName, this.user.email, this.user.bio, this.user.birthday, this.user.pronouns));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -15695,8 +15579,6 @@ var _signin = _interopRequireDefault(require("./views/pages/signin"));
 var _signup = _interopRequireDefault(require("./views/pages/signup"));
 
 var _profile = _interopRequireDefault(require("./views/pages/profile"));
-
-var _editProfile = _interopRequireDefault(require("./views/pages/editProfile"));
 
 var _guide = _interopRequireDefault(require("./views/pages/guide"));
 
@@ -15752,7 +15634,6 @@ const routes = {
   '/signin': _signin.default,
   '/signup': _signup.default,
   '/profile': _profile.default,
-  '/editProfile': _editProfile.default,
   '/read': _read.default,
   '/search-grid': _searchGrid.default,
   '/create-reading-list': _createReadingList.default,
@@ -15813,7 +15694,7 @@ function anchorRoute(e) {
   const pathname = e.target.closest('a').pathname;
   AppRouter.gotoRoute(pathname);
 }
-},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js","./views/pages/landing":"views/pages/landing.js","./views/pages/search-grid":"views/pages/search-grid.js","./views/pages/create-reading-list":"views/pages/create-reading-list.js","./views/pages/add":"views/pages/add.js","./views/pages/drafts":"views/pages/drafts.js","./views/pages/current-work":"views/pages/current-work.js","./views/pages/profile-settings":"views/pages/profile-settings.js"}],"App.js":[function(require,module,exports) {
+},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js","./views/pages/landing":"views/pages/landing.js","./views/pages/search-grid":"views/pages/search-grid.js","./views/pages/create-reading-list":"views/pages/create-reading-list.js","./views/pages/add":"views/pages/add.js","./views/pages/drafts":"views/pages/drafts.js","./views/pages/current-work":"views/pages/current-work.js","./views/pages/profile-settings":"views/pages/profile-settings.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -17982,7 +17863,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50294" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50433" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

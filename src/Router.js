@@ -4,7 +4,6 @@ import fourOFourView from './views/pages/404'
 import signinView from './views/pages/signin'
 import signupView from './views/pages/signup'
 import profileView from './views/pages/profile'
-import editProfileView from './views/pages/editProfile'
 import guideView from './views/pages/guide'
 import adultsView from './views/pages/adults'
 import libraryView from './views/pages/library'
@@ -40,7 +39,6 @@ const routes = {
 	'/signin': signinView,
 	'/signup': signupView,
 	'/profile': profileView,
-	'/editProfile': editProfileView,
 	'/read': readView,
 	'/search-grid': searchGridView,
 	'/create-reading-list': CreateReadingListView,

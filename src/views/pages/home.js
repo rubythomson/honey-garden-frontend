@@ -86,7 +86,7 @@ class HomeView {
                   <div class="comment-1">
                     <p><i>"This was so good"</i></p>
                   </div>
-                  <div class="comment-2">
+                  <div class="comment-2" style="margin-top: 80px">
                     <p><i>"Highly Recommend"</i></p>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ class HomeView {
 
         <!-- ---------------------------------------- CAROUSEL (for you) ----------------------------------------------- -->
         <div class="for-you-content">
-          <div class="img-slider" style="display: grid; grid-template-rows: max-content 1fr max-content">
+          <div class="img-slider" style="display: grid; grid-template-rows: max-content 1fr max-content max-content">
             <div class="featured-h2">For you</div>
             <div style="display: grid; grid-template-columns: repeat(${this.slides[this.slideNumber[0]].length}, 1fr); gap: 1em">
               ${this.slides[this.slideNumber[0]].map(({ image, alt }) => html`
@@ -112,7 +112,7 @@ class HomeView {
 
         <!-- ---------------------------------------- CAROUSEL (continue reading) -------------------------------------- -->
         <div class="continue-reading-content">
-          <div class="img-slider" style="display: grid; grid-template-rows: max-content 1fr max-content">
+          <div class="img-slider" style="display: grid; grid-template-rows: max-content 1fr max-content  max-content">
             <div class="featured-h2">Continue Reading</div>
             <div style="display: grid; grid-template-columns: repeat(${this.slides[this.slideNumber[1]].length}, 1fr); gap: 1em">
               ${this.slides[this.slideNumber[1]].map(({ image, alt }) => html`
@@ -130,7 +130,7 @@ class HomeView {
 
         <!-- ---------------------------------------- CAROUSEL (new posts) --------------------------------------------- -->
         <div class="for-you-content">
-          <div class="img-slider" style="display: grid; grid-template-rows: max-content 1fr max-content">
+          <div class="img-slider" style="display: grid; grid-template-rows: max-content 1fr max-content  max-content">
             <div class="featured-h2">New Posts</div>
             <div style="display: grid; grid-template-columns: repeat(${this.slides[this.slideNumber[2]].length}, 1fr); gap: 1em">
               ${this.slides[this.slideNumber[2]].map(({ image, alt }) => html`

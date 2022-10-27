@@ -58,13 +58,13 @@ class newPostView {
           <div></div>
         </div>
         <div class="manage-btns-container-2">
-        <a href="/current-work">
+        <a href="/current-work" style="text-decoration: none;">
           <div class="current-work-btn">Current Work</div>
         </a>  
-          <a href="/drafts">
+          <a href="/drafts" style="text-decoration: none;">
             <div class="view-drafts-btn">View Drafts</div>
           </a>
-          <a href="/add">
+          <a href="/add" style="text-decoration: none;">
             <div id="create-new-btn">Create New</div>
           </a>
         </div>

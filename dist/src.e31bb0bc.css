@@ -643,12 +643,10 @@ input.searchBox:focus-visible {
 }
 
 .bio-card {
-  display: flex;
   justify-content: center;
   width: 50%;
-  height: 200px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  margin: auto;
+  margin: 0 auto;
   margin-top: 40px;
 }
 
@@ -666,6 +664,9 @@ input.searchBox:focus-visible {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin: 30px;
   text-align: center;
+  margin: 0 auto;
+  width: max-content;
+  display: block;
 }
 
 .profile-box-parent {
@@ -999,8 +1000,8 @@ input.searchBox:focus-visible {
 
 .featured-card {
   display: grid;
-  grid-template-columns: repeat(2, 10% 90%);
-  grid-template-rows: 100px;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: max-content 1fr;
   grid-column-gap: 250px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-color: #FFE4B7;
@@ -1008,6 +1009,7 @@ input.searchBox:focus-visible {
   width: 90%;
   height: 470px;
   padding: 60px;
+  margin: 0 auto;
 }
 
 .featured-content-heading {
@@ -1026,6 +1028,7 @@ input.searchBox:focus-visible {
   justify-content: left;
   width: auto;
   height: 350px;
+  grid-row: 1/-1;
 }
 
 .for-you-content {
@@ -1078,7 +1081,7 @@ input.searchBox:focus-visible {
 
 .img-slider {
   position: relative;
-  width: 800px;
+  width: 100%;
   height: auto;
   margin: 10px;
 }
@@ -1102,12 +1105,9 @@ input.searchBox:focus-visible {
 }
 
 .img-slider .navigation {
-  z-index: 2;
-  position: absolute;
   display: flex;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  justify-self: center;
+  margin-top: 10px;
 }
 
 .img-slider .navigation .btn {

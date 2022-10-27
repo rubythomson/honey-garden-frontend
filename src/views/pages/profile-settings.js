@@ -93,7 +93,11 @@ class SettingsView {
                 <p>Birthday (dd/mm/yyyy) :</p>
                 <div class="input-group">
                   <sl-input type="text" name="email" value="${this.user.birthday}" placeholder="Birthday"></sl-input>
-                </div>       
+                </div>   
+                <p>Pronouns :</p>
+                <div class="input-group">
+                  <sl-input type="text" name="email" value="${this.user.pronouns}" placeholder="Pronouns"></sl-input>
+                </div>      
                 <sl-button type="primary" class="submit-btn" submit>Update</sl-button>
               </sl-form>
             `}
