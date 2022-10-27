@@ -472,9 +472,112 @@ input.searchBox:focus-visible {
   margin-top: 30px;
 }
 
-.sort-by-btn { //adjust positioning
+.sort-by-btn-container { 
   display: flex;
   justify-content: right;
+}
+
+.sort-by-btn {
+  background-color: white;
+  width: 130px;
+  height: 45px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px lightgray;
+  text-align: center;
+  padding: 5px;
+  margin-top: 1.5px;
+}
+
+.sort-by-icon { //and text
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+.library-filter-grid-container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 400px 130px;
+  grid-template-rows: 78px;
+  grid-column-gap: 40px;
+}
+
+/* LIBRARY (archived) ------------------------------------------------------------------------------------------- */
+.library-archived-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  grid-template-rows: 330px 330px 330px;
+  grid-column-gap: 120px;
+}
+
+.serve-me-img {
+  border-radius: 15px;
+  display: flex;
+  justify-content: left;
+  width: auto;
+  height: 300px;
+}
+
+.library-archived-container {
+  position: relative;
+  justify-content: center;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+
+/* LIBRARY (reading lists) -------------------------------------------------------------------------------------- */
+.library-reading-list-arrow-icon {
+  display: flex;
+  justify-content: right;
+  width: 30px;
+  height: auto;
+  transform: scaleX(-1);
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.library-reading-list-btn {
+  background-color: #FFF4E1;
+  border-radius: 10px;
+  width: 130px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+}
+
+.current-reads-btn {
+  background-color: transparent;
+  border-radius: 10px;
+  width: 130px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+}
+
+.reading-list-title {
+  display: flex;
+  justify-content: left;
+}
+
+.library-reading-list-card {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.reading-list-content {
+  width: 800px;
+}
+
+.stories-text {
+  display: flex;
+  justify-content: inline-block;
+  margin-left: 30px;
+  margin-top: 4px;
+}
+
+.reading-list-imgs {
+  display: flex;
+  justify-content: left;
 }
 
 /* BEEHIVE ------------------------------------------------------------------------------------------------------ */
@@ -704,6 +807,7 @@ input.searchBox:focus-visible {
 .reading-list-card {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .reading-list-content {
@@ -738,13 +842,6 @@ input.searchBox:focus-visible {
   height: 200px;
   margin-left: 10px;
   margin-right: 10px;
-}
-
-.center-img-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .empty-reading-list-space {

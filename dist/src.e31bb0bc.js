@@ -13985,7 +13985,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">      \n        \n      <div class=\"radial-gradient\"></div> <!-- STYLE -->\n\n        ", "\n        \n        <h1>", " ", "</h1>\n        <p>@", "</p>\n        \n          <sl-card class=\"profile-box\">\n            <div class=\"profile-box-parent\">\n                <div class=\"column1\">\n                  <p>Lists: 0</p>\n                </div>\n\n                <div class=\"column2\">\n                  <p>Works: 3</p>\n                </div>\n\n                <div class=\"column3\">\n                  <p>Followers: 50k</p>\n                </div>\n\n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/following-icon.png\" alt=\"following-icon-img\">  \n                Following</div>\n\n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/drafts-icon.png\" alt=\"drafts-icon-img\">  \n                Drafts</div>\n    \n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/setting-icon.png\" alt=\"setting-icon-img\">  \n                Settings</div>\n            </div>\n          </sl-card>\n\n          <div class=\"radial-gradient\"></div> <!-- STYLE -->\n\n          <sl-card class=\"bio-card\" style=\"width: 400px;\">\n          <div class=\"bio-content\">\n            ", "\n            </div>\n          </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <div class=\"bio-works-card\">\n          <sl-card class=\"card-basic\">\n            <div>        \n              <h2>Works (1)</h2>\n              <hr>\n            </div> \n\n            <div class=\"poem-grid\">\n                ", "\n              </div>\n          </sl-card>\n        </div>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <div class=\"reading-list-card\">\n          <sl-card class=\"card-basic\">\n            <div class=\"reading-list-content\"> \n              <div class=\"reading-list-title-and-btn\"> \n                <div class=\"reading-list-title\">     \n                  <h2>Reading Lists (1)</h2>\n                </div> \n                <div class=\"create-new-btn\">\n                <a href=\"/create-reading-list\">\n                  <sl-button class=\"create-btn\" size=\"medium\" pill>Create New</sl-button>\n                </a>\n                </div>\n              </div>\n              <hr>\n              <div class=\"reading-list-title\">\n                <h2>Modern Takes</h2>\n                <style>\n                  .vl {\n                    border-left: 1px solid black;\n                    height: 30px;\n                    position: absolute;\n                    margin-left: 155px;\n                  }\n                </style>\n                <div class=\"vl\"></div>\n                <div class=\"stories-text\">\n                  <h3>2 Stories</h3>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"reading-list-imgs\">\n              <div class=\"sinking-ships-img\">\n                <img src=\"/images/sinking-ships.png\" alt=\"sinking-ships-img\" style=\"border-radius: 15px;\">\n              </div>\n              <div class=\"kissing-clouds-img\">\n                <img src=\"/images/kissing-clouds.png\" alt=\"kissing-clouds-img\" style=\"border-radius: 15px;\">\n              </div>\n\n              <div class=\"empty-reading-list-space\"></div>\n              <style>\n                .empty-reading-list-space {\n                  width: 135px;\n                  height: 200px;\n                  border: 0.5px lightslategray solid;\n                  margin-left: 10px;\n                  margin-right: 10px;\n                }\n              </style>\n\n            <div class=\"empty-reading-list-space\"></div>\n              <style>\n                .empty-reading-list-space {\n                  width: 135px;\n                  height: 200px;\n                  border: 0.5px lightslategray solid;\n                  margin-left: 10px;\n                  margin-right: 10px;\n                }\n              </style>\n\n            <div class=\"empty-reading-list-space\"></div>\n              <style>\n                .empty-reading-list-space {\n                  width: 135px;\n                  height: 200px;\n                  border: 0.5px lightslategray solid;\n                  margin-left: 10px;\n                  margin-right: 10px;\n                }\n              </style>\n            </div>\n          </sl-card>\n        </div>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <sl-button @click=", ">Edit Profile</sl-button>\n\n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content calign\">      \n        \n      <div class=\"radial-gradient\"></div> <!-- STYLE -->\n\n        ", "\n        \n        <h1>", " ", "</h1>\n        <p>@", "</p>\n        \n          <sl-card class=\"profile-box\">\n            <div class=\"profile-box-parent\">\n                <div class=\"column1\">\n                  <p>Lists: 0</p>\n                </div>\n\n                <div class=\"column2\">\n                  <p>Works: 3</p>\n                </div>\n\n                <div class=\"column3\">\n                  <p>Followers: 50k</p>\n                </div>\n\n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/following-icon.png\" alt=\"following-icon-img\">  \n                Following</div>\n\n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/drafts-icon.png\" alt=\"drafts-icon-img\">  \n                Drafts</div>\n    \n                <div class=\"following-btn\" class=\"column1\">\n                <img src=\"/images/setting-icon.png\" alt=\"setting-icon-img\">  \n                Settings</div>\n            </div>\n          </sl-card>\n\n          <div class=\"radial-gradient\"></div> <!-- STYLE -->\n\n          <sl-card class=\"bio-card\" style=\"width: 400px;\">\n          <div class=\"bio-content\">\n            ", "\n            </div>\n          </sl-card>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <div class=\"bio-works-card\">\n          <sl-card class=\"card-basic\">\n            <div>        \n              <h2>Works (1)</h2>\n              <hr>\n            </div> \n\n            <div class=\"poem-grid\">\n                ", "\n              </div>\n          </sl-card>\n        </div>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <div class=\"reading-list-card\">\n          <sl-card class=\"card-basic\">\n            <div class=\"reading-list-content\"> \n              <div class=\"reading-list-title-and-btn\"> \n                <div class=\"reading-list-title\">     \n                  <h2>Reading Lists (1)</h2>\n                </div> \n                <div class=\"create-new-btn\">\n                <a href=\"/create-reading-list\">\n                  <sl-button class=\"create-btn\" size=\"medium\" pill>Create New</sl-button>\n                </a>\n                </div>\n              </div>\n              <hr>\n              <div class=\"reading-list-title\">\n                <h2>Modern Takes</h2>\n                <style>\n                  .vl {\n                    border-left: 1px solid black;\n                    height: 30px;\n                    position: absolute;\n                    margin-left: 155px;\n                  }\n                </style>\n                <div class=\"vl\"></div>\n                <div class=\"stories-text\">\n                  <h3>2 Stories</h3>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"reading-list-imgs\">\n              <div class=\"sinking-ships-img\">\n                <img src=\"/images/sinking-ships.png\" alt=\"sinking-ships-img\" style=\"border-radius: 15px;\">\n              </div>\n              <div class=\"kissing-clouds-img\">\n                <img src=\"/images/kissing-clouds.png\" alt=\"kissing-clouds-img\" style=\"border-radius: 15px;\">\n              </div>\n\n              <div class=\"empty-reading-list-space\"></div>\n              <style>\n                .empty-reading-list-space {\n                  width: 135px;\n                  height: 200px;\n                  box-shadow:  0 0 4px lightgrey;\n                  margin-left: 10px;\n                  margin-right: 10px;\n                }\n              </style>\n              <div class=\"empty-reading-list-space\"></div>\n              <div class=\"empty-reading-list-space\"></div>\n            </div>\n          </sl-card>\n        </div>\n\n        <br>\n        <p></p>\n        <p></p>\n        <br>\n        <p></p>\n        <p></p>\n\n        <a href=\"/profile-settings\">\n          <sl-button @click=", ">Edit Profile</sl-button>\n        </a>\n\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14190,38 +14190,8 @@ var _Toast = _interopRequireDefault(require("../../Toast"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject4() {
-  const data = _taggedTemplateLiteral(["\n                  <va-poem class=\"poem-card\"\n                      id=\"", "\"\n                      title=\"", "\" \n                      description=\"", "\"\n                      views=\"", "\"\n                      status=\"", "\"\n                      pages=\"", "\"\n                      user=\"", "\"\n                      image=\"", "\"\n                      showStartReadingHandler=\"", "\" \n                      showReadingListHandler=\"", "\"\n                    >\n                  </va-poem>\n                "]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  const data = _taggedTemplateLiteral(["\n                ", "\n              "]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  const data = _taggedTemplateLiteral(["\n                <sl-spinner></sl-spinner>\n                "]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Library\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1 class=\"library-title\">Library</h1>\n\n        <div class=\"library-filter\">\n          <sl-button variant=\"primary\">Current Reads</sl-button>\n          <sl-button variant=\"primary\">Archived</sl-button>\n          <sl-button variant=\"primary\">Reading Lists</sl-button>\n        </div>\n\n        <div class=\"sort-by-btn\">\n          <sl-button variant=\"default\">\n            <sl-icon slot=\"prefix\" name=\"chevron-down\"></sl-icon>  \n            Sort By\n          </sl-button>\n        </div>\n\n          <div class=\"bottom\">\n            <div class=\"poems-grid\">\n              ", "\n            </div>\n          </div>\n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Library\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1 class=\"library-title\">Library</h1>\n\n        <div class=\"library-filter-grid-container\">\n          <div class=\"library-filter\">\n          <a href=\"/library-reading-lists\" style=\"text-decoration: none;\">\n              <div class=\"library-reading-list-btn\">Current Reads</div>\n            </a>\n            <a href=\"/library-archived\" style=\"text-decoration: none;\">\n              <div class=\"current-reads-btn\">Archived</div>\n            </a>\n            <a href=\"/library-reading-lists\" style=\"text-decoration: none;\">\n              <div class=\"current-reads-btn\">Reading Lists</div>\n            </a>\n          </div>\n\n          <div class=\"sort-by-btn-container\">\n            <div class=\"sort-by-btn\"> \n              <sl-icon slot=\"prefix\" name=\"chevron-down\" class=\"sort-by-icon\"></sl-icon>  \n              Sort By</div>\n          </div>\n        </div>\n\n        <div class=\"library-archived-container\">\n          <div>\n            <img src=\"/images/time-traveller.png\" alt=\"time-traveller-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/sing-song.png\" alt=\"sing-song-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/non-stop-babbling.png\" alt=\"non-stop-babbling-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/consistency.png\" alt=\"consistency-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/light-bulb.png\" alt=\"light-bulb-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/sparks.png\" alt=\"sparks-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/peaking-point.png\" alt=\"peaking-point-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/chess.png\" alt=\"chess-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/on-the-path.png\" alt=\"on-the-path-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/swan-castle.png\" alt=\"swan-castle-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/king.png\" alt=\"king-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/home.png\" alt=\"home-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/ruins.png\" alt=\"ruins-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/dark-side.png\" alt=\"dark-side-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/fairy-circle.png\" alt=\"fairy-circle-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/tipping-point.png\" alt=\"tipping-point-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/midnight.png\" alt=\"midnight-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/blooming.png\" alt=\"blooming-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/marry-me.png\" alt=\"marry-me-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <img src=\"/images/you-may-kiss-the-bride.png\" alt=\"you-may-kiss-the-bride-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n        </div>\n\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14254,7 +14224,7 @@ class LibraryView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), this.poems == null ? (0, _litHtml.html)(_templateObject2()) : (0, _litHtml.html)(_templateObject3(), this.poems.map(poem => (0, _litHtml.html)(_templateObject4(), poem._id, poem.title, poem.description, poem.views, poem.status, poem.pages, JSON.stringify(poem.user), poem.image, true, true))));
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -15560,7 +15530,115 @@ class SettingsView {
 var _default = new SettingsView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js","moment":"../node_modules/moment/moment.js"}],"Router.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js","moment":"../node_modules/moment/moment.js"}],"views/pages/library-reading-lists.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+var _PoemAPI = _interopRequireDefault(require("./../../PoemAPI"));
+
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1 class=\"library-title\">Library</h1>\n\n        <div class=\"library-filter\">\n        <a href=\"/library\" style=\"text-decoration: none;\">\n            <div class=\"current-reads-btn\">Current Reads</div>\n          </a>\n          <a href=\"/library-archived\" style=\"text-decoration: none;\">\n            <div class=\"current-reads-btn\">Archived</div>\n          </a>\n          <a href=\"/library-reading-lists\" style=\"text-decoration: none;\">\n            <div class=\"library-reading-list-btn\">Reading Lists</div>\n          </a>\n        </div>\n\n        <div class=\"library-reading-list-card\">\n          <sl-card class=\"card-basic\">\n            <div class=\"reading-list-content\"> \n              <div class=\"reading-list-title\">\n                <h2>Modern Takes</h2>\n                <style>\n                  .vl {\n                    border-left: 1px solid black;\n                    height: 30px;\n                    position: absolute;\n                    margin-left: 155px;\n                  }\n                </style>\n                <div class=\"vl\"></div>\n                <div class=\"stories-text\">\n                  <h3>2 Stories</h3>\n                </div>\n                <div>\n                  <img src=\"/images/arrow-left-icon.png\" class=\"library-reading-list-arrow-icon\" alt=\"library-reading-list-arrow-icon\">\n                </div>\n              </div>\n            </div>\n\n            <div class=\"reading-list-imgs\">\n              <div class=\"sinking-ships-img\">\n                <img src=\"/images/the-way-love-lies.png\" alt=\"the-way-love-lies-img\" style=\"border-radius: 15px;\">\n              </div>\n              <div class=\"kissing-clouds-img\">\n                <img src=\"/images/alices-head.png\" alt=\"alices-head-img\" style=\"border-radius: 15px;\">\n              </div>\n\n              <div class=\"empty-reading-list-space\"></div>\n              <style>\n                .empty-reading-list-space {\n                  width: 135px;\n                  height: 200px;\n                  box-shadow:  0 0 4px lightgrey;\n                  margin-left: 10px;\n                  margin-right: 10px;\n                }\n              </style>\n              <div class=\"empty-reading-list-space\"></div>\n              <div class=\"empty-reading-list-space\"></div>\n          </sl-card>\n        </div>\n        \n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class LibraryReadingListsView {
+  init() {
+    document.title = 'Library Reading List';
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new LibraryReadingListsView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"views/pages/library-archived.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+var _PoemAPI = _interopRequireDefault(require("./../../PoemAPI"));
+
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1 class=\"library-title\">Library</h1>\n\n        <div class=\"library-filter\">\n        <a href=\"/library\" style=\"text-decoration: none;\">\n            <div class=\"current-reads-btn\">Current Reads</div>\n          </a>\n          <a href=\"/library-archived\" style=\"text-decoration: none;\">\n            <div class=\"library-reading-list-btn\">Archived</div>\n          </a>\n          <a href=\"/library-reading-lists\" style=\"text-decoration: none;\">\n            <div class=\"current-reads-btn\">Reading Lists</div>\n          </a>\n        </div>\n\n        <div class=\"library-archived-container\">\n          <div>\n            <img src=\"/images/serve-me.png\" alt=\"bow-down-img\" class=\"serve-me-img\">\n          </div>\n          <div>\n            <img src=\"/images/bow-down.png\" alt=\"bow-down-img\" class=\"serve-me-img\">\n          </div>\n          <div>\n            <img src=\"/images/boarding.png\" alt=\"boarding-img\" class=\"serve-me-img\">\n          </div>\n          <div>\n            <img src=\"/images/crowned.png\" alt=\"crowned-img\" class=\"serve-me-img\">\n          </div>\n          <div>\n            <img src=\"/images/queendom.png\" alt=\"queendom-img\" class=\"serve-me-img\">\n          </div>\n          <div>\n            <img src=\"/images/chase-me.png\" alt=\"chase-me-img\" class=\"serve-me-img\">\n          </div>\n          <div>\n            <img src=\"/images/forrest-fire.png\" alt=\"forrest-fire-img\" class=\"serve-me-img\">\n          </div>\n          <div>\n            <img src=\"/images/maid.png\" alt=\"maid-img\" class=\"serve-me-img\">\n          </div>\n          <div>\n            <img src=\"/images/happy.png\" alt=\"happy-img\" class=\"serve-me-img\">\n          </div>\n          <div>\n            <img src=\"/images/dreaming.png\" alt=\"dreaming-img\" class=\"serve-me-img\">\n          </div>\n        </div>\n        \n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class LibraryArchivedView {
+  init() {
+    document.title = 'Template';
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new LibraryArchivedView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../PoemAPI":"PoemAPI.js","../../Toast":"Toast.js"}],"Router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15614,6 +15692,10 @@ var _currentWork = _interopRequireDefault(require("./views/pages/current-work"))
 
 var _profileSettings = _interopRequireDefault(require("./views/pages/profile-settings"));
 
+var _libraryReadingLists = _interopRequireDefault(require("./views/pages/library-reading-lists"));
+
+var _libraryArchived = _interopRequireDefault(require("./views/pages/library-archived"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import views
@@ -15640,7 +15722,9 @@ const routes = {
   '/add': _add.default,
   '/drafts': _drafts.default,
   '/current-work': _currentWork.default,
-  '/profile-settings': _profileSettings.default
+  '/profile-settings': _profileSettings.default,
+  '/library-reading-lists': _libraryReadingLists.default,
+  '/library-archived': _libraryArchived.default
 };
 
 class Router {
@@ -15694,7 +15778,7 @@ function anchorRoute(e) {
   const pathname = e.target.closest('a').pathname;
   AppRouter.gotoRoute(pathname);
 }
-},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js","./views/pages/landing":"views/pages/landing.js","./views/pages/search-grid":"views/pages/search-grid.js","./views/pages/create-reading-list":"views/pages/create-reading-list.js","./views/pages/add":"views/pages/add.js","./views/pages/drafts":"views/pages/drafts.js","./views/pages/current-work":"views/pages/current-work.js","./views/pages/profile-settings":"views/pages/profile-settings.js"}],"App.js":[function(require,module,exports) {
+},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js","./views/pages/landing":"views/pages/landing.js","./views/pages/search-grid":"views/pages/search-grid.js","./views/pages/create-reading-list":"views/pages/create-reading-list.js","./views/pages/add":"views/pages/add.js","./views/pages/drafts":"views/pages/drafts.js","./views/pages/current-work":"views/pages/current-work.js","./views/pages/profile-settings":"views/pages/profile-settings.js","./views/pages/library-reading-lists":"views/pages/library-reading-lists.js","./views/pages/library-archived":"views/pages/library-archived.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -17513,7 +17597,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--app-header-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: var(--app-header-txt-color);\n      }\n\n      .app-top-nav :hover{\n        color: #FEC76C;\n      }\n\n      .app-top-nav-rose :hover{ /* needs to change colour */\n        color: #FEC76C;\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .app-side-menu-logo-1 {\n        margin-top: 0.05em;\n        height: 45px;\n        margin-right: 0.5em;\n        margin-left: 0.5em;\n      }\n\n      /* PAGE TITLES --------------------------------------------------------------------------------------------- */\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n        }\n\n      .outer {\n        display: grid;\n        grid-template: 1fr / 1fr;\n        place-items: center;\n        }\n\n      .outer > * {\n        grid-column: 1 / 1;\n        grid-row: 1 /1;\n      }\n\n      .outer .bottom {\n        z-index: 2;\n      }\n\n      .outer .top {\n        z-index: 1;\n      }\n\n      /* active nav links --------------------------------------------------------------------------------------------- */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------------------------------------------------------------------------------ */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">       \n      <div class=\"app-header-main\">\n        <div class=\"app-side-menu-logo-1\" style=\"z-index: 1;\">\n          <a href=\"/\" @click=", ">\n            <img class=\"app-side-menu-logo-1\" src=\"/images/honey-garden-logo.png\" alt=\"honey-garden-logo-img\">\n          </a>\n        </div>\n\n        <div class=\"app-top-nav\"> \n          <a href=\"/beehive\" @click=\"", "\">BeeHive</a>  \n          <sl-icon name=\"search\"></sl-icon>\n          <a href=\"/search-grid\" @click=\"", "\">Search</a>\n        </div> \n\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/library\" @click=\"", "\">Library</a> \n        <a href=\"/post\" @click=\"", "\">Manage</a> \n\n        ", "\n\n        <a href=\"/inbox\" @click=\"", "\">Messages</a> \n\n        <a href=\"/rose\" @click=\"", "\">\n          <img src=\"/images/rose-flower.png\" width=\"30\" height=\"30\" class=\"app-top-nav-rose\">\n        </a>\n        \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar style=\"--size: 24px;\" image=", "></sl-avatar> ", "\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Edit Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n    "]);
+  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--app-header-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: var(--app-header-txt-color);\n      }\n\n      .app-top-nav :hover{\n        color: #FEC76C;\n      }\n\n      .app-top-nav-rose :hover{ /* needs to change colour */\n        color: #FEC76C;\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .app-side-menu-logo-1 {\n        margin-top: 0.05em;\n        height: 45px;\n        margin-right: 0.5em;\n        margin-left: 0.5em;\n      }\n\n      /* PAGE TITLES --------------------------------------------------------------------------------------------- */\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n        }\n\n      .outer {\n        display: grid;\n        grid-template: 1fr / 1fr;\n        place-items: center;\n        }\n\n      .outer > * {\n        grid-column: 1 / 1;\n        grid-row: 1 /1;\n      }\n\n      .outer .bottom {\n        z-index: 2;\n      }\n\n      .outer .top {\n        z-index: 1;\n      }\n\n      /* active nav links --------------------------------------------------------------------------------------------- */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------------------------------------------------------------------------------ */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">       \n      <div class=\"app-header-main\">\n        <div class=\"app-side-menu-logo-1\" style=\"z-index: 1;\">\n          <a href=\"/\" @click=", ">\n            <img class=\"app-side-menu-logo-1\" src=\"/images/honey-garden-logo.png\" alt=\"honey-garden-logo-img\">\n          </a>\n        </div>\n\n        <div class=\"app-top-nav\"> \n          <a href=\"/beehive\" @click=\"", "\">BeeHive</a>  \n          <sl-icon name=\"search\"></sl-icon>\n          <a href=\"/search-grid\" @click=\"", "\">Search</a>\n        </div> \n\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/library\" @click=\"", "\">Library</a> \n        <a href=\"/post\" @click=\"", "\">Manage</a> \n\n        ", "\n\n        <a href=\"/inbox\" @click=\"", "\">Messages</a> \n\n        <a href=\"/rose\" @click=\"", "\">\n          <img src=\"/images/rose-flower.png\" width=\"30\" height=\"30\" class=\"app-top-nav-rose\">\n        </a>\n        \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar style=\"--size: 34px;\" image=", "></sl-avatar>\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -17575,7 +17659,7 @@ customElements.define('va-app-header', class AppHeader extends _litElement.LitEl
   }
 
   render() {
-    return (0, _litElement.html)(_templateObject(), _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, this.user.accessLevel == 2 ? (0, _litElement.html)(_templateObject2(), _Router.anchorRoute) : '', _Router.anchorRoute, _Router.anchorRoute, e => e.preventDefault(), this.user && this.user.avatar ? "".concat(_App.default.apiBase, "/images/").concat(this.user.avatar) : '', this.user && this.user.firstName, () => (0, _Router.gotoRoute)('/profile'), () => (0, _Router.gotoRoute)('/editProfile'), () => _Auth.default.signOut());
+    return (0, _litElement.html)(_templateObject(), _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, _Router.anchorRoute, this.user.accessLevel == 2 ? (0, _litElement.html)(_templateObject2(), _Router.anchorRoute) : '', _Router.anchorRoute, _Router.anchorRoute, e => e.preventDefault(), this.user && this.user.avatar ? "".concat(_App.default.apiBase, "/images/").concat(this.user.avatar) : '', () => (0, _Router.gotoRoute)('/profile'), () => _Auth.default.signOut());
   }
 
 });
@@ -17863,7 +17947,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50433" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52638" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

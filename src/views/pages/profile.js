@@ -170,33 +170,13 @@ class ProfileView {
                 .empty-reading-list-space {
                   width: 135px;
                   height: 200px;
-                  border: 0.5px lightslategray solid;
+                  box-shadow:  0 0 4px lightgrey;
                   margin-left: 10px;
                   margin-right: 10px;
                 }
               </style>
-
-            <div class="empty-reading-list-space"></div>
-              <style>
-                .empty-reading-list-space {
-                  width: 135px;
-                  height: 200px;
-                  border: 0.5px lightslategray solid;
-                  margin-left: 10px;
-                  margin-right: 10px;
-                }
-              </style>
-
-            <div class="empty-reading-list-space"></div>
-              <style>
-                .empty-reading-list-space {
-                  width: 135px;
-                  height: 200px;
-                  border: 0.5px lightslategray solid;
-                  margin-left: 10px;
-                  margin-right: 10px;
-                }
-              </style>
+              <div class="empty-reading-list-space"></div>
+              <div class="empty-reading-list-space"></div>
             </div>
           </sl-card>
         </div>
@@ -208,7 +188,9 @@ class ProfileView {
         <p></p>
         <p></p>
 
-        <sl-button @click=${()=> gotoRoute('/editProfile')}>Edit Profile</sl-button>
+        <a href="/profile-settings">
+          <sl-button @click=${()=> gotoRoute('/editProfile')}>Edit Profile</sl-button>
+        </a>
 
       </div>      
     `

@@ -21,6 +21,8 @@ import AddView from './views/pages/add'
 import DraftsView from './views/pages/drafts'
 import CurrentWorkView from './views/pages/current-work'
 import SettingsView from './views/pages/profile-settings'
+import LibraryReadingListsView from './views/pages/library-reading-lists'
+import LibraryArchivedView from './views/pages/library-archived'
 
 // define routes
 const routes = {
@@ -45,7 +47,9 @@ const routes = {
 	'/add': AddView,
 	'/drafts': DraftsView,
 	'/current-work': CurrentWorkView,
-	'/profile-settings': SettingsView
+	'/profile-settings': SettingsView,
+	'/library-reading-lists': LibraryReadingListsView,
+	'/library-archived': LibraryArchivedView
 }
 
 class Router {
