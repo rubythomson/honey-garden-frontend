@@ -511,6 +511,42 @@ input.searchBox:focus-visible {
   grid-column-gap: 40px;
 }
 
+.current-reads {
+  position: absolute;
+  align-items: center;
+  margin-top: 272px;
+  margin-left: 20px;
+}
+
+progress {
+  border-radius: 50px;
+}
+
+::-webkit-progress-value {
+  border-radius: 50px;
+  background-color: #FEC76C;
+}
+
+::-webkit-progress-bar {
+  background-color: #F1F1F1;
+  border-radius: 50px;
+  height: 8px;
+}
+
+.library-current-reads-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  grid-template-rows: 330px 330px 330px 330px;
+  grid-column-gap: 120px;
+}
+
+.library-current-reads-container {
+  position: relative;
+  justify-content: center;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+
 /* LIBRARY (archived) ------------------------------------------------------------------------------------------- */
 .library-archived-container {
   display: grid;
