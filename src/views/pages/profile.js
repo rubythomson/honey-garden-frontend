@@ -75,7 +75,7 @@ class ProfileView {
 
           <div class="radial-gradient"></div>
 
-          <sl-card class="bio-card" style="width: 50vw;">
+          <sl-card class="bio-card" style="width: 55vw;">
           <div class="bio-content">
             ${Auth.currentUser.bio ? html`
               <h3 class="bio">Bio:</h3>
@@ -92,31 +92,31 @@ class ProfileView {
         <p></p>
         <p></p>
 
-        <div class="current-work-container">
-          <h3 style="text-align: left;">Works (1)</h3>
+        <div class="profile-work-container">
+          <h3 style="text-align: left; font-size: 1.5em; margin: 0.5em;">Works (1)</h3>
 
           <hr>
-          <div class="current-works-img-text-container">
-            <div class="the-way-love-lies-img">
-              <img src="/images/the-way-love-lies.png" alt="the-way-love-lies-img" style="border-radius: 15px;">
+          <div class="profile-works-img-text-container">
+            <div class="the-way-love-lies-img-works-profile">
+              <img src="/images/the-way-love-lies.png" alt="the-way-love-lies-img" style="border-radius: 15px; width: 14vw; height: 40vh;">
             </div>
-            <div class="current-works-text">
+            <div class="profile-works-text">
               <h3>The Way Love Lies</h3>
-              <div class="current-work-icons">
-                <div>
+              <div class="profile-work-icons">
+                <div style="font-size: 0.8em;">
                 <img src="/images/views-icon.png" alt="views-icon-img" class="views-icon">  
                 300</div>
 
-                <div>
-                <img src="/images/status-icon.png" alt="views-icon-img" class="status-icon">   
+                <div style="font-size: 0.8em;">
+                  <img src="/images/status-icon.png" alt="views-icon-img" class="status-icon">
                 Completed</div>
 
-                <div>
+                <div style="font-size: 0.8em;">
                 <img src="/images/pages-icon.png" alt="views-icon-img" class="pages-icon">   
                 12</div>
               </div>
 
-              <div class="current-works-description">
+              <div class="profile-works-description">
                 <p>Alaska an alien princess who wants to expand her wings and meet her love and her life on another planet. Running away from home she finds herself on planet Earth.
                   <p></p>
                   Kingsley a restaurant chef at a small owned store has been in a cooking slump and decides to take a break to clear his head.
@@ -124,14 +124,13 @@ class ProfileView {
                   The two cross paths and we shall see the madness that unravels.</p>
                 </div>
 
-                <div class="current-works-bottom-btns">
-                  <div class="romance-btn">Romance</div>
-                  <div class="slice-of-life-btn">Slice of Life</div>
+                <div class="profile-works-bottom-btns">
+                  <div class="romance-btn" style="font-size: 0.7em;">Romance</div>
+                  <div class="slice-of-life-btn" style="font-size: 0.7em;">Slice of Life</div>
                 </div>
               </div>
             </div>
           </div>
-        </div> 
 
         <br>
         <p></p>
@@ -140,7 +139,7 @@ class ProfileView {
         <p></p>
         <p></p>
 
-      <div style="float: none;"> <!-- ??????????????????????? -->
+      <div> 
         <div class="reading-list-card">
           <sl-card class="card-basic">
             <div class="reading-list-content"> 

@@ -223,9 +223,8 @@ a {
 }
 
 .dropbtn {
-  background-color: white;
   background-color: transparent;
-  padding: 0.5em;
+  padding: 0.36em;
   font-size: 2em;
   border: none;
   align-items: center;
@@ -327,10 +326,10 @@ a {
   border: 1px solid #ccc;
   border-radius: 50px;
   width: 70%;
-  height: 5.5vh;
+  height: 7vh;
   margin: 0 auto;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  background-color: #F9F9F9;
+  background-color: #FFFFFF;
   margin-top: 1em;
   margin-left: 1.2em;
   margin-bottom: 0.9em;
@@ -346,6 +345,11 @@ a {
 
 .searchIcon {
   padding: 0.8rem;
+}
+
+.search-icon {
+  margin: 1em;
+  margin-left: 1em;
 }
 
 .search-title {
@@ -415,33 +419,37 @@ input.searchBox:focus-visible {
   font-family: var(--base-font-family);
   font-weight: bold;
   font-size: 1.3em;
+  color: black;
 }
 
 .feeling-adventurous-btn {
   display: flex;
   justify-content: center;
   text-decoration: underline;
+  font-size: 1.3em;
 }
 
 .randomise-btn::part(base) {
-  background-color: #FEC76C;
+  background-color: #FFF4E1;
   font-family: var(--base-font-family);
   font-weight: bold;
-  color: white;
+  font-size: 1.3em;
+  color: black;
+  border: 0.05em solid black;
+}
+
+.randomise-btn {
+  width: 12em;
 }
 
 .randomise-container {
   display: flex;
   justify-content: center;
-  margin: none;
-  margin: 0;
-  padding: 0;
+  margin: auto;
 }
 
 /* FILTER ICON ------------------------------------------------------------------------------------------------ */
 .gg-options {
-  margin-top: 0.1em;
-  margin-right: 0.1em;
   box-sizing: border-box;
   position: relative;
   display: block;
@@ -459,7 +467,6 @@ input.searchBox:focus-visible {
   position: absolute;
   width: 0.5vw;
   height: 1vh;
-  border: 2px solid;
   border-radius: 100%;
 }
 
@@ -822,7 +829,7 @@ input.searchBox:focus-visible {
 
 .bio-card {
   justify-content: center;
-  width: 50%;
+  width: 55vw;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin: 0 auto;
   margin-top: 40px;
@@ -845,7 +852,7 @@ input.searchBox:focus-visible {
   margin: 0 auto;
   width: max-content;
   display: block;
-  width: 50vw;
+  width: 55vw;
   margin-top: 2.5em;
 }
 
@@ -872,7 +879,7 @@ input.searchBox:focus-visible {
 .bio-works-card {
   display: flex;
   align-items: center;
-  width: 50vw;
+  width: 55vw;
   margin: auto;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -898,7 +905,7 @@ input.searchBox:focus-visible {
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  width: 55.55vw;
+  width: 55vw;
   margin: auto;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -942,6 +949,107 @@ input.searchBox:focus-visible {
   height: 200px;
   border: #777;
   border-radius: 15px;
+}
+
+/* PROFILE - works ------------------------------------------------------------------------- */
+.profile-works-text {
+  justify-content: left;
+  margin-top: 1.5em;
+  text-align: left;
+  font-size: 1.3em;
+}
+
+.profile-work-icons {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 60px 110px 90px;
+  grid-template-rows: 30px;
+  grid-column-gap: 100px;
+}
+
+.views-icon {
+  width: auto;
+  height: 13px;
+  margin-right: 5px;
+}
+
+.status-icon {
+  width: auto;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.pages-icon {
+  width: auto;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.profile-works-img-text-container {
+  display: grid;
+  grid-template-columns: 140px 200px 370px;
+  grid-template-rows: 300px;
+  grid-column-gap: 100px;
+}
+
+.profile-work-container {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 0.5px solid lightgray;
+  width: 55vw;
+  height: 60vh;
+  margin: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.profile-works-description {
+  width: 500px;
+  height: auto;
+  font-size: 0.8em;
+  text-align: left;
+}
+
+.profile-works-bottom-btns {
+  display: grid;
+  grid-template-columns: 100px 150px;
+  grid-template-rows: 10px;
+  grid-column-gap: 10px;
+}
+
+.romance-btn {
+  display: flex;
+  justify-content: center;
+  background-color: #FFFEF9;
+  border-radius: 10px;
+  border: 0.5px solid black;
+  width: 100px;
+  height: 30px;
+  padding: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.slice-of-life-btn {
+  display: flex;
+  justify-content: center;
+  background-color: #FFFEF9;
+  border-radius: 10px;
+  border: 0.5px solid black;
+  width: 6.6vw;
+  height: 1.9vh;
+  padding: 6px;
+  font-size: 0.9em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.the-way-love-lies-img-works-profile {
+  display: inline-block;
+  margin-top: 1.8em;
 }
 
 /* PROFILE - create reading list ------------------------------------------------------------------------- */
@@ -1460,6 +1568,7 @@ input.searchBox:focus-visible {
   padding: 6px;
   font-size: 0.9em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-top: 1.8em;
 }
 
 .slice-of-life-btn {
@@ -1470,10 +1579,10 @@ input.searchBox:focus-visible {
   border: 0.5px solid black;
   width: 100px;
   height: 30px;
-  margin: 20px;
   padding: 6px;
   font-size: 0.9em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-top: 1.8em;
 }
 
 /* MANAGE (drafts)  ----------------------------------------------------------------------------------------------- */
@@ -1757,6 +1866,14 @@ input.searchBox:focus-visible {
   left: 350px;
   top: 200px;
   background: radial-gradient(50% 50% at 50% 50%, rgba(254, 199, 108, 0.39) 0%, rgba(217, 217, 217, 0) 100%);
+}
+
+sl-avatar::part(image) {
+  background-color: #FFFEF9;
+}
+
+sl-dropdown::part(trigger) {
+  background-color: #FFFEF9;
 }
 
 @media all and (max-width: 1920px) {

@@ -118,12 +118,13 @@ class SearchGridView {
               <slot></slot>
               <div class="calign">
                 <div class="searchContainer">
-                  <i class="fa fa-search searchIcon"></i>
+                  
+                  <img class="search-icon" src="/images/search-icon.png" style="width: 1.8vw; height: 3.3vh;" alt="search-icon">
                   <input class="searchBox" type="search" name="search">
 
                   <div class="dropdown">
-                    <button class="dropbtn">
-                      <i class="gg-options"></i>
+                    <button class="dropbtn" class="gg-options">
+                      <img src="/images/filter-icon.png" style="width: 1.8vw; height: 3.3vh;" alt="filter-icon">
                     </button>
   
                       <div id="search-dropdown">
@@ -262,7 +263,7 @@ class SearchGridView {
         </div>
         
         <div class="randomise-container">
-          <sl-button class="randomise-btn" variant="primary" size="medium" style="margin: 20px;"pill>Randomise</sl-button>
+          <sl-button class="randomise-btn" variant="primary" size="medium" pill>Randomise</sl-button>
         </div>
 
         <br>
