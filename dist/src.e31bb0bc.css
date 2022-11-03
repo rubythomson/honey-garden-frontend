@@ -1085,7 +1085,7 @@ input.searchBox:focus-visible {
 .reading-list-cover-img {
   position: absolute;
   top: 70px;
-  left: 530px;
+  left: 38em;
   background-color: white;
   box-sizing: border-box;
   border: solid black 0.5px;
@@ -1158,14 +1158,17 @@ input.searchBox:focus-visible {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 59vw;
+  margin: auto;
 }
 
 .rose-card {
-  display: flex;
-  justify-content: center;
-  gap: 2em;
-  margin: 10px;
+  display: grid;
+  grid-template-columns: 100px 190px 20px;
+  grid-template-rows: 170px;
+  grid-column-gap: 2em;
+  margin: 0.65em;
+  width: 55vw;
 }
 
 .rose-basic {
@@ -1173,20 +1176,29 @@ input.searchBox:focus-visible {
 }
 
 .rose-card-text {
-  margin: 10px;
-  margin-left: 0;
+  margin-top: 2em;
+}
+
+.add-post-btn {
+  display: flex;
 }
 
 .add-roses-btn::part(base) {
-  margin-top: 80px;
+  margin-top: 5.8em;
   background-color: #FFF4E1;
   color: black;
   font-family: var(--base-font-family);
   font-weight: bold;
+  border-radius: 30px;
 }
 
 .rose-icon {
-  margin-top: 10px;
+  margin-top: 0.65em;
+  align-items: left;
+}
+
+.rose-icon:hover {
+  color: #FEC76C;
 }
 
 .rose-card-div {
@@ -1200,6 +1212,102 @@ input.searchBox:focus-visible {
 
 .rose-header {
   margin-top: 15px;
+}
+
+.rose-hover-div:hover {
+  background-color: #FEC76C;
+  border-radius: 20px;
+  width: 5.5vw;
+  height: 15vh;
+  padding-top: 0.3em;
+  padding-left: 0.1em;
+}
+
+.rose-div {
+  background-color: #FEC76C;
+  border-radius: 20px;
+  width: 5.5vw;
+  height: 15vh;
+  padding-top: 0.3em;
+  padding-left: 0.1em;
+}
+
+.rose-hover-container {
+  position: relative;
+  justify-content: center;
+  margin: auto;
+  width: 80vh;
+  height: 55vh;
+  background-color: white;
+  border-radius: 10px;
+  border: 0.3px solid lightgray;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 3em;
+}
+
+.rose-hover-grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 120px;
+  grid-column-gap: 40px;
+  margin-left: 2.5em;
+  margin-top: 2em;
+}
+
+.rose-hover-text-container {
+  margin: auto;
+  text-align: center;
+}
+
+.purchase-btn-parent {
+  margin: auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  margin-left: 14em;
+}
+
+.purchase-btn {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  width: 8vw;
+  height: 4vh;
+  background-color: #FFF4E1;
+  border-radius: 10px;
+  border: 0.5px solid black;
+  text-align: center;
+  padding: 0.4em;
+  margin-top: 7em;
+}
+
+.purchase-icon {
+  color: black;
+  display: flex;
+  justify-content: right;
+  width: 10vw;
+  height: 7vh;
+}
+
+.rose-icon-purchase-hover:hover {
+  width: 8vw;
+  height: 30vh;
+  border: 1.5px solid #FEC76C;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 1.1em;
+  margin-bottom: 1em;
+}
+
+.rose-grid-container {
+  display: grid;
+  grid-template-columns: 90px;
+  grid-template-rows: 100px 100px;
+  grid-row-gap: 10px;
+  justify-content: center;
 }
 
 /* MESSAGES / INBOX VIEW --------------------------------------------------------------------------------- */

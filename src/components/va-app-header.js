@@ -117,7 +117,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         color: #FEC76C;
       }
 
-      .app-top-nav-rose :hover{ /* needs to change colour */
+      .app-top-nav-rose :hover{ 
         color: #FEC76C;
       }
       

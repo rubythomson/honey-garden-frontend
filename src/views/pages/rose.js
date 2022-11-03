@@ -3,6 +3,8 @@ import {html, render } from 'lit-html'
 import {gotoRoute, anchorRoute} from '../../Router'
 import Auth from '../../Auth'
 import Utils from '../../Utils'
+import Toast from './../../Toast'
+import UserAPI from './../../UserAPI'
 
 class SaveView {
   init(){
@@ -24,14 +26,18 @@ class SaveView {
 
             <hr>
             
-            <div class="rose-card">
-              <img src="/images/rose-flower.png" width="80" height="90" class="rose-icon">
+            <div class="rose-card" style="margin-top: 3.5em;">
+              <div class="rose-hover-div">
+                <img src="/images/rose-flower.png" width="80" height="90" class="rose-icon">
+              </div>
               <div class="rose-card-text">
                 <h3>You have 7 Roses</h3>
                 <p>You have given 60 Roses</p>
               </div>
 
-              <sl-button class="add-roses-btn" size="small" pill>Add Roses</sl-button>
+              <a href="/rose-purchases">
+                <sl-button class="add-roses-btn" size="small" style="margin-left: 23em; width: 8vw; margin-top: 4em;">Add Roses</sl-button>
+              </a>
             </div>
             <hr>
           </sl-card>

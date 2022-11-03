@@ -23,6 +23,7 @@ import CurrentWorkView from './views/pages/current-work'
 import SettingsView from './views/pages/profile-settings'
 import LibraryReadingListsView from './views/pages/library-reading-lists'
 import LibraryArchivedView from './views/pages/library-archived'
+import RosePurchaseView from './views/pages/rose-purchase'
 
 // define routes
 const routes = {
@@ -49,7 +50,8 @@ const routes = {
 	'/current-work': CurrentWorkView,
 	'/profile-settings': SettingsView,
 	'/library-reading-lists': LibraryReadingListsView,
-	'/library-archived': LibraryArchivedView
+	'/library-archived': LibraryArchivedView,
+	'/rose-purchases': RosePurchaseView
 }
 
 class Router {

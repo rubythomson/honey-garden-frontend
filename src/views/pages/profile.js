@@ -195,19 +195,10 @@ class ProfileView {
           </sl-card>
         </div>
       </div>
-
-        <br>
-        <p></p>
-        <p></p>
-        <br>
-        <p></p>
-        <p></p>
-
-        <a href="/profile-settings">
-          <sl-button @click=${()=> gotoRoute('/profile-settings')}>Edit Profile</sl-button>
-        </a>
-
-      </div>      
+      <br>
+      <br>
+      <br>
+    </div>      
     `
     render(template, App.rootEl)
   }
