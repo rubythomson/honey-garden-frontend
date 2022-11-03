@@ -31,8 +31,6 @@ class ProfileView {
     const template = html`
       <va-app-header title="Profile" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
       <div class="page-content calign">      
-        
-      <div class="radial-gradient"></div> <!-- STYLE -->
 
         ${Auth.currentUser && Auth.currentUser.avatar ? html`
           <sl-avatar style="--size: 200px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
@@ -61,24 +59,28 @@ class ProfileView {
                 <img src="/images/following-icon.png" alt="following-icon-img">  
                 Following</div>
 
-                <div class="following-btn" class="column1">
-                <img src="/images/drafts-icon.png" alt="drafts-icon-img">  
-                Drafts</div>
+                <a href="/drafts" style="text-decoration: none;">
+                  <div class="following-btn" class="column1">
+                  <img src="/images/drafts-icon.png" alt="drafts-icon-img">  
+                  Drafts</div>
+                </a>
     
-                <div class="following-btn" class="column1">
-                <img src="/images/setting-icon.png" alt="setting-icon-img">  
-                Settings</div>
+                <a href="/profile-settings" style="text-decoration: none;">
+                  <div class="following-btn" class="column1">
+                    <img src="/images/setting-icon.png" alt="setting-icon-img">  
+                  Settings</div>
+                </a>
             </div>
           </sl-card>
 
-          <div class="radial-gradient"></div> <!-- STYLE -->
+          <div class="radial-gradient"></div>
 
-          <sl-card class="bio-card" style="width: 400px;">
+          <sl-card class="bio-card" style="width: 50vw;">
           <div class="bio-content">
             ${Auth.currentUser.bio ? html`
               <h3 class="bio">Bio:</h3>
               <hr>
-              <p>${Auth.currentUser.bio}</p>
+              <p class="bio">${Auth.currentUser.bio}</p>
             ` : html``}
             </div>
           </sl-card>
@@ -90,34 +92,46 @@ class ProfileView {
         <p></p>
         <p></p>
 
-        <div class="bio-works-card">
-          <sl-card class="card-basic">
-            <div>        
-              <h2>Works (1)</h2>
-              <hr>
-            </div> 
+        <div class="current-work-container">
+          <h3 style="text-align: left;">Works (1)</h3>
 
-            <div class="poem-grid">
-                ${this.readingList == null ? html`
-                  <sl-spinner></sl-spinner>
-                ` : html`
-                  ${this.readingList.map(({ poem }) => html`
-                    <va-poem class="poem-card"
-                      id="${poem._id}"
-                      title="${poem.title}" 
-                      description="${poem.description}"
-                      views="${poem.views}"
-                      status="${poem.status}"
-                      pages="${poem.pages}"
-                      user="${JSON.stringify(poem.user)}"
-                      image="${poem.image}"
-                    >        
-                    </va-poem>
-                  `)}
-                `}
+          <hr>
+          <div class="current-works-img-text-container">
+            <div class="the-way-love-lies-img">
+              <img src="/images/the-way-love-lies.png" alt="the-way-love-lies-img" style="border-radius: 15px;">
+            </div>
+            <div class="current-works-text">
+              <h3>The Way Love Lies</h3>
+              <div class="current-work-icons">
+                <div>
+                <img src="/images/views-icon.png" alt="views-icon-img" class="views-icon">  
+                300</div>
+
+                <div>
+                <img src="/images/status-icon.png" alt="views-icon-img" class="status-icon">   
+                Completed</div>
+
+                <div>
+                <img src="/images/pages-icon.png" alt="views-icon-img" class="pages-icon">   
+                12</div>
               </div>
-          </sl-card>
-        </div>
+
+              <div class="current-works-description">
+                <p>Alaska an alien princess who wants to expand her wings and meet her love and her life on another planet. Running away from home she finds herself on planet Earth.
+                  <p></p>
+                  Kingsley a restaurant chef at a small owned store has been in a cooking slump and decides to take a break to clear his head.
+                  <p></p>
+                  The two cross paths and we shall see the madness that unravels.</p>
+                </div>
+
+                <div class="current-works-bottom-btns">
+                  <div class="romance-btn">Romance</div>
+                  <div class="slice-of-life-btn">Slice of Life</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
 
         <br>
         <p></p>
@@ -126,6 +140,7 @@ class ProfileView {
         <p></p>
         <p></p>
 
+      <div style="float: none;"> <!-- ??????????????????????? -->
         <div class="reading-list-card">
           <sl-card class="card-basic">
             <div class="reading-list-content"> 
@@ -180,6 +195,7 @@ class ProfileView {
             </div>
           </sl-card>
         </div>
+      </div>
 
         <br>
         <p></p>
@@ -189,7 +205,7 @@ class ProfileView {
         <p></p>
 
         <a href="/profile-settings">
-          <sl-button @click=${()=> gotoRoute('/editProfile')}>Edit Profile</sl-button>
+          <sl-button @click=${()=> gotoRoute('/profile-settings')}>Edit Profile</sl-button>
         </a>
 
       </div>      

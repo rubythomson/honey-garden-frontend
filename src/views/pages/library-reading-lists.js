@@ -39,12 +39,12 @@ class LibraryReadingListsView {
                 <style>
                   .vl {
                     border-left: 1px solid black;
-                    height: 30px;
+                    height: 1.9vh;
                     position: absolute;
-                    margin-left: 155px;
+                    margin-left: 9.6em;
                   }
                 </style>
-                <div class="vl"></div>
+                <div class="vl" style="height: 3.2vh;"></div>
                 <div class="stories-text">
                   <h3>2 Stories</h3>
                 </div>

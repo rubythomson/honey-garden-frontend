@@ -61,7 +61,7 @@ a {
   text-align: center;
 }
 .app-splash .app-logo {
-  width: 180px;
+  width: 11vw;
   display: block;
   margin-bottom: 1em;
 }
@@ -149,19 +149,19 @@ a {
 .guide-step {
   padding: 1em;
   margin: 1.5em auto;
-  max-width: 600px;
+  max-width: 37.5em;
 }
 .guide-step img {
   width: 100%;
   height: auto;
-  margin-bottom: 200px;
+  margin-bottom: 12.5em;
 }
 
 .guide-title {
   display: flex;
   justify-content: left;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-top: 3.125em;
+  margin-left: 3.125em;
   font-size: 1.5em;
 }
 
@@ -173,7 +173,7 @@ a {
   display: flex;
   justify-content: right;
   width: auto;
-  height: 450px;
+  height: 28vw;
   transform: rotate(40deg);
   opacity: 60%;
 }
@@ -183,15 +183,15 @@ a {
   justify-content: left;
   transform: scaleX(-1);
   transform: rotate(-20deg);
-  margin-right: 1000px;
-  margin-left: 250px;
+  margin-right: 62.5em;
+  margin-left: 15.6em;
 }
 
 .guide-rose-icon-small {
   display: flex;
   justify-content: right;
   transform: rotate(25deg);
-  margin-right: 300px;
+  margin-right: 18.7em;
 }
 
 .explore-btn::part(body) {
@@ -201,7 +201,7 @@ a {
 .poems-grid {
   display: grid;
   grid-template-columns: repeat(2, 677px);
-  grid-auto-rows: 533px;
+  grid-auto-rows: 3fr;
   justify-content: space-around;
 }
 .poems-grid .poem-card {
@@ -225,7 +225,7 @@ a {
 .dropbtn {
   background-color: white;
   background-color: transparent;
-  padding: 13px;
+  padding: 0.5em;
   font-size: 2em;
   border: none;
   align-items: center;
@@ -240,17 +240,17 @@ a {
   visibility: hidden;
   position: absolute;
   background-color: #f1f1f1;
-  width: 700px;
+  width: 46vw;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 0.75em 1em;
   text-decoration: none;
   display: block;
-  border-radius: 50px;
+  border-radius: 50px !important;
 }
 
 .dropdown-content a:hover {
@@ -321,6 +321,59 @@ a {
 }
 
 /* SEARCH GRID FILTER  ------------------------------------------------------------------------------------- */
+.searchContainer {
+  display: inline-flex;
+  flex: 1 1 300px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  width: 70%;
+  height: 5.5vh;
+  margin: 0 auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #F9F9F9;
+  margin-top: 1em;
+  margin-left: 1.2em;
+  margin-bottom: 0.9em;
+}
+
+.searchBox {
+  border: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  flex: 1;
+  background-color: transparent;
+  margin: 1em;
+}
+
+.searchIcon {
+  padding: 0.8rem;
+}
+
+.search-title {
+  font-size: 2.5em;
+  margin: 1em;
+  margin-left: 4em;
+  font-weight: 100;
+}
+
+.searchButton {
+  background: #FEC76C;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: white;
+  margin: 0.3em;
+  margin-right: 0.7em;
+  border-radius: 10px;
+  font-family: var(--base-font-family);
+  padding: 0.3em;
+  width: 5.3vw;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+input.searchBox:focus-visible {
+  outline: none !important;
+}
+
 .search-grid {
   display: grid;
   grid-template-columns: repeat(4, 300px);
@@ -345,29 +398,36 @@ a {
   align-items: center;
 }
 
-.search-grid sl-button {
-  border-radius: 50px;
-  border: black;
+.search-grid-h2 {
+  display: flex;
+  justify-content: left;
+  margin-left: 8em;
+  margin-top: 2em;
+  font-size: 1.2em;
+  font-weight: 100;
 }
 
-.sl-button.hydrated {
-  border-radius: 50px;
-  border: black;
+.search-grid sl-button::part(base) {
+  background-color: transparent;
+  border-radius: 20px;
+  border: 0.05em solid black;
+  margin: 1em;
+  font-family: var(--base-font-family);
+  font-weight: bold;
+  font-size: 1.3em;
 }
 
 .feeling-adventurous-btn {
   display: flex;
   justify-content: center;
   text-decoration: underline;
-  margin: 0;
-  padding: 0;
 }
 
 .randomise-btn::part(base) {
-  background-color: #FFF4E1;
+  background-color: #FEC76C;
   font-family: var(--base-font-family);
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 .randomise-container {
@@ -378,67 +438,16 @@ a {
   padding: 0;
 }
 
-/* SEARCH BAR (BEEHIVE) ------------------------------------------------------------------------------------- */
-.searchContainer {
-  display: inline-flex;
-  flex: 1 1 300px;
-  border: 1px solid #ccc;
-  border-radius: 50px;
-  width: auto;
-  height: 45px;
-  margin: 0 auto;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  background-color: #F9F9F9;
-  margin-top: 17px;
-  margin-left: 15px;
-}
-
-.searchIcon {
-  padding: 0.7rem;
-}
-
-.searchBox {
-  border: 0;
-  padding: 0.5rem 0.5rem 0.5rem 0;
-  flex: 1;
-  background-color: transparent;
-}
-
-.searchButton {
-  background: #FEC76C;
-  border: 0.5px black solid;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  color: white;
-  margin: 3px;
-  border-radius: 10px;
-  font-family: var(--base-font-family);
-  padding: 5px;
-  width: 80px;
-  font-size: 1em;
-  font-weight: bold;
-}
-
-input.searchBox:focus-visible {
-  outline: none !important;
-}
-
-.beehive-search-text {
-  display: flex;
-  justify-content: left;
-  margin-left: 30px;
-  margin-bottom: 20px;
-}
-
 /* FILTER ICON ------------------------------------------------------------------------------------------------ */
 .gg-options {
-  margin-top: 5px;
-  margin-right: 10px;
+  margin-top: 0.1em;
+  margin-right: 0.1em;
   box-sizing: border-box;
   position: relative;
   display: block;
   transform: scale(var(--ggs, 1));
-  width: 10px;
-  height: 2px;
+  width: 0.6vw;
+  height: 0.25vh;
   box-shadow: -3px 4px 0 0, 3px -4px 0 0;
 }
 
@@ -448,8 +457,8 @@ input.searchBox:focus-visible {
   display: block;
   box-sizing: border-box;
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 0.5vw;
+  height: 1vh;
   border: 2px solid;
   border-radius: 100%;
 }
@@ -469,17 +478,17 @@ input.searchBox:focus-visible {
   padding: 0.25em;
   background-color: #D3D3D3;
   border-radius: 10px;
-  width: 400px;
+  width: 28vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 1.85em;
 }
 
 .library-title {
   font-size: 3.5em;
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-left: 1em;
+  margin-top: 0.7em;
 }
 
 .sort-by-btn-container {
@@ -489,18 +498,18 @@ input.searchBox:focus-visible {
 
 .sort-by-btn {
   background-color: white;
-  width: 130px;
-  height: 45px;
+  width: 8.5vw;
+  height: 5.5vh;
   border-radius: 10px;
   box-shadow: 0 0 5px lightgray;
   text-align: center;
-  padding: 5px;
-  margin-top: 1.5px;
+  padding: 0.4em;
+  margin-top: 0.06em;
 }
 
 .sort-by-icon {
-  margin-right: 10px;
-  margin-top: 7px;
+  margin-right: 0.6em;
+  margin-top: 0.45em;
 }
 
 .library-filter-grid-container {
@@ -514,8 +523,8 @@ input.searchBox:focus-visible {
 .current-reads {
   position: absolute;
   align-items: center;
-  margin-top: 272px;
-  margin-left: 20px;
+  margin-top: 17em;
+  margin-left: 1.25em;
 }
 
 progress {
@@ -530,7 +539,7 @@ progress {
 ::-webkit-progress-bar {
   background-color: #F1F1F1;
   border-radius: 50px;
-  height: 8px;
+  height: 1vh;
 }
 
 .library-current-reads-container {
@@ -543,8 +552,8 @@ progress {
 .library-current-reads-container {
   position: relative;
   justify-content: center;
-  margin-right: 100px;
-  margin-bottom: 100px;
+  margin-right: 6.25em;
+  margin-bottom: 6.25em;
 }
 
 /* LIBRARY (archived) ------------------------------------------------------------------------------------------- */
@@ -560,42 +569,42 @@ progress {
   display: flex;
   justify-content: left;
   width: auto;
-  height: 300px;
+  height: 37vh;
 }
 
 .library-archived-container {
   position: relative;
   justify-content: center;
-  margin-right: 100px;
-  margin-bottom: 100px;
+  margin-right: 6.25em;
+  margin-bottom: 6.25em;
 }
 
 /* LIBRARY (reading lists) -------------------------------------------------------------------------------------- */
 .library-reading-list-arrow-icon {
   display: flex;
   justify-content: right;
-  width: 30px;
+  width: 1.9vw;
   height: auto;
   transform: scaleX(-1);
-  margin-left: 15px;
-  margin-top: 10px;
+  margin-left: 0.9em;
+  margin-top: 0.9em;
 }
 
 .library-reading-list-btn {
   background-color: #FFF4E1;
   border-radius: 10px;
-  width: 130px;
-  height: 40px;
-  padding: 10px;
+  width: 9vw;
+  height: 5vh;
+  padding: 0.65em;
   text-align: center;
 }
 
 .current-reads-btn {
   background-color: transparent;
   border-radius: 10px;
-  width: 130px;
-  height: 40px;
-  padding: 10px;
+  width: 9vw;
+  height: 5vh;
+  padding: 0.65em;
   text-align: center;
 }
 
@@ -607,23 +616,51 @@ progress {
 .library-reading-list-card {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 2.5em;
 }
 
 .reading-list-content {
-  width: 800px;
+  width: 52vw;
+  height: auto;
 }
 
 .stories-text {
   display: flex;
   justify-content: inline-block;
-  margin-left: 30px;
-  margin-top: 4px;
+  margin-left: 1.8em;
+  margin-top: 0.25em;
 }
 
 .reading-list-imgs {
   display: flex;
   justify-content: left;
+}
+
+/* SEARCH BAR (BEEHIVE) ------------------------------------------------------------------------------------- */
+.beehive-search-container {
+  display: inline-flex;
+  flex: 1 1 300px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  width: 70%;
+  height: 5.5vh;
+  margin: 0 auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #F9F9F9;
+  margin-top: 1em;
+  margin-left: 1.2em;
+  margin-bottom: 0.9em;
+}
+
+input.searchBox:focus-visible {
+  outline: none !important;
+}
+
+.beehive-search-text {
+  display: flex;
+  justify-content: left;
+  margin-left: 1.9em;
+  margin-bottom: 2em;
 }
 
 /* BEEHIVE ------------------------------------------------------------------------------------------------------ */
@@ -635,8 +672,8 @@ progress {
 }
 
 .beehive-title {
-  margin-left: 50px;
-  margin-top: 40px;
+  margin-left: 1.5em;
+  margin-top: 1em;
   font-size: 2.5em;
 }
 
@@ -656,7 +693,7 @@ progress {
   position: absolute;
   display: flex;
   border-radius: 30px;
-  padding: 10px;
+  padding: 0.4em;
   text-align: left;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -664,40 +701,42 @@ progress {
 .beehive-search-box {
   border-radius: 50px;
   background-color: white;
-  width: 65%;
+  width: 70%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   justify-content: center;
+  padding: 0.05em;
 }
 
 .beehive-in-my-dreams {
   width: 70%;
   text-align: left;
-  padding: 40px;
+  padding: 1.25em;
 }
 
 .beehive-goldfish-tears {
   width: 70%;
   text-align: left;
-  padding: 40px;
+  padding: 1.25em;
 }
 
 .beehive-card {
   width: 70%;
+  margin: auto;
   text-align: left;
-  padding: 30px;
+  padding: 1.8em;
   background-color: #FFFFFF;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 20px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2.5em;
+  margin-bottom: 2em;
 }
 
 .in-my-dreams-icons {
   display: grid;
   justify-content: right;
   grid-template-columns: 30px 90px 50px 70px;
-  grid-template-rows: 40px;
+  grid-template-rows: 2.5em;
   grid-column-gap: 10px;
 }
 
@@ -705,7 +744,7 @@ progress {
   display: grid;
   justify-content: right;
   grid-template-columns: 30px 90px 50px 50px;
-  grid-template-rows: 40px;
+  grid-template-rows: 2.5em;
   grid-column-gap: 10px;
 }
 
@@ -713,19 +752,19 @@ progress {
   display: grid;
   justify-content: right;
   grid-template-columns: 30px 90px 50px 50px;
-  grid-template-rows: 40px;
+  grid-template-rows: 2.5em;
   grid-column-gap: 10px;
 }
 
 #beehive-card-text {
-  margin: 10px;
+  margin: 0.6em;
 }
 
 #beehive-card-rose-icon {
-  margin: 5px;
-  margin-top: 15px;
+  margin: 0.3em;
+  margin-top: 1em;
   width: auto;
-  height: 40px;
+  height: 2.6vh;
 }
 
 .beehive-card-rose-icon :hover {
@@ -735,9 +774,9 @@ progress {
 #beehive-card-avatar {
   display: flex;
   justify-content: right;
-  margin-top: 15px;
+  margin-top: 0.9em;
   width: auto;
-  height: 40px;
+  height: 2.6vh;
 }
 
 .beehive-search-style {
@@ -749,23 +788,23 @@ progress {
 .beehive-card-username {
   display: flex;
   justify-content: right;
-  margin-top: 10px;
-  width: 60px;
-  height: 40px;
+  margin-top: 0.6em;
+  width: 3.9vw;
+  height: 2.6vh;
 }
 
 .beehive-card-send-rose-text {
   display: flex;
   justify-content: right;
-  margin-top: 10px;
-  width: 80px;
-  height: 40px;
+  margin-top: 0.6em;
+  width: 5.5vw;
+  height: 2.6vh;
 }
 
 /* PROFILE  ------------------------------------------------------------------------------------------------------- */
 .card-header {
-  max-width: 300px;
-  margin-top: 50px;
+  max-width: 19vw;
+  margin-top: 3.1em;
   display: flex;
   justify-content: space-between;
   border-radius: 50px;
@@ -773,12 +812,12 @@ progress {
 }
 
 .bio-content {
-  margin: 15px;
+  margin: 0.5em;
+  width: 95%;
 }
 
 .bio {
   text-align: left;
-  /* align to the left not working */
 }
 
 .bio-card {
@@ -801,11 +840,13 @@ progress {
 
 .profile-box {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  margin: 30px;
+  margin: 1.8em;
   text-align: center;
   margin: 0 auto;
   width: max-content;
   display: block;
+  width: 50vw;
+  margin-top: 2.5em;
 }
 
 .profile-box-parent {
@@ -830,8 +871,10 @@ progress {
 
 .bio-works-card {
   display: flex;
-  justify-content: center;
-  width: auto;
+  align-items: center;
+  width: 50vw;
+  margin: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .reading-list-title-and-btn {
@@ -855,6 +898,9 @@ progress {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  width: 55.55vw;
+  margin: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .reading-list-content {
@@ -1713,6 +1759,17 @@ progress {
   background: radial-gradient(50% 50% at 50% 50%, rgba(254, 199, 108, 0.39) 0%, rgba(217, 217, 217, 0) 100%);
 }
 
+@media all and (max-width: 1920px) {
+  .signinup-box {
+    width: 90%;
+    max-width: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .search-grid {
+    grid-template-columns: repeat(4 1fr);
+  }
+}
 @media all and (max-width: 768px) {
   .signinup-box {
     width: 90%;
@@ -1755,6 +1812,12 @@ progress {
   bottom: 10px;
 }
 
+@media screen and (max-width: 600px) {
+  .app-top-nav a {
+    float: none;
+    width: 100%;
+  }
+}
 .input-group {
   margin-bottom: 0.5em;
 }

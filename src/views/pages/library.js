@@ -33,7 +33,7 @@ class LibraryView {
 
         <div class="library-filter-grid-container">
           <div class="library-filter">
-          <a href="/library-reading-lists" style="text-decoration: none;">
+          <a href="/library" style="text-decoration: none;">
               <div class="library-reading-list-btn">Current Reads</div>
             </a>
             <a href="/library-archived" style="text-decoration: none;">

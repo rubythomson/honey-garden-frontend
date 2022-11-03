@@ -21,14 +21,14 @@ class BeehiveView {
 
         <div class="beehive-search-style">
           <div class="beehive-search-box">
-            <div class="searchContainer">
+            <div class="beehive-search-container">
               <p class="beehive-search-text">Type a poem</p>
             </div>
-            <sl-button class="beehive-add-post-btn" variant="primary" size="medium" style="margin: 20px;"pill>Add Post</sl-button>
+            <sl-button class="beehive-add-post-btn" variant="primary" size="medium" style="margin: 1.1em;"pill>Add Post</sl-button>
           </div>
         </div>
 
-          <div class="radial-gradient"></div> <!-- STYLE -->
+          <div class="radial-gradient"></div>
 
           <div class="beehive-row-1">
             <div class="beehive-card">

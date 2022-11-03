@@ -62,8 +62,8 @@ class CurrentWorkView {
                   <div class="romance-btn">Romance</div>
                   <div class="slice-of-life-btn">Slice of Life</div>
                 </div>
+              </div>
             </div>
-
           </div>
         </div> 
         

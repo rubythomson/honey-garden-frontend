@@ -108,7 +108,7 @@ class SearchGridView {
       <va-app-header title="Search Grid" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
 
       <div class="page-content"> 
-        <h1 class="beehive-title">Search</h1>
+        <h1 class="search-title">Search</h1>
 
         <div class="outer">
           <div class="top">
@@ -164,7 +164,7 @@ class SearchGridView {
                           </div>
 
                           <div class="row-dropdown-updates">
-                            <a href="#">Updates</a>
+                            <a href="#">Content</a>
                             <ul class="updates-list">
                               <li>
                               <sl-button class="filter-btn" size="small"> 
@@ -187,7 +187,7 @@ class SearchGridView {
                           </div>
 
                           <div class="row-dropdown-C">
-                            <a href="#">Content</a>
+                            <a href="#">Updates</a>
                             <ul class="C-list">
                               <li>
                               <sl-button class="filter-btn" size="small">
@@ -236,9 +236,15 @@ class SearchGridView {
                   <input type="submit" value="Search" class="searchButton">          
                 </div>
 
+                <div class="radial-gradient"></div>
+
+                <div class="search-grid-h2">
+                  <h2>Popular Categories</h2>
+                </div>
+
                 <div class="search-grid">
                   ${this.categories.map(name => html`
-                    <sl-button data-name="name" size="large" variant="primary"  @click=${() => {
+                    <sl-button variant="default" data-name="name" size="large" @click=${() => {
                       this.category.set(name, "/browse");
                     }}>${name}</sl-button>
                   `)}
