@@ -207,7 +207,6 @@ a {
 .poems-grid .poem-card {
   display: flex;
   margin: 0.5em;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .poem-dialog {
@@ -1550,17 +1549,6 @@ input.searchBox:focus-visible {
   height: 500px;
 }
 
-.radial-gradient {
-  height: 700px;
-  border-radius: 50px;
-  aspect-ratio: 1/1;
-  position: absolute;
-  z-index: -1;
-  left: 800px;
-  top: 400px;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(254, 199, 108, 0.39) 0%, rgba(217, 217, 217, 0) 100%);
-}
-
 .feather-img-div {
   display: flex;
   justify-content: right;
@@ -1709,6 +1697,15 @@ input.searchBox:focus-visible {
 
 .next-page-btn::part(base) {
   background-color: #FEC76C;
+  color: white;
+  font-family: var(--base-font-family);
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border: 0.5px solid lightgray;
+  width: 9vw;
+  height: 5vh;
+  font-size: 1em;
+  margin-bottom: 2em;
 }
 
 .rose-content {
@@ -1719,37 +1716,163 @@ input.searchBox:focus-visible {
 
 .rose-read {
   position: absolute;
-  left: 1200px;
-  top: 1400px;
+  margin: 0.5em;
+  bottom: -42em;
 }
 
 .rose-read-text {
   position: absolute;
-  left: 1175px;
-  top: 1430px;
+  margin: -0.8em;
+  bottom: -43em;
+}
+
+.rose-read-text:hover {
+  color: #FEC76C;
+  cursor: pointer;
+}
+
+.rose-read:hover {
+  color: #FEC76C;
+  cursor: pointer;
 }
 
 .comments-div {
-  width: auto;
+  width: 100%;
+  margin: auto;
   margin-top: 50px;
   text-align: left;
   display: flex;
   justify-content: center;
+  margin-bottom: 3em;
 }
 
-.comments-content {
+.comments-div::part(base) {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border: 0.005px solid lightgray;
+}
+
+.comments-grid-1 {
+  display: grid;
+  grid-template-columns: 50px 600px;
+  grid-template-rows: 40px;
+  grid-column-gap: 10px;
   margin: 20px;
 }
 
-.read-card-top {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.comments-grid-2 {
+  display: grid;
+  grid-template-columns: 50px 300px;
+  grid-template-rows: 40px;
+  grid-column-gap: 10px;
+  margin: 20px;
 }
 
-.progress {
+.sl-input-read-comment::part(base) {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  width: 15vw;
+  height: 4vh;
+  padding-bottom: 2.3em;
+}
+
+.read-card-top {
+  display: grid;
+  grid-template-columns: 30px 200px 550px;
+  grid-column-gap: 50px;
+  justify-content: center;
+  width: 70%;
+  background-color: white;
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  margin: auto;
+  padding: 1em;
+  height: 22vh;
+}
+
+.read-user-avatar {
+  display: grid;
+  grid-template-columns: 30px 30px;
+  grid-column-gap: 10px;
+  justify-content: right;
+}
+
+.username-read {
+  margin-top: 0.5em;
+}
+
+progress {
+  margin: auto;
+  position: absolute;
+  display: flex;
+  width: 68.1%;
+  top: 11.6em;
+  left: 15em;
+}
+
+::-webkit-progress-bar {
+  background-color: #F1F1F1;
+  border-radius: 50px;
+  height: 1vh;
+}
+
+.read-edit-dropdown {
+  display: flex;
+  margin-right: 15em;
+  margin-top: 3em;
+  left: 69em;
+}
+
+.read-dropdown {
+  position: absolute;
+  top: -5em;
+  left: 58em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.read-dropdown::part(base) {
+  background-color: white;
+  border-radius: 5px;
+  width: 20vw;
+  height: 5.3vh;
+  padding: 0.25em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 0.05px solid lightgray;
+}
+
+.read-edit-dropdown::part(base) {
+  background-color: white;
+  border-radius: 5px;
+  width: 20vw;
+  height: 5.3vh;
+  padding: 0.25em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 0.05px solid lightgray;
+}
+
+.read-edit-btn-text-one {
   display: flex;
   justify-content: center;
+  margin: auto;
+  width: 15vw;
+  height: 5vh;
+  font-family: var(--base-font-family);
+  font-size: 1.2em;
+}
+
+.read-edit-btn-text {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 4vw;
+  height: 5vh;
+  font-family: var(--base-font-family);
+  font-size: 1.2em;
+}
+
+.dropdown-hover:hover {
+  color: #FEC76C;
+  background-color: rgba(211, 211, 211, 0.458);
+  font-weight: bold;
 }
 
 .profile {
@@ -1761,6 +1884,9 @@ input.searchBox:focus-visible {
 .read-card-img {
   display: flex;
   justify-content: left;
+  width: 20vw;
+  height: 17vh;
+  border-radius: 30px;
 }
 
 .img-title {
@@ -1771,12 +1897,68 @@ input.searchBox:focus-visible {
 .read-card-icon {
   display: flex;
   justify-content: left;
-  margin-left: 30px;
+  margin-left: 2.5em;
+}
+
+.views-icon-read {
+  width: 2vw;
+  height: 2vh;
+  aspect-ratio: 1/1;
+  padding-right: 0.2em;
+  padding-left: 0.2em;
+}
+
+.status-icon-read {
+  width: auto;
+  height: 3vh;
+  aspect-ratio: 1/1;
+  padding-right: 0.4em;
+  padding-left: 0.2em;
+}
+
+.pages-icon-read {
+  width: auto;
+  height: 3vh;
+  aspect-ratio: 1/1;
+  padding-right: 0.3em;
+  padding-left: 0.2em;
+}
+
+.read-icon-container {
+  display: flex;
+  padding: 0.05em;
+  padding-bottom: 1em;
+}
+
+.read-icons-grid {
+  display: grid;
+  grid-template-rows: 30px 30px 30px;
+  grid-row-gap: 10px;
+}
+
+.read-views-text {
+  margin-top: -0.1em;
+  margin-left: 0.5em;
+}
+
+.read-status-text {
+  margin-top: 0.3em;
+  margin-left: 0.5em;
+}
+
+.read-pages-text {
+  margin-top: 0.2em;
+  margin-left: 0.5em;
 }
 
 .next-page {
   display: flex;
   justify-content: center;
+}
+
+.read-comments-user-avatar {
+  width: 2.7vw;
+  height: 5vh;
 }
 
 /* MANAGE (current works)  ---------------------------------------------------------------------------------------- */
@@ -2146,7 +2328,7 @@ input.searchBox:focus-visible {
 }
 
 .radial-gradient {
-  height: 200px;
+  height: 60vh;
   border-radius: 50px;
   aspect-ratio: 1/1;
   position: absolute;

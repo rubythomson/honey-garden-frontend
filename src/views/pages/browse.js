@@ -95,6 +95,8 @@ class BrowseView {
       <div class="page-content"> 
         <h1 class="beehive-title">Search by ${this.category.get()}</h1>
 
+        <div class="radial-gradient"></div>
+
         <div class="outer">
           <div class="top">
             ${this.title ? html`

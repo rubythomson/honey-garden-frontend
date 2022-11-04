@@ -104,11 +104,6 @@ customElements.define('va-poem', class Poem extends LitElement {
    })
   }
 
-  // was deleted and updated with below code but they are two diff features - link to actual poem so user can read
-  startReadingHandler(){
-    alert("Start Reading!")
-  }
-
   async readingListHandler(){    
     try {
       UserAPI.readingListHandler(this.id)
@@ -133,31 +128,34 @@ customElements.define('va-poem', class Poem extends LitElement {
     return html`
     <style>
       .poem-card {
+        border-radius: 30px;
         display: grid;
         grid-template-columns: repeat(2, minmax(auto, 50%));
         grid-template-rows: max-content 1fr max-content;
-        border-radius: 50px;
         gap: 15px;
         padding: 1em;
         background-color: #FFFFFF;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       }
 
       .poem-card img {
         grid-row: 1 / -1;
         max-width: 100%;
-        border-radius: 5px;
+        border-radius: 30px;
         border: 0.2px solid lightgray;
         aspect-ratio: 1 / 1.6;
         object-fit: cover;
+        margin: 0.5em;
       }
 
       .poem-card .stats {
         display: flex;
         flex-direction: column;
-        gap: 0.5em;
+        gap: 0.7em;
         padding: 0;
         margin: 0;
         list-style: none;
+        font-size: 1.3em;
       }
 
       .poem-card .stats > li {
@@ -168,7 +166,7 @@ customElements.define('va-poem', class Poem extends LitElement {
       .poem-card p {
         overflow: hidden;
         text-overflow: ellipsis;
-        padding-left: 8px;
+        padding-left: 0.5em;
       }
 
       .poem-card .actions {
@@ -179,23 +177,66 @@ customElements.define('va-poem', class Poem extends LitElement {
       .search-description {
         font-size: 1.2em;
       }
+
+      .start-reading-btn::part(base) {
+        background-color: #FFF4E1;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border: 0.8px solid black;
+      }
+
+      .views-icon-va-poem {
+        width: 1.8vw;
+        height: 2.25vh;
+        aspect-ratio: 1/1;
+        padding-right: 0.5em;
+        padding-left: 0.2em;
+      }
+
+      .status-icon-va-poem {
+        width: 1.8vw;
+        height: 3.3vh;
+        aspect-ratio: 1/1;
+        padding-right: 0.2em;
+        padding-left: 0.1em;
+      }
+
+      .pages-icon-va-poem{
+        width: 2vw;
+        height: 3.35vh;
+        aspect-ratio: 1/1;
+        padding-right: 0.1em;
+        padding-left: 0.1em;
+      }
+
+      .plus-icon-container {
+        border-radius: 50px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
     </style> 
+
     <div class="poem-card">
         <img slot="image" src="${App.apiBase}/images/${this.image}"/>
         <ul class="stats">
           ${this.views && html`
             <li>
-              <sl-icon-button name="eye" label="Views" style="font-size: 23px"></sl-icon-button>
+              <div style="font-size: 0.8em;">
+                <img src="/images/views-icon.png" class="views-icon-va-poem" alt="views-icon-img" style="border: 0; border-radius: 0; margin-top:1em;">
+              </div>
+              <!-- <sl-icon-button name="eye" label="Views" style="font-size: 23px"></sl-icon-button> -->
               ${friendlyNumber(this.views)}
             </li>`}
           ${this.status && html`
             <li>
-              <sl-icon-button name="pencil-square" label="Status" style="font-size: 23px"></sl-icon-button>
+              <img src="/images/status-icon.png" class="status-icon-va-poem" alt="status-icon-img" style="border: 0; border-radius: 0;">
+              <!-- <sl-icon-button name="pencil-square" label="Status" style="font-size: 23px"></sl-icon-button> -->
               ${this.status}
             </li>`}
           ${this.pages && html`
           <li>
-              <sl-icon-button name="book" label="Pages" style="font-size: 23px"></sl-icon-button>
+              <img src="/images/pages-icon.png" class="pages-icon-va-poem" alt="pages-icon-img" style="border: 0; border-radius: 0;">
+             <!--  <sl-icon-button name="book" label="Pages" style="font-size: 23px"></sl-icon-button> -->
               ${this.pages}
           </li>`}
         </ul>
@@ -203,8 +244,12 @@ customElements.define('va-poem', class Poem extends LitElement {
           ${this.description}
         </p>
         <div class="actions">
-          <sl-icon-button @click=${this.readingListHandler.bind(this)} name="plus-circle" label="Save" style="font-size: 23px"></sl-icon-button>
-          <sl-button @click=${this.startReadingHandler.bind(this)} size="medium" pill>Start Reading</sl-button>
+          <div class="plus-icon-container">
+            <sl-icon-button @click=${this.readingListHandler.bind(this)} name="plus" label="Save" style="font-size: 23px"></sl-icon-button>
+          </div>
+          <a href="/read">
+            <sl-button size="medium" pill class="start-reading-btn">Start Reading</sl-button>
+          </a>
         </div>
     </div>
     `

@@ -169,7 +169,7 @@ class SearchGridView {
                             <ul class="updates-list">
                               <li>
                               <sl-button class="filter-btn" size="small"> 
-                                <sl-icon name="square"></sl-icon> <!-- Need to figure this out in database -->
+                                <sl-icon name="square"></sl-icon> 
                               </sl-button>  
                               All</li>
 

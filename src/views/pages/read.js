@@ -29,46 +29,59 @@ class ReadView {
       <va-app-header title="Read" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
       <div class="page-content">        
       
-      <sl-card class="read-card-top">
-        <div class="profile">
-          ${Auth.currentUser && Auth.currentUser.avatar ? html`
-            <sl-avatar style="--size: 30px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-          `:html`
-          <sl-avatar style="--size: 30px; margin-bottom: 1em;"></sl-avatar>
-          `}
-          <p>${Auth.currentUser.userName}</p>
-        </div>
-
+      <div class="read-card-top">
         <div class="read-card-img">
-          <img src="/images/sinking-ships.jpg" alt="sinking-ships">
-        </div>
-        <div class="img-title">
-          <h3>Sinking Ships</h3>
+          <img src="/images/sinking-ships.png" alt="sinking-ships" style="border-radius: 10px;">
         </div>
 
-        <div class="read-card-icon">
-          <sl-icon-button name="eye" label="Views" style="font-size: 23px"></sl-icon-button>
-        </div>
-        <div class="read-card-icon">
-          <sl-icon-button name="pencil-square" label="Status" style="font-size: 23px"></sl-icon-button>
-        </div>
-        <div class="read-card-icon">
-          <sl-icon-button name="book" label="Pages" style="font-size: 23px"></sl-icon-button>
+        <div>
+          <div class="img-title">
+            <h3>Sinking Ships</h3>
+          </div>
+          <div class="read-icons-grid">
+            <div class="read-card-icon">
+              <div class="read-icon-container">
+                <img src="/images/views-icon.png" style="width: 2vw" height="20vh" class="views-icon-read">
+              </div>
+              <p class="read-views-text">800</p>
+            </div>
+            <div class="read-card-icon">
+              <div class="read-icon-container">
+                <img src="/images/status-icon.png" style="width: 2vw" height="30vh" class="status-icon-read">
+              </div>
+              <p class="read-status-text">Completed</p>
+            </div>
+            <div class="read-card-icon">
+              <div class="read-icon-container">
+                <img src="/images/pages-icon.png" style="width: 2vw" height="20vh" class="pages-icon-read">
+              </div>
+              <p class="read-pages-text">12</p>
+            </div>
+          </div>
         </div>
 
-        <sl-button size="small" pill>Chapter 1 | "The ship is sinking"
-          <sl-icon style="margin-left:5px;" name="chevron-down"></sl-icon>
-        </sl-button>
-
-        <div class="progress">
-          <progress max="100" value="30"></progress>
+        <div class="read-user-avatar">
+          <img src="/images/user-five.png" alt="user-five-avatar-img" style="width: 2vw; height: 3.7vh;">
+          <p class="username-read">Magika012</p>
         </div>
-      </sl-card>
+      </div>
+
+      <div class="progress">
+        <progress max="100" value="30"></progress>
+      </div>
+
+      <sl-dropdown>
+        <sl-button slot="trigger" caret class="read-dropdown">
+          <p class="read-edit-btn-text-one">Chapter 1 | "The ship is sinking"</p>
+        </sl-button> 
+      </sl-dropdown>
 
       <hr>
-        <sl-button size="small" pill>Edit
-          <sl-icon style="margin-left:5px;" name="chevron-down"></sl-icon>
-        </sl-button>
+      <sl-dropdown>
+        <sl-button slot="trigger" caret style="width: 8vw;" class="read-edit-dropdown">
+          <p class="read-edit-btn-text">Edit</p>
+        </sl-button> 
+      </sl-dropdown>
 
       <h1 class="calign">Chapter 1</h1>
       <h2 class="calign">"The ship is sinking"</h2>
@@ -163,7 +176,7 @@ class ReadView {
 
       <div class="rose-content">
         <div class="rose-read">
-          <iconify-icon icon="vs:rose" width="30" height="50"></iconify-icon>
+          <img src="/images/rose-flower.png" alt="rose-icon" style="width: 3vw; height: 5vh;">
         </div>
         <div class="rose-read-text">
           <p>Send a rose</p>
@@ -173,31 +186,29 @@ class ReadView {
 
       <sl-card class="comments-div">
         <div class="comments-content">
-          ${Auth.currentUser && Auth.currentUser.avatar ? html`
-            <sl-avatar style="--size: 50px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-          `:html`
-          <sl-avatar style="--size: 50px; margin-bottom: 1em;"></sl-avatar>
-          `}
+          <div class="comments-grid-1">
+            <img src="/images/user-six.png" alt="user-six-img" class="read-comments-user-avatar">
+            <sl-input placeholder="Add comment" class="sl-input-read-comment"></sl-input>
+          </div>
+
+          <hr>
+
+        <div class="comments-content">
+          <div class="comments-grid-2">
+            <img src="/images/user-seven.png" alt="user-seven-img" class="read-comments-user-avatar">
+            <p>So good!</p>
+          </div>
         </div>
-        <sl-input placeholder="Add comment"></sl-input>
+ 
         <hr>
 
         <div class="comments-content">
-          ${Auth.currentUser && Auth.currentUser.avatar ? html`
-            <sl-avatar style="--size: 50px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-          `:html`
-          <sl-avatar style="--size: 50px; margin-bottom: 1em;"></sl-avatar>
-          `}
+          <div class="comments-grid-2">
+            <img src="/images/user-eight.png" alt="user-eight-img" class="read-comments-user-avatar">
+            <p>Keep going!!</p>
+          </div>
         </div>
-        <hr>
-        <div class="comments-content">
-          ${Auth.currentUser && Auth.currentUser.avatar ? html`
-            <sl-avatar style="--size: 50px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-          `:html`
-          <sl-avatar style="--size: 50px; margin-bottom: 1em;"></sl-avatar>
-          `}
-        </div>
-        <hr>
+
       </sl-card>
 
 
