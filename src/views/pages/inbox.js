@@ -3,6 +3,7 @@ import {html, render } from 'lit-html'
 import {gotoRoute, anchorRoute} from '../../Router'
 import Auth from '../../Auth'
 import Utils from '../../Utils'
+import Toast from '../../Toast'
 
 class InboxView {
   init(){
@@ -16,28 +17,28 @@ class InboxView {
       <va-app-header title="Inbox" user="${JSON.stringify(Auth.currentUser)}"></va-app-header>
       <div class="page-content">        
         
-      <div class="messages-card-div">
+        <div class="messages-card-div">
           <sl-card class="messages-card-header">
-            <div slot="header">
+            <div class="messages-gris-container">
               <h1 class="messages-header">Messages</h1>
 
-              <div class="messages-btn">
-                <sl-button class="new-message-btn" size="small" pill type="default">New Message</sl-button>
-              </div>
+              <a href="new-message" style="text-decoration: none;">
+                <div class="messages-btn">
+                  <sl-button class="new-message-btn" size="small" pill type="default">New Message</sl-button>
+                </div>
+              </a>
             </div>
-
+            <hr>
             <div class="messages-card">
               <div class="avatar-messages">
-                ${Auth.currentUser && Auth.currentUser.avatar ? html`
-                  <sl-avatar style="--size: 50px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-                `:html`
-                <sl-avatar style="--size: 50px; margin-bottom: 1em;"></sl-avatar>
-                `}
+                <img src="/images/user-avatar-one.png" class="messages-avatar">
               </div>
-
               <div class="messages-card-text">
-                <h3>${Auth.currentUser.userName}</h3>
-                <p>Hiiii thanks for the follow!!! I love your content btw.</p>
+                <h3>xxKiNxx</h3>
+                <p>Hiiii thanks for liking my story</p>
+              </div>
+              <div class="messages-timestamp">
+                <p>7:45</p>
               </div>
             </div>
 
@@ -45,56 +46,52 @@ class InboxView {
 
             <div class="messages-card">
               <div class="avatar-messages">
-                ${Auth.currentUser && Auth.currentUser.avatar ? html`
-                  <sl-avatar style="--size: 50px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-                `:html`
-                <sl-avatar style="--size: 50px; margin-bottom: 1em;"></sl-avatar>
-                `}
+                <img src="/images/user-avatar-two.png" class="messages-avatar">
               </div>
-
               <div class="messages-card-text">
-                <h3>${Auth.currentUser.userName}</h3>
-                <p>I really liked your post, where did you get the inspiration from?</p>
+                <h3>Cheesy3artini</h3>
+                <p>I really liked your posts what do you get your inspiration from?</p>
               </div>
-            </div> 
+              <div class="messages-timestamp">
+                <p>Wed</p>
+              </div>
+            </div>
             
             <hr>
 
             <div class="messages-card">
               <div class="avatar-messages">
-                ${Auth.currentUser && Auth.currentUser.avatar ? html`
-                  <sl-avatar style="--size: 50px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-                `:html`
-                <sl-avatar style="--size: 50px; margin-bottom: 1em;"></sl-avatar>
-                `}
+                <img src="/images/user-avatar-three.png" class="messages-avatar">
               </div>
-
               <div class="messages-card-text">
-                <h3>${Auth.currentUser.userName}</h3>
-                <p>You should read this, I think it'll surprise you...</p>
+                <h3>Dinfkq1</h3>
+                <p>You should read this</p>
               </div>
-            </div> 
+              <div class="messages-timestamp">
+                <p>Fri</p>
+              </div>
+            </div>
 
             <hr>
 
             <div class="messages-card">
               <div class="avatar-messages">
-                ${Auth.currentUser && Auth.currentUser.avatar ? html`
-                  <sl-avatar style="--size: 50px; margin-bottom: 1em;" image=${(Auth.currentUser && Auth.currentUser.avatar) ? `${App.apiBase}/images/${Auth.currentUser.avatar}` : ''}></sl-avatar>
-                `:html`
-                <sl-avatar style="--size: 50px; margin-bottom: 1em;"></sl-avatar>
-                `}
+                <img src="/images/user-avatar-four.png" class="messages-avatar">
               </div>
-
               <div class="messages-card-text">
-                <h3>${Auth.currentUser.userName}</h3>
-                <p>Magix Time is such a good reccommendation. Tysm!</p>
+                <h3>Linfow012</h3>
+                <p>Magix time is such a good reccommendation. Tysm</p>
               </div>
-            </div> 
+              <div class="messages-timestamp">
+                <p>12 Sep</p>
+              </div>
+            </div>
+
+            <hr>
 
           </sl-card>
         </div>
-        
+
       </div>      
     `
     render(template, App.rootEl)

@@ -11,7 +11,6 @@ import roseView from './views/pages/rose'
 import postView from './views/pages/post'
 import browseView from './views/pages/browse'
 import inboxView from './views/pages/inbox'
-import supportView from './views/pages/support'
 import beehiveView from './views/pages/beehive'
 import readView from './views/pages/read'
 import landingView from './views/pages/landing'
@@ -24,6 +23,8 @@ import SettingsView from './views/pages/profile-settings'
 import LibraryReadingListsView from './views/pages/library-reading-lists'
 import LibraryArchivedView from './views/pages/library-archived'
 import RosePurchaseView from './views/pages/rose-purchase'
+import RosePurchaseThankyouView from './views/pages/rose-purchase-thankyou'
+import NewMessageView from './views/pages/new-message'
 
 // define routes
 const routes = {
@@ -37,7 +38,6 @@ const routes = {
 	'/post': postView,
 	'/browse': browseView,
 	'/inbox': inboxView,
-	'/support': supportView,
 	'/404' : fourOFourView,
 	'/signin': signinView,
 	'/signup': signupView,
@@ -51,7 +51,9 @@ const routes = {
 	'/profile-settings': SettingsView,
 	'/library-reading-lists': LibraryReadingListsView,
 	'/library-archived': LibraryArchivedView,
-	'/rose-purchases': RosePurchaseView
+	'/rose-purchases': RosePurchaseView,
+	'/rose-purchase-thankyou': RosePurchaseThankyouView,
+	'/new-message': NewMessageView
 }
 
 class Router {

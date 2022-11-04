@@ -14156,7 +14156,7 @@ var _Toast = _interopRequireDefault(require("../../Toast"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Library\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1 class=\"library-title\">Library</h1>\n\n        <div class=\"library-filter-grid-container\">\n          <div class=\"library-filter\">\n          <a href=\"/library\" style=\"text-decoration: none;\">\n              <div class=\"library-reading-list-btn\">Current Reads</div>\n            </a>\n            <a href=\"/library-archived\" style=\"text-decoration: none;\">\n              <div class=\"current-reads-btn\">Archived</div>\n            </a>\n            <a href=\"/library-reading-lists\" style=\"text-decoration: none;\">\n              <div class=\"current-reads-btn\">Reading Lists</div>\n            </a>\n          </div>\n\n          <div class=\"sort-by-btn-container\">\n            <div class=\"sort-by-btn\"> \n              <sl-icon slot=\"prefix\" name=\"chevron-down\" class=\"sort-by-icon\"></sl-icon>  \n              Sort By</div>\n          </div>\n        </div>\n\n        <div class=\"library-current-reads-container\">\n          <div>\n            <div class=\"current-reads\" style=\"margin-left: 12px;\">\n              <progress max=\"100\" value=\"70\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/time-traveller.png\" alt=\"time-traveller-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"70\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/sing-song.png\" alt=\"sing-song-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"50\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/non-stop-babbling.png\" alt=\"non-stop-babbling-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"70\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/consistency.png\" alt=\"consistency-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"60\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/light-bulb.png\" alt=\"light-bulb-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/sparks.png\" alt=\"sparks-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/peaking-point.png\" alt=\"peaking-point-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"40\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/chess.png\" alt=\"chess-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/on-the-path.png\" alt=\"on-the-path-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/swan-castle.png\" alt=\"swan-castle-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/king.png\" alt=\"king-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/home.png\" alt=\"home-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"80\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/ruins.png\" alt=\"ruins-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"70\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/dark-side.png\" alt=\"dark-side-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/fairy-circle.png\" alt=\"fairy-circle-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"30\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/tipping-point.png\" alt=\"tipping-point-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"50\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/midnight.png\" alt=\"midnight-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"20\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/blooming.png\" alt=\"blooming-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/marry-me.png\" alt=\"marry-me-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"70\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/you-may-kiss-the-bride.png\" alt=\"you-may-kiss-the-bride-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n        </div>\n\n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Library\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1 class=\"library-title\">Library</h1>\n\n        <div class=\"library-filter-grid-container\">\n          <div class=\"library-filter\">\n          <a href=\"/library\" style=\"text-decoration: none;\">\n              <div class=\"library-reading-list-btn\">Current Reads</div>\n            </a>\n            <a href=\"/library-archived\" style=\"text-decoration: none;\">\n              <div class=\"current-reads-btn\">Archived</div>\n            </a>\n            <a href=\"/library-reading-lists\" style=\"text-decoration: none;\">\n              <div class=\"current-reads-btn\">Reading Lists</div>\n            </a>\n          </div>\n\n          <div class=\"sort-by-btn-container\">\n            <div>\n              <sl-dropdown>\n                <sl-button slot=\"trigger\" caret style=\"font-family: var(--base-font-family);\" class=\"dropdown-btn\">Sort By</sl-button>\n                <div class=\"dropdown-selection\">\n                  <div class=\"dropdown-hover\">\n                    <sl-menu class=\"dropwdown-text\">Recently Read</sl-menu>\n                  </div>\n                  <hr>\n                  <div class=\"dropdown-hover\">\n                    <sl-menu class=\"dropwdown-text\">Alphabetical A-Z</sl-menu>\n                  </div>\n                  <hr>\n                  <div class=\"dropdown-hover\">\n                    <sl-menu class=\"dropwdown-text\">Completed</sl-menu>\n                  </div>\n                  <hr>\n                  <div class=\"dropdown-hover\">\n                    <sl-menu class=\"dropwdown-text\">New / Unread</sl-menu>\n                  </div>\n                </div>\n              </sl-dropdown>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"library-current-reads-container\">\n          <div>\n            <div class=\"current-reads\" style=\"margin-left: 12px;\">\n              <progress max=\"100\" value=\"70\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/time-traveller.png\" alt=\"time-traveller-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"70\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/sing-song.png\" alt=\"sing-song-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"50\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/non-stop-babbling.png\" alt=\"non-stop-babbling-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"70\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/consistency.png\" alt=\"consistency-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"60\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/light-bulb.png\" alt=\"light-bulb-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n\n          <div class=\"green-circle-container-sparks\">\n            <div class=\"green-circle\"></div>\n          </div>\n          <div class=\"green-circle-container-peaking-point\">\n            <div class=\"green-circle\"></div>\n          </div>\n          <div class=\"green-circle-container-on-the-path\">\n            <div class=\"green-circle\"></div>\n          </div>\n          <div class=\"green-circle-container-swan-castle\">\n            <div class=\"green-circle\"></div>\n          </div>\n\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/sparks.png\" alt=\"sparks-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/peaking-point.png\" alt=\"peaking-point-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"40\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/chess.png\" alt=\"chess-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/on-the-path.png\" alt=\"on-the-path-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/swan-castle.png\" alt=\"swan-castle-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n\n          <div class=\"green-circle-container-king\">\n            <div class=\"green-circle\"></div>\n          </div>\n          <div class=\"green-circle-container-home\">\n            <div class=\"green-circle\"></div>\n          </div>\n          <div class=\"green-circle-container-fairy-circle\">\n            <div class=\"green-circle\"></div>\n          </div>\n\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/king.png\" alt=\"king-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/home.png\" alt=\"home-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"80\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/ruins.png\" alt=\"ruins-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"70\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/dark-side.png\" alt=\"dark-side-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/fairy-circle.png\" alt=\"fairy-circle-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"30\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/tipping-point.png\" alt=\"tipping-point-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"50\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/midnight.png\" alt=\"midnight-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"20\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/blooming.png\" alt=\"blooming-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n\n          <div class=\"green-circle-container-mary-me\" style=\"position: absolute; top: 61.2em; left: 53.8em;\">\n            <div class=\"green-circle\"></div>\n          </div>\n\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"0\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/marry-me.png\" alt=\"marry-me-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n          <div>\n            <div class=\"current-reads\">\n              <progress max=\"100\" value=\"70\" class=\"progress-bar\"></progress>\n            </div>\n            <img src=\"/images/you-may-kiss-the-bride.png\" alt=\"you-may-kiss-the-bride-img\" class=\"serve-me-img\" style=\"box-shadow: 0 0 10px lightgray;\">\n          </div>\n        </div>\n\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14575,90 +14575,12 @@ var _Auth = _interopRequireDefault(require("../../Auth"));
 
 var _Utils = _interopRequireDefault(require("../../Utils"));
 
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject9() {
-  const data = _taggedTemplateLiteral(["\n                <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\"></sl-avatar>\n                "]);
-
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject8() {
-  const data = _taggedTemplateLiteral(["\n                  <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\" image=", "></sl-avatar>\n                "]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  const data = _taggedTemplateLiteral(["\n                <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\"></sl-avatar>\n                "]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  const data = _taggedTemplateLiteral(["\n                  <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\" image=", "></sl-avatar>\n                "]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  const data = _taggedTemplateLiteral(["\n                <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\"></sl-avatar>\n                "]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  const data = _taggedTemplateLiteral(["\n                  <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\" image=", "></sl-avatar>\n                "]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  const data = _taggedTemplateLiteral(["\n                <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\"></sl-avatar>\n                "]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  const data = _taggedTemplateLiteral(["\n                  <sl-avatar style=\"--size: 50px; margin-bottom: 1em;\" image=", "></sl-avatar>\n                "]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Inbox\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        \n      <div class=\"messages-card-div\">\n          <sl-card class=\"messages-card-header\">\n            <div slot=\"header\">\n              <h1 class=\"messages-header\">Messages</h1>\n\n              <div class=\"messages-btn\">\n                <sl-button class=\"new-message-btn\" size=\"small\" pill type=\"default\">New Message</sl-button>\n              </div>\n            </div>\n\n            <div class=\"messages-card\">\n              <div class=\"avatar-messages\">\n                ", "\n              </div>\n\n              <div class=\"messages-card-text\">\n                <h3>", "</h3>\n                <p>Hiiii thanks for the follow!!! I love your content btw.</p>\n              </div>\n            </div>\n\n            <hr>\n\n            <div class=\"messages-card\">\n              <div class=\"avatar-messages\">\n                ", "\n              </div>\n\n              <div class=\"messages-card-text\">\n                <h3>", "</h3>\n                <p>I really liked your post, where did you get the inspiration from?</p>\n              </div>\n            </div> \n            \n            <hr>\n\n            <div class=\"messages-card\">\n              <div class=\"avatar-messages\">\n                ", "\n              </div>\n\n              <div class=\"messages-card-text\">\n                <h3>", "</h3>\n                <p>You should read this, I think it'll surprise you...</p>\n              </div>\n            </div> \n\n            <hr>\n\n            <div class=\"messages-card\">\n              <div class=\"avatar-messages\">\n                ", "\n              </div>\n\n              <div class=\"messages-card-text\">\n                <h3>", "</h3>\n                <p>Magix Time is such a good reccommendation. Tysm!</p>\n              </div>\n            </div> \n\n          </sl-card>\n        </div>\n        \n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Inbox\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        \n        <div class=\"messages-card-div\">\n          <sl-card class=\"messages-card-header\">\n            <div class=\"messages-gris-container\">\n              <h1 class=\"messages-header\">Messages</h1>\n\n              <a href=\"new-message\" style=\"text-decoration: none;\">\n                <div class=\"messages-btn\">\n                  <sl-button class=\"new-message-btn\" size=\"small\" pill type=\"default\">New Message</sl-button>\n                </div>\n              </a>\n            </div>\n            <hr>\n            <div class=\"messages-card\">\n              <div class=\"avatar-messages\">\n                <img src=\"/images/user-avatar-one.png\" class=\"messages-avatar\">\n              </div>\n              <div class=\"messages-card-text\">\n                <h3>xxKiNxx</h3>\n                <p>Hiiii thanks for liking my story</p>\n              </div>\n              <div class=\"messages-timestamp\">\n                <p>7:45</p>\n              </div>\n            </div>\n\n            <hr>\n\n            <div class=\"messages-card\">\n              <div class=\"avatar-messages\">\n                <img src=\"/images/user-avatar-two.png\" class=\"messages-avatar\">\n              </div>\n              <div class=\"messages-card-text\">\n                <h3>Cheesy3artini</h3>\n                <p>I really liked your posts what do you get your inspiration from?</p>\n              </div>\n              <div class=\"messages-timestamp\">\n                <p>Wed</p>\n              </div>\n            </div>\n            \n            <hr>\n\n            <div class=\"messages-card\">\n              <div class=\"avatar-messages\">\n                <img src=\"/images/user-avatar-three.png\" class=\"messages-avatar\">\n              </div>\n              <div class=\"messages-card-text\">\n                <h3>Dinfkq1</h3>\n                <p>You should read this</p>\n              </div>\n              <div class=\"messages-timestamp\">\n                <p>Fri</p>\n              </div>\n            </div>\n\n            <hr>\n\n            <div class=\"messages-card\">\n              <div class=\"avatar-messages\">\n                <img src=\"/images/user-avatar-four.png\" class=\"messages-avatar\">\n              </div>\n              <div class=\"messages-card-text\">\n                <h3>Linfow012</h3>\n                <p>Magix time is such a good reccommendation. Tysm</p>\n              </div>\n              <div class=\"messages-timestamp\">\n                <p>12 Sep</p>\n              </div>\n            </div>\n\n            <hr>\n\n          </sl-card>\n        </div>\n\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14678,7 +14600,7 @@ class InboxView {
   }
 
   render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject2(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject3()), _Auth.default.currentUser.userName, _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject4(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject5()), _Auth.default.currentUser.userName, _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject6(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject7()), _Auth.default.currentUser.userName, _Auth.default.currentUser && _Auth.default.currentUser.avatar ? (0, _litHtml.html)(_templateObject8(), _Auth.default.currentUser && _Auth.default.currentUser.avatar ? "".concat(_App.default.apiBase, "/images/").concat(_Auth.default.currentUser.avatar) : '') : (0, _litHtml.html)(_templateObject9()), _Auth.default.currentUser.userName);
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
     (0, _litHtml.render)(template, _App.default.rootEl);
   }
 
@@ -14687,57 +14609,7 @@ class InboxView {
 var _default = new InboxView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"views/pages/support.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _App = _interopRequireDefault(require("../../App"));
-
-var _litHtml = require("lit-html");
-
-var _Router = require("../../Router");
-
-var _Auth = _interopRequireDefault(require("../../Auth"));
-
-var _Utils = _interopRequireDefault(require("../../Utils"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Support\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        <h1>Support</h1>\n        <p>Find help ...</p>\n        \n      </div>      \n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-class SupportView {
-  init() {
-    document.title = 'Support';
-    this.render();
-
-    _Utils.default.pageIntroAnim();
-  }
-
-  render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
-    (0, _litHtml.render)(template, _App.default.rootEl);
-  }
-
-}
-
-var _default = new SupportView();
-
-exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js"}],"views/pages/beehive.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../Toast":"Toast.js"}],"views/pages/beehive.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15632,7 +15504,7 @@ var _UserAPI = _interopRequireDefault(require("./../../UserAPI"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        \n        <div class=\"rose-card-div\">\n          <sl-card class=\"rose-card-basic\" class=\"card-basic\">\n            <div slot=\"header\">\n              <h1 class=\"rose-header\">Roses</h1>\n            </div>\n\n            <hr>\n\n            <div class=\"rose-card\" style=\"margin-top: 3.5em;\">\n              <div class=\"rose-div\">\n                <img src=\"/images/rose-flower.png\" width=\"80\" height=\"90\" class=\"rose-icon\">\n              </div>\n              <div class=\"rose-card-text\">\n                <h3>You have 7 Roses</h3>\n                <p>You have given 60 Roses</p>\n              </div>\n              <sl-button class=\"add-roses-btn\" size=\"small\" style=\"margin-left: 23em; width: 8vw; margin-top: 4em;\">Add Roses</sl-button>\n            </div>\n            <hr>\n          </sl-card>\n        </div>\n\n        <div class=\"rose-hover-container\">\n\n          <sl-icon class=\"purchase-icon\" name=\"x-lg\"></sl-icon>\n\n          <div class=\"rose-hover-grid-container\">\n\n            <div class=\"rose-icon-purchase-hover\">\n              <div class=\"rose-grid-container\">\n                <img src=\"/images/rose-flower.png\" width=\"80\" height=\"90\" class=\"rose-icon\">\n                  <div class=\"rose-hover-text-container\">\n                    <p>5 Roses</p>\n                    <p>$5</p>\n                  </div>\n              </div>\n            </div>\n\n            <div class=\"rose-icon-purchase-hover\">\n              <div class=\"rose-grid-container\">\n                <img src=\"/images/rose-flower.png\" width=\"80\" height=\"90\" class=\"rose-icon\">\n                  <div class=\"rose-hover-text-container\">\n                    <p>20 Roses</p>\n                    <p>$18</p>\n                  </div>\n              </div>\n            </div>\n\n            <div class=\"rose-icon-purchase-hover\">\n              <div class=\"rose-grid-container\">\n                <img src=\"/images/rose-flower.png\" width=\"80\" height=\"90\" class=\"rose-icon\">\n                <div class=\"rose-hover-text-container\">\n                  <p>50 Roses</p>\n                  <p>$45</p>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"rose-icon-purchase-hover\">\n              <div class=\"rose-grid-container\">\n                <img src=\"/images/rose-flower.png\" width=\"80\" height=\"90\" class=\"rose-icon\">\n                <div class=\"rose-hover-text-container\">\n                  <p>100 Roses</p>\n                  <p>$80</p>\n                </div>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"purchase-btn-parent\">\n            <div class=\"purchase-btn\">Purchase</div>\n          </div>\n        </div>\n\n      </div>      \n    "]);
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        \n        <div class=\"rose-card-div\">\n          <sl-card class=\"rose-card-basic\" class=\"card-basic\">\n            <div slot=\"header\">\n              <h1 class=\"rose-header\">Roses</h1>\n            </div>\n\n            <hr>\n\n            <div class=\"rose-card\" style=\"margin-top: 3.5em;\">\n              <div class=\"rose-div\">\n                <img src=\"/images/rose-flower.png\" width=\"80\" height=\"90\" class=\"rose-icon\">\n              </div>\n              <div class=\"rose-card-text\">\n                <h3>You have 7 Roses</h3>\n                <p>You have given 60 Roses</p>\n              </div>\n              <sl-button class=\"add-roses-btn\" size=\"small\" style=\"margin-left: 23em; width: 8vw; margin-top: 4em;\">Add Roses</sl-button>\n            </div>\n            <hr>\n          </sl-card>\n        </div>\n\n        <div class=\"rose-hover-container\">\n\n          <a href=\"rose\">\n            <sl-icon class=\"purchase-x-icon\" name=\"x\"></sl-icon>\n          </a>\n\n          <div class=\"rose-hover-grid-container\">\n\n            <div class=\"rose-icon-purchase-hover\">\n              <div class=\"rose-grid-container\">\n                <img src=\"/images/rose-flower.png\" width=\"80\" height=\"90\" class=\"rose-icon\">\n                  <div class=\"rose-hover-text-container\">\n                    <p>5 Roses</p>\n                    <p>$5</p>\n                  </div>\n              </div>\n            </div>\n\n            <div class=\"rose-icon-purchase-hover\">\n              <div class=\"rose-grid-container\">\n                <img src=\"/images/rose-flower.png\" width=\"80\" height=\"90\" class=\"rose-icon\">\n                  <div class=\"rose-hover-text-container\">\n                    <p>20 Roses</p>\n                    <p>$18</p>\n                  </div>\n              </div>\n            </div>\n\n            <div class=\"rose-icon-purchase-hover\">\n              <div class=\"rose-grid-container\">\n                <img src=\"/images/rose-flower.png\" width=\"80\" height=\"90\" class=\"rose-icon\">\n                <div class=\"rose-hover-text-container\">\n                  <p>50 Roses</p>\n                  <p>$45</p>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"rose-icon-purchase-hover\">\n              <div class=\"rose-grid-container\">\n                <img src=\"/images/rose-flower.png\" width=\"80\" height=\"90\" class=\"rose-icon\">\n                <div class=\"rose-hover-text-container\">\n                  <p>100 Roses</p>\n                  <p>$80</p>\n                </div>\n              </div>\n            </div>\n          </div>\n\n          <a href=\"/rose-purchase-thankyou\">\n            <div class=\"purchase-btn-parent\">\n              <div class=\"purchase-btn\">Purchase</div>\n            </div>\n          </a>\n        </div>\n\n      </div>      \n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -15661,7 +15533,113 @@ class RosePurchaseView {
 var _default = new RosePurchaseView();
 
 exports.default = _default;
-},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js"}],"Router.js":[function(require,module,exports) {
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js"}],"views/pages/rose-purchase-thankyou.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+var _Toast = _interopRequireDefault(require("./../../Toast"));
+
+var _UserAPI = _interopRequireDefault(require("./../../UserAPI"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n      <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n      <div class=\"page-content\">        \n        \n      <div class=\"rose-card-div\">\n          <sl-card class=\"rose-card-basic\" class=\"card-basic\">\n            <div slot=\"header\">\n              <h1 class=\"rose-header\">Roses</h1>\n            </div>\n\n            <hr>\n\n            <div class=\"rose-card\" style=\"margin-top: 3.5em;\">\n              <div class=\"rose-div\">\n                <img src=\"/images/rose-flower.png\" width=\"80\" height=\"90\" class=\"rose-icon\">\n              </div>\n              <div class=\"rose-card-text\">\n                <h3>You have 7 Roses</h3>\n                <p>You have given 60 Roses</p>\n              </div>\n              <sl-button class=\"add-roses-btn\" size=\"small\" style=\"margin-left: 23em; width: 8vw; margin-top: 4em;\">Add Roses</sl-button>\n            </div>\n            <hr>\n          </sl-card>\n        </div>\n\n        <div class=\"rose-hover-container\">\n\n          <a href=\"rose\">\n            <sl-icon class=\"purchase-x-icon\" name=\"x\"></sl-icon>\n          </a>\n\n          <img src=\"/images/rose-flower.png\" width=\"110em\" height=\"120em\" class=\"rose-icon-thankyou\">\n          \n          <div class=\"rose-thankyou-text\">\n            <h1>Thank you for supporting our creators!</h1>\n          </div>\n        \n      </div>      \n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class RosePurchaseThankyouView {
+  init() {
+    document.title = 'Template';
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new RosePurchaseThankyouView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","./../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js"}],"views/pages/new-message.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _App = _interopRequireDefault(require("../../App"));
+
+var _litHtml = require("lit-html");
+
+var _Router = require("../../Router");
+
+var _Auth = _interopRequireDefault(require("../../Auth"));
+
+var _Utils = _interopRequireDefault(require("../../Utils"));
+
+var _Toast = _interopRequireDefault(require("../../Toast"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  const data = _taggedTemplateLiteral(["\n    <va-app-header title=\"Profile\" user=\"", "\"></va-app-header>\n    <div class=\"page-content\">        \n        \n      <div class=\"opacity\">\n        <div class=\"messages-card-div\">\n            <sl-card class=\"messages-card-header\">\n              <div class=\"messages-gris-container\">\n                <h1 class=\"messages-header\">Messages</h1>\n                <div class=\"messages-btn\">\n                  <sl-button class=\"new-message-btn\" size=\"small\" pill type=\"default\">New Message</sl-button>\n                </div>\n              </div>\n              <hr>\n              <div class=\"messages-card\">\n                <div class=\"avatar-messages\">\n                  <img src=\"/images/user-avatar-one.png\" class=\"messages-avatar\">\n                </div>\n                <div class=\"messages-card-text\">\n                  <h3>xxKiNxx</h3>\n                  <p>Hiiii thanks for liking my story</p>\n                </div>\n                <div class=\"messages-timestamp\">\n                  <p>7:45</p>\n                </div>\n              </div>\n\n              <hr>\n\n              <div class=\"messages-card\">\n                <div class=\"avatar-messages\">\n                  <img src=\"/images/user-avatar-two.png\" class=\"messages-avatar\">\n                </div>\n                <div class=\"messages-card-text\">\n                  <h3>Cheesy3artini</h3>\n                  <p>I really liked your posts what do you get your inspiration from?</p>\n                </div>\n                <div class=\"messages-timestamp\">\n                  <p>Wed</p>\n                </div>\n              </div>\n              \n              <hr>\n\n              <div class=\"messages-card\">\n                <div class=\"avatar-messages\">\n                  <img src=\"/images/user-avatar-three.png\" class=\"messages-avatar\">\n                </div>\n                <div class=\"messages-card-text\">\n                  <h3>Dinfkq1</h3>\n                  <p>You should read this</p>\n                </div>\n                <div class=\"messages-timestamp\">\n                  <p>Fri</p>\n                </div>\n              </div>\n\n              <hr>\n              <div class=\"opacity\">\n                \n              </div>\n              <div class=\"messages-card\">\n                <div class=\"avatar-messages\">\n                  <img src=\"/images/user-avatar-four.png\" class=\"messages-avatar\">\n                </div>\n                <div class=\"messages-card-text\">\n                  <h3>Linfow012</h3>\n                  <p>Magix time is such a good reccommendation. Tysm</p>\n                </div>\n                <div class=\"messages-timestamp\">\n                  <p>12 Sep</p>\n                </div>\n              </div>\n              <hr>\n            </sl-card>\n          </div>\n        </div> \n        \n      </div>\n\n        <div class=\"new-message-container\">\n          <div class=\"new-message-content\">\n            <a href=\"inbox\">\n              <sl-icon class=\"purchase-x-icon\" name=\"x\"></sl-icon>\n            </a>\n\n            <div class=\"title\">\n              <h1>New Message</h1>\n            </div>\n            <div class=\"message-text\">\n              <p>Send message to:</p>\n            </div>\n            <div class=\"message-input\">\n              <input type=\"text\" minlength=\"4\" maxlength=\"400\" size=\"80\" style=\"height: 4vh; border-radius: 10px; box-shadow: inset rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border: 1px solid lightgrey;\">\n            </div>\n            <div class=\"message-text\">\n              <p>Message:</p>\n            </div>\n            <div class=\"message-input\">\n              <input type=\"text\" minlength=\"4\" maxlength=\"400\" size=\"80\" style=\"height: 20vh; border-radius: 10px; box-shadow: inset rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border: 1px solid lightgrey;\">\n            </div>\n\n            <a href=\"inbox\" style=\"text-decoration: none;\">\n              <div class=\"send-btn-container\">\n                <div class=\"send-btn\">Send</div>\n              </div>\n            </a>\n\n          </div>\n        </div> \n      \n    </div>\n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class NewMessageView {
+  init() {
+    document.title = 'New Message';
+    this.render();
+
+    _Utils.default.pageIntroAnim();
+  }
+
+  render() {
+    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
+    (0, _litHtml.render)(template, _App.default.rootEl);
+  }
+
+}
+
+var _default = new NewMessageView();
+
+exports.default = _default;
+},{"../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","../../Router":"Router.js","../../Auth":"Auth.js","../../Utils":"Utils.js","../../Toast":"Toast.js"}],"Router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15695,8 +15673,6 @@ var _browse = _interopRequireDefault(require("./views/pages/browse"));
 
 var _inbox = _interopRequireDefault(require("./views/pages/inbox"));
 
-var _support = _interopRequireDefault(require("./views/pages/support"));
-
 var _beehive = _interopRequireDefault(require("./views/pages/beehive"));
 
 var _read = _interopRequireDefault(require("./views/pages/read"));
@@ -15721,6 +15697,10 @@ var _libraryArchived = _interopRequireDefault(require("./views/pages/library-arc
 
 var _rosePurchase = _interopRequireDefault(require("./views/pages/rose-purchase"));
 
+var _rosePurchaseThankyou = _interopRequireDefault(require("./views/pages/rose-purchase-thankyou"));
+
+var _newMessage = _interopRequireDefault(require("./views/pages/new-message"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import views
@@ -15736,7 +15716,6 @@ const routes = {
   '/post': _post.default,
   '/browse': _browse.default,
   '/inbox': _inbox.default,
-  '/support': _support.default,
   '/404': _.default,
   '/signin': _signin.default,
   '/signup': _signup.default,
@@ -15750,7 +15729,9 @@ const routes = {
   '/profile-settings': _profileSettings.default,
   '/library-reading-lists': _libraryReadingLists.default,
   '/library-archived': _libraryArchived.default,
-  '/rose-purchases': _rosePurchase.default
+  '/rose-purchases': _rosePurchase.default,
+  '/rose-purchase-thankyou': _rosePurchaseThankyou.default,
+  '/new-message': _newMessage.default
 };
 
 class Router {
@@ -15804,7 +15785,7 @@ function anchorRoute(e) {
   const pathname = e.target.closest('a').pathname;
   AppRouter.gotoRoute(pathname);
 }
-},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/support":"views/pages/support.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js","./views/pages/landing":"views/pages/landing.js","./views/pages/search-grid":"views/pages/search-grid.js","./views/pages/create-reading-list":"views/pages/create-reading-list.js","./views/pages/add":"views/pages/add.js","./views/pages/drafts":"views/pages/drafts.js","./views/pages/current-work":"views/pages/current-work.js","./views/pages/profile-settings":"views/pages/profile-settings.js","./views/pages/library-reading-lists":"views/pages/library-reading-lists.js","./views/pages/library-archived":"views/pages/library-archived.js","./views/pages/rose-purchase":"views/pages/rose-purchase.js"}],"App.js":[function(require,module,exports) {
+},{"./views/pages/home":"views/pages/home.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/adults":"views/pages/adults.js","./views/pages/library":"views/pages/library.js","./views/pages/rose":"views/pages/rose.js","./views/pages/post":"views/pages/post.js","./views/pages/browse":"views/pages/browse.js","./views/pages/inbox":"views/pages/inbox.js","./views/pages/beehive":"views/pages/beehive.js","./views/pages/read":"views/pages/read.js","./views/pages/landing":"views/pages/landing.js","./views/pages/search-grid":"views/pages/search-grid.js","./views/pages/create-reading-list":"views/pages/create-reading-list.js","./views/pages/add":"views/pages/add.js","./views/pages/drafts":"views/pages/drafts.js","./views/pages/current-work":"views/pages/current-work.js","./views/pages/profile-settings":"views/pages/profile-settings.js","./views/pages/library-reading-lists":"views/pages/library-reading-lists.js","./views/pages/library-archived":"views/pages/library-archived.js","./views/pages/rose-purchase":"views/pages/rose-purchase.js","./views/pages/rose-purchase-thankyou":"views/pages/rose-purchase-thankyou.js","./views/pages/new-message":"views/pages/new-message.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -17623,7 +17604,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--app-header-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: var(--app-header-txt-color);\n      }\n\n      .app-top-nav :hover{\n        color: #FEC76C;\n      }\n\n      .app-top-nav-rose :hover{ \n        color: #FEC76C;\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .app-side-menu-logo-1 {\n        margin-top: 0.05em;\n        height: 45px;\n        margin-right: 0.5em;\n        margin-left: 0.5em;\n      }\n\n      /* PAGE TITLES --------------------------------------------------------------------------------------------- */\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n        }\n\n      .outer {\n        display: grid;\n        grid-template: 1fr / 1fr;\n        place-items: center;\n        }\n\n      .outer > * {\n        grid-column: 1 / 1;\n        grid-row: 1 /1;\n      }\n\n      .outer .bottom {\n        z-index: 2;\n      }\n\n      .outer .top {\n        z-index: 1;\n      }\n\n      /* active nav links --------------------------------------------------------------------------------------------- */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------------------------------------------------------------------------------ */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">       \n      <div class=\"app-header-main\">\n        <div class=\"app-side-menu-logo-1\" style=\"z-index: 1;\">\n          <a href=\"/\" @click=", ">\n            <img class=\"app-side-menu-logo-1\" src=\"/images/honey-garden-logo.png\" alt=\"honey-garden-logo-img\">\n          </a>\n        </div>\n\n        <div class=\"app-top-nav\"> \n          <a href=\"/beehive\" @click=\"", "\">BeeHive</a>  \n          <sl-icon name=\"search\"></sl-icon>\n          <a href=\"/search-grid\" @click=\"", "\">Search</a>\n        </div> \n\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/library\" @click=\"", "\">Library</a> \n        <a href=\"/post\" @click=\"", "\">Manage</a> \n\n        ", "\n\n        <a href=\"/inbox\" @click=\"", "\">Messages</a> \n\n        <a href=\"/rose\" @click=\"", "\">\n          <img src=\"/images/rose-flower.png\" width=\"30\" height=\"30\" class=\"app-top-nav-rose\">\n        </a>\n        \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <style>\n              sl-avatar::part(image) {\n                background-color: #FFFEF9;\n              }\n            </style>\n            <sl-avatar style=\"--size: 34px; background-color: #FFFEF9\" image=", "></sl-avatar>\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n    "]);
+  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--app-header-color);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n      }\n      \n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: #fff;\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: var(--app-header-txt-color);\n      }\n\n      .app-top-nav :hover{\n        color: #FEC76C;\n      }\n\n      .app-top-nav-rose img :hover{ \n        filter: none;\n        --wekbit-filter: #FEC76C;\n      }\n      \n      .app-side-menu-items a {\n        display: block;\n        padding: .6em;\n        text-decoration: none;\n        font-size: 1.3em;\n        color: #333;\n        left: 1em;\n        top: 2em;\n      }\n\n      .app-side-menu-logo {\n        width: 90px;\n        margin-bottom: 1em;\n        position: absolute;\n        left: .5em;\n        top: .5em;\n      }\n\n      .app-side-menu-logo-1 {\n        margin-top: 0.05em;\n        height: 45px;\n        margin-right: 0.5em;\n        margin-left: 0.5em;\n      }\n\n      /* PAGE TITLES --------------------------------------------------------------------------------------------- */\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n        }\n\n      .outer {\n        display: grid;\n        grid-template: 1fr / 1fr;\n        place-items: center;\n        }\n\n      .outer > * {\n        grid-column: 1 / 1;\n        grid-row: 1 /1;\n      }\n\n      .outer .bottom {\n        z-index: 2;\n      }\n\n      .outer .top {\n        z-index: 1;\n      }\n\n      /* active nav links --------------------------------------------------------------------------------------------- */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n\n      /* RESPONSIVE - MOBILE ------------------------------------------------------------------------------------------ */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">       \n      <div class=\"app-header-main\">\n        <div class=\"app-side-menu-logo-1\" style=\"z-index: 1;\">\n          <a href=\"/\" @click=", ">\n            <img class=\"app-side-menu-logo-1\" src=\"/images/honey-garden-logo.png\" alt=\"honey-garden-logo-img\">\n          </a>\n        </div>\n\n        <div class=\"app-top-nav\"> \n          <a href=\"/beehive\" @click=\"", "\">BeeHive</a>\n          <a href=\"/search-grid\" @click=\"", "\">Search</a>\n        </div> \n\n      </div>\n\n      <nav class=\"app-top-nav\">\n        <a href=\"/library\" @click=\"", "\">Library</a> \n        <a href=\"/post\" @click=\"", "\">Manage</a> \n\n        ", "\n\n        <a href=\"/inbox\" @click=\"", "\">Messages</a> \n\n        <a href=\"/rose\" @click=\"", "\">\n          <img src=\"/images/rose-flower.png\" width=\"30\" height=\"30\" class=\"app-top-nav-rose\">\n        </a>\n        \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <style>\n              sl-avatar::part(image) {\n                background-color: #FFFEF9;\n              }\n            </style>\n            <sl-avatar style=\"--size: 34px; background-color: #FFFEF9\" image=", "></sl-avatar>\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -17973,7 +17954,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54787" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58191" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -45,9 +45,28 @@ class LibraryView {
           </div>
 
           <div class="sort-by-btn-container">
-            <div class="sort-by-btn"> 
-              <sl-icon slot="prefix" name="chevron-down" class="sort-by-icon"></sl-icon>  
-              Sort By</div>
+            <div>
+              <sl-dropdown>
+                <sl-button slot="trigger" caret style="font-family: var(--base-font-family);" class="dropdown-btn">Sort By</sl-button>
+                <div class="dropdown-selection">
+                  <div class="dropdown-hover">
+                    <sl-menu class="dropwdown-text">Recently Read</sl-menu>
+                  </div>
+                  <hr>
+                  <div class="dropdown-hover">
+                    <sl-menu class="dropwdown-text">Alphabetical A-Z</sl-menu>
+                  </div>
+                  <hr>
+                  <div class="dropdown-hover">
+                    <sl-menu class="dropwdown-text">Completed</sl-menu>
+                  </div>
+                  <hr>
+                  <div class="dropdown-hover">
+                    <sl-menu class="dropwdown-text">New / Unread</sl-menu>
+                  </div>
+                </div>
+              </sl-dropdown>
+            </div>
           </div>
         </div>
 
@@ -82,6 +101,20 @@ class LibraryView {
             </div>
             <img src="/images/light-bulb.png" alt="light-bulb-img" class="serve-me-img" style="box-shadow: 0 0 10px lightgray;">
           </div>
+
+          <div class="green-circle-container-sparks">
+            <div class="green-circle"></div>
+          </div>
+          <div class="green-circle-container-peaking-point">
+            <div class="green-circle"></div>
+          </div>
+          <div class="green-circle-container-on-the-path">
+            <div class="green-circle"></div>
+          </div>
+          <div class="green-circle-container-swan-castle">
+            <div class="green-circle"></div>
+          </div>
+
           <div>
             <div class="current-reads">
               <progress max="100" value="0" class="progress-bar"></progress>
@@ -112,6 +145,17 @@ class LibraryView {
             </div>
             <img src="/images/swan-castle.png" alt="swan-castle-img" class="serve-me-img" style="box-shadow: 0 0 10px lightgray;">
           </div>
+
+          <div class="green-circle-container-king">
+            <div class="green-circle"></div>
+          </div>
+          <div class="green-circle-container-home">
+            <div class="green-circle"></div>
+          </div>
+          <div class="green-circle-container-fairy-circle">
+            <div class="green-circle"></div>
+          </div>
+
           <div>
             <div class="current-reads">
               <progress max="100" value="0" class="progress-bar"></progress>
@@ -160,6 +204,11 @@ class LibraryView {
             </div>
             <img src="/images/blooming.png" alt="blooming-img" class="serve-me-img" style="box-shadow: 0 0 10px lightgray;">
           </div>
+
+          <div class="green-circle-container-mary-me" style="position: absolute; top: 61.2em; left: 53.8em;">
+            <div class="green-circle"></div>
+          </div>
+
           <div>
             <div class="current-reads">
               <progress max="100" value="0" class="progress-bar"></progress>

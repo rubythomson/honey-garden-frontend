@@ -117,8 +117,9 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         color: #FEC76C;
       }
 
-      .app-top-nav-rose :hover{ 
-        color: #FEC76C;
+      .app-top-nav-rose img :hover{ 
+        filter: none;
+        --wekbit-filter: #FEC76C;
       }
       
       .app-side-menu-items a {
@@ -197,8 +198,7 @@ customElements.define('va-app-header', class AppHeader extends LitElement {
         </div>
 
         <div class="app-top-nav"> 
-          <a href="/beehive" @click="${anchorRoute}">BeeHive</a>  
-          <sl-icon name="search"></sl-icon>
+          <a href="/beehive" @click="${anchorRoute}">BeeHive</a>
           <a href="/search-grid" @click="${anchorRoute}">Search</a>
         </div> 
 

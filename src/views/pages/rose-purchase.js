@@ -42,7 +42,9 @@ class RosePurchaseView {
 
         <div class="rose-hover-container">
 
-          <sl-icon class="purchase-icon" name="x-lg"></sl-icon>
+          <a href="rose">
+            <sl-icon class="purchase-x-icon" name="x"></sl-icon>
+          </a>
 
           <div class="rose-hover-grid-container">
 
@@ -87,9 +89,11 @@ class RosePurchaseView {
             </div>
           </div>
 
-          <div class="purchase-btn-parent">
-            <div class="purchase-btn">Purchase</div>
-          </div>
+          <a href="/rose-purchase-thankyou">
+            <div class="purchase-btn-parent">
+              <div class="purchase-btn">Purchase</div>
+            </div>
+          </a>
         </div>
 
       </div>      
