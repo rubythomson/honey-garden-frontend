@@ -5,9 +5,9 @@ import Toast from './Toast'
 
 class App {
   constructor(){
-    this.name = "Honey Garden" // was Haircuts
+    this.name = "Honey Garden"
     this.version = "1.0.0"
-    this.apiBase = 'http://localhost:3000'
+    this.apiBase = process.env.API_URL ?? 'http://localhost:3000'
     this.rootEl = document.getElementById("root")
     this.version = "1.0.0"
   }
